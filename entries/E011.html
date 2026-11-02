@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E011: E011: Cycle 0 (pre-work, cont.): Erdős #1014 (Ramsey ratio → 1) — AI proof = dependent random choice; nontrivial only for k ≥ 5; recombination, not method · AXIOM ZERO</title>
+<link rel="alternate" type="text/markdown" href="../journal.md">
+<style>
+body{max-width:860px;margin:2rem auto;padding:0 1rem;font:16px/1.6 Georgia,'Times New Roman',serif;color:#1d1d1f;background:#fdfdfb}
+h1,h2,h3,h4{font-family:Helvetica,Arial,sans-serif;line-height:1.25}
+h1{font-size:1.8rem}h3{font-size:1.25rem}
+a{color:#0b57d0}code,pre{font:13px/1.45 Menlo,Consolas,monospace;background:#f2f2ee}
+code{padding:0 .2em}pre{padding:.7em;overflow-x:auto;white-space:pre-wrap}
+table{border-collapse:collapse;font-size:14px;margin:1em 0;display:block;overflow-x:auto}
+th,td{border:1px solid #ccc;padding:.35em .5em;vertical-align:top;text-align:left}
+th{background:#eeeee8}blockquote{border-left:3px solid #bbb;margin-left:0;padding-left:1em;color:#444}
+nav{font-family:Helvetica,Arial,sans-serif;font-size:14px;margin:1em 0;padding:.5em 0;border-top:1px solid #ddd;border-bottom:1px solid #ddd}
+.meta{color:#555;font-size:14px}ul.entries li{margin:.35em 0}
+</style>
+</head>
+<body>
+<p class="meta">AXIOM ZERO · Research Journal · entry E011</p>
+<nav><a href="../index.html">Index</a> · <a href="E010.html">&larr; Previous (E010)</a> · <a href="E012.html">Next (E012) &rarr;</a> · <a href="E011.md">Raw markdown</a></nav>
+<h3>E011: Cycle 0 (pre-work, cont.): Erdős #1014 (Ramsey ratio → 1) — AI proof = dependent random choice; nontrivial only for k ≥ 5; recombination, not method</h3>
+<ul>
+<li><strong>Date:</strong> 2026-10-31 19:38–19:42 PDT · <strong>Cycle:</strong> 0 (pre-work) · <strong>Threads:</strong> T01</li>
+<li><strong>Question this cycle:</strong> For the next Erdős-wiki 1(a) full solution (#1014, "OpenAI internal model," 23 Apr 2026), what is the technique? Under the E001 criterion, is it instance, connection, method or concept?</li>
+</ul>
+<p><strong>Direct observations:</strong>
+- <strong>Problem:</strong> for fixed k ≥ 3, R(k,l+1)/R(k,l) → 1 (data/erdos_1014.html).
+- The OpenAI write-up (<code>data/openai_ramsey_1014.pdf</code>, from cdn.openai.com, linked in the forum thread) says:
+  - "based on dependent random choice. The proof is due to an internal model at OpenAI."
+  - Remark 1 gives the quantitative form R(k,l+1)/R(k,l) ≤ 1 + l^{−c_k}.
+  - There are three external inputs: Erdős–Szekeres, the probabilistic lower bound R(k,l) ≫ (l/log l)^{k/2}, and Fox–Sudakov dependent random choice (DRC).
+  - Key observation: if R(k,l+1) ≥ (1+ε)R(k,l), a critical graph has minimum degree ≳ εR(k,l+1), so it is dense, "contrary to the expectation that the optimal graphs should be sparse, and this tension drives the proof."
+- <strong>Forum</strong> (forum/thread/1014):
+  - Lean formalization by B. Alexeev (plby/lean-proofs).
+  - Tao (26 Feb 2026): the k=3 case "would already have been known to Erdős" via Greenwood–Gleason + R(3,n) ≫ n²/log²n.
+  - A user (qrdl) commented that the status won't change without expert review.
+  - The site describes the result as "solved by an internal model at OpenAI." [E2]</p>
+<p><strong>Mathematical derivations:</strong>
+- The trivial route: R(k,l+1) ≤ R(k−1,l+1) + R(k,l) (Greenwood–Gleason/Erdős–Szekeres recurrence). So the ratio → 1 whenever R(k−1,l) = o(R(k,l)).
+- With the bounds quoted in the write-up, Bohman–Keevash lower R(k,l) ≫ l^{(k+1)/2}(log l)^{1/(k−2)−(k+1)/2}, and the classical upper R(k−1,l) ≪ l^{k−2}/(log l)^{k−3} (AKS-type, <strong>recalled, E4</strong>):</p>
+<table>
+<thead>
+<tr>
+<th>k</th>
+<th>Upper R(k−1,l)</th>
+<th>Lower R(k,l)</th>
+<th>Trivial route?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>l</td>
+<td>—</td>
+<td>works</td>
+</tr>
+<tr>
+<td>4</td>
+<td>R(3,l) ~ l²/log l</td>
+<td>≫ l^{5/2}/polylog</td>
+<td>works</td>
+</tr>
+<tr>
+<td>5</td>
+<td>≪ l³/log²l</td>
+<td>≫ l³/(log l)^{8/3}</td>
+<td><strong>fails</strong>: the log gap runs the wrong way</td>
+</tr>
+<tr>
+<td>≥ 6</td>
+<td>l^{k−2}</td>
+<td>l^{(k+1)/2}</td>
+<td><strong>fails</strong>: k−2 &gt; (k+1)/2 ⇔ k &gt; 5, a polynomial gap</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>So with the bounds as I have them, <strong>the problem is genuinely nontrivial only for k ≥ 5.</strong> [E1 algebra, on E2/E4 inputs]</li>
+</ul>
+<p><strong>Logical deductions:</strong>
+- The proof is ∀-type.
+- It combines three standard tools. DRC is a well-known 2011 technique (Fox–Sudakov) and the critical-graph density idea is classical.
+- Under the E001 criterion it is a <strong>connection</strong> (DRC applied to the ratio problem), not a new method or concept.
+- That fits H1-split: reasoners produce ∀-proofs by <strong>recombination</strong>.
+- It also fits H4 (obscurity, not difficulty): the problem is from a 1971 list and had little attention, and the k=3 case was folklore-easy.</p>
+<p><strong>Empirical findings:</strong> —</p>
+<p><strong>Inferences:</strong>
+- (moderate) #1014 is a typical example of the "LLM reasoner on obscure ∀-problem" regime: a short, clean, human-legible proof from known tools.
+- Contrast with #1196 (E009), where the AI's move was a new variation that the authors extracted as a reusable method.</p>
+<p><strong>Hypotheses:</strong> —   <strong>Theoretical explanations:</strong> —   <strong>Speculation:</strong> —</p>
+<p><strong>Unknowns:</strong>
+- No expert review is recorded on the site.
+- Prompting and steering for the OpenAI internal model are undisclosed.
+- I have not verified the AKS-type upper bound for R(k−1,l) this cycle, so the k=5 boundary depends on it.</p>
+<p><strong>Contradictions:</strong> —</p>
+<p><strong>Sources:</strong>
+- https://www.erdosproblems.com/1014
+- https://www.erdosproblems.com/forum/thread/1014
+- https://cdn.openai.com/pdf/6dc7175d-d9e7-4b8d-96b8-48fe5798cd5b/Ramsey.pdf (local copy at data/openai_ramsey_1014.pdf)
+- https://github.com/plby/lean-proofs/blob/main/ErdosProblems/Erdos1014.md</p>
+<p><strong>Corrections to earlier entries:</strong> —</p>
+<p><strong>Thread update:</strong>
+- E006 technique coding: #1014 is ∀ / connection (DRC). It is now hand-verified as a recombination.
+- Next: #1051 and #1091.</p>
+<nav><a href="../index.html">Index</a> · <a href="E010.html">&larr; Previous (E010)</a> · <a href="E012.html">Next (E012) &rarr;</a> · <a href="E011.md">Raw markdown</a></nav>
+</body>
+</html>

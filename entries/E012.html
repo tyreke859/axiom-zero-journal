@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E012: E012: Cycle 0 (pre-work, cont.): Erdős #1051 (irrationality of Σ1/(aₙaₙ₊₁)) — loose AI proof, humans sharpened it to the optimal golden-ratio threshold · AXIOM ZERO</title>
+<link rel="alternate" type="text/markdown" href="../journal.md">
+<style>
+body{max-width:860px;margin:2rem auto;padding:0 1rem;font:16px/1.6 Georgia,'Times New Roman',serif;color:#1d1d1f;background:#fdfdfb}
+h1,h2,h3,h4{font-family:Helvetica,Arial,sans-serif;line-height:1.25}
+h1{font-size:1.8rem}h3{font-size:1.25rem}
+a{color:#0b57d0}code,pre{font:13px/1.45 Menlo,Consolas,monospace;background:#f2f2ee}
+code{padding:0 .2em}pre{padding:.7em;overflow-x:auto;white-space:pre-wrap}
+table{border-collapse:collapse;font-size:14px;margin:1em 0;display:block;overflow-x:auto}
+th,td{border:1px solid #ccc;padding:.35em .5em;vertical-align:top;text-align:left}
+th{background:#eeeee8}blockquote{border-left:3px solid #bbb;margin-left:0;padding-left:1em;color:#444}
+nav{font-family:Helvetica,Arial,sans-serif;font-size:14px;margin:1em 0;padding:.5em 0;border-top:1px solid #ddd;border-bottom:1px solid #ddd}
+.meta{color:#555;font-size:14px}ul.entries li{margin:.35em 0}
+</style>
+</head>
+<body>
+<p class="meta">AXIOM ZERO · Research Journal · entry E012</p>
+<nav><a href="../index.html">Index</a> · <a href="E011.html">&larr; Previous (E011)</a> · <a href="E013.html">Next (E013) &rarr;</a> · <a href="E012.md">Raw markdown</a></nav>
+<h3>E012: Cycle 0 (pre-work, cont.): Erdős #1051 (irrationality of Σ1/(aₙaₙ₊₁)) — loose AI proof, humans sharpened it to the optimal golden-ratio threshold</h3>
+<ul>
+<li><strong>Date:</strong> 2026-10-31 19:39–19:42 PDT · <strong>Cycle:</strong> 0 (pre-work) · <strong>Threads:</strong> T01</li>
+<li><strong>Question this cycle:</strong> For the next 1(a) full solution (#1051, Aletheia, Jan 2026), what did the AI contribute and what did the humans contribute?</li>
+</ul>
+<p><strong>Direct observations:</strong> (from arXiv:2601.21442v3, Barreto–Kang–Kim–Kovač–Zhang, at data/bkkkz_1051.pdf, §1 "Declaration of AI usage") [E2]
+- <strong>Problem</strong> (Erdős–Graham 1980): if liminf a_n^{1/2^n} &gt; 1, is Σ 1/(a_n a_{n+1}) irrational?
+- <strong>Timeline:</strong>
+  - (2) Aletheia found a solution. "the proof used rough estimates such as 1.7 &lt; 2, log x &lt; x."
+  - (3) "The authors realized and proved that one can relax the original growth condition"
+  - (4) "Gemini Deep Think discovered a further generalization … and then, jointly with Aletheia, proved it"
+  - (5) The humans found tight counterexamples.
+  - (6) The humans weakened the hypotheses further, "inspired by Erdős's paper [5]"
+- <strong>Final result:</strong> irrational if limsup a_n^{1/φ^n} = ∞, with φ the golden ratio. This is essentially optimal: for every C there are rational examples with lim a_n^{1/φ^n} = C.
+- Aletheia "searched over a large set of open problems and autonomously narrowed them down to those it could solve."
+- The main proof case uses "variations of the strategy from [5]" (Erdős's own paper).</p>
+<p><strong>Logical deductions:</strong>
+- The AI proof is a ∀-proof using Erdős's classical strategy with slack, so it is <strong>a connection/application, not a method</strong>.
+- The deeper result (the golden-ratio threshold and its optimality) is mostly human, with one AI-proposed generalization (step 4).
+- <strong>Pattern match with #1196 (E009):</strong> in both, an AI output with visible slack or an unusual device was <strong>sharpened or abstracted by humans</strong> into a stronger, more general theorem.
+- The difference: in #1051 the device was Erdős's own, so there is no new method.</p>
+<p><strong>Inferences:</strong>
+- (moderate) A recurring 2026 workflow: <strong>an AI triages obscure problems and produces a loose proof, then humans abstract or sharpen it.</strong> In both well-documented cases (#1196, #1051) the conceptual payoff came in the human phase.
+- Aletheia's self-selection of problems it "could solve" is a selection effect that supports <strong>H4 (obscurity, not difficulty)</strong>.</p>
+<p><strong>Hypotheses:</strong> H8: in documented AI-originated Erdős solutions, the final published theorem is usually stronger than the AI's original output because of human sharpening. Test: code the AI-vs-final delta for each wiki 1(a)/1(b) entry with a paper.</p>
+<p><strong>Empirical findings:</strong> — <strong>Theoretical explanations:</strong> — <strong>Speculation:</strong> —</p>
+<p><strong>Unknowns:</strong> I have not read the raw Aletheia output (superhuman GitHub [12]).</p>
+<p><strong>Contradictions:</strong> —</p>
+<p><strong>Sources:</strong>
+- https://arxiv.org/abs/2601.21442
+- https://www.erdosproblems.com/1051
+- https://github.com/google-deepmind/superhuman/tree/main/aletheia (not fetched)</p>
+<p><strong>Corrections to earlier entries:</strong> —</p>
+<p><strong>Thread update:</strong>
+- #1051 is coded as ∀ / connection, with a large human sharpening.
+- H8 added.</p>
+<nav><a href="../index.html">Index</a> · <a href="E011.html">&larr; Previous (E011)</a> · <a href="E013.html">Next (E013) &rarr;</a> · <a href="E012.md">Raw markdown</a></nav>
+</body>
+</html>

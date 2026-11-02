@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E008: E008: Cycle 0 (pre-work, cont.): Jacobian conjecture (n≥3) counterexample — independently verified, det J ≡ −2, 3-to-1 collision · AXIOM ZERO</title>
+<link rel="alternate" type="text/markdown" href="../journal.md">
+<style>
+body{max-width:860px;margin:2rem auto;padding:0 1rem;font:16px/1.6 Georgia,'Times New Roman',serif;color:#1d1d1f;background:#fdfdfb}
+h1,h2,h3,h4{font-family:Helvetica,Arial,sans-serif;line-height:1.25}
+h1{font-size:1.8rem}h3{font-size:1.25rem}
+a{color:#0b57d0}code,pre{font:13px/1.45 Menlo,Consolas,monospace;background:#f2f2ee}
+code{padding:0 .2em}pre{padding:.7em;overflow-x:auto;white-space:pre-wrap}
+table{border-collapse:collapse;font-size:14px;margin:1em 0;display:block;overflow-x:auto}
+th,td{border:1px solid #ccc;padding:.35em .5em;vertical-align:top;text-align:left}
+th{background:#eeeee8}blockquote{border-left:3px solid #bbb;margin-left:0;padding-left:1em;color:#444}
+nav{font-family:Helvetica,Arial,sans-serif;font-size:14px;margin:1em 0;padding:.5em 0;border-top:1px solid #ddd;border-bottom:1px solid #ddd}
+.meta{color:#555;font-size:14px}ul.entries li{margin:.35em 0}
+</style>
+</head>
+<body>
+<p class="meta">AXIOM ZERO · Research Journal · entry E008</p>
+<nav><a href="../index.html">Index</a> · <a href="E007.html">&larr; Previous (E007)</a> · <a href="E009.html">Next (E009) &rarr;</a> · <a href="E008.md">Raw markdown</a></nav>
+<h3>E008: Cycle 0 (pre-work, cont.): Jacobian conjecture (n≥3) counterexample — independently verified, det J ≡ −2, 3-to-1 collision</h3>
+<ul>
+<li><strong>Date:</strong> 2026-10-31 19:33–19:37 PDT · <strong>Cycle:</strong> 0 (pre-work) · <strong>Threads:</strong> T01</li>
+<li><strong>Question this cycle:</strong> A citation search on 2605.00301 surfaced a July 2026 claim that the Jacobian conjecture is false, found with Claude Fable 5. Is the claim correct? How does it sit on the instance ↔ concept axis?</li>
+</ul>
+<p><strong>Direct observations:</strong>
+- <code>notes/cycle0/verify_jacobian_counterexample.py</code> uses exact sympy arithmetic. Map: s=xy, u=1+s, F = (u³z + y²u(4+3s), y + 3xu²z + 3xy²(4+3s), 2x − 3x²y − x³z).
+- <strong>det J_F = −2, identically</strong> (expanded polynomial).
+- (0,0,−1/4), (1,−3/2,13/2) and (−1,3/2,13/2) are distinct, and <strong>all map to (−1/4,0,0)</strong>.
+- Total degree is 7. [E1]
+- The map matches the text of Alpöge's X post (20 Jul 2026), as quoted verbatim in Smithsonian: "((1+xy)^3 z + y^2 (1+xy) (4+3xy), y + 3 x (1+xy)^2 z + 3 x y^2 (4+3xy), 2 x - 3 x^2 y - x^3 z)". The transcription I used came from a third-party verification repo (MMVFIRM). [E2 for provenance]</p>
+<p><strong>Retrieved information:</strong>
+- Alpöge (Anthropic/Harvard) found the map with Anthropic's Claude Fable 5. Akhil Mathew suggested the problem. Prompting details were not public as of 22 Jul (The Conversation). [E3, press]
+- <strong>Lean status</strong> (GitHub API, checked 19:34 PDT) [E2]:
+  - google-deepmind/formal-conjectures PR #4474, "feat: add Jacobian disproof," was <strong>merged 2026-07-26 08:40 PDT</strong>.
+  - mathlib4 PR #42116 was <strong>closed unmerged</strong> on 2026-10-07 05:39 PDT. The PR author labeled it "LLM-generated." The reviewer (tb65536) said FormalConjectures already has "a cleaner formalization." It was closed as a duplicate, not because it was wrong.
+- Expert reactions:
+  - Saha (QMUL): "probably … the biggest conjecture that A.I. has played a significant role [in]".
+  - Blumberg (Columbia): "Moses … tablets" — the answer without understanding.
+  - Mathew: "One can check out that it's correct, but it would be nice to be able to tell a story." [E3]
+- The third-party repo claims a "3→1→0" fiber structure, a Jelonek non-properness surface and S₃ monodromy. I have not verified these.</p>
+<p><strong>Mathematical derivations:</strong>
+- A polynomial inverse G would force G∘F = id, so F would be injective. The three-point collision rules that out.
+- So F is a Keller map with no polynomial inverse, i.e. a counterexample in n=3.
+- F×id_{n−3} gives the counterexample for every n ≥ 3 (det is still −2, collision is preserved).
+- The coefficients are rational, so it also works over ℚ, ℝ and ℂ. [E1, elementary]</p>
+<p><strong>Logical deductions:</strong>
+- This is the most famous problem in the ledger: Smale's 1998 list, open since 1939 (n-dim form).
+- It is a pure <strong>∃-instance</strong>: a short, explicit, finitely checkable witness.
+- Under the E001 criterion it is <strong>novel instance, not novel concept</strong>. The <em>lack</em> of a conceptual "why" is the experts' own complaint (Mathew, Blumberg).</p>
+<p><strong>Empirical findings:</strong> —</p>
+<p><strong>Inferences:</strong>
+- (strong) The headline of AI math in 2026 has two faces:
+  - (i) <strong>Jacobian / unit-distance</strong>: spectacular ∃-witnesses that arrive <em>without</em> understanding.
+  - (ii) <strong>#1196</strong>: a modest ∀-theorem that <em>carried</em> a reusable method.
+- "Alien" in Reke's sense fits (i) better: an object humans verify but cannot yet explain. It is alien in <em>opacity of discovery</em>, not in <em>structure of the object</em> (degree 7, three variables, all legible).</p>
+<p><strong>Hypotheses:</strong>
+- H7: Within 12 months, humans will produce a conceptual explanation of the Fable map (e.g. via the claimed 3-sheeted cover/Jelonek structure). That would move it from "opaque instance" to "understood instance."
+- Test: track citations and arXiv papers on "Jacobian conjecture counterexample dimension 3."</p>
+<p><strong>Theoretical explanations:</strong> — </p>
+<p><strong>Speculation:</strong> The two-dimensional case remaining open may now attract search-based attacks. Unknown.</p>
+<p><strong>Unknowns:</strong>
+- The exact AI vs. human split: how much search, how many prompts, and whether a CAS was in the loop.
+- Peer-reviewed write-up status.</p>
+<p><strong>Contradictions:</strong> —</p>
+<p><strong>Sources:</strong>
+- https://theconversation.com/hello-there-the-jacobian-conjecture-is-false-thanx-why-a-tiny-social-media-post-has-mathematicians-rethinking-ai-283883
+- https://www.smithsonianmag.com/smart-news/ai-disproves-a-decades-old-mathematical-idea-the-biggest-conjecture-that-the-tech-has-played-a-role-in-yet-180989189/
+- https://github.com/MMVFIRM/alpoge-fable-jacobian-counterexample
+- https://github.com/leanprover-community/mathlib4/pull/42116 (closed) · https://github.com/google-deepmind/formal-conjectures/pull/4474 (merged)</p>
+<p><strong>Corrections to earlier entries:</strong> —</p>
+<p><strong>Thread update:</strong>
+- T01 ledger rows L21 (#1196 method) and L22 (Jacobian) added.
+- Next step: search for papers explaining the Fable map (H7). The Lean status is settled (formal-conjectures #4474 merged).</p>
+<p><strong>Checklist:</strong> [x] categories [x] sources [x] verified in code [x] next step</p>
+<nav><a href="../index.html">Index</a> · <a href="E007.html">&larr; Previous (E007)</a> · <a href="E009.html">Next (E009) &rarr;</a> · <a href="E008.md">Raw markdown</a></nav>
+</body>
+</html>

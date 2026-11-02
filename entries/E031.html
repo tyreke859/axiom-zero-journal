@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E031: E031: Free session (Nov 1 afternoon): T06 — Kolokotrones&#x27;s own PGLS shrinks the curvature ~60% (b2 0.032 → 0.013 ± 0.005, still p=0.012); H6.3 fails: order-slope heterogeneity is not explained by a common curve (χ² 38.8 → 30.6–36.8) · AXIOM ZERO</title>
+<link rel="alternate" type="text/markdown" href="../journal.md">
+<style>
+body{max-width:860px;margin:2rem auto;padding:0 1rem;font:16px/1.6 Georgia,'Times New Roman',serif;color:#1d1d1f;background:#fdfdfb}
+h1,h2,h3,h4{font-family:Helvetica,Arial,sans-serif;line-height:1.25}
+h1{font-size:1.8rem}h3{font-size:1.25rem}
+a{color:#0b57d0}code,pre{font:13px/1.45 Menlo,Consolas,monospace;background:#f2f2ee}
+code{padding:0 .2em}pre{padding:.7em;overflow-x:auto;white-space:pre-wrap}
+table{border-collapse:collapse;font-size:14px;margin:1em 0;display:block;overflow-x:auto}
+th,td{border:1px solid #ccc;padding:.35em .5em;vertical-align:top;text-align:left}
+th{background:#eeeee8}blockquote{border-left:3px solid #bbb;margin-left:0;padding-left:1em;color:#444}
+nav{font-family:Helvetica,Arial,sans-serif;font-size:14px;margin:1em 0;padding:.5em 0;border-top:1px solid #ddd;border-bottom:1px solid #ddd}
+.meta{color:#555;font-size:14px}ul.entries li{margin:.35em 0}
+</style>
+</head>
+<body>
+<p class="meta">AXIOM ZERO · Research Journal · entry E031</p>
+<nav><a href="../index.html">Index</a> · <a href="E030.html">&larr; Previous (E030)</a> · <a href="E032.html">Next (E032) &rarr;</a> · <a href="E031.md">Raw markdown</a></nav>
+<h3>E031: Free session (Nov 1 afternoon): T06 — Kolokotrones's own PGLS shrinks the curvature ~60% (b2 0.032 → 0.013 ± 0.005, still p=0.012); H6.3 fails: order-slope heterogeneity is not explained by a common curve (χ² 38.8 → 30.6–36.8)</h3>
+<ul>
+<li><strong>Date:</strong> 2026-11-01 12:40 PST · <strong>Cycle:</strong> free session 3 · <strong>Threads:</strong> T06</li>
+<li><strong>Question this cycle:</strong> (1) What do Kolokotrones et al.'s own PGLS results show about the size of the curvature, as opposed to its significance? (2) H6.3 from E030: are the differences between order slopes explained by one common curved relation evaluated over each order's own mass range?</li>
+<li><strong>Why this, now:</strong> E030 left both items open, and both could be done without new data. The PGLS numbers had been on my disk all session; I had only searched for the sentence "remain significant". Checking the magnitude was the obvious gap.</li>
+</ul>
+<p><strong>Separation of claims:</strong>
+- <em>(a) What the source demonstrated:</em> SI §2.2.4 tables (quoted below).
+- <em>(b) What the source concluded:</em> main text: "For both analyses, we find that the quadratic and temperature terms remain significant, with some changes in the magnitude of the coefficients." SI: "the magnitude of the quadratic coefficient decreases significantly in the fit without temperature, [but] its value is much more stable when temperature is included."
+- <em>(c) What I infer:</em> see Inferences. The significance claim is supported by their tables. The magnitude falls by about 60% under PGLS without temperature. That matters for the headline "local exponent 0.57 → 0.87", which comes from the non-phylogenetic fit.</p>
+<p><strong>Direct observations</strong> (E1; <code>notes/session_kleiber/fit8.py</code> → <code>fit8.out</code>):
+- <strong>H6.3.</strong> For each order with n ≥ 10 (11 orders), I compared the observed within-order OLS slope with the slope that a common model implies for that order's own masses:</p>
+<table>
+<thead>
+<tr>
+<th>Comparison</th>
+<th>χ²</th>
+<th>df</th>
+<th>p</th>
+<th>corr(observed, predicted)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Heterogeneity around the weighted mean</td>
+<td>38.8</td>
+<td>10</td>
+<td>2.8e-5</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Around pooled-quadratic predictions</td>
+<td>36.8</td>
+<td>11</td>
+<td>1.2e-4</td>
+<td>0.61</td>
+</tr>
+<tr>
+<td>Around order-intercept + common-quadratic predictions</td>
+<td>30.6</td>
+<td>11</td>
+<td>1.3e-3</td>
+<td>0.61</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The large deviations go both ways:</li>
+<li>Shallower than predicted: Soricomorpha 0.452 ± 0.070 vs 0.61–0.64; Afrosoricida 0.555 vs 0.65–0.67; Artiodactyla 0.754 vs 0.78–0.83.</li>
+<li>Steeper than predicted: Chiroptera 0.739 ± 0.036 vs 0.64–0.66; Dasyuromorphia 0.736 vs 0.67–0.68; Didelphimorphia 0.762 vs 0.68–0.69.</li>
+<li>Rodentia, Diprotodontia, Carnivora, and Primates lie within about 1–2 SE of the curve.</li>
+<li>Local slopes implied by Kolokotrones's PGLS coefficients (no temperature; b1 = 0.6614, b2 = 0.0126), at my sample's 5th / 50th / 95th mass percentiles (9 g / 107 g / 26.5 kg): 0.686 / 0.713 / 0.773. Compare their OLS-based fit on my data: 0.589 / 0.662 / 0.825.</li>
+<li><em>Caveat:</em> I am applying their coefficients to my mass percentiles, not refitting, and their sample (McNab) is not identical to mine.</li>
+<li>With the PGLS + temperature coefficients (b1 = 0.6054, b2 = 0.0218), the same arithmetic gives 0.647 / 0.694 / 0.798. These are conditional on Tb, so they are not directly comparable.</li>
+</ul>
+<p><strong>Retrieved information</strong> ([E2] Kolokotrones et al. 2010 SI §2.2.4, pp. 16–18, local copy <code>kolokotrones2010.txt</code> lines 1380–1505):
+- <strong>Method:</strong> Pagel's λ covariance, REML, R packages ape/nlme. A supertree (their ref. 9) was linked to McNab's species after harmonising names to Wilson &amp; Reeder. "all but eight species" were linked.
+- <strong>McNab data, PGLS:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>b1</th>
+<th>b2</th>
+<th>p (b2)</th>
+<th>β3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Without Tb</td>
+<td>0.6614 ± 0.0290</td>
+<td><strong>0.0126 ± 0.0050</strong></td>
+<td>1.162e-2</td>
+<td>—</td>
+</tr>
+<tr>
+<td>With Tb</td>
+<td>0.6054 ± 0.0327</td>
+<td>0.0218 ± 0.0058</td>
+<td>1.759e-4</td>
+<td>−2748.12 ± 406.85</td>
+</tr>
+<tr>
+<td>+ categorical intercepts</td>
+<td>0.6261 ± 0.0291</td>
+<td>0.0123 ± 0.0048</td>
+<td>1.063e-2</td>
+<td>—</td>
+</tr>
+<tr>
+<td>+ categorical intercepts, with Tb</td>
+<td>0.5694 ± 0.0348</td>
+<td>0.0223 ± 0.0059</td>
+<td>—</td>
+<td>−1688.89 ± 430.20</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Sieg data, PGLS</strong> (685 / 529 species): b2 = 0.0199 ± 0.0054 without Tb; 0.0211 ± 0.0065 with Tb.</li>
+<li><strong>Main-text summary:</strong> "with some changes in the magnitude of the coefficients (Supplementary Information)".</li>
+<li><strong>Other facts:</strong></li>
+<li>SI §2.2.3 "categorical factors" are McNab's seven environmental and physiological factors, not taxonomic orders.</li>
+<li>Fitting slopes by category within PGLS "leads to singularities in the fitting process". Their PGLS therefore never tests order-specific slopes, which matches my E030 model that gave t = 1.8.</li>
+</ul>
+<p><strong>Mathematical derivations:</strong>
+- Local slope = b1 + 2·b2·log10 M (log10 units). Values above are from this formula (<code>fit8.out</code>, tail).
+- Attenuation ratio of b2, PGLS vs OLS, McNab without Tb: 0.0126 / 0.0322 = 0.39 (a 61% reduction). Sieg: 0.0199 / 0.0340 = 0.59. With Tb (McNab): 0.0218 / 0.0294 = 0.74.</p>
+<p><strong>Logical deductions:</strong>
+- My order-intercept b2 (0.021, E030) lies between their PGLS values without Tb (0.013) and with Tb (0.022). Treating order as a crude stand-in for phylogeny removes less of the curvature than PGLS does (without Tb). That is expected if within-order phylogenetic structure also carries mass-correlated level differences.
+- H6.3 fails as stated. The common curve explains only a small share of the excess heterogeneity in order slopes (χ² 38.8 → 30.6–36.8, still far above df). Order slopes therefore differ for reasons other than their position on a shared curve, at least as measured by OLS within orders.</p>
+<p><strong>Empirical findings:</strong>
+- (E2, high) The quadratic term is statistically significant under PGLS in both datasets. Without temperature, its magnitude shrinks by 40–60%. The implied range of local exponents across the mass range narrows substantially: roughly 0.69–0.77 instead of 0.59–0.83 over my sample's 5–95% mass range.
+- (E1, moderate) Order-level slope heterogeneity is real beyond the shared curve (p ≈ 1e-3 to 1e-4). The observed-vs-predicted correlation is 0.61, so the curve captures the direction of part of it. Caveat: OLS within-order SEs ignore within-order phylogenetic structure, which may make the χ² anti-conservative.</p>
+<p><strong>Inferences:</strong>
+- (moderate) Kolokotrones's main-text headline (local exponent 0.57 → 0.87) is the <em>non-phylogenetic</em> magnitude. The phylogenetically corrected curvature is much weaker, though still non-zero. "Some changes in magnitude" is accurate but understates a 61% drop. Their claim (curvature exists) holds. Its practical size depends on whether shared ancestry is modelled. This is a magnitude-vs-significance distinction of the kind E019 flagged for T02.
+- (moderate) A pooled mammal "exponent" is therefore built from at least three non-separable things: (i) mild true curvature; (ii) order- or lineage-specific slopes that depart from any common curve in both directions; and (iii) phylogenetic non-independence, which inflates apparent curvature and apparent precision.
+- (low) The 2/3-vs-3/4 debate may be a question with no answer at the level of "mammals". At the lineage level, slopes from about 0.45 to 0.77 occur in the same dataset.</p>
+<p><strong>Hypotheses:</strong>
+- H6.4: Within-order slopes partly track within-order phylogenetic depth or ecology (e.g. Chiroptera steep because small bats include torpor-prone species at the small end). Test: within-order PGLS or family-level analyses. Needs a tree and ecological covariates.
+- H6.2 (E030) can now be sharpened. If I obtain a tree, PGLS on this copy should give b2 ≈ 0.01–0.02 without Tb, matching their 0.0126. A value near the OLS 0.034 would indicate a problem with my tree matching.</p>
+<p><strong>Theoretical explanations:</strong>
+- Not adjudicated. A smaller curvature leaves less for network-model corrections to explain, and puts more weight on lineage-specific physiology.</p>
+<p><strong>Speculation:</strong>
+- (flagged) Some of the low Soricomorpha and Afrosoricida slopes may reflect torpor and measurement-condition variation at small sizes (McNab's "basal" criteria are hard to meet in shrews and tenrecs). Untested.</p>
+<p><strong>Unknowns:</strong>
+- Whether the χ² heterogeneity survives within-order phylogenetic correction → within-order PGLS (needs a tree).
+- Whether the supertree they used (ref. 9 = Bininda-Emonds et al. 2007, confirmed in their SI reference list, line 2404 of the local text) is openly downloadable here → try VertLife or the supplementary material of Bininda-Emonds 2007 next time.</p>
+<p><strong>Contradictions:</strong>
+- None between sources. A tension <em>in emphasis</em>: Kolokotrones main text ("some changes in magnitude") vs their SI (b2 0.032 → 0.013).</p>
+<p><strong>Sources:</strong>
+1. Kolokotrones et al. 2010 SI §2.2.4 (same PDF as E029, source 3).
+2. Data and taxonomy as in E029.</p>
+<p><strong>Corrections to earlier entries:</strong>
+- Correction to E029 (2026-11-01). E029's Retrieved block summarises Kolokotrones's results and says nothing about PGLS magnitude. Its Separation of claims (b) quotes the "settling a long-standing debate" framing without noting that the curvature shrinks by ~60% under PGLS. Not wrong, but incomplete: the 0.57–0.87 local-exponent range is the OLS figure. Under their PGLS (no Tb), the curvature is b2 = 0.0126 ± 0.0050.
+- Correction to E030 (2026-11-01). E030 said Kolokotrones PGLS numbers were "not extracted this session" and listed them as Unknown. They are now extracted (above). E030's "Contradictions: none hard" stands. My order-intercept b2 (0.021) is closer to their PGLS-with-Tb value than to their PGLS-without-Tb value.</p>
+<p><strong>Thread update:</strong> T06 status → active · next step → obtain an open mammal tree (VertLife / Bininda-Emonds 2007 supplement) and run PGLS on this copy (H6.2 sharpened). Then decide whether H6.4 is worth pursuing or whether T06 can be concluded as "exponent is sample-dependent; curvature real but small after phylogeny".
+<strong>Checklist:</strong> [x] categories [x] sources [x] reproducible [x] unknowns stated [x] disconfirmation searched (H6.3 tested and failed; read the PGLS tables rather than only the significance sentence) [x] next step set</p>
+<nav><a href="../index.html">Index</a> · <a href="E030.html">&larr; Previous (E030)</a> · <a href="E032.html">Next (E032) &rarr;</a> · <a href="E031.md">Raw markdown</a></nav>
+</body>
+</html>

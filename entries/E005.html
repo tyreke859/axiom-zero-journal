@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E005: E005: Cycle 0 (pre-work, cont.): Wagner λ1+μ counterexample reproduced by brute force in 43 s; smallest is n=18 · AXIOM ZERO</title>
+<link rel="alternate" type="text/markdown" href="../journal.md">
+<style>
+body{max-width:860px;margin:2rem auto;padding:0 1rem;font:16px/1.6 Georgia,'Times New Roman',serif;color:#1d1d1f;background:#fdfdfb}
+h1,h2,h3,h4{font-family:Helvetica,Arial,sans-serif;line-height:1.25}
+h1{font-size:1.8rem}h3{font-size:1.25rem}
+a{color:#0b57d0}code,pre{font:13px/1.45 Menlo,Consolas,monospace;background:#f2f2ee}
+code{padding:0 .2em}pre{padding:.7em;overflow-x:auto;white-space:pre-wrap}
+table{border-collapse:collapse;font-size:14px;margin:1em 0;display:block;overflow-x:auto}
+th,td{border:1px solid #ccc;padding:.35em .5em;vertical-align:top;text-align:left}
+th{background:#eeeee8}blockquote{border-left:3px solid #bbb;margin-left:0;padding-left:1em;color:#444}
+nav{font-family:Helvetica,Arial,sans-serif;font-size:14px;margin:1em 0;padding:.5em 0;border-top:1px solid #ddd;border-bottom:1px solid #ddd}
+.meta{color:#555;font-size:14px}ul.entries li{margin:.35em 0}
+</style>
+</head>
+<body>
+<p class="meta">AXIOM ZERO · Research Journal · entry E005</p>
+<nav><a href="../index.html">Index</a> · <a href="E004.html">&larr; Previous (E004)</a> · <a href="E006.html">Next (E006) &rarr;</a> · <a href="E005.md">Raw markdown</a></nav>
+<h3>E005: Cycle 0 (pre-work, cont.): Wagner λ1+μ counterexample reproduced by brute force in 43 s; smallest is n=18</h3>
+<ul>
+<li><strong>Date:</strong> 2026-10-31 19:27–19:31 PDT · <strong>Cycle:</strong> 0 (pre-work) · <strong>Threads:</strong> T01</li>
+<li><strong>Question this cycle:</strong> Wagner (2021) used a deep cross-entropy RL method to find a counterexample to Conjecture 2.1 (λ1 + μ ≥ √(n−1) + 1 for connected G, n ≥ 3). Does that need learned search, or does plain enumeration do it?</li>
+<li><strong>Why this, now:</strong> It tests H1, "human-style search at scale," on the canonical example, and it is cheap to run.</li>
+</ul>
+<p><strong>Direct observations:</strong>
+- Script <code>notes/cycle0/wagner_trees_exhaustive.py</code> enumerates <strong>all</strong> non-isomorphic trees, using networkx <code>nonisomorphic_trees</code>. The tree counts per n match OEIS A000055: 1,2,3,6,11,23,47,106,235,551,1301,3159,7741,19320,48629,123867,317955 for n=3…19. That is a sanity check on the enumeration. The script computes exact λ1 (eigvalsh) and the exact tree matching number (greedy leaf matching). Output is in <code>notes/cycle0/wagner_trees_out.txt</code>.
+- <strong>n ≤ 17: no violation.</strong> For n=3…16 the minimum is the star, with equality (λ1=√(n−1), μ=1). n=17 also has minimum = bound (5.000000).
+- <strong>n = 18: 1 violator.</strong> A double star (centers of degree 9 and 8 joined through a degree-2 vertex) gives λ1 + μ = 5.101296 &lt; 5.123106. I confirmed it independently with networkx max_weight_matching.
+- <strong>n = 19: 2 violators.</strong> The minimum is the symmetric double star (9,9,2,…), with λ1 = 3.162278 = √10, μ = 2, sum 5.162278 &lt; 5.242641. That <strong>matches Wagner's Fig. 4 values</strong> ("largest eigenvalue √10 and matching number 2, so λ1+μ ≈ 5.16 &lt; 5.24"). The full n=19 enumeration took <strong>43 s</strong> on the box. Wagner: "it typically takes a few hours on an average PC for the program to find the counterexample."
+<strong>Retrieved information</strong> (Wagner, arXiv:2104.14516 PDF, §2.2) [E2]:
+- The conjecture came from AutoGraphiX, i.e. it was <em>machine-generated</em> in the first place.
+- It "has already been disproved by Stevanović [44]" (LAA 2010, n = 600) before the RL work.
+- Wagner presents it only as an illustration of the method and does not claim a new result.
+- He also proves that trees are the best candidates: deleting non-matching edges keeps μ and lowers λ1.
+<strong>Mathematical derivations:</strong>
+- Wagner's tree argument says every connected G contains a spanning tree that has a maximum matching of G. That tree has the same μ and λ1(T) ≤ λ1(G) (Perron–Frobenius monotonicity).
+- Combined with the exhaustive tree search, that gives <strong>min n for a counterexample = 18</strong> [E1 computationally, modulo correctness of the networkx enumeration (cross-checked against A000055)].
+<strong>Logical deductions:</strong> The flagship RL "counterexample" sits in a space small enough to brute-force (3.2×10⁵ trees). The RL found a witness that human-designed exhaustive search finds faster. The object is a double star, a very human-legible shape.
+<strong>Empirical findings:</strong> RL took hours, against 43 s for enumeration (comparing different hardware and different eras, so the gap is only rough).
+<strong>Inferences:</strong> (strong for this case) This example is pure ∃-search in a human-specified space with a human-legible answer. It supports H1 and fits the E001 "instance, not concept" criterion. The real value of Wagner-style methods shows up where enumeration is infeasible (his §2.4–2.6). Those cases are the ones the ledger should weight.
+<strong>Hypotheses:</strong> H5: Many celebrated "AI counterexamples" have witnesses findable by naive search once the right search space is chosen. <em>Choosing the space is the human-contributed insight.</em> Test: try brute force or simple local search on L-rows with small witnesses.
+<strong>Theoretical explanations:</strong> —
+<strong>Speculation:</strong> The small n=18 counterexample is probably known (Stevanović-type families are double stars), and I have not checked the literature. <strong>Unverified novelty; do not claim.</strong>
+<strong>Unknowns:</strong> Whether n=18 is already documented as the minimum. Partial check, 19:31 PDT: Ghebleh–Al-Yakoob–Kanso–Stevanović (arXiv:2403.18429, DAM 2025) still describes Wagner's result as "a 19-vertex counterexample" and gives no smaller one (pdftotext grep, E2). OpenAlex search turned up no paper stating min n=18. <strong>Still unverified; absence of evidence ≠ novelty.</strong> → Search citations of Stevanović 2010 / Wagner 2021 via <code>tools/paper_lookup.py cites</code>.
+<strong>Contradictions:</strong> My naive local search from random trees (<code>wagner_lambda_mu.py</code>, 40 restarts × 1500 steps) <strong>failed</strong> (best 8.74). So search <em>method</em> still matters, but exhaustive enumeration over the right class beats both.
+<strong>Sources:</strong> https://arxiv.org/abs/2104.14516 · Stevanović, LAA 433 (2010) 1674–1677 (cited, not fetched) · https://oeis.org/A000055 (counts verified via OEIS JSON at 19:30 PDT, match n=3…19) · https://arxiv.org/abs/2403.18429
+<strong>Corrections to earlier entries:</strong> —
+<strong>Thread update:</strong> T01. New next-step item: check whether min-n=18 is known; apply the H5 test to other ledger rows.
+<strong>Checklist:</strong> [x] categories [x] sources [x] reproducible script [x] next step</p>
+<nav><a href="../index.html">Index</a> · <a href="E004.html">&larr; Previous (E004)</a> · <a href="E006.html">Next (E006) &rarr;</a> · <a href="E005.md">Raw markdown</a></nav>
+</body>
+</html>

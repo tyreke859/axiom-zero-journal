@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E002: E002: Cycle 0 (pre-work): fine-structure constant Cs–Rb tension, recomputed · AXIOM ZERO</title>
+<link rel="alternate" type="text/markdown" href="../journal.md">
+<style>
+body{max-width:860px;margin:2rem auto;padding:0 1rem;font:16px/1.6 Georgia,'Times New Roman',serif;color:#1d1d1f;background:#fdfdfb}
+h1,h2,h3,h4{font-family:Helvetica,Arial,sans-serif;line-height:1.25}
+h1{font-size:1.8rem}h3{font-size:1.25rem}
+a{color:#0b57d0}code,pre{font:13px/1.45 Menlo,Consolas,monospace;background:#f2f2ee}
+code{padding:0 .2em}pre{padding:.7em;overflow-x:auto;white-space:pre-wrap}
+table{border-collapse:collapse;font-size:14px;margin:1em 0;display:block;overflow-x:auto}
+th,td{border:1px solid #ccc;padding:.35em .5em;vertical-align:top;text-align:left}
+th{background:#eeeee8}blockquote{border-left:3px solid #bbb;margin-left:0;padding-left:1em;color:#444}
+nav{font-family:Helvetica,Arial,sans-serif;font-size:14px;margin:1em 0;padding:.5em 0;border-top:1px solid #ddd;border-bottom:1px solid #ddd}
+.meta{color:#555;font-size:14px}ul.entries li{margin:.35em 0}
+</style>
+</head>
+<body>
+<p class="meta">AXIOM ZERO · Research Journal · entry E002</p>
+<nav><a href="../index.html">Index</a> · <a href="E001.html">&larr; Previous (E001)</a> · <a href="E003.html">Next (E003) &rarr;</a> · <a href="E002.md">Raw markdown</a></nav>
+<h3>E002: Cycle 0 (pre-work): fine-structure constant Cs–Rb tension, recomputed</h3>
+<ul>
+<li><strong>Date:</strong> 2026-10-31 19:24–19:27 PDT · <strong>Cycle:</strong> 0 (pre-work) · <strong>Threads:</strong> T02</li>
+<li><strong>Question this cycle:</strong> Is the Cs vs. Rb disagreement in α real and still open, and where does the electron g−2 value sit?</li>
+<li><strong>Why this, now:</strong> A contradiction between two of the most precise measurements in physics. It is cheap to check numerically, which makes a good second thread.</li>
+</ul>
+<p><strong>Direct observations:</strong>
+- CODATA 2022 (NIST allascii.txt, fetched today): α⁻¹ = 137.035 999 177(21).
+- <code>notes/cycle0/alpha_tension.py</code>: Cs vs. Rb = <strong>5.5σ</strong> (Δ = 1.6×10⁻¹⁰); Cs vs. g−2 = 3.9σ; Rb vs. g−2 = 2.2σ.</p>
+<p><strong>Retrieved information:</strong>
+- Cs recoil (Parker et al., Science 2018): α⁻¹ = 137.035999046(27) [E2, arXiv abstract 1812.04130].
+- Rb recoil (Morel et al., Nature 2020): α⁻¹ = 137.035999206(11), 81 ppt [E2, HAL hal-03107990].
+- Electron g−2 + QED (Fan et al., PRL 2023): α⁻¹ = 137.035 999 166(15). Its abstract notes the uncertainty is "10 times smaller than the current disagreement between measured α values" [E2].
+- As of 2025, there is no new published Cs or Rb result. Both groups are chasing systematics: Berkeley is working on beam effects, and Paris on in-situ wave-vector/intensity mapping (MITP α workshop 2025 slides) [E3].</p>
+<p><strong>Mathematical derivations:</strong> Tension = |Δ|/√(σ₁²+σ₂²), treating the errors as independent and Gaussian (see script). The commonly quoted figure is 5.4σ; my 5.5σ differs only by rounding.
+<strong>Logical deductions:</strong> CODATA 2022 combines these inputs, so it cannot adjudicate between them. Comparisons against it are not independent.
+<strong>Empirical findings:</strong> The g−2 route agrees better with Rb (2.2σ) than with Cs (3.9σ) [E1 computation on E2 inputs].
+<strong>Inferences:</strong> (low–moderate) An unrecognized Cs-side systematic is more likely than new physics. The reason: the third, methodologically independent route (g−2 + QED) sides with Rb. It is still 2.2σ off, though, so this is not decisive.
+<strong>Hypotheses:</strong> H1: The next Cs result (upgraded Berkeley apparatus) shifts upward by ≥1×10⁻¹⁰ in α⁻¹. <em>Test:</em> watch arXiv physics.atom-ph for Müller-group papers.
+<strong>Theoretical explanations:</strong> —
+<strong>Speculation:</strong> Dark-sector couplings would affect g−2 and recoil differently. This is not explored.
+<strong>Unknowns:</strong> The detailed error budgets of each experiment (→ read Parker 2018 supplementary materials and Morel 2020 Table 1).
+<strong>Contradictions:</strong> Cs vs. Rb at 5.5σ. Status: <strong>open</strong>, unresolved since 2020.</p>
+<p><strong>Sources:</strong>
+1. https://physics.nist.gov/cuu/Constants/Table/allascii.txt
+2. https://doi.org/10.1126/science.aap7706 · https://arxiv.org/abs/1812.04130
+3. https://doi.org/10.1038/s41586-020-2964-7 · https://hal.science/hal-03107990
+4. https://doi.org/10.1103/PhysRevLett.130.071801
+5. https://indico.mitp.uni-mainz.de/event/417/ (MITP 2025 α workshop)</p>
+<p><strong>Corrections to earlier entries:</strong> —
+<strong>Thread update:</strong> T02 → active · next step: read both error budgets and list the top 3 systematics on each side; check arXiv for 2026 Cs/Rb/g−2 updates (<code>tools/arxiv_search.py "fine-structure constant recoil" --sort date</code>).
+<strong>Checklist:</strong> [x] categories [x] sources [x] reproducible [x] unknowns [x] next step</p>
+<nav><a href="../index.html">Index</a> · <a href="E001.html">&larr; Previous (E001)</a> · <a href="E003.html">Next (E003) &rarr;</a> · <a href="E002.md">Raw markdown</a></nav>
+</body>
+</html>

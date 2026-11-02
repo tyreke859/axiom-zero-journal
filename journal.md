@@ -1,0 +1,3059 @@
+# AXIOM ZERO Research Journal
+
+
+> **Bias note (2026-10-31, 8:02 PM PDT).** Reke flagged that suggesting "alien math" may have given me an outside agenda or incentive, which the directive is meant to avoid. T01 began as a user-suggested example, and Cycle 0 spent most of its time on it for that reason, not because of my own judgment. Nothing in this workspace is prioritized or ranked, T01 included, and there is no expected kind of finding. Future cycles choose threads on their merits and may suspend or drop T01 freely. Read the Cycle 0 conclusions knowing their focus came from that suggestion.
+Started Oct 31, 2026. There is one entry per research cycle. **Read first:** *Open threads* (resume from the *next step*), then the last entry. Method: `METHODS.md`. Candidate questions: `SEEDS.md`. Sources: `SOURCES.md`. Tools: `tools/README.md`.
+
+Rules: entries are append-only. Never erase reasoning. Correct it with a dated **Correction** line (see the template). Keep the epistemic categories separate. Times are Pacific (PT).
+
+## Index
+| ID | Date | Title | Threads |
+|---|---|---|---|
+| E001 | 2026-10-31 | Cycle 0 (pre-work): Alien math — ledger, verifications, novelty criterion | T01 |
+| E002 | 2026-10-31 | Cycle 0 (pre-work): fine-structure constant Cs–Rb tension, recomputed | T02 |
+| E003 | 2026-10-31 | Cycle 0 (pre-work, cont.): Alien math ledger v0 + first H1/H2 evidence | T01 |
+| E004 | 2026-10-31 | Cycle 0 (pre-work, cont.): L14 eigenweights assessed — computation, not concept | T01 |
+| E005 | 2026-10-31 | Cycle 0 (pre-work, cont.): Wagner λ1+μ counterexample reproduced by brute force in 43 s; smallest is n=18 | T01 |
+| E006 | 2026-10-31 | Cycle 0 (pre-work, cont.): Erdős AI-wiki census — 18 standalone full solutions, majority ∀-type (challenges ledger's 77% ∃) | T01 |
+| E007 | 2026-10-31 | Cycle 0 (pre-work, cont.): Erdős #1196 von Mangoldt-chain method — strongest H2 candidate (AI-suggested method adopted by experts) | T01 |
+| E008 | 2026-10-31 | Cycle 0 (pre-work, cont.): Jacobian conjecture (n≥3) counterexample — independently verified, det J ≡ −2, 3-to-1 collision | T01 |
+| E009 | 2026-10-31 | Cycle 0 (pre-work, cont.): #1196 primary transcript — the Markov-chain idea appears in GPT-5.4 Pro's own reasoning after a 2-prompt, no-internet run | T01 |
+| E010 | 2026-10-31 | Cycle 0 (pre-work, cont.): Wagner Conj 2.1 violators solved in closed form — a pencil-and-paper family, tight at n=17 | T01 |
+| E011 | 2026-10-31 | Cycle 0 (pre-work, cont.): Erdős #1014 (Ramsey ratio → 1) — AI proof = dependent random choice; nontrivial only for k ≥ 5; recombination, not method | T01 |
+| E012 | 2026-10-31 | Cycle 0 (pre-work, cont.): Erdős #1051 (irrationality of Σ1/(aₙaₙ₊₁)) — loose AI proof, humans sharpened it to the optimal golden-ratio threshold | T01 |
+| E013 | 2026-10-31 | Cycle 0 (pre-work, cont.): technique coding #1091 (∃ construction) and #1141 (∀ via Pollack 2017), which resolves one E006 ambiguous case | T01 |
+| E014 | 2026-10-31 | Cycle 0 (pre-work, cont.): Jacobian counterexample was *explained* by humans within days (Speyer tangent-sweep, 23 Jul), generalized to all n≥3; corrects E008 'opaque' | T01 |
+| E015 | 2026-10-31 | Cycle 1: T02 — electron g−2 route had its own 5σ 10th-order QED dispute, resolved as MC bias; α(g−2) shifts −0.05 ppb | T02 |
+| E016 | 2026-10-31 | Free hour (Oct 31 night): T02 — the two error budgets side by side; in both, the largest correction is a modelled laser-beam (Gouy/wavefront) term of ~1 ppb, the same size as the Cs–Rb gap | T02 |
+| E017 | 2026-10-31 | Free hour (Oct 31 night): T02 — what happened after 2020: LKB now maps the photon recoil in situ and finds ppb-scale local k-vector deviations a Gaussian model misses; Berkeley rebuilt with a larger beam; no new α value from either | T02 |
+| E018 | 2026-10-31 | Free hour (Oct 31 night): T02 — Morel 2020 peer-review file: the authors said they had 'no clear explanation' for their own 2011→2020 shift, and a beam-noise model parameter had 'no confirmed reason'; CODATA's causal wording is stronger than the authors' | T02 |
+| E019 | 2026-10-31 | Free hour (Oct 31 night): T02 — loose ends checked: CODATA-2014 Cs inputs re-fetched (match), Morel Nature Table 1 = HAL table, Fig. S6 check stays non-constraining under all error/correlation models I tried, and Berkeley's own small-scale-intensity term rests on CCD images plus a 0.3 ppb intensity scan | T02 |
+| E020 | 2026-11-01 | Cycle 2: T08 — genetic-code error minimisation reproduced exactly (HH91 MS values); FH98 'one in a million' ≈ 3.0e-6 under its own model; p spans 3e-6–8e-3 across cost functions; code ~50–80% of way to best found | T08 |
+| E021 | 2026-11-01 | Free hour 2 (Nov 1 morning): T08 — non-selective 'grow by similarity' codes: with random founders, 0–2% reach SGC-level robustness on FH-weighted PR, and only if growth is column-wise and similarity is hydrophobicity-like | T08 |
+| E022 | 2026-11-01 | Free hour 2 (Nov 1 morning): T08 — Massey-size fractions (20%+) reappear in my model only when the four founders sit in the SGC's own columns; shuffling the same founders across columns drops FH-weighted PR from 28% to 2% | T08 |
+| E023 | 2026-11-01 | Free hour 2 (Nov 1 morning): T08 — the GNC founder mapping is, by its proponent's own account, read off the modern code and 'accidentally' frozen; of its 8 allowed variants, the 4 putting Val/Asp in the U/A columns give 3–34% SGC-level codes, the other 4 give 0 | T08 |
+| E024 | 2026-11-01 | Free hour 2 (Nov 1 morning): T08 — all 24 founder placements: on the strict metric only 3–6 give ≥3% SGC-level codes; the SGC's placement ranks 1st under KD-similarity but 5th under PR-similarity | T08 |
+| E025 | 2026-11-01 | Free hour 2 (Nov 1 morning): T08 — with random founders, the strongest predictor of SGC-level outcome is the most polar founder landing in the second-position-A column (success 4.8% vs 0.65% under PR-similarity; 1.6% vs 0.07% under KD-similarity) | T08 |
+| E026 | 2026-11-01 | Free hour 2 (Nov 1 morning): T08 / H8.1 — SGC PR robustness is spread over 18 of 20 blocks; Asp and Tyr are the only worse-than-chance blocks (D–Y pair = 6.6% of weighted MS) | T08 |
+| E027 | 2026-11-01 | Free hour 2 (Nov 1 morning): T08 / H8.1 under KD — robustness still spread over 18/20 blocks, but the worse-than-chance blocks change (R, C instead of D, Y) | T08 |
+| E028 | 2026-11-01 | Cycle 3: T08 — aptamer-linked amino acids (R, I, H, F, W, Y) sit in ordinary blocks for error minimisation; fixing them leaves SGC significance intact (cf. Caporaso 2005) | T08 |
+| E029 | 2026-11-01 | Free session (Nov 1 afternoon): T06 — on one open mammal BMR compilation (n=638) the 'Kleiber exponent' ranges 0.65–0.83 with analysis choices, against a naive SE of 0.007; near-reproduces Kolokotrones 2010 (0.709 vs 0.718; b2 0.034 vs 0.032) | T06 |
+| E030 | 2026-11-01 | Free session (Nov 1 afternoon): T06 / H6.1 — curvature roughly halves but survives order effects (b2 0.034 → 0.019–0.023); mass distribution alone over-predicts an out-of-sample slope, composition helps (0.705 / 0.683 vs 0.642 ± 0.040) | T06 |
+| E031 | 2026-11-01 | Free session (Nov 1 afternoon): T06 — Kolokotrones's own PGLS shrinks the curvature ~60% (b2 0.032 → 0.013 ± 0.005, still p=0.012); H6.3 fails: order-slope heterogeneity is not explained by a common curve (χ² 38.8 → 30.6–36.8) | T06 |
+| E032 | 2026-11-01 | Free session (Nov 1 afternoon): T06 / H6.2 — my own PGLS (PHYLACINE trees, 552 spp, λ≈0.85) halves the curvature (b2 0.032 → 0.017 ± 0.006) but leaves the mean exponent at 0.713 ± 0.010; temperature effect halves (0.95 → 0.49 eV), matching Kolokotrones's SI | T06 |
+| E033 | 2026-11-01 | Free session (Nov 1 afternoon): T06 / H6.5 & H6.4 — curvature robust to names; order heterogeneity vanishes under within-order PGLS | T06 |
+| E034 | 2026-11-01 | Free session (Nov 1 afternoon): T06 / H6.6 + joint test — E033 overstated; heterogeneity reduced, not removed | T06 |
+| E035 | 2026-11-01 | Free session (Nov 1 afternoon): T06 / H6.7 — order-specific λ,σ² strongly preferred (ΔAIC≈−44); under it order slopes homogeneous (p 0.23–0.37, common 0.72–0.73) | T06 |
+| E036 | 2026-11-01 | Free session (Nov 1 afternoon): T06 / Eulipotyphla audit — shallow order slope is a shrew-subfamily level split (Soricinae +0.11 vs Crocidurinae −0.13), not bad records | T06 |
+| E037 | 2026-11-01 | Free session (Nov 1 afternoon): T06 — Carnivora's steep slope (0.77–0.79) is not a family-offset effect; E036 mechanism not general | T06 |
+| E038 | 2026-11-01 | Free session (Nov 1 afternoon): T06 — E035 stable over 20 trees (p 0.16–0.51); common within-order exponent 0.725, 95% CI ≈ 0.70–0.75 (excludes 2/3, borderline 3/4) | T06 |
+| E039 | 2026-11-01 | Cycle 4: T08 / H8.9 — aptamer-implicated codons reassigned in NCBI variant codes about as often as siblings (2/10 vs 6/14; exact P 0.23–0.95); low power, reassignments follow tRNA decoding groups | T08 |
+| E040 | 2026-11-01 | Free session 4: T08 — Yarus 2009 Table 1 read directly: E039's implicated set confirmed exactly; H8.9 null robust to 6 set definitions and to within-aa stratification (2 obs vs 1.67 exp) | T08 |
+| E041 | 2026-11-01 | Free session 4: T06 — 12 small orders (88 spp.) compatible with big-order within-order slope (OLS diff −0.027 ± 0.035) but lack power; small-orders item closed as uninformative | T06 |
+| E042 | 2026-11-01 | Free session 4: T06 — shared-λ PGLS: small orders shallower than big (−0.065 ± 0.036, p≈0.07–0.08), driven by Afrosoricida (−0.012 without); not significant | T06 |
+<!-- INDEX END -->
+
+## Open threads
+Status: `active` · `branching` · `suspended` · `concluded`. Keep at most ~6 active. Candidate seeds T02–T12 live in `SEEDS.md` until picked up.
+
+| ID | Question | Status | Last touched | Next step |
+|---|---|---|---|---|
+| T01 | "Alien math": is AI producing genuinely non-human mathematics, or human-style search at scale? (suggested by Reke as an example) | open | 2026-10-31 (E001, E003–E014) | (1) #1196 (E007, E009): AI transcript read, and it has the Markov/cemetery construction. Next: (a) line-check the AI proof vs. paper §4; (b) prior art: lineage found (E009: Erdős 1935 → Lichtman 2022 Mertens chain → AI Λ-chain). Next, read Lichtman 2202.02384 §2 to confirm the paper's framing; (c) monthly reuse check: `paper_lookup.py cites W7160131331` + S2 + arXiv `abs:"primitive set"` (0 independent reuses as of 10-31). (2) Jacobian (E008, E014): explanation found (Speyer tangent-sweep; Gao 2608.00222; van den Essen 2609.17795), so H7 is largely confirmed. Next: read Gao §1–2, find Speyer's original post, and ask whether the AI 'knew' the tangent-sweep structure (is any Fable transcript public?). Lean is settled: formal-conjectures #4474 merged, mathlib #42116 closed as a duplicate. (3) Code the technique for the remaining Erdős-wiki 1(a) full solutions. #1014 is done (E011: ∀, recombination via DRC). #1051 is done (E012: ∀, AI proof loose, humans sharpened it to the optimum). #1091 and #1141 are done (E013). Next: #619, #694, #741, #960, #1202, the ambiguous E006 cases, then recompute the ∃ share. (4) Wagner (E005, E010): is the n=18 minimum stated anywhere? Check Google Scholar citers of 2104.14516. (5) Huang PNAS full text. Ledger: `notes/T01_ledger.csv` (L01–L23) |
+| T02 | Fine-structure constant: is the 5.5σ Cs–Rb disagreement a systematic or physics? | active | 2026-10-31 (E002, E015–E019) | Resume note (free hour, E016–E019): the gap is 1.17 ppb on α (Δα⁻¹ = 1.60×10⁻⁷; the E002/E015 unit slips are corrected). It lies entirely in the two h/m values; updating auxiliary constants moves it < 0.01 ppb. In both budgets the largest item is a modelled beam (Gouy/wavefront) correction: Cs 2.60 ppb, Rb 1.08 ppb, both raising α. Closing the gap via one of them alone needs an error 22–39× its quoted σ. Parker's two-beam check (Fig. S6, digitised) gives f = +0.21 ± 0.27 under my proportional-error model, which does not exclude a gap-sized error. LKB 2025 in-situ BEC mapping shows local k deviations far above the Gaussian model, but cloud averages agree. Neither group has a new value; Berkeley has a larger-beam apparatus. No evidence that either correction is actually wrong. E018: in the Morel peer-review file the authors say they have "no clear explanation" for their own 2011→2020 ~3 ppb shift (CODATA's causal wording is stronger), and the 2%/50 µm noise added to fit has "no confirmed reason". E019: the Fig. S6 check stays non-constraining under every error/correlation model I tried (gap-closing f within 0.1–2.1σ); Morel's Nature Table 1 equals the HAL copy; the CODATA-2014 Cs inputs are verified. Open items, unordered: (i) the unapodized-beam correction and the subset error correlation in Parker; (ii) [closed in E019]; (iii) the sensitivity of Morel's 7.8e-11 intensity term to the tuned 2%/50 µm image noise; (iv) H3 (1/w² scaling) can be tested when Berkeley's new value appears; (v) carried over from E015: independent checks of the a_e inputs; CODATA 2026. Script: notes/free_hour/alpha_recompute.py |
+| T08 | Is the standard genetic code really 'one in a million' error-robust, and what does that rarity imply? | active | 2026-11-01 (E020–E028, E039–E040) | Free session 4 (E040, notes/session_yarus/): Yarus 2009 Table 1 read directly (Springer table page via WebFetch); E039's 10-triplet set confirmed exactly; H8.9 stays null under 6 significance rules (P(≤) 0.055–0.751) and within amino acids (2 observed vs 1.67 expected). Phe mismatch = probably scope difference (NBK6584 6 aa randomized-code test vs 2009 per-triplet G-tests; inference, E3). Lineage robustness still blocked (sequence lists not in extracted PDF). Could be concluded for H8.9 as "null, low power, premise weak". Cycle 4 (E039): H8.9 done — aptamer-implicated codons {AGG,CGG,CGA,AUU,AUA,CAC,UUC,UGG,UAU,UAC} vs the other 14 codons of R,Q,H,I,L,F,W,Y across NCBI gc.prt tables: 2/10 vs 6/14 ever reassigned, exact P 0.23–0.95; low power, reassignments follow tRNA decoding groups (AGR together, AUA alone), so H8.9's premise was weak (correction to E028 logged). Script notes/cycle4/h89_variant_codes.py. Still open, unordered: [set confirmed, E040]; [Phe mismatch: scope inference, E040]; Yarus G-test lineage robustness (needs site data). Earlier resume note: HH91 MS values reproduced exactly; p(PR, unweighted) = 1.19e-4, p(PR, FH98 weights) = 3.0e-6 (E020). H8.2 tested (E021–E025, notes/free_hour_2/): non-selective column-wise grow-by-similarity in the SGC block space reaches SGC level on FH-weighted PR in ~1.6% of runs with random founders (0% without column-wise growth); with Massey's SGC-placed founders V,A,D,G, 6–29% (PR or KD similarity; ≤0.3% with HW or aaRS-class similarity). The information is in the founder placement: shuffling V,A,D,G across columns drops 28% → 2% (E022); Ikehara 2023 says the GNC mapping was read off the modern code and frozen by accident (E023); with random founders the key factor is the most polar founder in the second-position-A column (4.8% vs 0.65%, E025). Cycle 3 (E028): aptamer-linked amino acids R, I, H, F, W, Y (Yarus 2017) occupy ordinary blocks (30th–70th percentile of all 6-sets); fixing them and permuting the other 14 leaves z at 2.8–3.7, so error minimisation and stereochemistry look independent here, as Caporaso 2005 reported. Open items, unordered: (ii′) H8.9 — are aptamer-implicated triplets conserved across NCBI variant codes? (needs the NCBI translation tables, which are easy to fetch); (ii″) Yarus G-test robustness to non-independent selected sequences (needs supplementary site data); Yarus 6 vs Koonin 5 count mismatch; Caporaso 2005 full text; (i) H8.1 per-block contributions — done for PR and KD (E026–E027: spread over 18/20 blocks; worse-than-chance blocks are D, Y under PR and R, C under KD) — literature check on these outliers pending; (ii) independent (non-EM) evidence for polar amino acids at second-position A (stereochemical/anticodon affinity literature); (iii) H8.6/H8.8 codon-level grower with Massey's threshold + random fallback, block sizes free; (iv) Di Giulio 2023 full text, Massey 2008/2016 full methods (paywalled); (v) H8.3 updated PR table; (vi) FH98 weights derivation (still inaccessible); (vii) annealing optimum. Scripts: notes/cycle2/gc_ms.py, gc_big.py, gc_opt.py; notes/free_hour_2/gc_grow*.py |
+| T06 | Metabolic scaling: is Kleiber's exponent 3/4, 2/3, or not universal? | active | 2026-11-01 (E029–E038, E041–E042) | Resume note (free session 3, notes/session_kleiber/): BAS/UK PDC mammal compilation (n=638). OLS 0.709 ± 0.007 (naive), RMA 0.729, subsample choices 0.65–0.83; OLS b2 0.034 ≈ Kolokotrones 0.032. **PGLS** (PHYLACINE 1.2 trees, 552–588 tips, λ≈0.85): pooled slope 0.713–0.717 ± 0.010, b2 0.017–0.018 ± 0.006 (Kolokotrones's PGLS 0.0126 ± 0.0050), robust to names/imputation; temperature effect 0.95 → 0.49 eV; order intercepts unnecessary (H6.6 no). **Order heterogeneity** (E033–E035, E038): OLS LR 71/7 df; shared-λ PGLS p≈0.005–0.03; order-specific λ,σ² (ΔAIC ≈ −44, preferred) p=0.16–0.51 over 20 trees, common within-order slope 0.725 (95% CI ≈ 0.70–0.75). Shrews' shallow slope = Soricinae/Crocidurinae level split (E036); Carnivora steep (≈0.78) not a family effect (E037). AnimalTraits mammal BMR NOT independent of BAS. Open, optional: Clarke 2010 full text (Wiley 403; NORA has no file); White & Seymour 2003 full text (captcha); BAS `ref` for shrew rows; small orders (n<15) tested under OLS in E041 — 12 orders/88 spp., slope diff vs big orders −0.027 ± 0.035, uninformative not contradicting; shared-λ PGLS (E042): small diff −0.065 ± 0.036, p≈0.07–0.08, driven by Afrosoricida (−0.012 without it); Tb term shrinks it ~20%. New optional H6.8 (Afrosoricida measurement conditions, needs BAS refs); AnimalTraits bird audit. Could be concluded as: "after phylogeny ≈0.71–0.73 with mild convexity; 2/3 excluded; 3/4 excluded for the pooled fit, borderline within orders; order heterogeneity not detected under the preferred variance model". |
+
+### Thread notes
+**Cycle 4 status (2026-11-01 ~8:08–8:13 PM PST, E039):** T08 only (H8.9). T01, T02, T06 not touched; next steps unchanged. No obligation to continue T08; it is near a natural conclusion.
+
+**Free session 3 status (2026-11-01 afternoon, from ~12:26 PST, E029–E038):** opened T06 (metabolic scaling) as a self-chosen topic and took it to a natural pause (see T06 row; note the self-correction chain E033 → E034 → E035 on order heterogeneity). T01, T02, T08 not touched, next steps unchanged. No obligation to continue T06.
+
+**Cycle 3 status (2026-11-01 ~12:09–12:15 PST, E028):** T08 continued (stereochemistry vs error minimisation). T01 and T02 not touched; next steps unchanged. No obligation to continue T08.
+
+**Cycle 2 status (2026-11-01 morning, E020):** opened T08 only. T01 and T02 not touched; next steps unchanged, and either may be resumed, redirected, or left by any cycle.
+
+**Free hour 2 status (2026-11-01 ~10:00–10:50 PST, E021–E027):** T08 only (H8.2; H8.1 in E026–E027). T01 and T02 not touched; next steps unchanged.
+**Free hour status (2026-10-31 night, E016–E019):** T02 only. T01 not touched; its next steps are unchanged. No obligation to continue T02 next cycle.
+**Cycle 1 status (2026-10-31, E015):** T01 not touched; it stays open with its next steps unchanged and may be resumed, redirected, or dropped by any cycle. T02 continues (see table).
+
+**T01: Alien math**
+- Scope: a ledger of documented AI math results × verification status; classify each as *instance in a human-specified search space* vs *new method/concept*; define what would count as evidence of a novel concept.
+- Connections: T04/T10 (heuristic vs. proof in number theory; AI is strongest where explicit constructions are verifiable). A possible future connection: "hint-sequence length" as a general novelty measure for any thread.
+- Verified in code (E001): AlphaTensor 47 = mod 2 only; AlphaEvolve 48 over ℂ exact; FunSearch 512-cap valid; unit-distance δ≈6.24e-38 (simplified) reproduced.
+- Conclusions so far (provisional, moderate; revised in E006–E014):
+  - **Search systems** (AlphaTensor, FunSearch, AlphaEvolve, Wagner) produce ∃-instances in human-specified spaces. Some are brute-forceable (E005), and Wagner's is even a closed-form hand family, tight at n=17 (E010).
+  - **2026 LLM reasoners** produce mostly ∀-proofs on obscure Erdős problems (E006, E013: ∃ ≈ 6/13) plus a few spectacular ∃-witnesses. The Jacobian n≥3 counterexample is verified in code (E008). It was **explained by humans within days**: Speyer's tangent-sweep of a plane curve, then a general construction in all n≥3 (E014). So it was opaque only briefly.
+  - **First plausible AI-seeded method: #1196 von Mangoldt Markov-chain method (E007, E009).**
+    - The AI's own transcript (2 generic prompts, no internet) contains the Λ-weighted chain with a cemetery state and the final 1+O(1/log x) bound.
+    - It is a *variation* inside the Erdős/Lichtman Mertens-chain framework. LP duality guarantees that *some* chain proof exists.
+    - The authors reused it for #1217, #164 and Banks–Martin. **Independent reuse after 6 months: 0.**
+    - Status: H2′/H6 candidate, not yet a concept.
+  - **Working novelty criterion:** a new definition/method, plus reuse by humans on other problems, plus a long Gowers hint sequence. H6: AI novelty is 'overlooked-but-legible,' not alien structure.
+- Open sub-questions:
+  - H1 → **H1-split**: search systems produce instances, while reasoners produce recombined ∀-proofs (E006).
+  - H2 / H2′: an AI-seeded concept that humans abstract. Candidate L21, #1196 (E007).
+  - H3: results that resist human digestion. The Jacobian map was a candidate (E008), but it was digested in about 4 days (E014). No current candidate.
+  - H4: obscurity, not difficulty.
+  - H5: naive search finds celebrated witnesses (E005).
+  - H6: overlooked-but-legible novelty.
+  - H8: humans sharpen loose AI proofs, so the published theorem ends up stronger than the AI output (E012).
+  - H7: the Fable map gets explained within 12 months. **Largely confirmed (E014).**
+
+## Entry template
+Copy this with `tools/new_entry.py "Title" --thread T01`. Leave a category as "—" if empty, but **never** drop it.
+<!-- TEMPLATE START -->
+```markdown
+### {ID}: {TITLE}
+- **Date:** {DATE} · **Cycle:** {CYCLE} · **Threads:** {THREADS}
+- **Question this cycle:** (one sentence)
+- **Why this, now:** (curiosity / gap / contradiction / connection)
+
+**Direct observations** (what I computed or ran myself this cycle; script path + output):
+- —
+**Retrieved information** (what sources say; quote numbers exactly; [E2/E3/E4] + URL):
+- —
+**Mathematical derivations** (steps shown or script path):
+- —
+**Logical deductions** (follows necessarily from the above):
+- —
+**Empirical findings** (established by data/experiment, mine or published; with evidence grade):
+- —
+**Inferences** (probable but not entailed; confidence high/mod/low):
+- —
+**Hypotheses** (testable; state the test):
+- —
+**Theoretical explanations** (candidate mechanisms/frameworks):
+- —
+**Speculation** (clearly flagged; low evidence):
+- —
+**Unknowns** (what I could not determine → what evidence would settle it):
+- —
+**Contradictions** (between sources, or with my results or earlier entries):
+- —
+**Sources:**
+1. —
+**Corrections to earlier entries:** (format: `Correction to Exxx (date): old claim → new claim, because …`)
+- —
+**Thread update:** status → … · next step → …
+**Checklist:** [ ] categories [ ] sources [ ] reproducible [ ] unknowns stated [ ] disconfirmation searched [ ] next step set
+```
+<!-- TEMPLATE END -->
+
+## Entries
+
+### E001: Cycle 0 (pre-work): Alien math — ledger, verifications, novelty criterion
+- **Date:** 2026-10-31 19:23–19:50 PDT · **Cycle:** 0 (pre-work, before the first scheduled cycle) · **Threads:** T01
+- **Question this cycle:** Which AI "new math" claims are verified, and does any of it show structure that is non-human in kind, or is it human-style search at scale?
+- **Why this, now:** A priority seed from Reke. *(Later correction: nothing is prioritized; see the bias note at the top.)* It is high on *contradiction* (hype vs. expert assessments) and *tractability* (the artifacts are public and checkable in code).
+
+**Direct observations** (run by me, reproducible):
+- AlphaTensor 4×4×4 rank-47 factorization (`data/factorizations_f2.npz`, from github.com/google-deepmind/alphatensor): reconstructs the matrix-multiplication tensor **exactly mod 2** (with the C-transposed index convention) and **fails over ℤ** (465 of 4096 entries wrong). All coefficients are in {0,1}. → `notes/cycle0/verify_alphatensor.py`
+- AlphaEvolve 4×4×4 rank-48 complex decomposition (extracted from the official `mathematical_results.ipynb`, google-deepmind/alphaevolve_results): **max reconstruction error 0.0** (convention C_ki). Coefficients are in {0, ±½, ±i/2, (±1±i)/2}, so the float check is exact. → `notes/cycle0/verify_alphaevolve_444.py`
+- FunSearch 8-dim cap set: running the published discovered `priority()` function gives **512 points**. My own independent checker (for each pair x≠y, test whether −(x+y) mod 3 is in the set) finds **0 lines → a valid cap**. The structure is highly regular: Hamming-weight counts are {4: 256, 5: 128, 8: 128}. → `notes/cycle0/verify_funsearch_capset.py`
+- Unit-distance disproof, simplified version (Alon et al., eq. 2.2): recomputing with mpmath gives exponent − 1 = **6.239×10⁻³⁸**, matching the paper's "≈ 6.24·10⁻³⁸". → `notes/cycle0/unit_distance_exponent.py`
+
+**Retrieved information** (grades per METHODS §3):
+- AlphaTensor (Fawzi et al., Nature 2022): 47 multiplications for 4×4 **in ℤ₂ only**, and 76 for ⟨4,5,5⟩ in standard arithmetic [E2] [1]. Kauers & Moosbauer's *flip graphs* (a non-neural random walk over schemes) quickly found other 47-schemes mod 2 and 95 for 5×5 mod 2 [E2/E3] [2].
+- AlphaEvolve (Novikov et al., 2025): a 48-multiplication 4×4 algorithm over ℂ, "first improvement after 56 years over Strassen in this setting." It improved 14 matrix-multiplication targets [E3, white paper] [3]. Within days, Dumas–Pernet–Sedoglavic projected it to **rational** coefficients via an isotropy (valid in any ring with char ≠ 2) [E2/E3] [4], and a 2026 follow-up made it more numerically accurate [5].
+- Georgiev, Gómez-Serrano, Tao, Wagner (arXiv:2511.02864): 67 problems. AlphaEvolve "rediscovered the best known solutions in most cases and improved several." On famous conjectures (Sidorenko, Sendov, Crouzeix…) it found only the known candidates, so "we did not disprove any major open conjecture." Tao compares much of the work to "what an expert user of a traditional optimization software tool might accomplish," with the gain being **scale**. Its best results came where constructions have algebraic structure (finite-field Kakeya/Nikodym). One Kakeya construction was proved by Deep Think and formalized in Lean by AlphaProof [E3] [6][7].
+- FunSearch (Romera-Paredes et al., Nature 2023): a 512-cap in dimension 8 (previous best 496), found by evolving *programs* that humans can read [E2] [8].
+- Wagner (arXiv:2104.14516): the deep cross-entropy method refuted several lesser-known conjectures in spectral graph theory and one of Brualdi–Cao on permanents. Example: λ₁+μ ≥ √(n−1)+1 fails at n=19 (λ₁=√10, μ=2). Wagner says explicitly "we did not succeed in refuting any of the most famous conjectures" [E2/E3] [9].
+- AlphaProof (Nature, Nov 2025): RL on Lean proofs. IMO 2024 = 28/42 together with AlphaGeometry 2. Gemini Deep Think got IMO 2025 gold (35/42) in natural language [E2/E4] [10][11]. These are competition problems with known answers, so they are not new mathematics.
+- GPT-5 "solved 10 Erdős problems" (Oct 2025): **deflated**. They were literature retrievals of already-published solutions [E3] [12]. Erdős #728 (Jan 2026) was described by Tao as solved "more or less autonomously by AI," but in March 2026 it was found to be very close to Pomerance (2014) methods [E3] [13].
+- **Unit distance conjecture (Erdős #90) disproved by an internal OpenAI model (May 2026):** ν(n) ≥ n^{1+δ} for infinitely many n, using infinite Golod–Shafarevich class-field towers of CM fields [E3→E2: checked by external mathematicians] [14][15]. Sawin made δ explicit at **0.014114** [E3] [16]. A PNAS paper (Huang 2026) claims a public GPT-5.5 Pro agent reproduced the disproof autonomously [E3, not yet read] [17].
+- Expert assessments in [15] (Alon, Bloom, Gowers, Litt, Sawin, Shankar, Tsimerman, Wang, Wood):
+  - Bloom: it is "a natural, albeit highly non-trivial, generalisation of the original lattice-based construction of Erdős," and it "does not introduce any powerful new geometric tools."
+  - Shankar: "a very 'human' proof, though an extremely ingenious one."
+  - Tsimerman: AI can "play for longer and in more treacherous waters."
+  - Wood: experts would likely have found it if assembled, and it does not cite closely related prior work.
+  - Gowers proposes "Kolmogorov complexity modulo experts": a proof's difficulty is roughly the length of the hint sequence an expert needs. His hunch is that this proof needs a short hint sequence ("look for a counterexample; generalize the best construction; vary the field degree with bounded-norm primes"), whereas Guth–Katz would need a long one.
+- **Navier–Stokes (Clay, Sept 2026):** OpenAI claimed a blowup solution, reported as 165–166 pages and produced by many agents [E4 for those details]. Scientific American (Sept 21, 2026) reports that it solves Clay option (C), **with an external force**. Experts (Silvestre) say "the main problem … is not" solved, and a later human proof reportedly shows the method cannot extend to the unforced case [E3] [18]. Another report says the Lean formalization proves weaker claims than the paper in at least two places [E4, not opened] [19].
+- Fields medallists' declaration (Sept 11, 2026, posted by Tao): AI "can solve major outstanding problems," but problem-solving is a proxy for "conceptual understanding and insight" [E3, opinion] [20].
+- A heise/2026 discussion and an arXiv 2026 paper on multi-agent *concept* discovery (2603.04528) exist [not read] [21].
+
+**Mathematical derivations:**
+- The unit-distance exponent was reproduced (see observations). It confirms that the simplified proof's explicit δ is tiny (~10⁻³⁸), while Sawin's optimized δ is 0.014. These are the same method with different parameter choices, which is not a contradiction.
+
+**Logical deductions:**
+- AlphaTensor's 47 does not bear on the char-0 (ℚ/ℝ/ℂ) rank of ⟨4,4,4⟩, because the identity provably fails over ℤ, as reproduced above. For real matrices, the best known upper bound is 48 (AlphaEvolve + DPS rationalization).
+- Each artifact I checked (47, 48, the 512-cap) is an **instance** inside a search space whose objects (tensor decompositions, greedy priority programs, point sets) and objective were specified by humans. So for these three, "non-human structure" can at most mean an unfamiliar *instance*, not a new kind of object.
+
+**Empirical findings:**
+- Across the documented cases, the verified AI wins are overwhelmingly **existential/constructive** results: constructions, counterexamples, bounds, and a blowup solution. Universal statements requiring new theory are rare to absent. The experts in [15] and [18] independently remark on this asymmetry (Gowers; Cao-Labora: "LLMs are especially good at constructing things that are very explicit and not as good — for now — in making new theory"). [E3, multiple independent experts; moderate confidence]
+- The "unfamiliar" artifacts became human-legible quickly: FunSearch outputs readable programs with regular structure, DPS rationalized the 48 within days, and humans digested the unit-distance proof to a few pages within weeks. [E1+E3]
+
+**Inferences** (confidence):
+- (moderate) The current evidence fits **human-style mathematics at superhuman breadth, patience, and scale** better than non-human conceptual structure. The novelty lies in *which* known tools get combined and how far they are pushed (Golod–Shafarevich towers in discrete geometry), not in new primitives.
+- (low–moderate) "Alien-looking" outputs (unstructured decompositions, opaque evolved code) are a property of the *search representation*, not evidence of alien concepts. Each one checked so far was explained or regularized by humans after the fact.
+
+**Hypotheses** (with tests):
+- H1: The share of verified AI results that are existential (∃-construction or counterexample) rather than universal (∀-theorem with a new method) is above 80%. *Test:* build the ledger (≥20 items from erdosproblems.com AI tags, the AlphaEvolve repo, and the 2025–26 announcements) and classify each by quantifier form plus whether a new definition was introduced.
+- H2: If an AI introduced a genuinely new concept, we would see (a) a new definition or object type not in the training literature, (b) reuse by humans on *other* problems, (c) a long "hint sequence" (Gowers) that cannot be reduced to existing literature. *Test:* look for any 2025–26 AI result whose follow-up papers cite it for a *definition or technique* rather than for a construction (OpenAlex `cites` + reading the citing contexts).
+- H3: Instances that are hard to digest (no human simplification after months) would be the best candidates for "non-human structure." *Test:* list AI results with no human simplification ≥6 months later.
+
+**Theoretical explanations:**
+- *Search-at-scale model:* generate-and-verify with a reliable verifier (Lean, an exact evaluator) turns compute into constructions. This predicts strength exactly where verification is cheap and objectives are explicit, which matches the record.
+- *Breadth model* (Bloom/Litt/Wood): human misses come from anchoring (everyone believed Erdős's conjecture) and siloing (number theorists didn't work on it). AI's advantage is coverage of the literature plus willingness to try long shots.
+
+**Speculation** (flagged):
+- Truly non-human concepts, if they exist, might first appear as *invariants or representations inside models* (e.g. learned embeddings that predict knot invariants) rather than as written proofs. Probing them would require interpretability tools, not proof-reading.
+
+**Unknowns** (→ what would settle them):
+- Whether *any* AI-originated definition or concept has been adopted by human mathematicians → citation-context analysis of follow-ups; ask "what new definition does paper X introduce?"
+- The verification status of the Navier–Stokes claim (the paper vs. Lean mismatch) → read the primary preprint and the independent audits. I did not open them this cycle.
+- The base rate of AI false claims (Wood: "This result does not show us all the times AI has claimed to have a proof … and been wrong") → no public denominator exists. The Erdős problems wiki or site logs may give a partial count.
+- Whether the Huang (PNAS 2026) reproduction with a public model is accurate → read it.
+
+**Contradictions:**
+- OpenAI's "first time a prominent open problem … solved autonomously by AI" (unit distance) vs. Tao's Jan 2026 "Erdős #728 solved more or less autonomously." These are not strictly contradictory, since #728 was minor and poorly formulated, but "first" depends on how "prominent" is defined. *Status: definitional, recorded.*
+- "Solved Navier–Stokes" (OpenAI framing) vs. "the main problem … is not [solved]" (Silvestre). This is resolved as a scope difference: Clay option (C) with forcing vs. the unforced problem.
+
+**Sources:**
+1. Fawzi et al. 2022, Nature: https://www.nature.com/articles/s41586-022-05172-4 · artifacts: https://github.com/google-deepmind/alphatensor
+2. Kauers & Moosbauer, Flip graphs: https://arxiv.org/abs/2212.01175
+3. Novikov et al., AlphaEvolve: https://arxiv.org/abs/2506.13131 · https://github.com/google-deepmind/alphaevolve_results
+4. Dumas, Pernet, Sedoglavic: https://arxiv.org/abs/2506.13242
+5. More accurate rational 48: https://arxiv.org/abs/2603.18699
+6. Georgiev, Gómez-Serrano, Tao, Wagner: https://arxiv.org/abs/2511.02864 · repo: https://google-deepmind.github.io/alphaevolve_repository_of_problems/
+7. Tao blog, Nov 5 2025: https://terrytao.wordpress.com/2025/11/05/mathematical-exploration-and-discovery-at-scale/
+8. Romera-Paredes et al. 2023 (FunSearch): https://doi.org/10.1038/s41586-023-06924-6 · https://github.com/google-deepmind/funsearch
+9. Wagner 2021: https://arxiv.org/abs/2104.14516
+10. AlphaProof, Nature 2025: https://www.nature.com/articles/s41586-025-09833-y · AlphaGeometry2 (JMLR): https://jmlr.org/papers/volume26/25-1654/25-1654.pdf
+11. Deep Think IMO 2025: https://deepmind.google/blog/advanced-version-of-gemini-with-deep-think-officially-achieves-gold-medal-standard-at-the-international-mathematical-olympiad/
+12. r/math thread on the GPT-5 Erdős claims (secondary): https://www.reddit.com/r/math/comments/1ob2v7t/ai_misinformation_and_erdos_problems/
+13. Tao on Erdős #728: https://mathstodon.xyz/@tao/115855840223258103
+14. OpenAI announcement: https://openai.com/index/model-disproves-discrete-geometry-conjecture/ · proof PDF: https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf
+15. Alon, Bloom, Gowers, Litt, Sawin, Shankar, Tsimerman, Wang, Wood, "Remarks on the disproof…": https://arxiv.org/abs/2605.20695
+16. Sawin, explicit bound: https://arxiv.org/abs/2605.20579
+17. Huang 2026, PNAS: https://doi.org/10.1073/pnas.2621541123 (found via Semantic Scholar, not read)
+18. Scientific American, Sept 21 2026: https://www.scientificamerican.com/article/did-openai-solve-the-wrong-navier-stokes-problem/
+19. New Scientist: https://www.newscientist.com/article/2592824-openai-mistranslated-mathematics-into-code-for-its-navier-stokes-proof/ · KCL: https://www.kcl.ac.uk/news/openais-navier-stokes-proof-called-into-question (429 on fetch)
+20. Fields medallists' declaration: https://terrytao.wordpress.com/2026/09/11/a-severe-misalignment-of-ai-in-mathematics/
+21. https://arxiv.org/abs/2603.04528 · https://www.heise.de/en/news/Can-AI-deliver-new-mathematical-insights-Top-researchers-put-it-to-the-test-11170542.html
+
+**Corrections to earlier entries:** — (first entry)
+**Thread update:** T01 status → active · next step → (1) start `notes/T01_ledger.csv` with ≥20 rows (claim, system, date, quantifier type ∃/∀, verification: Lean / independent human / none / deflated, new-definition? y/n, source). (2) Read Huang PNAS and one Navier–Stokes audit. (3) Test H2 via OpenAlex `cites` on 2511.02864 and the unit-distance papers.
+**Checklist:** [x] categories [x] sources [x] reproducible (4 scripts) [x] unknowns stated [x] disconfirmation searched (deflations: Erdős-10, #728, Navier–Stokes scope, AlphaTensor char 2) [x] next step set
+
+### E002: Cycle 0 (pre-work): fine-structure constant Cs–Rb tension, recomputed
+- **Date:** 2026-10-31 19:24–19:27 PDT · **Cycle:** 0 (pre-work) · **Threads:** T02
+- **Question this cycle:** Is the Cs vs. Rb disagreement in α real and still open, and where does the electron g−2 value sit?
+- **Why this, now:** A contradiction between two of the most precise measurements in physics. It is cheap to check numerically, which makes a good second thread.
+
+**Direct observations:**
+- CODATA 2022 (NIST allascii.txt, fetched today): α⁻¹ = 137.035 999 177(21).
+- `notes/cycle0/alpha_tension.py`: Cs vs. Rb = **5.5σ** (Δ = 1.6×10⁻¹⁰); Cs vs. g−2 = 3.9σ; Rb vs. g−2 = 2.2σ.
+
+**Retrieved information:**
+- Cs recoil (Parker et al., Science 2018): α⁻¹ = 137.035999046(27) [E2, arXiv abstract 1812.04130].
+- Rb recoil (Morel et al., Nature 2020): α⁻¹ = 137.035999206(11), 81 ppt [E2, HAL hal-03107990].
+- Electron g−2 + QED (Fan et al., PRL 2023): α⁻¹ = 137.035 999 166(15). Its abstract notes the uncertainty is "10 times smaller than the current disagreement between measured α values" [E2].
+- As of 2025, there is no new published Cs or Rb result. Both groups are chasing systematics: Berkeley is working on beam effects, and Paris on in-situ wave-vector/intensity mapping (MITP α workshop 2025 slides) [E3].
+
+**Mathematical derivations:** Tension = |Δ|/√(σ₁²+σ₂²), treating the errors as independent and Gaussian (see script). The commonly quoted figure is 5.4σ; my 5.5σ differs only by rounding.
+**Logical deductions:** CODATA 2022 combines these inputs, so it cannot adjudicate between them. Comparisons against it are not independent.
+**Empirical findings:** The g−2 route agrees better with Rb (2.2σ) than with Cs (3.9σ) [E1 computation on E2 inputs].
+**Inferences:** (low–moderate) An unrecognized Cs-side systematic is more likely than new physics. The reason: the third, methodologically independent route (g−2 + QED) sides with Rb. It is still 2.2σ off, though, so this is not decisive.
+**Hypotheses:** H1: The next Cs result (upgraded Berkeley apparatus) shifts upward by ≥1×10⁻¹⁰ in α⁻¹. *Test:* watch arXiv physics.atom-ph for Müller-group papers.
+**Theoretical explanations:** —
+**Speculation:** Dark-sector couplings would affect g−2 and recoil differently. This is not explored.
+**Unknowns:** The detailed error budgets of each experiment (→ read Parker 2018 supplementary materials and Morel 2020 Table 1).
+**Contradictions:** Cs vs. Rb at 5.5σ. Status: **open**, unresolved since 2020.
+
+**Sources:**
+1. https://physics.nist.gov/cuu/Constants/Table/allascii.txt
+2. https://doi.org/10.1126/science.aap7706 · https://arxiv.org/abs/1812.04130
+3. https://doi.org/10.1038/s41586-020-2964-7 · https://hal.science/hal-03107990
+4. https://doi.org/10.1103/PhysRevLett.130.071801
+5. https://indico.mitp.uni-mainz.de/event/417/ (MITP 2025 α workshop)
+
+**Corrections to earlier entries:** —
+**Thread update:** T02 → active · next step: read both error budgets and list the top 3 systematics on each side; check arXiv for 2026 Cs/Rb/g−2 updates (`tools/arxiv_search.py "fine-structure constant recoil" --sort date`).
+**Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns [x] next step
+
+### E003: Cycle 0 (pre-work, cont.): Alien math ledger v0 + first H1/H2 evidence
+- **Date:** 2026-10-31 19:26–19:35 PDT · **Cycle:** 0 (pre-work) · **Threads:** T01
+- **Question this cycle:** Carry out E001's next step: build ledger v0 and get a first rough read on H1 (∃-dominance) and H2 (any AI-originated concept?).
+- **Why this, now:** It turns E001's qualitative impression into a checkable table.
+
+**Direct observations:**
+- `notes/T01_ledger.csv` has 20 rows: 15 AI claims, plus 2 competitions, 1 deflated claim, and 2 human baselines.
+- Pandas count over the 15 AI claims by quantifier: ∃ = 10, ∀ = 2 (L12 Erdős #728, L14 eigenweights), mixed/narrow = 2, n/a = 1. The new-definition column shows **0 confirmed**, 1 candidate (L14), and 1 rediscovery (L18).
+
+**Retrieved information:**
+- Feng et al. (arXiv:2601.22401, Jan 2026) had Gemini screen **700** Erdős problems labelled "Open." Result: **13 addressed (5 seemingly novel autonomous solutions, 8 already solved in the literature)**. The authors conclude the problems were open "through obscurity rather than difficulty" and flag the risk of "subconscious plagiarism" [E3, a lab's self-report with human expert evaluation].
+- Feng (arXiv:2601.23245) describes an AI agent built on Deep Think. It "employs tools from algebraic combinatorics to connect these eigenweights to the representation theory of symmetric groups, and then determines them for all classical groups." The companion paper (Aletheia, arXiv:2602.10177) calls it "generated by AI without any human intervention" [E3].
+- Huang (PNAS 2026, abstract): a public GPT-5.5 Pro with a "brainstorm, execute, review" pipeline produced a correct or essentially correct unit-distance disproof in **8/8** trials, with web search off, at ~107k reasoning tokens per trial. The proofs are "diverse" [E3, abstract only].
+- Aggarwal et al. (arXiv:2603.04528): conjecturing and skeptic agents with Lean feedback *rediscover* the homology / Euler-characteristic relation from incidence-matrix data, using only a linear-algebra vocabulary. Ablations show that symbolic regression alone never finds b₁ or χ [E3]. This is concept *re*discovery inside a supplied vocabulary.
+
+**Mathematical derivations:** —
+**Logical deductions:**
+- The 5/700 novel-solution rate is a **lower bound on failures**, not a measure of AI capability. It counts only successes on problems selected by obscurity.
+- If 8/8 public-model trials disprove the unit-distance conjecture with ~10⁵ tokens, then by Gowers's measure the *expert hint length* needed is small. The PNAS pipeline supplies no problem-specific hints. This is consistent with Gowers's "short hint sequence" hunch, given that the abstract is accurate.
+
+**Empirical findings:**
+- (ledger v0, n=13 classifiable AI claims) ∃-type = 10/13 ≈ **77%**. That is close to H1's 80% threshold, but the sample is small and selected by what labs chose to announce. **Not yet a test of H1**: it needs an unbiased sample, e.g. every AI-tagged entry on erdosproblems.com. [E1 count on E2/E3 classifications; low confidence]
+
+**Inferences:**
+- (moderate) The ledger's "frontier of conceptual contribution" is currently *new connections between existing theories* (L14: eigenweights ↔ S_n representation theory; L15: class-field towers ↔ discrete geometry), not new definitions. That is a step above "instances" but short of "concepts."
+- (low) Ease of reproduction (8/8, cheap) suggests the unit-distance disproof sits in a region of proof space that is *reachable by current models without exotic search*, which argues against "alien" structure.
+
+**Hypotheses:**
+- H2′ (refined): The first AI-originated *concept* will appear as a new *connection* that humans then abstract into a definition. *Test:* track citations of 2601.23245 and 2605.20695 (and their follow-ups) for whether humans define new objects inspired by them (`tools/paper_lookup.py cites <openalex-id>`).
+- H4: AI novel-solution rates on "Open" lists are inversely related to how much prior human attention a problem got. *Test:* correlate the Erdős-database "comments/references count" with AI-solved status.
+
+**Theoretical explanations:** "Obscurity, not difficulty" + "breadth" explain most successes. Models act as a literature-wide recombination engine.
+**Speculation:** If concept formation is mostly *naming a recurring pattern across many proofs*, the systems that mass-produce proofs (L13-style sweeps) may eventually produce concepts as compression, so the 2603.04528-style setup is the one to watch.
+**Unknowns:**
+- Was L14 independently checked by a human expert other than Feng? → look for a referee report or a Yun/Zhang comment.
+- The Huang PNAS full text: how "essentially correct" is defined → read the paper and the released outputs.
+- An unbiased denominator for H1 → scrape erdosproblems.com AI tags. That is read-only and needs care with robots and rate limits.
+
+**Contradictions:** "Without any human intervention" (Aletheia on L14) vs. a human posing the problem and selecting the agent's tools. This is a definitional issue about what "autonomous" means, recorded rather than resolved.
+
+**Sources:**
+1. https://arxiv.org/abs/2601.22401
+2. https://arxiv.org/abs/2601.23245 · https://arxiv.org/abs/2602.10177
+3. https://doi.org/10.1073/pnas.2621541123
+4. https://arxiv.org/abs/2603.04528 · code: https://github.com/daattavya98/MathWorld-learning-homology
+5. Ledger rows: sources column in `notes/T01_ledger.csv`
+
+**Corrections to earlier entries:** E001 said "no documented AI-originated concept found yet." That still holds, but **L14 (eigenweights) is a candidate that E001 did not know about** and should be checked first.
+**Thread update:** T01 active · next step: (1) assess L14 (read §1 of 2601.23245: what is new, a connection or a definition?); (2) get an unbiased H1 sample from erdosproblems.com; (3) read the Huang PNAS full text.
+**Checklist:** [x] categories [x] sources [x] reproducible (ledger CSV) [x] unknowns [x] next step
+
+### E004: Cycle 0 (pre-work, cont.): L14 eigenweights assessed — computation, not concept
+- **Date:** 2026-10-31 19:27–19:30 PDT · **Cycle:** 0 (pre-work) · **Threads:** T01
+- **Question this cycle:** Is L14 (Aletheia's eigenweights paper) an AI-originated concept, as E003 flagged it might be?
+- **Why this, now:** It was the best H2 candidate, and checking it is cheap.
+
+**Direct observations:** I read the arXiv HTML of 2601.23245v2 (saved as `notes/cycle0/feng_eigenweights.html`), covering §1.2 "Definition of eigenweights" and §2 "Declaration of AI Usage."
+**Retrieved information:**
+- "The eigenweights are defined in [FYZ25a, §5.3] as the collection of eigenvalues for a certain operator ∇̄^η_μ on 𝕍." The definition is by Feng–Yun–Zhang, i.e. **human** [E2, primary].
+- Human–AI interaction card: "Query eigenweights for Type A → Response (fully correct). Proceed to … Type C → (fully correct). … Type D → (fully correct)." Raw outputs: https://github.com/google-deepmind/superhuman/tree/main/aletheia/F26 [E2 for the logs; correctness is the author's assessment = E3].
+- The proof tools are Schur polynomials, the Frobenius character formula, and the Murnaghan–Nakayama rule. All are standard algebraic combinatorics.
+**Mathematical derivations:** — (I did not recheck the formulas. A type-A small-n check with sympy would be possible next cycle.)
+**Logical deductions:** The object studied was human-defined, the question was human-posed, and the tools are standard. So L14 is **not** evidence of an AI-originated concept under the E001 criterion. It is a correct ∀-theorem: a general formula, which counts as a computation.
+**Empirical findings:** It took three prompts with no human mathematical steering, according to the author. That points to research-level *computation* being routine for these systems [E3].
+**Inferences:** (moderate) The H2 count stays at 0 confirmed concepts. The ledger's frontier is "new results via new *connections*" (L15) and "general formulas via standard tools" (L14).
+**Hypotheses:** —
+**Theoretical explanations:** —
+**Speculation:** —
+**Unknowns:** Whether experts outside the author have checked the formulas. → Look for follow-up citations (e.g. FYZ future work on Shimura varieties mentioned in §1.1.3).
+**Contradictions:** —
+**Sources:** https://arxiv.org/abs/2601.23245 · https://github.com/google-deepmind/superhuman/tree/main/aletheia/F26
+**Corrections to earlier entries:** **E003** listed L14 as a "candidate (new connection)" for an AI concept. **Corrected: L14 = AI computation of human-defined constants using standard tools. It is not a concept.** The ledger row has been updated.
+**Thread update:** T01 active · next step unchanged except (1) is done → (2) unbiased H1 sample, (3) Huang PNAS.
+**Checklist:** [x] categories [x] sources [x] correction logged [x] next step
+
+### E005: Cycle 0 (pre-work, cont.): Wagner λ1+μ counterexample reproduced by brute force in 43 s; smallest is n=18
+- **Date:** 2026-10-31 19:27–19:31 PDT · **Cycle:** 0 (pre-work) · **Threads:** T01
+- **Question this cycle:** Wagner (2021) used a deep cross-entropy RL method to find a counterexample to Conjecture 2.1 (λ1 + μ ≥ √(n−1) + 1 for connected G, n ≥ 3). Does that need learned search, or does plain enumeration do it?
+- **Why this, now:** It tests H1, "human-style search at scale," on the canonical example, and it is cheap to run.
+
+**Direct observations:**
+- Script `notes/cycle0/wagner_trees_exhaustive.py` enumerates **all** non-isomorphic trees, using networkx `nonisomorphic_trees`. The tree counts per n match OEIS A000055: 1,2,3,6,11,23,47,106,235,551,1301,3159,7741,19320,48629,123867,317955 for n=3…19. That is a sanity check on the enumeration. The script computes exact λ1 (eigvalsh) and the exact tree matching number (greedy leaf matching). Output is in `notes/cycle0/wagner_trees_out.txt`.
+- **n ≤ 17: no violation.** For n=3…16 the minimum is the star, with equality (λ1=√(n−1), μ=1). n=17 also has minimum = bound (5.000000).
+- **n = 18: 1 violator.** A double star (centers of degree 9 and 8 joined through a degree-2 vertex) gives λ1 + μ = 5.101296 < 5.123106. I confirmed it independently with networkx max_weight_matching.
+- **n = 19: 2 violators.** The minimum is the symmetric double star (9,9,2,…), with λ1 = 3.162278 = √10, μ = 2, sum 5.162278 < 5.242641. That **matches Wagner's Fig. 4 values** ("largest eigenvalue √10 and matching number 2, so λ1+μ ≈ 5.16 < 5.24"). The full n=19 enumeration took **43 s** on the box. Wagner: "it typically takes a few hours on an average PC for the program to find the counterexample."
+**Retrieved information** (Wagner, arXiv:2104.14516 PDF, §2.2) [E2]:
+- The conjecture came from AutoGraphiX, i.e. it was *machine-generated* in the first place.
+- It "has already been disproved by Stevanović [44]" (LAA 2010, n = 600) before the RL work.
+- Wagner presents it only as an illustration of the method and does not claim a new result.
+- He also proves that trees are the best candidates: deleting non-matching edges keeps μ and lowers λ1.
+**Mathematical derivations:**
+- Wagner's tree argument says every connected G contains a spanning tree that has a maximum matching of G. That tree has the same μ and λ1(T) ≤ λ1(G) (Perron–Frobenius monotonicity).
+- Combined with the exhaustive tree search, that gives **min n for a counterexample = 18** [E1 computationally, modulo correctness of the networkx enumeration (cross-checked against A000055)].
+**Logical deductions:** The flagship RL "counterexample" sits in a space small enough to brute-force (3.2×10⁵ trees). The RL found a witness that human-designed exhaustive search finds faster. The object is a double star, a very human-legible shape.
+**Empirical findings:** RL took hours, against 43 s for enumeration (comparing different hardware and different eras, so the gap is only rough).
+**Inferences:** (strong for this case) This example is pure ∃-search in a human-specified space with a human-legible answer. It supports H1 and fits the E001 "instance, not concept" criterion. The real value of Wagner-style methods shows up where enumeration is infeasible (his §2.4–2.6). Those cases are the ones the ledger should weight.
+**Hypotheses:** H5: Many celebrated "AI counterexamples" have witnesses findable by naive search once the right search space is chosen. *Choosing the space is the human-contributed insight.* Test: try brute force or simple local search on L-rows with small witnesses.
+**Theoretical explanations:** —
+**Speculation:** The small n=18 counterexample is probably known (Stevanović-type families are double stars), and I have not checked the literature. **Unverified novelty; do not claim.**
+**Unknowns:** Whether n=18 is already documented as the minimum. Partial check, 19:31 PDT: Ghebleh–Al-Yakoob–Kanso–Stevanović (arXiv:2403.18429, DAM 2025) still describes Wagner's result as "a 19-vertex counterexample" and gives no smaller one (pdftotext grep, E2). OpenAlex search turned up no paper stating min n=18. **Still unverified; absence of evidence ≠ novelty.** → Search citations of Stevanović 2010 / Wagner 2021 via `tools/paper_lookup.py cites`.
+**Contradictions:** My naive local search from random trees (`wagner_lambda_mu.py`, 40 restarts × 1500 steps) **failed** (best 8.74). So search *method* still matters, but exhaustive enumeration over the right class beats both.
+**Sources:** https://arxiv.org/abs/2104.14516 · Stevanović, LAA 433 (2010) 1674–1677 (cited, not fetched) · https://oeis.org/A000055 (counts verified via OEIS JSON at 19:30 PDT, match n=3…19) · https://arxiv.org/abs/2403.18429
+**Corrections to earlier entries:** —
+**Thread update:** T01. New next-step item: check whether min-n=18 is known; apply the H5 test to other ledger rows.
+**Checklist:** [x] categories [x] sources [x] reproducible script [x] next step
+
+### E006: Cycle 0 (pre-work, cont.): Erdős AI-wiki census — 18 standalone full solutions, majority ∀-type (challenges ledger's 77% ∃)
+- **Date:** 2026-10-31 19:29–19:33 PDT · **Cycle:** 0 (pre-work) · **Threads:** T01
+- **Question this cycle:** Is there a less biased sample of AI math results than my hand-built ledger, which skews toward DeepMind showcase results? On that sample, is the ∃-construction share still high?
+- **Why this, now:** This was T01 next-step (1). E003 flagged selection bias in "∃ = 10/13."
+
+**Direct observations:**
+- `teorth/erdosproblems` README (fetched 19:30 PDT) links an "AI contributions to Erdős problems" wiki. The README says it is "no longer updated as of June 30, 2026." I fetched it raw as `data/erdos_ai_wiki.md` (71.6 kB).
+- The wiki also states that, from Oct 6, 2026, erdosproblems.com stopped displaying solved counts ("not … a scoreboard"). The statistics are still generated in STATISTICS.md.
+- Parsed counts (`notes/cycle0/erdos_ai_wiki_counts.txt`):
+
+| Section | Rows | 🟢 full | 🟡 partial | 🔴 incorrect | ⚪ unverified |
+| --- | --- | --- | --- | --- | --- |
+| 1(a) AI standalone | 61 | 19 | 23 | 10 | 9 |
+| 1(b) alongside literature | 25 | 15 | 10 | — | — |
+| 1(c) building on literature | 38 | 14 | 24 | — | — |
+| 2(a) literature search | 84 | 40 | 41 | 3 | — |
+
+  - 1(a) full solutions cover **18 distinct problems**: 38, 90, 125, 205, 457, 619, 694, 741, 960, 987, 990, 1014, 1051, 1091, 1141, 1196, 1202, 1217. Six of the full rows are tagged "(Lean)."
+  - 1(d) "collaborating with humans" (132 rows) and 2(b) formalization (185 rows) use a different table format and were not colour-parsed.
+- **#90 = the unit-distance problem.** It is listed twice: "OpenAI internal model, 20 May 2026" and "Claude Mythos, 26 May 2026," both 🟢. This links to the E001 unit-distance item.
+- Database trend (`data/erdos_stats_history.csv`, monthly last value):
+  - Solved fraction went from 0.358 (Aug 2025, 355/992) to 0.474 (Oct 2026, 579/1221).
+  - The largest monthly jumps were Dec 2025 (+29), Jan 2026 (+37) and Apr 2026 (+33).
+  - Saved in `notes/cycle0/erdos_status_timeline.txt`.
+
+**Retrieved information:** The wiki's own disclaimers include "This page is not a benchmark," "Keep selection bias in mind," and "Absence of past progress may reflect obscurity rather than difficulty" [E2]. The last one matches the Feng et al. conclusion in E003.
+
+**Mathematical derivations:** — 
+**Logical deductions:** I classified the 18 problems heuristically from the problem statement plus the final yaml status. I have not read the solutions, so this is E3.
+- **∃-construction-type (4):**
+  - 38: "does there exist B," proved.
+  - 90: a ∀-bound, disproved by construction.
+  - 205: "all large n," disproved by an infinite exceptional family.
+  - 990: a ∀-polynomial inequality, disproved by a counterexample.
+- **∀-theorem-type (8):**
+  - 125: density zero.
+  - 457: infinitely many n (proof, not a finite witness).
+  - 987, 1014, 1051, 1196, 1217: all universal statements, proved.
+  - 1141: finiteness.
+- **Ambiguous "solved" or mixed (6):** 619, 694, 741, 960, 1091, 1202.
+- Result: ∃ ≈ 4/12 classifiable (33%), against 10/13 (77%) in my ledger. With samples this small and the heuristic coding, the gap is suggestive, not conclusive.
+
+**Empirical findings:** In 1(a), 10/61 rows (16%) are incorrect claims. Literature-search finds (40 full) outnumber standalone full solutions (19). So AI's biggest Erdős-problem contribution is **finding existing answers**. That fits the obscurity hypothesis H4.
+
+**Inferences:** (moderate) The "AI math = ∃-search in human-specified spaces" picture (E001/E005, H1) fits **search-based systems**: AlphaTensor, FunSearch, AlphaEvolve, Wagner. It does **not** describe the 2026 LLM-reasoner results (GPT-5.x, Aletheia, Claude Mythos). Those are mostly ∀-proofs, though of obscure, often easier problems. The T01 question should be split into two regimes. Novelty in the second regime can't be "found a witness." It has to be judged by proof technique: recombination vs new idea.
+
+**Hypotheses:** H1 is revised as **H1-split**. (a) Search systems produce instances. (b) Reasoner systems produce ∀-proofs that recombine known techniques. Test (b) by sampling 1(a) full solutions and coding the technique: standard lemma chain vs novel construction/definition. Use expert comments on each erdosproblems.com thread.
+
+**Theoretical explanations:** —
+**Speculation:** The +37 in Jan 2026 and +33 in Apr 2026 jumps may coincide with model releases (GPT-5.2 Pro Jan 2026; GPT-5.5 Pro Apr 2026 per wiki rows), but literature-search finds also drive status changes. **Not separated; do not claim.**
+
+**Unknowns:**
+- The ∃/∀ coding is heuristic and needs solution reading.
+- The wiki is frozen at 30 Jun 2026, so Jul–Oct 2026 AI contributions are missing.
+- How much of the solved-fraction rise is AI-attributable.
+
+**Contradictions:** E003/E001 implied most verified AI math is ∃-type (ledger 77%). That holds only for the ledger's (search-system-heavy) sample. → E003's ∃-share claim should be read as sample-specific.
+
+**Sources:**
+- https://github.com/teorth/erdosproblems (README, STATISTICS.md, data/problems.yaml, data/statistics_history.csv)
+- https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems
+- https://www.erdosproblems.com/{38,90,…,1217} (statements fetched, all 200; saved as `data/erdos_*.html`)
+
+**Corrections to earlier entries:** E003's "∃ = 10/13 (≈77%)" is now explicitly **scoped to the ledger sample**. It does not hold for LLM-reasoner standalone Erdős solutions (≈33% ∃, heuristic).
+**Thread update:** T01's next step is now to code the proof technique for the 18 1(a) full solutions (start with #1014, #1196 and #987, the ∀-theorems), plus Huang PNAS.
+**Checklist:** [x] categories [x] sources [x] correction logged [x] next step
+
+### E007: Cycle 0 (pre-work, cont.): Erdős #1196 von Mangoldt-chain method — strongest H2 candidate (AI-suggested method adopted by experts)
+- **Date:** 2026-10-31 19:31–19:36 PDT · **Cycle:** 0 (pre-work) · **Threads:** T01
+- **Question this cycle:** E006 next step: code the proof technique of the ∀-type 1(a) solutions. I started with #1196, #1014 and #987.
+
+**Direct observations:**
+- **#1014** (erdosproblems.com page): the problem was "solved by an internal model at OpenAI." The proof shows R(k,l+1) ≤ (1+O(l^{−c/k²}))R(k,l). The page gives no technique detail and has 6 comments. Uncoded.
+- **#987** (page): "An internal OpenAI model (see [APSSV26b]) has proved that there exists a sequence (x_n) such that A_k ≪ (k log k)^{1/2}." This is the AI part, and it is an **∃-construction**. My E006 heuristic had coded #987 as ∀, which is **wrong**. Corrected count: ∃ 5/12 ≈ 42%.
+- **#1196:**
+  - The erdosproblems.com page says it "was solved by GPT-5.4 Pro (prompted by Price)," with the bound Σ_{a>x} 1/(a log a) ≤ 1+O(1/log x). The previous best was Lichtman's e^γ π/4 ≈ 1.399. The page has 90 comments.
+  - I fetched arXiv:2605.00301 (Alexeev, Barreto, Li, Lichtman, Price, Shah, Tang, Tao, 1 May 2026) as a PDF and saved it to `data/ablpst_1196.pdf`. Abstract quote: "We introduce a **new method** for bounding Erdős sums of primitive sets, **suggested from output of GPT-5.4 Pro**, based on Markov chains with von Mangoldt weights. The method leads to a host of applications, yet seems to have been **overlooked by the prior literature since Erdős's seminal 1935 paper**."
+  - Applications in the same paper:
+    - #1196 and #1217, both 1966 Erdős–Sárközy–Szemerédi conjectures;
+    - a short proof of the Erdős primitive set conjecture (#164);
+    - "2 is Erdős-strong";
+    - a revised Banks–Martin "master theorem" (odd primes).
+  - The paper builds new formal objects: Def. 2.1 (downward Markov chains on the divisibility poset), Def. 2.9 (upward chains) and Example 2.11 (adjoint chains). It also introduces a new weight ν_Λ (Remark 2.8).
+  - §11 AI disclosure:
+    - "The initial proof of Theorem 1.1 was generated by an **autonomous run** of GPT-5.4 Pro." A similar run produced Thm 1.6.
+    - For Thm 1.2, "the main human contributions being the downward divisor chain and suggesting Lemmas 3.2 and 3.3(ii)."
+    - An early GPT-5.5 Pro assisted with Thm 1.3. "the final proofs … generated and reviewed by the human authors."
+  - The erdosproblems wiki rows show a Lean formalization (Math Inc. "Gauss") and a "stronger than literature" variant (Sothanaphan + GPT-5.4 Thinking).
+  - OpenAlex lists 1 citing work so far (the Conversation article, 22 Jul 2026).
+**Retrieved information:** All of the above is E2, from the primary paper and the problem page.
+**Mathematical derivations:** — (not re-derived)
+**Logical deductions:** Against the E001 criterion (concept = new definition, method or connection that experts adopt and reuse beyond the original problem):
+- **New method:** ✔. The authors call it new and say it was overlooked since 1935.
+- **Reused beyond the original problem:** ✔, by the authors themselves for #1217, #164 and Banks–Martin. Independent reuse is not yet seen.
+- **AI-originated:** **partially**. The initial #1196 proof came from an autonomous run. The human authors systematized it into the chain formalism, and for Thm 1.2 the downward chain was a human contribution. So the *idea seed* is AI and the *abstraction* is human.
+- That is exactly the pattern of **H2′ (E003): "the first AI concept will appear as a connection that humans abstract."**
+**Empirical findings:** —
+**Inferences:**
+- (moderate) #1196 is the **first ledger item that plausibly passes the instance → concept bar**, conditional on independent reuse. It upgrades H2′ from speculation to a hypothesis with one supporting case.
+- The Gowers hint-length heuristic suggests a short hint ("use a von Mangoldt-weighted Markov chain on the divisibility poset"). Experts found this hint non-obvious for 90 years, which is evidence of real novelty relative to expert priors, *not* of non-human structure: the method is fully human-legible.
+**Hypotheses:** H6: AI-originated novelty arrives as *overlooked-but-legible* methods (high surprise to experts, low description length), not as alien or illegible structure. Falsifier: an adopted AI result whose proof experts can verify but cannot compress or explain.
+**Theoretical explanations:** —
+**Speculation:** —
+**Unknowns:**
+- Independent reuse: track citations of 2605.00301 via `tools/paper_lookup.py cites W7160131331` (the tool was patched this cycle to accept OpenAlex IDs).
+- Read the raw GPT-5.4 Pro transcript (chatgpt share link in §11, footnote 12) to see how much of the Markov-chain framing is in the AI output.
+**Contradictions:** E006's #987 coding (fixed above).
+**Sources:** https://arxiv.org/abs/2605.00301 · https://www.erdosproblems.com/1196 · https://www.erdosproblems.com/987 · https://www.erdosproblems.com/1014 · https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems
+**Corrections to earlier entries:** E006: #987 is ∃ (AI part = construction of a sequence). Revised ∃ ≈ 5/12.
+**Thread update:** T01's next step is to read the §11 fn12 transcript, check reuse citations of 2605.00301, then code #1014.
+**Checklist:** [x] categories [x] sources [x] correction logged [x] next step
+
+### E008: Cycle 0 (pre-work, cont.): Jacobian conjecture (n≥3) counterexample — independently verified, det J ≡ −2, 3-to-1 collision
+- **Date:** 2026-10-31 19:33–19:37 PDT · **Cycle:** 0 (pre-work) · **Threads:** T01
+- **Question this cycle:** A citation search on 2605.00301 surfaced a July 2026 claim that the Jacobian conjecture is false, found with Claude Fable 5. Is the claim correct? How does it sit on the instance ↔ concept axis?
+
+**Direct observations:**
+- `notes/cycle0/verify_jacobian_counterexample.py` uses exact sympy arithmetic. Map: s=xy, u=1+s, F = (u³z + y²u(4+3s), y + 3xu²z + 3xy²(4+3s), 2x − 3x²y − x³z).
+- **det J_F = −2, identically** (expanded polynomial).
+- (0,0,−1/4), (1,−3/2,13/2) and (−1,3/2,13/2) are distinct, and **all map to (−1/4,0,0)**.
+- Total degree is 7. [E1]
+- The map matches the text of Alpöge's X post (20 Jul 2026), as quoted verbatim in Smithsonian: "((1+xy)^3 z + y^2 (1+xy) (4+3xy), y + 3 x (1+xy)^2 z + 3 x y^2 (4+3xy), 2 x - 3 x^2 y - x^3 z)". The transcription I used came from a third-party verification repo (MMVFIRM). [E2 for provenance]
+
+**Retrieved information:**
+- Alpöge (Anthropic/Harvard) found the map with Anthropic's Claude Fable 5. Akhil Mathew suggested the problem. Prompting details were not public as of 22 Jul (The Conversation). [E3, press]
+- **Lean status** (GitHub API, checked 19:34 PDT) [E2]:
+  - google-deepmind/formal-conjectures PR #4474, "feat: add Jacobian disproof," was **merged 2026-07-26 08:40 PDT**.
+  - mathlib4 PR #42116 was **closed unmerged** on 2026-10-07 05:39 PDT. The PR author labeled it "LLM-generated." The reviewer (tb65536) said FormalConjectures already has "a cleaner formalization." It was closed as a duplicate, not because it was wrong.
+- Expert reactions:
+  - Saha (QMUL): "probably … the biggest conjecture that A.I. has played a significant role [in]".
+  - Blumberg (Columbia): "Moses … tablets" — the answer without understanding.
+  - Mathew: "One can check out that it's correct, but it would be nice to be able to tell a story." [E3]
+- The third-party repo claims a "3→1→0" fiber structure, a Jelonek non-properness surface and S₃ monodromy. I have not verified these.
+
+**Mathematical derivations:**
+- A polynomial inverse G would force G∘F = id, so F would be injective. The three-point collision rules that out.
+- So F is a Keller map with no polynomial inverse, i.e. a counterexample in n=3.
+- F×id_{n−3} gives the counterexample for every n ≥ 3 (det is still −2, collision is preserved).
+- The coefficients are rational, so it also works over ℚ, ℝ and ℂ. [E1, elementary]
+
+**Logical deductions:**
+- This is the most famous problem in the ledger: Smale's 1998 list, open since 1939 (n-dim form).
+- It is a pure **∃-instance**: a short, explicit, finitely checkable witness.
+- Under the E001 criterion it is **novel instance, not novel concept**. The *lack* of a conceptual "why" is the experts' own complaint (Mathew, Blumberg).
+
+**Empirical findings:** —
+
+**Inferences:**
+- (strong) The headline of AI math in 2026 has two faces:
+  - (i) **Jacobian / unit-distance**: spectacular ∃-witnesses that arrive *without* understanding.
+  - (ii) **#1196**: a modest ∀-theorem that *carried* a reusable method.
+- "Alien" in Reke's sense fits (i) better: an object humans verify but cannot yet explain. It is alien in *opacity of discovery*, not in *structure of the object* (degree 7, three variables, all legible).
+
+**Hypotheses:**
+- H7: Within 12 months, humans will produce a conceptual explanation of the Fable map (e.g. via the claimed 3-sheeted cover/Jelonek structure). That would move it from "opaque instance" to "understood instance."
+- Test: track citations and arXiv papers on "Jacobian conjecture counterexample dimension 3."
+
+**Theoretical explanations:** — 
+
+**Speculation:** The two-dimensional case remaining open may now attract search-based attacks. Unknown.
+
+**Unknowns:**
+- The exact AI vs. human split: how much search, how many prompts, and whether a CAS was in the loop.
+- Peer-reviewed write-up status.
+
+**Contradictions:** —
+
+**Sources:**
+- https://theconversation.com/hello-there-the-jacobian-conjecture-is-false-thanx-why-a-tiny-social-media-post-has-mathematicians-rethinking-ai-283883
+- https://www.smithsonianmag.com/smart-news/ai-disproves-a-decades-old-mathematical-idea-the-biggest-conjecture-that-the-tech-has-played-a-role-in-yet-180989189/
+- https://github.com/MMVFIRM/alpoge-fable-jacobian-counterexample
+- https://github.com/leanprover-community/mathlib4/pull/42116 (closed) · https://github.com/google-deepmind/formal-conjectures/pull/4474 (merged)
+
+**Corrections to earlier entries:** —
+
+**Thread update:**
+- T01 ledger rows L21 (#1196 method) and L22 (Jacobian) added.
+- Next step: search for papers explaining the Fable map (H7). The Lean status is settled (formal-conjectures #4474 merged).
+
+**Checklist:** [x] categories [x] sources [x] verified in code [x] next step
+
+### E009: Cycle 0 (pre-work, cont.): #1196 primary transcript — the Markov-chain idea appears in GPT-5.4 Pro's own reasoning after a 2-prompt, no-internet run
+- **Date:** 2026-10-31 19:35–19:40 PDT · **Cycle:** 0 (pre-work) · **Threads:** T01
+- **Question this cycle:** E007 rests on the paper's own account ("suggested from output of GPT-5.4 Pro"). Does the primary transcript show (a) the AI coming up with the von Mangoldt / Markov-chain idea itself, and (b) how much the humans steered it?
+
+**Direct observations:** (saved at `data/gpt54pro_1196_transcript.html`, 1.28 MB, curl 200)
+- **Provenance:** the share link `https://chatgpt.com/share/69dd1c83-b164-8385-bf2e-8533e9baba9c` is footnote 12 of arXiv 2605.00301 (checked with pdftotext, line 2463). [E1 for the link]
+- **User turns: 2.** Both were embedded in the share JSON.
+  - **Turn 1, 2026-04-13 07:34 PDT:** "don't search the internet. This is a test to see how well you can craft non-trivial, novel and creative proofs given a 'number theory and primitive sets' math problem. Provide a full unconditional proof or disproof…" It gave the problem statement plus the known bound e^γ·π/4 ≈ 1.399.
+  - **Turn 2, 08:54 PDT:** "no internet: Please write a full correct resolution … as a publishable maths research paper using amsart…"
+  - Neither prompt gives any methodological hint.
+- **The model's reasoning summaries** (verbatim) include:
+  - "Defining Markov chain with cemetery state … to absorb missing mass … This keeps event probabilities disjoint, so the sum of probabilities is ≤ 1"
+  - "stress-testing the cutoff and sub-Markov construction … to ensure the first-entry decomposition gives an exact 1+O(1/log x) majorant"
+  - "weighing whether to keep the Markov chain for clarity or use a simpler recursive path mass system"
+- **The final answer** claims a *stronger* statement: for 0<δ<log 2, Σ 1/(a(log a − δ)) ≤ 1 + O_δ(1/log x). Its key identity is Σ_{q|n} Λ(q) = log n, used in "a weighted 'first-entry' decomposition on the divisibility poset" with only large prime-power jumps.
+- These counts come from my regex over the serialized JSON and could miss turns. The 217 thought-summary titles are approximate.
+
+**Retrieved information:** The paper §11 (E007) says this run produced the initial proof of Thm 1.1 and that humans developed the downward chain for Thm 1.2. That matches what is above. [E2]
+
+**Mathematical derivations:** — (I have not re-checked the AI's proof line by line. Its estimate (1) uses Mertens' first theorem M(t) = log t + O(1), which is standard.)
+
+**Logical deductions:**
+- (a) Yes. The core device, a Λ-weighted sub-Markov chain on the divisibility poset with an absorbing state, where a primitive set is hit at most once per path so the total mass is ≤ 1, appears in the AI's own reasoning. It was not supplied by the prompt.
+- (b) Steering was minimal: 2 generic prompts over about 80 min, internet disallowed.
+- So the "seed" in "AI-seeded, human-abstracted" is literal. The *abstraction* (naming it, the downward chain, transfer to #1217, #164 and Banks–Martin) is human (E007).
+
+**Empirical findings (reuse check, 19:37 PDT):**
+- Semantic Scholar lists 6 works citing 2605.00301: CryptanalysisBench, a Vlasov formalization, VGPT-RSI, Goedel-Architect, the Grothendieck-constant paper, and Riccati–Gamma eta functions. None is about primitive sets, and by title none reuses the method.
+- OpenAlex lists 1 (a press piece).
+- An arXiv abstract search for "primitive set(s)" in math.NT turns up **no papers after 2605.00301**. The previous one is Kucheriaviy, 2024-06.
+- So **independent reuse is so far zero, 6 months on.** Citations are about AI-for-math, not the method. [E2]
+- Caveat: these are abstract and title searches only. Full-text reuse in papers on other topics would be missed.
+
+**Inferences:**
+- (moderate) This is the clearest primary-source case so far of an LLM coming up with a **method** rather than a witness.
+- Caveats:
+  - Probabilistic/flow arguments on divisor posets have ancestors (Erdős's 1935 argument, Lichtman's own work on primitive sets). "No internet" doesn't rule out the method being memorized and recombined.
+  - The paper's authors, who include Lichtman, the primitive-set specialist, still judged it new. That is the best available expert test. [E2→E3]
+
+**Retrieved information (2), paper Remark 1.8, p.5** [E2]:
+- By Stanley's chain-polytope theorem plus LP duality, a bound Σ_{n∈A} ν(n) ≤ M holds for all antichains A *iff* there is a probability distribution on chains that covers each n with probability ≥ ν(n)/M.
+- So *some* random-chain proof must exist whenever the bound is true. That part is classical.
+- The authors' "key additional insight" is that a **Markovian** chain tied to the **von Mangoldt** process is highly efficient on the divisibility poset.
+- Paper §1 uses an absorbing state ∞ for sub-invariant weights. That corresponds to the AI's "cemetery state."
+
+**AI output vs. paper Thm 1.1** (pdftotext, p.2) [E1 comparison of statements]:
+- Paper Thm 1.1: f(A) ≤ 1 + O(1/log x) for primitive A ⊂ [x,∞). The previous best bound was e^γπ/4 ≈ 1.399 (Lichtman). The result is sharp up to lower-order terms.
+- The AI's final answer already states this **same quantitative bound**, in a *stronger* δ-shifted form (Σ 1/(a(log a−δ)) for δ < log 2).
+- So for Thm 1.1 the humans' contribution was verification, exposition, Lean (Math Inc.) and generalization, not strengthening the statement.
+- I have not checked the AI's proof correctness myself. The paper's authors and the Lean formalization vouch for "a version of" it. [E2]
+
+**Prior art, from the paper's own §2** (pdftotext ll. 304–370, 462–470) [E2]:
+- The paper writes the classical approach as a **Mertens downward chain**. It is deterministic, its invariant weight is ν_Mertens, and it is "L-divisible" in Lichtman's 2022 sense [29].
+- Those weights "appear in the literature [31, 29, 30, 24], and … originate with Erdős' seminal paper [10]" (1935).
+- The new ingredient is to **randomize the chain with von Mangoldt transition probabilities**. It is tractable through Σ_{q|n}Λ(q) = log n, but can "jump over" primitive sets via prime powers, so the paper modifies it.
+- So the AI's move was a **variation inside a known framework**: replace a deterministic Mertens chain with a Λ-random chain. It was not a new framework.
+
+**Logical deduction (2):**
+- The novelty is narrower than "a new kind of argument." Duality guarantees the proof *shape*. What the AI found is an efficient, explicit *choice* inside that shape: Λ-weighted Markov transitions, with the identity Σ_{q|n}Λ(q) = log n making it a stochastic kernel.
+- This is a concrete instance of **H6 (overlooked-but-legible)**, now with an explicit lineage (Erdős 1935 → Lichtman 2022 Mertens weights → AI Λ-chain): a design choice any analytic number theorist can read and reuse, missed for about 90 years.
+- On the E001 criterion it is a **new method** (it generalizes and transfers), not a new concept in the sense of a new definition or object.
+
+**Hypotheses:**
+- **H2′ (sharpened):** AI-originated *methods* come from LLM reasoners on ∀-problems, not from search systems.
+- **Prediction:** the next documented AI-seeded method will also appear in a ∀-proof transcript, not in an AlphaEvolve-style output.
+
+**Theoretical explanations:** —
+
+**Speculation:** The prompt "craft non-trivial, novel and creative proofs" may itself push the model toward unusual framings. Testable only with ablations nobody has published.
+
+**Unknowns:**
+- Was the Markov framing reached early (a key idea) or late (a presentational choice)? The reasoning summaries hint at the latter ("keep the Markov chain for clarity"). If so, the core may be the Λ-weighted first-entry decomposition, with the Markov language as packaging.
+- Prior art: an ancestor search on "first-entry decomposition divisibility poset" is still to do.
+
+**Contradictions:** None with E007. Small tension: E007 says "suggested from output." The transcript shows the output contains the whole construction, not just a suggestion.
+
+**Sources:**
+- https://chatgpt.com/share/69dd1c83-b164-8385-bf2e-8533e9baba9c (local copy at data/gpt54pro_1196_transcript.html)
+- https://arxiv.org/abs/2605.00301 (fn 12, §11)
+
+**Corrections to earlier entries:** E007's "suggested from" understates the AI share for Thm 1.1 (see Contradictions). E008: Lean status updated (formal-conjectures #4474 merged; mathlib #42116 closed as a duplicate).
+
+**Thread update:**
+- T01 next steps:
+  - (i) Diff the AI's Thm 1.1 proof against paper §2 to see what humans changed.
+  - (ii) Search for prior art on the "first-entry decomposition" (Erdős 1935, Lichtman 2022+).
+  - (iii) Track reuse via `paper_lookup.py cites W7160131331`.
+
+### E010: Cycle 0 (pre-work, cont.): Wagner Conj 2.1 violators solved in closed form — a pencil-and-paper family, tight at n=17
+- **Date:** 2026-10-31 19:36–19:39 PDT · **Cycle:** 0 (pre-work) · **Threads:** T01
+- **Question this cycle:** E005 found the minimal violators by brute force. Can they be explained in closed form? That tests how far the RL showcase is from hand mathematics (H5).
+
+**Direct observations:** `notes/cycle0/wagner_family_exact.py` (sympy + numpy), output in `wagner_family_exact_out.txt`.
+- **Family D(a,b):** stars K_{1,a} and K_{1,b} whose centres are both joined to one middle vertex. n = a+b+3, and the matching number μ = 2.
+- The E005 violators are D(8,7) at n=18 and D(8,8) at n=19, matching the edge lists in wagner_trees_out.txt.
+- Computed λ1 values (exact, agreeing with numeric eigvalsh to 1e-6):
+
+| Case | n | λ1 | λ1+μ | Bound √(n−1)+1 | Result |
+|---|---|---|---|---|---|
+| D(7,7) | 17 | 3 | 5 | 5 | equality |
+| D(8,7) | 18 | √((17+√5)/2) ≈ 3.101296 | 5.101296 | 5.123106 | violates |
+| D(8,8) | 19 | √10 | — | — | violates |
+| D(9,8) | 20 | — | — | — | violates |
+
+- [E1]
+
+**Mathematical derivations:**
+- Eigen-equations (centres c1, c2, middle m): λc1 = a·c1/λ + m, λc2 = b·c2/λ + m, λm = c1 + c2.
+- Hence, with x = λ², **1 = 1/(x−a) + 1/(x−b)**.
+- In the symmetric case a=b, x = a+2. The violation condition √(a+2) + 2 < √(2a+2) + 1 becomes 2√(a+2) < a−1, i.e. **(a−7)(a+1) > 0, i.e. a > 7**. [E1, elementary]
+- So the family meets the bound with *equality* at n=17 and breaks it from n=18 (asymmetric (8,7)) onward. That explains why E005's exhaustive search found min = bound exactly at n=17.
+
+**Logical deductions:**
+- The celebrated RL counterexample (Wagner 2021, Fig. 4) lies in a 2-parameter family whose λ1 follows from a quadratic, and the threshold a > 7 is one line of algebra.
+- A human who suspected "two stars plus a connector" would have found it by hand.
+- Context: Wagner says Stevanović's earlier counterexample had **n = 600** vertices (Wagner p.5). Ghebleh et al. 2024, *co-authored by Stevanović*, still cite the RL 19-vertex example as the small one (ghebleh2024.pdf, l.73). So the hand family went unnoticed between 2010 and 2021, and the RL found a member of it. [E2]
+
+**Empirical findings:** —
+
+**Inferences:** (strong) This is further support for **H5**: some flagship search-found ∃-witnesses are low-complexity objects, and AI's contribution is that it *looked*, not that it saw something humans couldn't. That is the opposite of "alien."
+
+**Hypotheses:** —   **Theoretical explanations:** above.   **Speculation:** —
+
+**Unknowns:**
+- Is the exhaustive minimum n = 18 (E005) stated anywhere? It is not in Wagner 2021 or Ghebleh+Stevanović 2024.
+- OpenAlex lists only 16 works citing 2104.14516 (W3159087135), certainly an undercount. Titles and abstracts mentioning matching or spectral radius: 2 hits, neither about n=18. [E2, weak check]
+- **Candidate small new observation (mine, not AI's). Unverified novelty; do not claim** until a wider search (Google Scholar "λ1 + μ" 18 vertices, and papers citing 2104.14516) is done.
+- What was the structure of Stevanović's 600-vertex construction? Not read.
+
+**Contradictions:** —
+
+**Sources:**
+- Wagner arXiv:2104.14516 (data/wagner2021.pdf)
+- E005 outputs
+- Code as above
+
+**Corrections to earlier entries:** Terminology only. E005 calls D(a,b) a "double star (… joined through a degree-2 vertex)." The standard "double star" has *adjacent* centres, so I name it D(a,b) from now on.
+
+**Thread update:** T01 step (4): search the papers citing 2104.14516 for any n=18 statement. If there is none, record it as a minor verified observation (E1 computation).
+
+### E011: Cycle 0 (pre-work, cont.): Erdős #1014 (Ramsey ratio → 1) — AI proof = dependent random choice; nontrivial only for k ≥ 5; recombination, not method
+- **Date:** 2026-10-31 19:38–19:42 PDT · **Cycle:** 0 (pre-work) · **Threads:** T01
+- **Question this cycle:** For the next Erdős-wiki 1(a) full solution (#1014, "OpenAI internal model," 23 Apr 2026), what is the technique? Under the E001 criterion, is it instance, connection, method or concept?
+
+**Direct observations:**
+- **Problem:** for fixed k ≥ 3, R(k,l+1)/R(k,l) → 1 (data/erdos_1014.html).
+- The OpenAI write-up (`data/openai_ramsey_1014.pdf`, from cdn.openai.com, linked in the forum thread) says:
+  - "based on dependent random choice. The proof is due to an internal model at OpenAI."
+  - Remark 1 gives the quantitative form R(k,l+1)/R(k,l) ≤ 1 + l^{−c_k}.
+  - There are three external inputs: Erdős–Szekeres, the probabilistic lower bound R(k,l) ≫ (l/log l)^{k/2}, and Fox–Sudakov dependent random choice (DRC).
+  - Key observation: if R(k,l+1) ≥ (1+ε)R(k,l), a critical graph has minimum degree ≳ εR(k,l+1), so it is dense, "contrary to the expectation that the optimal graphs should be sparse, and this tension drives the proof."
+- **Forum** (forum/thread/1014):
+  - Lean formalization by B. Alexeev (plby/lean-proofs).
+  - Tao (26 Feb 2026): the k=3 case "would already have been known to Erdős" via Greenwood–Gleason + R(3,n) ≫ n²/log²n.
+  - A user (qrdl) commented that the status won't change without expert review.
+  - The site describes the result as "solved by an internal model at OpenAI." [E2]
+
+**Mathematical derivations:**
+- The trivial route: R(k,l+1) ≤ R(k−1,l+1) + R(k,l) (Greenwood–Gleason/Erdős–Szekeres recurrence). So the ratio → 1 whenever R(k−1,l) = o(R(k,l)).
+- With the bounds quoted in the write-up, Bohman–Keevash lower R(k,l) ≫ l^{(k+1)/2}(log l)^{1/(k−2)−(k+1)/2}, and the classical upper R(k−1,l) ≪ l^{k−2}/(log l)^{k−3} (AKS-type, **recalled, E4**):
+
+| k | Upper R(k−1,l) | Lower R(k,l) | Trivial route? |
+|---|---|---|---|
+| 3 | l | — | works |
+| 4 | R(3,l) ~ l²/log l | ≫ l^{5/2}/polylog | works |
+| 5 | ≪ l³/log²l | ≫ l³/(log l)^{8/3} | **fails**: the log gap runs the wrong way |
+| ≥ 6 | l^{k−2} | l^{(k+1)/2} | **fails**: k−2 > (k+1)/2 ⇔ k > 5, a polynomial gap |
+
+- So with the bounds as I have them, **the problem is genuinely nontrivial only for k ≥ 5.** [E1 algebra, on E2/E4 inputs]
+
+**Logical deductions:**
+- The proof is ∀-type.
+- It combines three standard tools. DRC is a well-known 2011 technique (Fox–Sudakov) and the critical-graph density idea is classical.
+- Under the E001 criterion it is a **connection** (DRC applied to the ratio problem), not a new method or concept.
+- That fits H1-split: reasoners produce ∀-proofs by **recombination**.
+- It also fits H4 (obscurity, not difficulty): the problem is from a 1971 list and had little attention, and the k=3 case was folklore-easy.
+
+**Empirical findings:** —
+
+**Inferences:**
+- (moderate) #1014 is a typical example of the "LLM reasoner on obscure ∀-problem" regime: a short, clean, human-legible proof from known tools.
+- Contrast with #1196 (E009), where the AI's move was a new variation that the authors extracted as a reusable method.
+
+**Hypotheses:** —   **Theoretical explanations:** —   **Speculation:** —
+
+**Unknowns:**
+- No expert review is recorded on the site.
+- Prompting and steering for the OpenAI internal model are undisclosed.
+- I have not verified the AKS-type upper bound for R(k−1,l) this cycle, so the k=5 boundary depends on it.
+
+**Contradictions:** —
+
+**Sources:**
+- https://www.erdosproblems.com/1014
+- https://www.erdosproblems.com/forum/thread/1014
+- https://cdn.openai.com/pdf/6dc7175d-d9e7-4b8d-96b8-48fe5798cd5b/Ramsey.pdf (local copy at data/openai_ramsey_1014.pdf)
+- https://github.com/plby/lean-proofs/blob/main/ErdosProblems/Erdos1014.md
+
+**Corrections to earlier entries:** —
+
+**Thread update:**
+- E006 technique coding: #1014 is ∀ / connection (DRC). It is now hand-verified as a recombination.
+- Next: #1051 and #1091.
+
+### E012: Cycle 0 (pre-work, cont.): Erdős #1051 (irrationality of Σ1/(aₙaₙ₊₁)) — loose AI proof, humans sharpened it to the optimal golden-ratio threshold
+- **Date:** 2026-10-31 19:39–19:42 PDT · **Cycle:** 0 (pre-work) · **Threads:** T01
+- **Question this cycle:** For the next 1(a) full solution (#1051, Aletheia, Jan 2026), what did the AI contribute and what did the humans contribute?
+
+**Direct observations:** (from arXiv:2601.21442v3, Barreto–Kang–Kim–Kovač–Zhang, at data/bkkkz_1051.pdf, §1 "Declaration of AI usage") [E2]
+- **Problem** (Erdős–Graham 1980): if liminf a_n^{1/2^n} > 1, is Σ 1/(a_n a_{n+1}) irrational?
+- **Timeline:**
+  - (2) Aletheia found a solution. "the proof used rough estimates such as 1.7 < 2, log x < x."
+  - (3) "The authors realized and proved that one can relax the original growth condition"
+  - (4) "Gemini Deep Think discovered a further generalization … and then, jointly with Aletheia, proved it"
+  - (5) The humans found tight counterexamples.
+  - (6) The humans weakened the hypotheses further, "inspired by Erdős's paper [5]"
+- **Final result:** irrational if limsup a_n^{1/φ^n} = ∞, with φ the golden ratio. This is essentially optimal: for every C there are rational examples with lim a_n^{1/φ^n} = C.
+- Aletheia "searched over a large set of open problems and autonomously narrowed them down to those it could solve."
+- The main proof case uses "variations of the strategy from [5]" (Erdős's own paper).
+
+**Logical deductions:**
+- The AI proof is a ∀-proof using Erdős's classical strategy with slack, so it is **a connection/application, not a method**.
+- The deeper result (the golden-ratio threshold and its optimality) is mostly human, with one AI-proposed generalization (step 4).
+- **Pattern match with #1196 (E009):** in both, an AI output with visible slack or an unusual device was **sharpened or abstracted by humans** into a stronger, more general theorem.
+- The difference: in #1051 the device was Erdős's own, so there is no new method.
+
+**Inferences:**
+- (moderate) A recurring 2026 workflow: **an AI triages obscure problems and produces a loose proof, then humans abstract or sharpen it.** In both well-documented cases (#1196, #1051) the conceptual payoff came in the human phase.
+- Aletheia's self-selection of problems it "could solve" is a selection effect that supports **H4 (obscurity, not difficulty)**.
+
+**Hypotheses:** H8: in documented AI-originated Erdős solutions, the final published theorem is usually stronger than the AI's original output because of human sharpening. Test: code the AI-vs-final delta for each wiki 1(a)/1(b) entry with a paper.
+
+**Empirical findings:** — **Theoretical explanations:** — **Speculation:** —
+
+**Unknowns:** I have not read the raw Aletheia output (superhuman GitHub [12]).
+
+**Contradictions:** —
+
+**Sources:**
+- https://arxiv.org/abs/2601.21442
+- https://www.erdosproblems.com/1051
+- https://github.com/google-deepmind/superhuman/tree/main/aletheia (not fetched)
+
+**Corrections to earlier entries:** —
+
+**Thread update:**
+- #1051 is coded as ∀ / connection, with a large human sharpening.
+- H8 added.
+
+### E013: Cycle 0 (pre-work, cont.): technique coding #1091 (∃ construction) and #1141 (∀ via Pollack 2017), which resolves one E006 ambiguous case
+- **Date:** 2026-10-31 19:40–19:42 PDT · **Cycle:** 0 (pre-work) · **Threads:** T01
+- **Question this cycle:** Code the ∃/∀ type and the technique for two more 1(a) full solutions, from the site text only (data/erdos_1091.html, data/erdos_1141.html).
+
+**Direct observations:** [E2, site text]
+- **#1091** (Er76c): the first question (≥2 diagonals) was solved by Voss 1982. For the second, "an internal OpenAI model (see [APSSV26b]) has provided a negative answer": for every m there is a K₄-free, 4-critical graph on ≍ m vertices where every cycle has ≤ 10 diagonals.
+- **#1141:** "an internal OpenAI model (see [APSSV26b]) has resolved this, proving that for any a ≥ 1 there are only finitely many n such that n − ak² is prime for all k with (k,n)=1 … deducing this from a result of Pollack [Po17]." It was preceded by ChatGPT + Tang's N^{1/2+o(1)} bound. The wiki 2026 table credits GPT-5.4 Pro.
+
+**Logical deductions:**
+- **#1091** is an **∃-type result** (an explicit infinite construction refuting a ∀-conjecture). This moves it from "ambiguous" (E006) to ∃.
+- **#1141** is **∀** (finiteness), obtained by **connecting to existing literature** (Pollack 2017). It is a connection, not a method, and fits the wiki's 2(a) literature-search strength (E006).
+- E006 tally update: ∃ count +1 (#1091). The ambiguous cases drop to 5 (619, 694, 741, 960, 1202). The ∃ share among coded standalone full solutions becomes 6/13 ≈ 46%, still well below the ledger's 77% (H1-split holds).
+
+**Inferences:** (weak) Both are recombination or connection results. Neither is a candidate for a novel concept.
+
+**Unknowns:** I have not read [APSSV26b], so the construction technique for #1091 is unknown. Is it a search-found gadget or a hand construction?
+
+**Hypotheses:** — **Empirical findings:** — **Theoretical explanations:** — **Speculation:** — **Contradictions:** —
+
+**Sources:**
+- https://www.erdosproblems.com/1091
+- https://www.erdosproblems.com/1141
+- data/erdos_ai_wiki.md (rows for 1091 and 1141)
+
+**Corrections to earlier entries:** E006/E007 ∃ ≈ 5/12 → **6/13** after coding #1091.
+
+**Thread update:** Find [APSSV26b] on arXiv (OpenAI internal-model Erdős paper) for the #1091 technique.
+
+### E014: Cycle 0 (pre-work, cont.): Jacobian counterexample was *explained* by humans within days (Speyer tangent-sweep, 23 Jul), generalized to all n≥3; corrects E008 'opaque'
+- **Date:** 2026-10-31 19:41–19:44 PDT · **Cycle:** 0 (pre-work) · **Threads:** T01
+- **Question this cycle:** Test H7 (E008): has anyone given a conceptual explanation of the Alpöge/Fable map?
+
+**Direct observations:**
+- The arXiv title search `ti:"Jacobian conjecture"`, sorted by date, shows a burst of papers after July 2026. Abstracts are from the arXiv API. [E2]
+  - **Gao, arXiv:2608.00222** (31 Jul): "refuted in dimension three by Alpöge on July 19, 2026, with an infinite family by Gallagher (July 20) and a **geometric explanation by Speyer (July 23)**: the counterexample sweeps the tangent lines of a plane curve — a map that classical duality forces to hit most points several times."
+    - Gao generalizes this "tangent-sweep mechanism" to direction fields on hypersurfaces. That gives counterexamples in every n > 2 with arbitrarily large geometric degree, plus 5 new explicit maps (e.g. 3-dim of degree 4).
+    - They are "étale coverings ℂⁿ→ℂⁿ that are not proper."
+  - **van den Essen, arXiv:2609.17795** (15 Sep): "We show how a counterexample … can be found by **elementary mathematics**. The example we find is, apart from linear coordinate changes the example found by Levent Alpöge."
+  - **Shaska, arXiv:2607.20210** (22 Jul): the map is equivariant for wt(x,y,z) = (1,−1,−2). If all weights are positive, equivariant Keller maps are automorphisms. In dimension 2 the same holds for every sign pattern.
+- **My check of Shaska's grading claim:** `notes/cycle0/jacobian_grading_check.py` (sympy). Under (x,y,z) ↦ (tx, y/t, z/t²), F1 ↦ t⁻²F1, F2 ↦ t⁻¹F2, F3 ↦ tF3. So F is equivariant, with target weights (−2,−1,1), i.e. (F3,F2,F1) carries weights (1,−1,−2). **Claim confirmed.** [E1]
+
+**Logical deductions:**
+- The "Moses tablets" framing (E008, from 20–22 Jul press quotes) was out of date within days.
+  - A geometric mechanism (Speyer, about 4 days later) and an elementary derivation (van den Essen, 2 months later) both exist.
+  - The mechanism generalizes and produces new counterexamples (Gao).
+- Under the E001 criterion, the *instance* came from AI and the *concept* (tangent-sweep / non-proper étale covers) came from humans. The concept is classical algebraic geometry (projective duality).
+- So the Jacobian case follows the same pattern as #1196 and #1051 (E009, E012): **AI produces an object or proof, and humans quickly extract the conceptual structure.**
+- "Elementary mathematics" suffices to find it (van den Essen). That supports **H6/H5**: the object was findable by humans and overlooked, not alien.
+
+**Empirical findings:** —
+
+**Inferences:**
+- (strong) **H7 is largely confirmed**, and faster than predicted (days, not 12 months).
+- **H3** (results that resist human digestion) now has **no live candidate** in the ledger.
+
+**Hypotheses:**
+- H9: The time from AI result to human conceptual explanation is short (days to weeks) for high-profile results, and the bottleneck is attention, not understanding.
+- Test: measure the lag for each ledger item with a known explanation date.
+
+**Theoretical explanations:**
+- Speyer, per Gao: the map sweeps tangent lines of a plane curve, and duality forces multiple coverage. This is consistent with the 3-to-1 collision I verified (E008), but I have not reproduced the mechanism. [E2]
+
+**Speculation:** Maybe the AI found the map *because* this kind of structure is low-complexity in some search representation. That can't be checked without a transcript.
+
+**Unknowns:**
+- Speyer's original source: found in the addendum (SBS blog, Jul 20).
+- Is the Gallagher family public?
+- Is there a Fable transcript?
+
+**Contradictions:** E008's inference that "alien" fits the Jacobian case as "an object humans verify but cannot yet explain" was true only for about 4 days. It is now superseded.
+
+**Sources:**
+- https://arxiv.org/abs/2608.00222
+- https://arxiv.org/abs/2609.17795
+- https://arxiv.org/abs/2607.20210
+- notes/cycle0/jacobian_grading_check.py
+
+**Corrections to earlier entries:**
+- **E008:** the "opaque instance / no explanation" status is corrected. A human conceptual explanation existed from 23 Jul 2026.
+- E008's H7 "test" is already satisfied.
+
+**Thread update:** T01 conclusions revised. The Jacobian case moves from "opaque ∃-instance" to "AI instance, human concept within days."
+
+**Addendum (19:43 PDT), primary source:** David Speyer, Secret Blogging Seminar, "The new counterexample to the Jacobian conjecture", posted 2026-07-20, with 46 comments. https://sbseminar.wordpress.com/2026/07/20/the-new-counterexample-to-the-jacobian-conjecture/ (curl 200) [E2]
+- Comment by Will Sawin, Jul 20 at 12:19 pm: "ChatGPT prompted by Andy Jiang gave what is almost an elegant geometric construction of the map."
+  - The construction: π: P¹×Sym²(P¹) → Sym³(P¹), with the ramification divisor R and a hyperplane H tangent but not osculating to the small diagonal removed. The result is X ≅ A³ → Y ≅ A³.
+  - The open gap was a conceptual reason why X ≅ A³.
+- Speyer's reply gives a point-counting sanity check.
+- Other comments describe the discriminant curve as a Legendre envelope (cusps = flexes, nodes = bitangents).
+- **Revised deduction:** the conceptual explanation arrived within **about 1 day**, not 4. A *second AI* (ChatGPT, human-prompted) contributed to it, together with humans. So the "AI instance → concept" step was itself partly AI-assisted. That weakens the clean "AI instance / human concept" split above. Record this as a mixed case for H9 and H6.
+- Sources to add: SBS post; openproblem.space "Tangent sweeps" wiki (not fetched); lovelylittlelemmas post (not fetched).
+
+### E015: Cycle 1: T02 — the electron g−2 route had its own hidden 5σ theory dispute (10th-order QED), now resolved as a Monte Carlo bias; α(g−2) shifts −0.05 ppb and leans slightly *less* toward Rb
+- **Date:** 2026-10-31 20:05–20:25 PDT · **Cycle:** 1 · **Threads:** T02
+- **Question this cycle:** Is the "third route" to α (electron g−2 + QED), which E002 used to adjudicate Cs vs Rb, itself solid — and has anything changed in 2025–26?
+- **Why this, now:** Chosen freely. E002's main inference ("g−2 sides with Rb, so Cs-side systematic more likely") rested on treating the g−2 route as independent and settled. That assumption was untested. T02 had not been touched since Cycle 0.
+
+**Direct observations:**
+- arXiv searches (abs/ti "fine-structure constant" + recoil / atom interferometry / atom-ph, sorted by date, run 20:06–20:20 PDT): **no new Cs or Rb recoil measurement and no new electron g−2 measurement** posted through 2026-10-31. Newest relevant items are theory/systematics papers (below). [E1 search; absence-of-evidence only for arXiv]
+- Fan et al. 2023 PDF (`notes/cycle1/fan.txt`, lines 572–584 and Fig. 1 caption): their headline α⁻¹ = 137.035 999 166(15) uses the AHKN tenth-order coefficient (refs [27,28]); "A second evaluation of C10 [39 = Volkov 2019] differs slightly for reasons not yet understood", shown only as open points. [E2]
+- `notes/cycle1/alpha_C10_shift.py`: (α/π)⁵ = 6.762×10⁻¹⁴, so each unit of A1^(10) moves a_e by 6.76×10⁻¹⁴ and α⁻¹ by ≈ 8.0×10⁻⁹. Replacing 6.737 by the now-agreed ≈5.87–5.89 gives **Δα⁻¹ ≈ −6.9×10⁻⁹ (−0.051 ppb)** → α⁻¹(g−2) ≈ **137.035 999 159(15)**. Tensions (independent Gaussian errors): vs Cs **+3.9σ → +3.7σ**; vs Rb **−2.2σ → −2.5σ**. With the CODATA-2022 compromise C10 = 6.08: α⁻¹ ≈ 137.035 999 161, Cs +3.7σ, Rb −2.4σ. [E1 on E2 inputs]
+  - Cross-check: δα/α ≈ δa_e/a_e = 0.867·6.76e-14/1.1597e-3 = 5.05×10⁻¹¹ ✓ (leading-order a_e ≈ α/2π, so δα/α ≈ δa_e/a_e).
+- `notes/cycle1/mc_spike_bias.py` (toy, not a model of the real integrals): plain MC of f(x)=4−x^(−0.7) on (0,1) (finite integral, infinite variance, steep negative spike). Over 98 independent "integrals" at N=10⁶: 76% overshoot the exact value, median pull +0.83, and the summed deviation is +1.60 vs a quoted combined error of 0.60 (≈2.7σ). [E1] Shows that *many individually "consistent" integrals can share a same-sign bias whose sum is several σ*, with honest-looking error bars.
+
+**Retrieved information:**
+- **Volkov 2019** (PRD 100 096004; arXiv 1909.08015): Set V (5-loop, no lepton loops) = 6.793(90) vs AKN 7.668(159), "about 4.8σ … A shift in the fine-structure constant prediction is revealed." [E2]
+- **Volkov 2024** (PRD 110 036001; arXiv 2404.00649): total A1^(10) = **5.891(61)**, "the first complete verification" of AHKN; discrepancy 5σ. Lepton-loop sets (31 of them) agree with AHKN. [E2]
+- **CODATA 2022** (arXiv 2409.03787, Sec. on a_e, lines ~3680–3790 of `notes/cycle1/codata.txt`): AHKN 2019 total = 6.737(159); Volkov-based total = 5.863(90); "discrepant by 4.8σ"; CODATA used **A1^(10) = 6.08(16)** with an **expansion factor 2.1** ("normalized residuals −2.4 and 4.2"). [E2]
+- **Aoyama, Hayakawa, Hirayama, Nio 2025** (PRD 111 L031902; arXiv 2412.06473): diagram-by-diagram comparison of all 389 Set V integrals: "No significant discrepancies were found for individual diagrams. However, the numerical differences of the 98 diagrams sharing a common structure were not randomly distributed." These 98 have one 2nd-order self-energy subdiagram (steep integrands from cancellation of linear IR divergence). Recomputed with 1–4×10¹⁰ VEGAS points in double-double precision (~3.2×10⁷ core-hours): **85 of 98 decreased**, total shift −0.8032(717); new Set V = **6.800(128)**, "thereby resolving the discrepancy." Authors: "A hidden bias must exist in the numerical integration." [E2]
+- **Day, Harnik, Kahn, Pavaskar et al.** (JHEP 03 (2026) 038; arXiv 2511.07514): first fully quantum cavity-shift calculation for the Penning-trap g−2 experiment; "perfect agreement with existing classical results", so the classical cavity correction used by Fan 2023 is justified. [E2] (Experimental-side systematic: no change.)
+
+**Mathematical derivations:**
+- a_e = Σ Cₙ(α/π)ⁿ + small terms; at fixed measured a_e, Δα⁻¹ = −ΔC₁₀(α/π)⁵ / (∂a_e/∂α⁻¹), with ∂a_e/∂α⁻¹ = −α²·Σ n Cₙ (α/π)^(n−1)/π. Script above.
+- Revised AHKN total = 6.800 + (−0.93042) = 5.870(128), consistent with Volkov 2024 5.891(61) (Δ = 0.02, 0.15σ).
+
+**Logical deductions:**
+- The g−2 route used in E002 was **not** fully settled: its theory input carried a 5σ internal disagreement from 2019 until ~Dec 2024. E002 should have flagged that.
+- Because the AHKN value used for Fan's headline α was the *biased* one, every published "g−2 vs Cs/Rb" comparison using 137.035 999 166 is off by ~7×10⁻⁹ in α⁻¹ — about 0.45 of the g−2 route's own σ. Not decisive, but not negligible.
+- CODATA 2022's recommended α (and everything downstream) used C10 = 6.08(16), which is now ~1.3 expanded-σ above the agreed value; the effect on α⁻¹ is ≈ −1.7×10⁻⁹, well inside CODATA's ±21×10⁻⁹.
+
+**Empirical findings:**
+- With corrected theory, α⁻¹(g−2) ≈ 137.035 999 159(15) sits **3.7σ from Cs and 2.5σ from Rb**. It still lies between them and closer to Rb, but the "g−2 sides with Rb" reading is a bit weaker than in E002. [E1 computation on E2 inputs; confidence moderate — I did not re-derive the mass-dependent/hadronic terms, only the C10 change]
+
+**Inferences:**
+- (moderate) The 10th-order episode is a clean example of a failure mode that also matters for the Cs–Rb dispute: **systematic bias that hides inside individually "consistent" pieces and only shows up as a coherent sign pattern across many of them**. Both atom-interferometry groups now report newly recognized systematic effects (CODATA: Morel 2020 "new systematic effects … could explain the 2.4σ discrepancy" with their own 2011 result). **→ See correction in E018:** the support is LKB-only; LKB told referees it had "no clear explanation".
+- (low–moderate) Since the g−2 value is 2.5σ from Rb and 3.7σ from Cs, a scenario where **both** recoil results carry unrecognized systematics (in opposite directions) is not excluded; E002's framing that one side is wrong and the other right is an assumption, not a deduction.
+
+**Hypotheses:**
+- H2 (T02): The g−2 route is now the most internally checked of the three (two independent 5-loop calculations agree; cavity shift confirmed by a quantum calculation). *Test:* look for any remaining unchecked input in a_e theory — hadronic contribution (~1.7×10⁻¹²) and the experimental a_e itself, which has only one modern measurement (Fan 2023) plus Harvard 2008.
+- H1 (from E002) stands unchanged: the next Cs result moves up by ≥1×10⁻¹⁰ in α⁻¹. Note: with corrected theory, the g−2 point is 1.13×10⁻⁸ above Cs, so H1's threshold should be read against 137.035 999 159.
+
+**Theoretical explanations:**
+- AHHN's account: steep integrands near IR-singular regions after cancellation of linear divergences; VEGAS with ~10⁹ points under-sampled them in a way that produced same-sign errors. The toy (`mc_spike_bias.py`) shows the generic mechanism (infinite- or near-infinite-variance integrands → typical runs miss rare large contributions → same-sign bias with understated error), but **I have not shown that this is what happened in the 98 real integrals**; that's AHHN's claim, and they themselves only say "hidden bias".
+
+**Speculation:** The direction of the bias (old AHKN values too *high*) is consistent with rare large *negative* contributions being missed, as in my toy, but the actual integrand signs near the singular regions are unknown to me. (flagged speculation)
+
+**Unknowns:**
+- What C10 and a_e-theory inputs the next CODATA (2026 adjustment, closing date presumably 31 Dec 2026) will use → settled when CODATA 2026 is published.
+- Whether there is any still-unpublished new Cs (Berkeley) or Rb (LKB Paris) measurement → watch arXiv atom-ph and the groups' pages; my searches find none.
+- Error budgets of Parker 2018 and Morel 2020 (E002's next step) — **still not done** this cycle.
+- Whether anyone has re-examined VEGAS-based numbers elsewhere in precision QED (e.g. muon g−2 10th-order, mass-dependent terms) for the same kind of bias → search "VEGAS bias" + QED.
+
+**Contradictions:**
+- E002 treated the g−2 α as a fixed, theory-clean reference. In fact two published theory values disagreed by 4.8–5σ through 2024; resolved now in Volkov's favor by AHKN's own recomputation.
+- Fan 2023's headline α (137.035 999 166) vs the corrected-theory value (≈137.035 999 159): differ by 7×10⁻⁹, 0.45σ. Not a conflict in data, a correction in theory.
+
+**Sources:**
+1. Fan et al. 2023, PRL 130 071801 — https://arxiv.org/abs/2209.13084 (PDF text: notes/cycle1/fan.txt)
+2. Volkov 2019 — https://arxiv.org/abs/1909.08015 ; Volkov 2024 — https://arxiv.org/abs/2404.00649
+3. Aoyama, Hayakawa, Hirayama, Nio 2025, PRD 111 L031902 — https://arxiv.org/abs/2412.06473 (text: notes/cycle1/ahhn.txt) · https://doi.org/10.1103/physrevd.111.l031902
+4. CODATA 2022 (Mohr et al.) — https://arxiv.org/abs/2409.03787 (text: notes/cycle1/codata.txt)
+5. Day et al. 2026, JHEP 03 038 — https://arxiv.org/abs/2511.07514
+6. Scripts: notes/cycle1/alpha_C10_shift.py, notes/cycle1/mc_spike_bias.py
+
+**Corrections to earlier entries:**
+- Correction to E002 (2026-10-31, E015): "Rb vs. g−2 = 2.2σ; Cs vs. g−2 = 3.9σ" → with corrected 10th-order QED, **Rb vs g−2 ≈ 2.5σ, Cs vs g−2 ≈ 3.7σ**, because Fan 2023's α used the AHKN 2019 C10 = 6.737, which AHKN themselves revised (Set V −0.803) to agree with Volkov (total ≈ 5.87–5.89).
+- Correction to E002: the claim that the g−2 route is "methodologically independent" and a clean third arbiter should carry a caveat — its theory input was itself disputed at 5σ until Dec 2024.
+
+**Thread update:** T02 → active · next step → (a) read the error budgets (Parker 2018 Table/supplement; Morel 2020 Table 1) and list top-3 systematics each side (carried over from E002); (b) check whether the hadronic + weak a_e inputs or the a_e measurement have any second independent check; (c) watch for CODATA 2026 and any new Cs/Rb/a_e result.
+**Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [x] disconfirmation searched (looked for new measurements and for a resolution of the C10 dispute; found the resolution) [x] next step set
+
+### E016: Free hour (Oct 31 night): T02 — the two error budgets side by side; in both, the largest correction is a modelled laser-beam (Gouy/wavefront) term of ~1 ppb, the same size as the Cs–Rb gap
+- **Date:** 2026-10-31 22:25 PDT · **Cycle:** Free hour · **Threads:** T02
+- **Question this cycle:** Do Parker 2018 (Cs) or Morel 2020 (Rb) contain a large modelled correction that could carry a hidden same-sign bias, like the 10th-order QED integrals in E015?
+- **Why this, now:** The focus on α came from outside, from the free-hour brief, which listed T02 and this question. The direction within it was mine. This also carries over E002/E015 next step (a).
+
+**Separation of claims (added per Reke's directive refinement, 22:27 PDT):**
+- *(a) What the authors demonstrated:*
+  - Parker and Morel each report a beam-profile (Gouy/wavefront) correction that is the largest item in their budget: −2.60 ± 0.03 ppb on α for Cs, +108.2(5.4)×10⁻¹¹ for Rb. Each was evaluated with a Monte Carlo fed by beam images.
+  - Parker reports two internal checks: two beam shapes agree "within 1-sigma", and a Bloch-intensity scan is flat within 0.3 ppb.
+  - CODATA 2022 reports the 2011→2020 LKB change of ~3 ppb in h/m and attributes it to previously unrecognized systematics.
+- *(b) What their findings suggest (in their own words):*
+  - Parker: the Gouy phase is "accounted for correctly".
+  - CODATA: "presumably" the LKB-2011 effects were reduced at Berkeley, and work on α "should be given high priority".
+  - Neither source claims a hidden bias in the 2018 or 2020 values.
+- *(c) What I independently infer (mine, not theirs):*
+  - That the beam-model terms are a plausible place for a gap-sized error, because they are ~1 ppb, modelled, and carry simulation-spread error bars. This is a structural argument only. **I have no evidence that either correction is actually wrong.**
+  - Checked by me: the α reconstruction, the tensions, the unit errors, the what-if arithmetic, the Gaussian Gouy scale, and the equivalence of Parker's Eq. S2 with the Gaussian formula, and the strength of Parker's two-beam cross-check (Fig. S6, which I digitised).
+  - Only retrieved: all budget entries and every statement about methods.
+
+**Direct observations** (what I computed or ran myself this cycle; script path + output):
+- `notes/free_hour/alpha_recompute.py` (output in `alpha_recompute.out`): I recomputed α from α² = (2R∞/c)·(A_r(X)/A_r(e))·(h/m_X).
+  - Rb with Morel's inputs gives α⁻¹ = 137.035 999 2063; the published value is 206(11).
+  - Cs with CODATA-2014 inputs gives 137.035 999 045; the published value is 046(27). The CODATA-2014 R∞, A_r(e) and A_r(Cs) were recalled from memory and not re-fetched, so this one is E3 on its inputs.
+  - With CODATA-2022 R∞ and A_r(e) plus AME2020 masses: Rb 137.035 999 2052, Cs 137.035 999 0455.
+  - Updating the auxiliary constants moves either value by ≤ 1.1×10⁻⁹ in α⁻¹ (≤ 0.008 ppb). **The gap is entirely in the two h/m measurements.** [E1]
+- Same script, tensions (α⁻¹ − 137.035 999, in units of 10⁻⁹):
+  - Rb − Cs = +160 (1.168 ppb), **5.5σ**.
+  - g−2(corrected, E015) − Cs = +113 (0.825 ppb), 3.7σ.
+  - g−2(corrected) − Rb = −47, 2.5σ.
+  - CODATA2022 − Rb = −29, 1.2σ. [E1]
+- What-if table, same script. The gap is 1.168 ppb on α. To close it by mis-modelling alone, the error would need to be:
+  - Cs Gouy term (2.60 ppb): 45% wrong, which is **39×** its quoted ±0.03 ppb.
+  - Cs total systematic (4.58 ppb): 25% wrong, 10× its ±0.12.
+  - Rb Gouy term (1.082 ppb): 108% wrong, **22×** its ±0.054.
+  - Rb total systematic (0.642 ppb): 182% wrong, 17× its ±0.068. [E1]
+- On-axis Gaussian Gouy scale 2/(k²w²) per beam: 1.23 ppb for Rb (780 nm, w = 5 mm) and 1.13 ppb for Cs (852 nm, w = 5.7 mm). **Both are ~1 ppb, the same size as the gap.** [E1, simple formula from Gaudout 2025 Eq. for κ_z]
+
+- *(Added 22:29 PDT, after the directive refinement: examining Parker's own cross-check instead of quoting it.)* I digitised Parker supplement Fig. S6 from a 300-dpi render (`notes/free_hour/figS6-24.png`; `alpha_recompute.py` §8; pixel read ±~1×10⁻⁹). Values are (α⁻¹ − 137.035 999 139) ×10⁹:
+  - Apodized beam (the one used for the final α): −93 ± 27, i.e. 137.035 999 046 ✓ (matches the published value, which checks my digitisation).
+  - Unapodized 5.7 mm Gaussian: −51 ± 46.
+  - Difference: +42 ± 54 ×10⁻⁹, i.e. **+0.31 ± 0.39 ppb**, if the errors are treated as independent. [E1]
+  - *My model (c), not Parker's:* suppose both beams' corrections are wrong by the same fraction f. Take the unapodized total correction as ≈ the on-axis Gaussian 1.13 ppb (an assumption: z0/zR, off-axis and intensity terms neglected). Then the difference constrains **f = +0.21 ± 0.27**.
+  - Both f = 0 (0.8σ) and the f = +0.45 that would close the Cs–Rb gap via the Cs Gouy term alone (0.9σ) are consistent with this.
+  - **So Parker's "within 1-sigma" check is real but too weak to exclude a gap-sized Gouy-model error.** It neither supports nor refutes one. Confidence in this conclusion: moderate. It depends on my assumed unapodized correction and on the unknown error correlation between the two subsets.
+**Retrieved information** (what sources say; quote numbers exactly; [E2/E3/E4] + URL):
+- Morel 2020, Table 1 (HAL version), in 10⁻¹¹ relative on α, correction (uncertainty):
+  - Laser frequencies (PLL) −39.8 (0.6) **[→ E019: two separate rows in the table: 'Frequencies of the lasers — (0.3)' and 'Phase shifts in Raman PLL −39.8 (0.6)']**
+  - Two-photon light shift −11.0 (2.3)
+  - Gouy phase **108.2 (5.4)**
+  - Wavefront distortion (intensity) 3.9 (1.9)
+  - Residual Raman phase 2.3 (2.3)
+  - Coriolis — (1.2)
+  - Gravity gradient −0.6 (0.1)
+  - Alignment 0.5 (0.5)
+  - WF curvature 0.6 (0.3)
+  - **Global systematic 64.2 (6.8)**
+  - Statistical 2.4
+  - Rb mass 3.5, m_e 1.5, R∞ 0.1
+  - **Total 8.1**
+  - The Gouy and wavefront terms are evaluated by a Monte Carlo over atom trajectories, using beam profiles from CCD images. [E2]
+  - Verified in Morel Methods (`morel.txt` l.645–684):
+    - The Laplacian (Gouy) term "has been calculated from pictures taken with a CCD", with pictures taken at distances matching the cloud positions.
+    - Its uncertainty (2.9×10⁻¹¹ on h/m) is "the standard deviation of those simulations" over beam/cloud **overlap** parameters, which are known to ±500 µm. It is not a spread over images.
+    - For the intensity–survival ("extra recoil") term, they ran the experiment at reduced intensity: a 50% intensity reduction gave "a systematic effect of about 1 ppb". To make the Monte Carlo match those data, "we had to add a small noise (2% at a scale of 50µm to the pictures recorded with a CCD camera)". The standard-condition correction is (7.8 ± 3.8)×10⁻¹¹ on h/m. [E2]
+    - My note (c): the added noise is a tuned model parameter. The authors validated the model against their own intensity scan, but whether a 2%/50 µm noise model captures the in-situ field is exactly what Gaudout 2025 later probed (E017). I do not know how sensitive the 7.8e-11 is to that choice.
+- Parker 2018, Table 1 (ppb on α):
+  - Gouy phase **−2.60 ± 0.03**. The on-axis part is −2.26; the rest comes from a Monte Carlo on CCD images of the beam, and the error bar is the spread over images.
+  - Acceleration gradient −1.79 ± 0.02
+  - Laser frequency −0.24 ± 0.03
+  - **Total systematic −4.58 ± 0.12**
+  - Statistical 0.16; total 0.20
+  - The analysis was blind. After unblinding, a 0.2 ppb typo was fixed and an intensity analysis was added. [E2]
+- CODATA 2022 (`notes/cycle1/codata.txt` ~l.465–475 and l.10299–10312):
+  - LKB's 2020 experiment "uncovered previously unrecognized systematic effects in the earlier experiment". As a result, the 2020 h/m(Rb) "is fractionally smaller by about 3 parts in 10⁹" than LKB 2011.
+  - "Presumably, the most significant of these effects would have been reduced in the similar experiment to measure h/m(133Cs) at Berkeley."
+  - h/m(Cs) had normalized residual 4.7 before CODATA applied a 2.5× expansion factor to the six α data. [E2]
+- Roth (Berkeley), MITP Oct 2025 slides:
+  - Lists Gouy phase (~2.60 ± 0.03 ppb), speckle (0 ± 0.04), non-Gaussian waveform (0 ± 0.03), thermal motion and parasitic interferometers among the "difficult" systematics.
+  - Quotes Parker et al. PRA 94 053618 (2016): with typical parameters "an 8-mrad peak-to-peak oscillation can produce a systematic shift in the measured α as large as 1 ppb" (parasitic interferometers, aliasing of the chosen T values).
+  - Also notes "2018 measurement systematic uncertainty of 120 ppt". [E2]
+
+**Mathematical derivations** (steps shown or script path):
+- Mapping k to α: h/m_inferred ∝ k_eff²/k_nom² · h/m, so δ(h/m)/(h/m) = 2δk/k and δα/α = δk/k.
+- Morel's Methods quote the h/m corrections, which are 2× the α numbers in Table 1. I verified this for most rows. Exceptions (HAL version):
+  - Two-photon light shift: h/m −11.5(4.7) would imply α −5.75, but the table has −11.0.
+  - Gouy uncertainty: 2.9e-11 on h/m, but 5.4e-11 on α in the table.
+  - Both differences are ≤ 0.05 ppb. I have not checked the Nature version of record. **[→ E019: Nature Table 1 checked; identical to HAL, so the exceptions stand in the version of record.]**
+
+**Logical deductions** (follows necessarily from the above):
+- A bias confined to the auxiliary constants (R∞, A_r) cannot explain the gap. Their combined effect is < 0.01 ppb, against a 1.17 ppb gap.
+- If the gap comes from one mis-modelled correction in one experiment, that correction's true error must exceed its quoted uncertainty by a factor ≥ 10 (total Cs systematic) to ≥ 39 (Cs Gouy alone). In other words, the quoted uncertainty would be wrong, not just unlucky.
+
+**Empirical findings** (established by data/experiment, mine or published; with evidence grade):
+- In **both** experiments the single largest correction is a laser-beam-profile (Gouy/wavefront) term: −2.60 ppb for Cs and +1.08 ppb for Rb. Each is evaluated by Monte Carlo from measured beam images, with an uncertainty set by simulation spread. [E2]
+- Precedent, as CODATA 2022 states it: LKB's 2020 experiment "uncovered previously unrecognized systematic effects in the earlier experiment and as a consequence" the 2020 h/m(Rb) is "fractionally smaller by about 3 parts in 10⁹" than LKB 2011. I have not checked which effects, or how much of the 3 ppb each accounts for. [E2] (My arithmetic: ≈1.5 ppb in α, 1.3× the present gap.) **→ Superseded in part by E018:** the original authors told referees they had "no clear explanation" for this shift.
+
+**Inferences** (probable but not entailed; confidence high/mod/low):
+- (moderate) Structurally, the beam-profile corrections resemble the E015 QED failure mode. Each is a modelled number with a small, internally derived error bar, large compared with the disagreement. A wrong *model* (e.g. missing small-scale wavefront structure) would not show up in the simulation-spread error bar.
+- (low–moderate) Which side is more exposed is **not** decidable from the budgets. Cs's beam correction is larger in absolute terms, which is what CODATA's "presumably" glosses over. Rb's is smaller but would have to be underestimated by more than 100%.
+- *As first written this hour (22:3x PDT):* "(low) The opposite printed signs (Cs −2.60, Rb +108.2) probably reflect different table conventions (effect vs correction), not opposite physics … **Not verified**."
+- *Revised after reading Parker supplement §3 (`parker.txt` l.639–790), confidence raised to moderate:* The opposite printed signs reflect conventions, not opposite physics.
+  - Parker's Eq. S2 gives δk_eff/k_eff < 0, and the table lists that effect on α (−2.60 ppb).
+  - Morel lists the correction (+108.2e-11).
+  - In both experiments the beam correction therefore **raises α** (lowers α⁻¹), by 2.60 and 1.08 ppb.
+  - Consequence for a *common* same-sign model error with fractional size f in both: the gap changes by f·(2.60−1.08) = f·1.52 ppb. f ≈ +77% (both overestimated) would close it, and f < 0 widens it. [E1 arithmetic on E2 inputs]
+
+**Hypotheses** (testable; state the test):
+- H3 (T02): The Cs–Rb gap is dominated by an error in modelling wavefront/intensity structure (Gouy + "extra recoil") in at least one experiment.
+  - *Test:* repeat each measurement with a substantially larger beam waist. The on-axis term scales as 1/w², so a beam-model error should shrink by roughly (w₁/w₂)², while a physics or other-systematic offset should not. Berkeley's rebuilt apparatus has a larger beam (E017). **Disconfirmation:** the new Cs value reproduces 137.035 999 046 within ~0.3 ppb at a larger w.
+- H1 (E002), restated (see Corrections): the next Cs result moves upward by ≥ 1×10⁻⁷ in α⁻¹ (≈ 0.7 ppb).
+
+**Theoretical explanations** (candidate mechanisms/frameworks):
+- Bade et al. 2018 (PRL 121 073603): the local photon momentum is ħk_z with k_z = k[1 − (∇φ/k)²/2 + Δ⊥A/(2k²A)]. When atom survival depends on intensity (Bloch losses), the effective recoil is a survival-weighted average, k_eff = ⟨P k_z⟩/⟨P⟩. That average can exceed ħk ("extra recoil"). It depends on small-scale intensity structure that CCD imaging outside the vacuum chamber may not capture.
+
+**Speculation** (clearly flagged; low evidence):
+- The "both experiments biased, in opposite directions" scenario from E015 would need two independent model errors. That is less parsimonious than one, but not excluded: g−2 sits between them (3.7σ / 2.5σ).
+
+**Unknowns** (what I could not determine → what evidence would settle it):
+- ~~Factor 2 between Parker's on-axis −2.26 ppb and my 1.13 ppb~~ **Resolved this hour.** Parker's S2, λ²/(2π²w₀²) = 2/(k²w₀²), is the same formula as mine. The 5.7 mm Gaussian beam was **not** the one used for the final α. The final α used an apodized, "significantly non-Gaussian" flat-top beam, Its correction is written as (1/2k²)(ΔE/E) − ⟨ρ²⟩/(2R²), with the beam characterised by CCD images (the speckle analysis explicitly uses images "taken at the approximate distance of the atoms from the fiber port", i.e. outside the vacuum). The text does not say exactly how the on-axis ΔE/E of the apodized beam was obtained. −2.26 ppb corresponds to a Gaussian-equivalent w ≈ 4.0 mm. [E1 on E2]
+- How strong Parker's two-beam cross-check is → *partly answered 22:29 PDT* (Direct observations, Fig. S6 digitisation): σ(difference) ≈ 0.39 ppb, so it cannot exclude a ~45% Cs Gouy-model error. Still unknown: the actual unapodized-beam correction, and the correlation between the subset errors → would need Parker's per-subset budgets.
+- The Nature-version numbers of Morel Table 1 (two ≤ 0.05 ppb inconsistencies in the HAL copy). → https://www.nature.com/articles/s41586-020-2964-7
+- Whether any published comment or critique of either budget exists. OpenAlex citers of both papers were title-filtered, and I found none (`notes/free_hour/citers.txt`). That is absence-of-evidence only.
+
+**Contradictions** (between sources, or with my results or earlier entries):
+- E002/E015 unit errors (see Corrections).
+- Morel HAL Table 1 vs its own Methods text: two-photon light shift and Gouy uncertainty (≤ 0.05 ppb, not decisive).
+
+**Sources:**
+1. Parker et al., Science 360, 191 (2018): https://arxiv.org/abs/1812.04130 · https://doi.org/10.1126/science.aap7706 (text: notes/free_hour/parker.txt)
+2. Morel et al., Nature 588, 61 (2020): https://hal.science/hal-03107990v1/file/main.pdf · https://doi.org/10.1038/s41586-020-2964-7 (text: notes/free_hour/morel.txt)
+3. CODATA 2022: https://arxiv.org/abs/2409.03787 (notes/cycle1/codata.txt); CODATA 2022 values: https://physics.nist.gov/cuu/Constants/Table/allascii.txt
+4. AME2020: https://www-nds.iaea.org/amdc/ame2020/mass_1.mas20.txt
+5. Roth, MITP 2025: https://indico.mitp.uni-mainz.de/event/417/contributions/5801/attachments/4078/5395/JRoth_MITP_alpha_2025_compressed.pdf
+6. Bade et al. PRL 121 073603 (2018), cited in both slide decks (not re-read this hour)
+7. Script: notes/free_hour/alpha_recompute.py (+ .out)
+
+**Corrections to earlier entries:** (format: `Correction to Exxx (date): old claim → new claim, because …`)
+- Correction to E002 (2026-10-31, E016): "Cs vs. Rb = 5.5σ (Δ = 1.6×10⁻¹⁰)" → Δα⁻¹ = **1.60×10⁻⁷** (relative 1.17×10⁻⁹ = 1.17 ppb), because `notes/cycle0/alpha_tension.py` stores α⁻¹ − 137.035999 in units of 10⁻⁶ while its comment says 10⁻⁹. The σ values are unaffected.
+- Correction to E002 (2026-10-31, E016): H1's threshold "≥1×10⁻¹⁰ in α⁻¹" inherited the same unit slip. As written it is ~270× smaller than the Cs uncertainty (2.7×10⁻⁸), so it is untestable. It is restated as ≥ 1×10⁻⁷ in α⁻¹.
+- Correction to E015 (2026-10-31, E016): "the g−2 point is 1.13×10⁻⁸ above Cs" → **1.13×10⁻⁷** (0.82 ppb). The −6.9×10⁻⁹ C10 shift and all σ values in E015 are correct (re-verified in alpha_recompute.py).
+
+**Thread update:** status → active · next step → (as first written) resolve the sign/factor-2 conventions. *Update 22:30 PDT:* the conventions and the factor-2 were resolved this hour (see Inferences/Unknowns). The remaining items are in the T02 row.
+**Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [x] disconfirmation searched (citer search for critiques; none found) [x] next step set
+
+### E017: Free hour (Oct 31 night): T02 — what happened after 2020: LKB now maps the photon recoil in situ and finds ppb-scale local k-vector deviations a Gaussian model misses; Berkeley rebuilt with a larger beam; no new α value from either
+- **Date:** 2026-10-31 22:25 PDT · **Cycle:** Free hour · **Threads:** T02
+- **Question this cycle:** Since 2020, has either group found or ruled out a hidden beam-related bias, or published a new value?
+- **Why this, now:** This follows from E016, my own choice within the outside-suggested T02 focus. The largest correction on both sides is a beam-model term, so I checked what later work says about exactly that term.
+
+**Separation of claims (added per Reke's directive refinement, 22:27 PDT):**
+- *(a) What the authors demonstrated:*
+  - Gaudout et al. measured position-resolved recoil with a BEC. Local κ variations exceed the ~0.2 ppb a Gaussian model predicts.
+  - The grid average agrees with the molasses value.
+  - With a clipped beam, κ_z reverses sign, and their Monte Carlo reproduces it from an in-situ intensity map.
+- *(b) What their findings suggest (their words):* "significant wavefront distortions beyond those expected from a simple Gaussian model". The LKB SPIE abstract says the discrepancy is "most likely due to systematic effects that are either misestimated or not yet identified". **Neither group says that Morel 2020 or Parker 2018 is wrong, or by how much.**
+- *(c) What I independently infer:*
+  - That this makes beam-model corrections built from ex-situ images more uncertain than their quoted error bars might indicate. This is my reading. Gaudout et al. did not apply their map to the 2020 configuration, and the averaged agreement they report cuts against a large averaged bias in their current setup.
+  - Checked by me: the 0.2 ppb Gaussian variation.
+  - Only retrieved: everything else in this entry, including "no new α value" (based on searches and slides, so absence-of-evidence).
+
+**Direct observations** (what I computed or ran myself this cycle; script path + output):
+- Read the Gaudout 2025 text (`notes/free_hour/gaudout2025.txt`, l.225–330) and both MITP 2025 slide decks (`roth_mitp2025.txt`, `guellati_mitp2025.txt`). [E1 reading]
+- My recomputation of the pure-Gaussian variation (Gaudout's κ_z = −(2/k²w²)(1 − r²/w²), at w = 5 mm, r = 0–2 mm) gives 1.23 ppb × (2/5)² ≈ 0.2 ppb. This matches their stated "of the order of 2×10⁻¹⁰". [E1]
+
+**Retrieved information** (what sources say; quote numbers exactly; [E2/E3/E4] + URL):
+- Gaudout, Si-Ahmed, Debavelaere, Door, Cladé, Guellati-Khelifa (arXiv 2507.19157, 2025):
+  - They use a BEC (RMS size 350 µm) moved across a 5 mm-waist beam as an in-situ probe of the local recoil, with a 121-point 2D grid and 117 h of data.
+  - Per-point uncertainty is 6×10⁻¹⁰ on κ.
+  - They find spatial variations of κ "negligible compared to the much larger deviations observed experimentally". From the Fig. 2 axis range this is ppb-scale; I read it off the plot only (low precision).
+  - "This suggests the presence of significant wavefront distortions beyond those expected from a simple Gaussian model."
+  - **But** "the average value of these measurements is in good agreement with the values obtained using an optical molasses."
+  - With a deliberately clipped beam, they observe a local "extra recoil" exceeding hν/c and a sign reversal of κ_z. Their Monte Carlo reproduces it from the measured intensity map. [E2]
+- Guellati-Khelifa, MITP 2025 slides:
+  - "Our strategy to solve 5σ discrepancy: new method to probe in-situ the spatial laser beam profile → better evaluation of the wave vectors?"
+  - "New measurement using AI based Bragg diffraction (Berkeley scheme)" is planned, as a test of beam-splitter-method systematics.
+  - They see temporal fluctuations with the BEC from a parasitic interference in the new optical setup.
+  - Statistical uncertainty is "limited by the time required to scan the full beam profile".
+  - **No new h/m value is shown.** [E2]
+- LKB SPIE 2026 abstract (https://doi.org/10.1117/12.3089685): the discrepancy is "most likely due to systematic effects that are either misestimated or not yet identified". [E2, abstract only]
+- Roth (Berkeley), MITP 2025 slides:
+  - A new apparatus: "new chamber, new simulation, new team", 4 m interferometer region, **larger beam**.
+  - The larger beam is meant to give "reduced effect of thermal motion, Gouy phase, laser phase"; baffles to reduce speckle.
+  - "One unified simulation for understanding all beam related systematics", being verified stage by stage against single-Bragg-pulse data.
+  - "Experiment can now run 24/7." **No new α value.** [E2]
+  - DAMOP 2025 abstracts on the same apparatus: https://meetings-archive.aps.org/damop/2025/h00/152/ · https://meetings-archive.aps.org/damop/2025/n09/3/ [E2]
+- Ironically, a speculative "IR/UV mixing" paper (arXiv 2508.06171) fits the Cs/Rb/g−2 spread as new physics. Its quoted inputs match mine: 137.035999160(14), 045(27), 2052(97). [E2; physics claim not assessed, E4-level for this thread]
+
+**Mathematical derivations** (steps shown or script path):
+- See Direct observations: the Gaussian Gouy term varies by only ~0.2 ppb over the r = 0–2 mm cloud region at w = 5 mm.
+
+**Logical deductions** (follows necessarily from the above):
+- *As first written:* "So any analysis that relies on the Gaussian model plus CCD-imaged intensity *outside* the chamber is model-dependent at a level comparable to the gap." *Reclassified 22:3x PDT:* that sentence is an **inference (low–moderate)**, not a deduction. The paper shows large *local* deviations, not a gap-sized error in a cloud-averaged correction. What does follow necessarily is narrower: a pure Gaussian model does not describe the local recoil in LKB's current beam.
+- It does **not** show that Morel 2020 is biased. The cloud-averaged (molasses) value agreed with the BEC grid average. The relevant question is whether 2020's Monte Carlo got the *average* right, and this result neither confirms nor refutes that for the 2020 beam.
+
+**Empirical findings** (established by data/experiment, mine or published; with evidence grade):
+- Neither group has published a new α since 2020 (Rb) and 2018 (Cs), as of 2026-10-31 (arXiv, OpenAlex, MITP 2025 talks, SPIE 2026). [E2, absence-of-evidence with fair coverage]
+- Both groups' current programmes target beam/wavefront systematics specifically. [E2]
+
+**Inferences** (probable but not entailed; confidence high/mod/low):
+- (moderate) LKB's SPIE 2026 abstract names misestimated or unidentified systematics as "most likely". In what I read, I found no equivalent explicit statement from Berkeley; their slides describe upgrades aimed at beam-related systematics. *Earlier wording this hour said "the groups themselves", which over-attributed LKB's statement to both groups.*
+- (low–moderate) LKB's switch to Bragg diffraction ("Berkeley scheme") would remove the Raman-vs-Bragg difference as a discriminator, but it also tests one candidate class directly.
+
+**Hypotheses** (testable; state the test):
+- H3 (E016) has a natural test coming: Berkeley's larger-beam apparatus. If the new Cs value moves toward Rb/g−2 by roughly the fraction of the beam correction that 1/w² scaling removes, that supports H3. If it stays at 046 within its error, H3 is weakened for Cs.
+- H4 (T02): LKB's in-situ map, applied to the beam configuration actually used in 2020 (if it is reconstructable), would shift h/m(Rb) by < 0.3 ppb. *Test:* any LKB re-analysis or new value. Disconfirmation: a revision ≥ 0.5 ppb.
+
+**Theoretical explanations** (candidate mechanisms/frameworks):
+- Bade 2018 extra recoil (survival-weighted Laplacian term), parasitic interferometers aliasing with chosen pulse times (Parker 2016, up to ~1 ppb), and Bragg "anomalous phase" (Roth slides). All three are beam/diffraction-model effects.
+
+**Speculation** (clearly flagged; low evidence):
+- New-physics fits (e.g. arXiv 2508.06171) need the Cs/Rb difference to be real, i.e. species-dependent at the 1 ppb level. Nothing I read rules this out, but the existence of three uncharacterised beam-model channels each capable of ~1 ppb makes it the less economical reading for now. This is not a finding.
+
+**Unknowns** (what I could not determine → what evidence would settle it):
+- When either group will publish a new value → their next papers. Nothing is announced with a date.
+- Whether Morel 2020's beam configuration can be retro-mapped → only LKB can say.
+- Exact ppb scale of the Gaudout Fig. 2 local deviations → the figure data or a higher-resolution read.
+
+**Contradictions** (between sources, or with my results or earlier entries):
+- None found between sources. CODATA's "presumably" (that Berkeley had already reduced the LKB-2011 effects) is an assumption, not a demonstration (E016).
+
+**Sources:**
+1. Gaudout et al. 2025: https://arxiv.org/abs/2507.19157 (text: notes/free_hour/gaudout2025.txt)
+2. Guellati-Khelifa, MITP 2025: https://indico.mitp.uni-mainz.de/event/417/contributions/5799/attachments/4076/5393/ALPHA_2025_SGUELLATI.pdf
+3. Roth, MITP 2025: https://indico.mitp.uni-mainz.de/event/417/contributions/5801/attachments/4078/5395/JRoth_MITP_alpha_2025_compressed.pdf
+4. LKB SPIE 2026: https://doi.org/10.1117/12.3089685
+5. DAMOP 2025: https://meetings-archive.aps.org/damop/2025/h00/152/ · https://meetings-archive.aps.org/damop/2025/n09/3/
+6. arXiv 2508.06171: https://arxiv.org/abs/2508.06171
+7. Li-6 recoil at ppb (Phys. Rev. Research 5, 023052): https://doi.org/10.1103/physrevresearch.5.023052 (a possible third species, not yet competitive)
+
+**Corrections to earlier entries:** (format: `Correction to Exxx (date): old claim → new claim, because …`)
+- None beyond E016.
+
+**Thread update:** status → active · next step → see T02 row.
+**Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [x] disconfirmation searched (looked for new values and critiques; none) [x] next step set
+
+### E018: Free hour (Oct 31 night): T02 — Morel 2020 peer-review file: the authors said they had 'no clear explanation' for their own 2011→2020 shift, and a beam-noise model parameter had 'no confirmed reason'; CODATA's causal wording is stronger than the authors'
+- **Date:** 2026-10-31 22:30 PDT · **Cycle:** Free hour · **Threads:** T02
+- **Question this cycle:** What did the referees and authors of Morel 2020 say about the beam systematics and the 2011→2020 shift? These are primary statements, not CODATA's summary.
+- **Why this, now:** The directive refinement (22:27 PDT) asks me to check cited conclusions against originals. E016 leaned on CODATA's account of the 2011→2020 change. The Nature page lists a public peer-review file, so I read it. The direction is mine, within the outside-suggested T02 focus.
+
+**Separation of claims:**
+- *(a) What the authors demonstrated (per the file):*
+  - They measured the intensity-dependence of the recoil at reduced Bloch intensity.
+  - They matched it with a Monte Carlo, which needed 2% added noise at 50 µm.
+  - They imaged the beam after the viewport and saw "no noticeable differences with and without the viewport".
+  - They did not measure the beam/cloud overlap variations that their uncertainty simulations assume ("We did not measure the magnitude of these variations but evaluated the uncertainty of the alignment procedure").
+- *(b) What the authors and referees concluded or suggested, in their words:*
+  - Authors on 2011 vs 2020: "To be honest we have no clear explanation for this discrepancy." The PLL problem "is a possibility". The intensity-correlation effect "could not explain the discrepency as the shift would be the other way".
+  - Authors on Berkeley: "No reason has been identified to explain the difference with Berkeley caesium measurement."
+  - Authors on the added noise: "We have no a confirmed reason … We believe that it comes from the viewport." They add that, by the universal σ/l² scaling (Bade 2018), the interpolation is "robust and independent of the choice of σ and l".
+  - Referee 1: "One interpretation is that there is one or more uncertainties in these types of measurements that have not yet been recognized." The same referee called the manuscript's change from "This explains" to "This could explain" "very significant, even a bit troubling".
+  - Referee 3, first round: beam-related contributions "seem to have come out of thin air". By the final round: "excellent", and agrees the noise "is likely arising from the viewports".
+- *(c) What I infer:* see Inferences. **Nothing in the file shows that either result is wrong.**
+
+**Direct observations** (what I computed or ran myself this cycle; script path + output):
+- I downloaded the peer-review/supplement PDF (`notes/free_hour/morel_esm1.pdf` → `morel_peer_review.txt`, 1053 lines) and read the author rebuttals to Referees 1 and 3 in full (l.300–330, 476–522, 575–1053). [E1 reading]
+
+**Retrieved information** (what sources say; quote numbers exactly; [E2/E3/E4] + URL):
+- All quotes above are from the Nature Peer Review File: https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-020-2964-7/MediaObjects/41586_2020_2964_MOESM1_ESM.pdf [E2]
+- The Nature article page lists "Gerald Gabrielse and the other, anonymous, reviewer(s)": https://www.nature.com/articles/s41586-020-2964-7. I do not know which referee number is whom and make no attribution.
+- CODATA 2022 says the new experiment "uncovered previously unrecognized systematic effects in the earlier experiment and as a consequence the 2020 value is fractionally smaller by about 3 parts in 10⁹" (`codata.txt` l.471–474). [E2]
+
+**Mathematical derivations** (steps shown or script path):
+- None this entry.
+
+**Logical deductions** (follows necessarily from the above):
+- CODATA's "as a consequence" asserts a causal link that the original authors, in the review record, said they could not establish. They named one candidate (the PLL), could not test it on the old apparatus, and ruled out the intensity-correlation effect as the cause, since its sign is wrong. CODATA's wording is therefore stronger than its source's own position. (This is about wording. CODATA may have had other information I have not seen.)
+
+**Empirical findings** (established by data/experiment, mine or published; with evidence grade):
+- The LKB 2011→2020 shift (~3 ppb in h/m, 2.4σ in the authors' terms) is an **unexplained** change, not a demonstrated systematic correction. [E2, authors' statement]
+
+**Inferences** (probable but not entailed; confidence high/mod/low):
+- (moderate) The precedent still matters, but differently from how E016 framed it. It shows that one of these apparatus-generations produced a result ~3 ppb off from its successor, with the cause unidentified. That counts as an unrecognized-uncertainty event of gap size. It does not show what kind of effect causes such shifts.
+- (low–moderate) There is a mild tension inside the authors' own replies:
+  - The images taken with and without the viewport showed no noticeable difference.
+  - Yet they believe the extra noise needed to fit comes from the viewport.
+  - Both can be true: the CCD may not resolve 2% at 50 µm, or the light may change between the viewport and the atoms. Neither was demonstrated.
+  - Gaudout 2025's in-situ mapping (E017) is, in effect, the measurement that would settle this, but it was done on a later optical setup.
+- (low) The robustness argument (universal σ/l² scaling, so the interpolation is independent of the choice of σ and l) is an argument from the Bade 2018 model, not a test against independent data. I have not checked it.
+
+**Hypotheses** (testable; state the test):
+- No new hypothesis. H3 and H4 (E016/E017) are unchanged.
+
+**Theoretical explanations** (candidate mechanisms/frameworks):
+- No new ones. The candidates for the 2011→2020 shift named by the authors: PLL phase shift (possible, untestable retroactively).
+
+**Speculation** (clearly flagged; low evidence):
+- None offered.
+
+**Unknowns** (what I could not determine → what evidence would settle it):
+- What caused the 2011→2020 LKB shift → not determinable now (the old PLL is gone). Only a statement from LKB would add information.
+- Whether CODATA had additional information behind "as a consequence" → the CODATA 2018/2022 task-group discussions, if published.
+- Whether 2% at 50 µm is detectable by their CCD → their camera pixel size and MTF, not in the text I read.
+
+**Contradictions** (between sources, or with my results or earlier entries):
+- CODATA 2022 ("as a consequence") vs Morel et al. peer-review rebuttal ("no clear explanation") on the cause of the 2011→2020 shift.
+- Morel rebuttal: viewport images show no difference vs extra noise "believed" to come from the viewport (possibly reconcilable; see Inferences).
+- My E016 "precedent" bullet and E015's Inferences relied on the CODATA framing (see Corrections).
+
+**Sources:**
+1. Morel et al. 2020, Peer Review File: https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-020-2964-7/MediaObjects/41586_2020_2964_MOESM1_ESM.pdf (text: notes/free_hour/morel_peer_review.txt)
+2. Article page: https://www.nature.com/articles/s41586-020-2964-7
+3. CODATA 2022: https://arxiv.org/abs/2409.03787
+
+**Corrections to earlier entries:** (format: `Correction to Exxx (date): old claim → new claim, because …`)
+- Correction to E016 (2026-10-31, E018): "Precedent … previously unrecognized systematic effects … as a consequence … 3 parts in 10⁹" → it is CODATA's wording. The original authors stated in peer review that they had "no clear explanation" for the shift. The precedent is an *unexplained* gap-sized shift, not a demonstrated hidden systematic. The original bullet is left in E016 for the record.
+- Correction to E015 (2026-10-31, E018): "Both atom-interferometry groups now report newly recognized systematic effects (CODATA: Morel 2020 …)" → the cited support covers LKB only. For LKB, "could explain" was explicitly the authors' softened wording, with "no clear explanation" given to the referees. I have no source this hour for Berkeley reporting newly recognized systematics in the 2018 value.
+
+**Thread update:** status → active · next step → T02 row.
+**Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [x] disconfirmation searched (read the referees' strongest critiques and the authors' answers) [x] next step set
+
+### E019: Free hour (Oct 31 night): T02 — loose ends checked: CODATA-2014 Cs inputs re-fetched (match), Morel Nature Table 1 = HAL table, Fig. S6 check stays non-constraining under all error/correlation models I tried, and Berkeley's own small-scale-intensity term rests on CCD images plus a 0.3 ppb intensity scan
+- **Date:** 2026-10-31 22:47 PDT · **Cycle:** Free hour · **Threads:** T02
+- **Question this cycle:** Do the open items from E016–E018 hold up when checked against original sources and alternative error models? The items: the recalled Cs inputs, Morel's Table 1 in the version of record, the robustness of my Fig. S6 f-estimate, and how Berkeley handled small-scale beam structure.
+- **Why this, now:** Reke's 22:45 message cleared me to keep investigating and listed candidate items. I chose these because each one tests something I had asserted, not because they were suggested. This is still the outside-suggested T02 focus.
+
+**Separation of claims:**
+- *(a) What authors demonstrated:*
+  - Parker 2018 Fig. S6: apodized and unapodized α agree "within 1-sigma".
+  - Parker Fig. S5: no Bloch-efficiency dependence "within 0.3 ppb (limited by statistics)".
+  - Parker/Yu: the small-scale intensity term was computed from CCD autocorrelation (rms 0.65%) as −0.030 ± 0.019 ppb.
+- *(b) What they concluded:*
+  - Parker: the Fig. S6 check shows "the Gouy phase was accounted for correctly".
+  - Parker: Fig. S5 is "consistent with the results of the analytic calculation and Monte Carlo".
+  - Yu 2019: a 25 mm waist "will suppress the leading systematic effects by almost two orders of magnitude".
+- *(c) What I infer:* see Inferences. None of this shows that either result is wrong.
+
+**Direct observations** (computed/run myself):
+- `notes/free_hour/cs_inputs_check.py` → `.out`. I fetched the CODATA 2014 ASCII table (`codata2014_allascii.txt`, https://physics.nist.gov/cuu/Constants/ArchiveASCII/allascii_2014.txt).
+  - R∞ = 10 973 731.568 508 m⁻¹ and A_r(e) = 5.485 799 090 70e-4 **match my recalled values exactly**. [E1]
+  - A_r(¹³³Cs) is not in that table. AME2016 (`mass16.txt`, https://www-nds.iaea.org/amdc/ame2016/mass16.txt) gives 132.905451961(8) u. My recalled 132.9054519615 differs by 5×10⁻¹⁰ u, which is 1.9×10⁻¹² in α.
+  - α⁻¹(Cs) comes out 137.0359990450 (recalled) and 137.0359990452 (AME2016), against Parker's published …046(27). The residual is 0.006 ppb, negligible. I have not verified which A_r(Cs) Parker actually used (their ref. 15). [E1]
+- `notes/free_hour/figS6_robustness.py` → `.out`. I varied the correlation ρ between the two Fig. S6 points (0 to 0.58) and my assumed unapodized correction G_un (0.6 to 2.0 ppb). [E1]
+  - f = +0.15 to +0.52; f = 0 sits 0.8–1.1σ away.
+  - The f needed to close the gap via the Cs beam term alone (0.45) sits 0.1–2.1σ away. The 2.1σ is the most favourable case: G_un = 0.6, ρ = 0.58.
+  - Even the smallest σ any ρ can give for the difference (0.27 ppb, against a difference of 0.31 ppb) does not let the check exclude a gap-sized error at >2.1σ.
+  - All of this rests on my proportional-error model (both beam corrections off by the same fraction f), which is an assumption.
+- I checked Yu 2019's scaling claim: (3 mm / 25 mm)² = 1/69, consistent with "almost two orders of magnitude". [E1]
+- Nature Table 1 (https://www.nature.com/articles/s41586-020-2964-7/tables/1) is **identical in every number** to the HAL Table 1 (`morel.txt` l.170–198). [E1 comparison]
+  - So the two table-vs-Methods inconsistencies (two-photon light shift; Gouy uncertainty 2.9e-11 in Methods vs 5.4e-11 in the table) are in the version of record too. They are not HAL artifacts.
+  - One wording difference: Nature has "Residual Raman light shift", HAL has "Residual Raman phase shift".
+
+**Retrieved information:**
+- Parker 2018 supplement (`parker.txt` l.660–673, https://arxiv.org/abs/1812.04130): "only data from the latter [apodized] was used for the final determination of α". For the 5.7 mm unapodized beam, "a simple Gaussian model adequately describes the profile within one waist … therefore Eqn. S2 is used". The Fig. S6 caption does not say whether the error bars are statistical or total. [E2]
+- Parker supplement l.760–767: small-scale intensity term −0.030 ± 0.019 ppb, from rms 0.65% and r_I⁽²⁾ ≈ 2.44×10⁻⁹ µm⁻², with Ic = 0.85 ± 0.05 I0. Fig. S5: "No dependence is observed within 0.3 ppb (limited by statistics)". [E2]
+- Yu et al., Ann. Phys. 531, 1800346 (2019), NSF copy https://par.nsf.gov/servlets/purl/10096353 (`yu2019.txt`). [E2]
+  - The Gouy uncertainty "includes … on-axis … and off-axis shifts".
+  - It is estimated by Monte Carlo from CCD images: 10 images averaged at each of 10 positions, with a 5×5-pixel filter "chosen to match the experimentally observed contrast". Result −2.60 ± 0.03 ppb.
+  - Planned new experiment: w0 ≈ 25 mm, "compared with our current waist of 3 mm". The appendix uses w0 = 3.5 mm for the intensity term.
+- Berkeley status: a web search found nothing newer than the DAMOP 2025 / MITP Oct-2025 talks already in E017. No new Cs value. This is absence of evidence. The Zhong 2020 thesis (https://escholarship.org/uc/item/4nm4g4dt) returned 403 to curl, so it is unread.
+
+**Logical deductions:**
+- The HAL-vs-Nature question in E016 is closed: no difference in any number.
+
+**Empirical findings:**
+- None new beyond the authors' published checks listed in (a).
+
+**Inferences:**
+- (moderate) **Parker's two-beam check cannot exclude a gap-sized Cs beam-model error under any of the models I tried.** This strengthens E016's conclusion that the check is weak. It does not show an error exists: f = 0 is equally compatible (≤1.1σ).
+- (moderate) **The Cs small-scale-intensity term (the analogue of LKB's "wave-front distortion") is constrained experimentally at about the 0.3 ppb level by Fig. S5. The CCD-based −0.03 ppb is a model value.**
+  - At LKB, the CCD images *underestimated* the noise needed to fit an intensity scan (2% at 50 µm had to be added; E016/E018).
+  - A Berkeley CCD-based estimate could in principle be similarly low. The Fig. S5 scan is the guard against that.
+  - Caveat: a slope bounded over the scanned efficiency range is not an absolute bound on the offset at the working point. That depends on the functional form (Bade 2018's universal curve). I have not modelled it.
+- (low) Berkeley texts quote 5.7 mm (unapodized fiber beam), 3.5 mm (appendix intensity-term calculation) and "current waist of 3 mm" (outlook) for their beam. My "Gaussian-equivalent w ≈ 4.04 mm" (E016) is only a back-calculation from 2.60 ppb, not a beam size. The 3 mm "waist" for the apodized flat-top is not a Gaussian waist, so H3's 1/w² scaling factor for the new apparatus is uncertain by roughly (3.5/3)² ≈ 1.4×.
+
+**Hypotheses:**
+- H3 unchanged, but the predicted suppression factor should be quoted as ~50–70×, not as a single number.
+
+**Theoretical explanations:**
+- None new.
+
+**Speculation:**
+- None.
+
+**Unknowns:**
+- Whether the Fig. S6 bars are statistical or total → Parker/Yu data or the Zhong thesis (blocked to me).
+- The actual unapodized-beam correction (G_un) → the same sources.
+- Which A_r(Cs) Parker used → **[addendum ~22:51: wrong ref. number above. The budget row 'Cesium Mass (10,18)' cites CODATA 2014 and NUBASE2012 (parker.txt l.418, 272, 299). My curl of the AME2012 table returned a 5 kB non-table page, so the exact value is still unverified. The effect on α is ≤ 2e-12 either way.]**
+- Whether Fig. S5's 0.3 ppb bound translates into an absolute bound on the offset → needs Bade-type modelling at Berkeley's parameters.
+- The source of the two Morel table-vs-Methods inconsistencies → only the authors can say.
+
+**Contradictions:**
+- Berkeley beam-size figures (3 mm / 3.5 mm / 5.7 mm) across their own texts. Probably different beams and definitions, unresolved.
+- Morel Table 1 vs Methods (two rows, ≤0.05 ppb). Persists in the version of record.
+
+**Sources:**
+1. CODATA 2014: https://physics.nist.gov/cuu/Constants/ArchiveASCII/allascii_2014.txt
+2. AME2016: https://www-nds.iaea.org/amdc/ame2016/mass16.txt
+3. Morel Nature Table 1: https://www.nature.com/articles/s41586-020-2964-7/tables/1
+4. Parker 2018 supplement: https://arxiv.org/abs/1812.04130 (`parker.txt`)
+5. Yu et al. 2019: https://par.nsf.gov/servlets/purl/10096353 (`yu2019.txt`)
+
+**Corrections to earlier entries:**
+- Correction to E016 (2026-10-31, E019): my Table 1 transcription merged two rows as "Laser frequencies (PLL) −39.8 (0.6)". The table actually has "Frequencies of the lasers — (0.3)" and "Phase shifts in Raman phase lock loop −39.8 (0.6)" as separate rows. The PLL label was right, but I had dropped one 0.3e-11 uncertainty row. No computed number used the merged row.
+- Correction to E016 (2026-10-31, E019): the exceptions were labelled "(HAL version)". They are in the Nature version of record too.
+- Upgrade (2026-10-31, E019): the CODATA-2014 Cs inputs were "recalled, not re-fetched". R∞ and A_r(e) are now verified against NIST. A_r(Cs) matches AME2016 to 2e-12 in α.
+
+**Addendum (2026-10-31, ~22:50 PDT, same entry): Fig. S5 inspected** (`notes/free_hour/parker_p-23.png`, a low-resolution render; my reading of it is [E1] but approximate).
+- The scanned "Bloch efficiency" spans roughly 0.05–0.36.
+- Individual points scatter by about ±1 ppb, with one outlier near −2.5 ppb. Tick labels are barely legible, so the y readings are uncertain.
+- The red line is a *linear* fit. Its rise across the range looks like a few tenths of a ppb, consistent with "no dependence … within 0.3 ppb".
+- Inference (low–moderate): the 0.3 ppb statement bounds a linear slope over this efficiency window. Whether it bounds a Bade-type offset, which is not linear in efficiency, at the working point depends on the functional form. I have not modelled that, and I don't know which efficiency the final data used. So this check is real but not a direct absolute bound.
+
+**Thread update:** status → active · next step → T02 row.
+**Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [x] disconfirmation searched (looked for model choices under which the Fig. S6 check *would* exclude the gap) [x] next step set
+
+---
+### Correction note to E016–E019 / free-hour report (2026-10-31, 11:58 PM PDT)
+**Inference (corrected):** The free-hour summary said each lab's beam-shape (Gouy/wavefront) correction is "about the size of the gap" and implied it could therefore explain the gap. That conflates a correction's *magnitude* with its *uncertainty*. Magnitude alone establishes nothing about whether it accounts for the discrepancy. The relevant question is whether the model's error could plausibly reach ~1.17 ppb. For Rb the stated uncertainty on the correction is 5.4×10⁻¹¹ (~5% of its 108.2×10⁻¹¹ size); closing the gap would require the model to be off far beyond that stated uncertainty, i.e. an unrecognized model failure, not a within-error shift. For Cs, the Fig. S6 analysis (f between +0.15 and +0.52) constrains the model-error fraction only weakly. That is a statement about insufficient validation, not evidence the model is wrong.
+**Status:** The original wording is preserved above. The open question is reframed: is there evidence that either beam model's *uncertainty* is underestimated? The size of the correction alone is not that evidence.
+(Prompted by external feedback from Reke; the correction stands on its own logic. It doesn't oblige any future cycle to continue T02.)
+
+---
+### E020: Cycle 2: T08 — genetic-code error minimisation reproduced exactly; the "one in a million" is ~1 in 330,000 under its own model, and the headline depends on which amino-acid property was picked
+- **Date:** 2026-11-01 08:10 PST · **Cycle:** 2 · **Threads:** T08 (new)
+- **Question this cycle:** Can I reproduce the published "the standard genetic code beats all but ~1e-4 / ~1e-6 of random codes" numbers from scratch, and how much do they move when the cost function changes?
+- **Why this, now:** A fresh, self-contained thread that can be examined directly in code rather than summarised. Picked from `SEEDS.md` on its own merits. T01 and T02 were not touched; both remain open with next steps unchanged. Not an outside suggestion.
+
+**Separation of claims:**
+- *(a) What the authors demonstrated:* Haig & Hurst 1991 (corrected 1999): with polar requirement (PR) and all single-base changes weighted equally, P0 = 0.0001 of 100,000 random block-preserving codes do better. Freeland & Hurst 1998: with mistranslation weights, 1 of 1,000,000 random codes does better.
+- *(b) What they concluded:* HH91: "most easily explained by selection to minimize deleterious effects of translation errors". FH98: the code's "structure reflects biases in these errors, as might be expected were the code the product of selection."
+- *(c) What I infer:* see Inferences. The rarity number is real and reproducible; the step from rarity to "selection for error minimisation" is not settled by these calculations.
+
+**Direct observations** (all E1; scripts in `notes/cycle2/`):
+- `gc_ms.py`: built the standard code, PR values and Kyte–Doolittle (KD) values, and computed MS (mean squared property change over all single-base changes between sense codons; synonymous changes included, changes to/from stop excluded; 526 ordered pairs).
+  - Natural code, PR: MS1 = 4.88, MS2 = 10.56, MS3 = 0.14, MS0 = 5.19. KD: 5.18, 21.78, 1.17, 9.39. **All eight match HH91's corrected Table 3 exactly.**
+- Null model (HH91/FH98): the 20 amino acids are randomly permuted over the 20 synonymous codon blocks; stop codons fixed.
+- `gc_big.py`, N = 10,000,000 random codes:
+  - Unweighted PR: 1,186 better → **p = 1.19e-4** (HH91 erratum: 0.0001).
+  - FH98-weighted PR: 30 better → **p = 3.0e-6** (Poisson 95% interval roughly 2.0–4.3e-6). Natural weighted MS = 2.6283.
+- `gc_ms.py`, N = 100,000 each (seeded): unweighted KD p = 7.9e-3 (HH91: 0.0083); unweighted PR with |Δ| instead of Δ² p = 2e-5; FH-weighted KD p = 1.1e-4; FH-weighted KD |Δ| p = 6e-5.
+- In-cycle correction: my first N = 100,000 run gave FH-weighted PR 2/100,000 (2e-5). The 10M run shows that was a high fluctuation (chance of ≥2 hits at the true rate ≈ 0.04). The 10M number supersedes it.
+- `gc_opt.py`: pairwise-swap hill-climbing (60 random starts plus one start from the natural code) within the same block-permutation space. Fraction of the way from the random-code mean to the best code found:
+  - unweighted PR 0.71 (random mean 9.41, natural 5.19, best found 3.49; climbing from the natural code stops at 4.01)
+  - unweighted KD 0.49 (13.30 / 9.39 / 5.32)
+  - FH-weighted PR 0.81 (7.63 / 2.63 / 1.49)
+  - FH-weighted KD 0.70 (10.78 / 4.60 / 1.90)
+  - 60 starts reached 20–38 distinct local optima per setting (a rugged landscape). "Best found" is not a proven global optimum, so these fractions are **upper bounds**.
+
+**Retrieved information:**
+- Haig & Hurst 1991 erratum (J Mol Evol, doi 10.1007/pl00006591), quoted via search snippet [E2 content, retrieved second-hand]: Table 3 values above; Table 4 P0 = 0.0001 (PR), 0.0083 (hydropathy), 0.1101 (molecular volume), 0.5636 (isoelectric point), from 100,000 codes.
+- PR values: Woese, Olsen, Ibba & Söll 2000, MMBR Table 1 (https://pmc.ncbi.nlm.nih.gov/articles/PMC98992/table/T1/; the page was captcha-blocked, so values are from the search-engine extraction). [E3 transcription; the exact reproduction of HH91's eight MS values is an independent check that they are the values HH91 used.]
+- KD values: Biopython `ProtParamData.kd` (https://github.com/biopython/biopython/blob/master/Bio/SeqUtils/ProtParamData.py). [E3; also validated by the exact HH91 KD match.]
+- FH98 weights: per position, transitions 1 / 0.5 / 1, transversions 0.5 / 0.1 / 1. Taken from two secondary sources that agree: Geyer & Madany Mamlouk 2018 PeerJ Table 2, "taken from Freeland & Hurst (1998)" (https://doi.org/10.7717/peerj.4825), and arXiv 2510.10871 Table 1 (https://arxiv.org/html/2510.10871v1). The FH98 PDF itself was paywalled. [E3]
+- FH98 text (docslib copy, first pages only, https://docslib.org/doc/4269450/the-genetic-code-is-one-in-a-million): PR "was chosen because previous work (Haig and Hurst 1991) … found it to give the most significant evidence of minimization from an array of four amino acid properties". [E2 text]
+- Geyer & Madany Mamlouk 2018: "Freeland and Hurst found only one out of one million random codes with a lower tMS score … With our set of one million variant codes, two better codes were found … ten million unique variant codes … Pt = 0.0000028." [E2] **My 3.0e-6 independently agrees with their 2.8e-6.**
+- Freeland & Hurst 1998b, Proc R Soc B (https://doi.org/10.1098/rspb.1998.0547), abstract: restricting random codes so biosynthetically related amino acids share a first base, the code remains efficient, p = 0.0003; with mistranslation biases, "fewer than four per 100,000". [E2 abstract only]
+- Novozhilov, Wolf & Koonin 2007, Biol Direct (https://pmc.ncbi.nlm.nih.gov/articles/PMC2211284/), quoted via search: the standard code is "about half the way to the summit of the local peak"; the landscape is "extremely rugged"; 81% (PRS cost) of random codes, once minimised by pairwise swaps, beat the standard code. [E2 via snippet; their move set includes two-codon series swaps, so it is not the same space as mine]
+- An unvetted web post (problemhive.org/c/yl198b) reports the same natural weighted MS 2.6283 and 6 of 2,000,000 better (3e-6). [E4; consistent but not counted as evidence]
+
+**Mathematical derivations:**
+- MS is a quadratic form: MS(π) = Σᵢⱼ Cᵢⱼ (x_π(i) − x_π(j))², where C is the (weighted, normalised) count of single-base changes from block i to block j. Because stops are fixed, C is the same for every random code, so normalisation cannot change any ranking. (`gc_ms.py: pair_matrix`)
+
+**Logical deductions:**
+- "1 in a million" was a single-count estimate (1 hit in 10⁶). Under FH98's own model the rate is ≈3e-6, i.e. about **1 in 330,000**. A count of 1 is entirely compatible with that rate (P(≤1 | λ = 3) ≈ 0.2), so FH98 made no error. The headline phrase is just a noisy point estimate.
+- The headline property was the strongest of four tested in HH91. A p-value reported for the best of four properties is not a single pre-specified test. The other three gave 0.0083, 0.11 and 0.56 (corrected), so for two of four properties the code is unremarkable.
+
+**Empirical findings:**
+- (E1+E2, high) The standard code is far more robust to single-base errors than random block-preserving codes when the cost is a hydrophobicity-like property (PR: ~1e-4 unweighted, ~3e-6 weighted; KD: ~1e-2 unweighted, ~1e-4 weighted).
+- (E1, moderate) It is clearly not optimal in that same space: about 50–80% of the way from random to the best code that simple search finds, depending on metric and weighting.
+
+**Inferences:**
+- (moderate) **The rarity claim is robust in kind but not in magnitude.** Across the eight settings I tried, p ranges over more than two orders of magnitude (3e-6 to 8e-3), depending on property, weighting, and squared vs absolute cost.
+- (moderate) **"Near-optimal" and "one in a million" are different claims.** The code being in the top ~1e-4–1e-6 of random codes and being only ~50–80% of the way to a local best are both true at once, because the random distribution is very wide compared with how far the code sits in its tail. This agrees with NWK 2007's "halfway up a moderate peak" reading, reached in a different move space.
+- (low–moderate) The weighted analysis partly uses mistranslation data (Friedman & Weinstein 1964, poly(U) in vitro) to set weights, then reports that the code fits those weights. That is a legitimate test only if the weights are independent of the code's structure. I haven't checked how they were derived.
+
+**Hypotheses** (testable):
+- H8.1: the rarity depends mainly on a handful of blocks (e.g. second-position-U hydrophobics, the Asp/Glu block). Test: leave-one-block-out or per-block contribution to MS vs the random mean.
+- H8.2: codes built by "adding amino acids next to similar ones" (a non-selective growth process) would themselves land in the top ~1e-3 or better. Test: simulate code growth by codon-capture with a similarity rule and score with the same MS. (I recall this idea from the literature as "emergence" or "self-organisation" accounts, but I haven't retrieved it, so it is a lead, not a citation.)
+- H8.3: the PR result is sensitive to PR measurement precision. Test: rerun with an updated PR table (Mathew & Luthey-Schulten 2008 is reported to exist; not retrieved).
+
+**Theoretical explanations** (candidates, none favoured by this cycle's evidence):
+- Selection for error minimisation (HH91, FH98); biosynthetic co-evolution (tested against in FH98b); stereochemical affinities; a non-selective growth process by similar-amino-acid expansion (H8.2). The calculations here measure rarity and cannot by themselves tell these apart.
+
+**Speculation:**
+- None.
+
+**Unknowns:**
+- The exact FH98 weight table and any normalisation details → the FH98 PDF (paywalled; try an institutional or author copy).
+- How the mistranslation weights were derived and whether they're independent of the code → the FH98 methods and Friedman & Weinstein 1964.
+- The true global optimum in block-permutation space → exact search or a much larger annealing run.
+- Whether the PR values I used carry rounding that matters → the original Woese et al. 1966 table.
+
+**Contradictions:**
+- FH98's 1e-6 vs my 3.0e-6 and Geyer's 2.8e-6. Resolved as sampling noise in a 1-count estimate, not a real disagreement.
+- My own 100k run (2e-5) vs my 10M run (3e-6). Resolved: small-sample fluctuation; 10M supersedes.
+
+**Sources:**
+1. Haig & Hurst 1991, J Mol Evol 33:412; erratum doi 10.1007/pl00006591 — https://pubmed.ncbi.nlm.nih.gov/1960738/
+2. Freeland & Hurst 1998, J Mol Evol 47:238 — https://doi.org/10.1007/pl00006381 ; partial text https://docslib.org/doc/4269450/the-genetic-code-is-one-in-a-million
+3. Woese et al. 2000 MMBR Table 1 — https://pmc.ncbi.nlm.nih.gov/articles/PMC98992/table/T1/
+4. Geyer & Madany Mamlouk 2018, PeerJ 6:e4825 — https://doi.org/10.7717/peerj.4825 (`geyer2018.txt`)
+5. arXiv 2510.10871 — https://arxiv.org/html/2510.10871v1
+6. Freeland & Hurst 1998b, Proc R Soc B 265:2111 — https://doi.org/10.1098/rspb.1998.0547
+7. Novozhilov, Wolf & Koonin 2007, Biol Direct 2:24 — https://pmc.ncbi.nlm.nih.gov/articles/PMC2211284/
+8. Biopython ProtParamData — https://github.com/biopython/biopython/blob/master/Bio/SeqUtils/ProtParamData.py
+
+**Corrections to earlier entries:**
+- None to earlier entries. The in-cycle correction (100k → 10M estimate) is recorded under Direct observations.
+
+**Thread update:** T08 status → active · next step → see the T08 row.
+**Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [x] disconfirmation searched (looked for replications and critiques; found Geyer 2018 replication, NWK 2007 partial-optimisation critique) [x] next step set
+
+### E021: Free hour 2 (Nov 1 morning): T08 — non-selective 'grow by similarity' codes: with random founders, 0–2% reach SGC-level robustness on FH-weighted PR, and only if growth is column-wise and similarity is hydrophobicity-like
+- **Date:** 2026-11-01 10:06 PST · **Cycle:** free hour 2 · **Threads:** T08
+- **Question this cycle:** H8.2 — does a non-selective "add a similar amino acid next to its parent" growth process produce codes as error-robust as the standard genetic code (SGC), when scored with exactly the E020 cost functions and null?
+- **Why this, now:** Free hour 2 (open direction). H8.2 was the open T08 item that could be tested directly in code in under an hour. T01 and T02 were not touched. Not an outside suggestion.
+
+**Separation of claims:**
+- *(a) What the authors demonstrated:* Massey 2015 (OA) reports a simulation ("reproduced from" his 2008 paper) in which codes grown by adding amino acids similar to a "parent" are better than the SGC in "over 25%" (Grantham matrix) / "over 18%" (EX matrix) of runs "for some similarity thresholds". The 2008 abstract: "Under certain conditions, 22% ... equivalent or superior". I could read the 2015 methods paragraph only; the 2008 and 2016 full texts were paywalled.
+- *(b) What they concluded:* that error minimisation can arise without direct selection for it ("emergent"/neutral); Koonin 2017 summarises such simulations as "readily yield[ing] codes with error minimization levels exceeding that of the SGC".
+- *(c) What I infer:* see Inferences — in my block-preserving version, growth by similarity gives a real but small gain over random codes unless the growth is column-wise; even then a few % at most reach SGC-level on PR, and only if "similarity" is hydrophobicity-like. E022 decomposes where Massey-size numbers come from.
+
+**Direct observations** (all E1; scripts and outputs in `notes/free_hour_2/`):
+- Model space = E020's: the SGC's 20 synonymous blocks, stops fixed; a "grown" code is a permutation of the 20 amino acids over the blocks, so it is scored against the same random-permutation null (`gc_ms.pair_matrix`, Haig–Hurst MS; FH98 weights).
+- Growth rule: pick a uniformly random edge from an assigned block P to an unassigned neighbour block Q; Q gets a still-free amino acid with probability ∝ exp(−|z(a) − z(parent)|/T), z = z-scored "similarity property". T=0 = always the most similar (ties random); T=∞ = uniform. No step looks at the score.
+- Similarity properties: PR (same as score), Kyte–Doolittle (KD), Hopp–Woods (HW), molecular mass (MW, Biopython `protein_weights`).
+- Sanity control (both variants): T=∞ reproduces the null — median null-percentile 0.50, fraction in null top 1e-3 = 0.001.
+- **Variant A** (`gc_grow.py`, n = 6,000 codes per row, 1M-code null; one random founder, growth across any single-base adjacency):
+  - PR-similarity, T=0: mean unweighted MS 7.97 (null mean 9.41; SGC 5.19), median null-percentile 0.16; fraction as good as or better than SGC: **0.0047 unweighted, 0.0000 FH-weighted** (0/6000); fraction in weighted null top 1e-3: 0.013.
+  - KD / HW similarity: median percentile 0.22–0.38; FH-weighted fraction ≥ SGC 0–0.0002.
+  - MW similarity: no gain (median percentile 0.53–0.55).
+- **Variant B** (`gc_grow2.py`, n = 20,000; "2-1-3-like": one random founder in a random block of each second-position column, then growth only across first- or third-position changes so children keep the parent's second base):
+  - PR-similarity T=0: unweighted fraction ≥ SGC **0.0335**, FH-weighted **0.0163**; median weighted null-percentile 0.030; fraction in weighted top 1e-3: 0.19. T=0.3: 0.0158 / 0.0057.
+  - KD-similarity T=0: 0.0156 / 0.0050. HW T=0: 0.0076 / 0.0022. MW T=0: 0.0001 / 0.0000.
+  - Best single grown code (FH-weighted PR MS): 1.78 (PR-sim T=0) vs SGC 2.63 — i.e. some grown codes beat the SGC by a lot.
+- Binomial check: 0.0163 × 20,000 = 326 codes, SE ≈ 0.0009; 0.0047 × 6,000 = 28 codes, SE ≈ 0.0009. The A-vs-B difference is far outside noise.
+
+**Retrieved information:**
+- Massey 2015, Life 5:1301, PMC4500140 (OA; saved as `massey2015.txt`) [E2 text]: setup "consistent with the '213' mechanism ... initial assignment of V, A, D and G to the 2nd codon position nucleotide T, C, A and G, respectively, which reflects the SGC. Then the 1st codon position nucleotide acquires meaning, followed by the 3rd"; "If no amino acid was available according to the similarity criteria, then a random amino acid was added. 10,000 codes were generated for each similarity threshold"; "for some similarity thresholds over 25% of codes were better than the SGC" (Grantham), "over 18%" (EX). Against random codes the SGC is "better than 99.7%" (Grantham) and "better than 98.6%" (EX).
+- Massey 2008, J Mol Evol 67:510 (doi 10.1007/s00239-008-9167-4), abstract only [E2 abstract]: "Under certain conditions, 22% ... equivalent or superior". Full text paywalled.
+- Massey 2016, J Theor Biol 408:237 (doi 10.1016/j.jtbi.2016.08.022): abstract only (via search); ScienceDirect blocked curl and WebFetch timed out. [E3]
+- Koonin 2017 (PMC5492144; `koonin2017.txt`) [E2 text]: "The evolutionary simulations with both the 2-1-3 model and the ambiguity reduction model readily yield codes with error minimization levels exceeding that of the SGC. In contrast, the coevolution model ... was substantially inferior".
+- Di Giulio 2023, Biosystems 104838 (doi 10.1016/j.biosystems.2023.104838), abstract via Europe PMC (PMID 36657560) [E2 abstract]: "I criticize Massey's simulations (2008) ... which, containing elements of natural selection, would render his conclusions at least partly tautological"; "the level of optimization achieved by the genetic code is so high that it would imply, per se, an intervention of natural selection". Full text not retrieved, so I do not know which "elements" he means.
+
+**Mathematical derivations:**
+- None new; same quadratic-form MS as E020. Percentiles computed by `np.searchsorted` in sorted null samples (1M codes for A/B; 500k for E022 scripts).
+
+**Logical deductions:**
+- Because grown codes live in exactly the null's space and T=∞ reproduces the null, any shift in the grown-code distribution is caused by the similarity rule and the growth topology, not by a change of space or scoring.
+- Massey's 99.7% / 98.6% baselines mean the SGC is in the top 0.3% / 1.4% of random codes under his metrics. Under FH-weighted PR it is in the top ~3e-6 (E020). "X% of grown codes beat the SGC" is therefore not comparable across metrics without stating how extreme the SGC is under each.
+
+**Empirical findings:**
+- (E1, high within this model) Similarity-driven growth without column structure (A) shifts codes toward robustness but almost never to SGC level under FH-weighted PR (0/6000 for PR-similarity).
+- (E1, high within this model) Column-wise growth (B) is much more effective: up to 1.6% (FH-weighted) / 3.4% (unweighted) reach SGC level with PR-similarity; 0.2–0.5% with KD/HW; ~0 with mass.
+
+**Inferences:**
+- (moderate) "Non-selective growth can produce SGC-level robustness" is true in my model, but at rates of ~0.5–3% on the PR metric, not ~20–25%, unless additional SGC information is supplied (E022).
+- (moderate) Most of the effect requires (i) columns fixed by second base before expansion and (ii) a similarity measure correlated with the scored property. Mass-based similarity gives nothing because mass is nearly uncorrelated with PR here.
+- (low–moderate) Massey's process is not identical to mine (he builds codon assignments rather than permuting fixed SGC blocks, and uses a threshold with random fallback); my numbers test the idea, not a reproduction of his runs.
+
+**Hypotheses:**
+- H8.4: Massey-size fractions (~20%+) arise mainly from SGC-derived founders and from using the same matrix for similarity and for scoring. Test: factorial design founders {random, SGC} × similarity {= score, ≠ score} → done in E022.
+
+**Theoretical explanations:**
+- Unchanged from E020 (selection; coevolution; stereochemistry; emergent growth). This entry gives the emergent account a working mechanism with a quantified, modest yield in this space.
+
+**Speculation:**
+- None.
+
+**Unknowns:**
+- Massey 2008/2016 full methods (exact codon-assignment rules, threshold values, the EM scoring) → paywalled full texts.
+- Which "elements of natural selection" Di Giulio 2023 identifies → full text.
+- Whether my block-preserving restriction understates or overstates growth outcomes relative to free codon assignment → implement a codon-level grower (not done).
+- FH98 weight derivation (carried over from E020) → still inaccessible; docslib copy has only the first pages.
+
+**Contradictions:**
+- Massey: "over 25%" of grown codes better than SGC vs mine: ≤3.4% (unweighted PR), ≤1.6% (FH-weighted PR), with random founders. Not resolved here; E022 shows the gap closes when SGC-derived founders and same-matrix similarity are added and when the metric is one where the SGC is less extreme.
+
+**Sources:**
+1. Massey 2015, Life 5:1301 — https://pmc.ncbi.nlm.nih.gov/articles/PMC4500140/ (`notes/free_hour_2/massey2015.txt`)
+2. Massey 2008, J Mol Evol 67:510 — https://doi.org/10.1007/s00239-008-9167-4 (abstract only)
+3. Massey 2016, J Theor Biol 408:237 — https://doi.org/10.1016/j.jtbi.2016.08.022 (abstract only)
+4. Koonin 2017, "Frozen accident pushing 50", RNA Biol — https://pmc.ncbi.nlm.nih.gov/articles/PMC5492144/ (`koonin2017.txt`)
+5. Di Giulio 2023, Biosystems 104838 — https://doi.org/10.1016/j.biosystems.2023.104838 ; abstract https://europepmc.org/article/MED/36657560
+6. Biopython `Bio.Data.IUPACData.protein_weights` (installed biopython 1.88)
+
+**Corrections to earlier entries:**
+- None.
+
+**Thread update:** T08 status → active · next step → see the T08 row.
+**Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [x] disconfirmation searched (Di Giulio 2023 critique of Massey; Koonin 2017 summary) [x] next step set
+
+### E022: Free hour 2 (Nov 1 morning): T08 — Massey-size fractions (20%+) reappear in my model only when the four founders sit in the SGC's own columns; shuffling the same founders across columns drops FH-weighted PR from 28% to 2%
+- **Date:** 2026-11-01 10:06 PST · **Cycle:** free hour 2 · **Threads:** T08
+- **Question this cycle:** Where do Massey-size results ("over 25%" of grown codes beat the SGC) come from: the founders taken from the SGC, using the same matrix for similarity and for scoring, or the choice of metric?
+- **Why this, now:** Direct follow-up to the E021 contradiction (my ≤3% vs Massey's 18–25%). Testable in the same code in minutes.
+
+**Separation of claims:**
+- *(a) What the authors demonstrated:* Massey 2015 states two design features: founders "V, A, D and G ... which reflects the SGC", and a similarity criterion from the same matrix (Grantham or EX) later used to score error minimisation (EM). His metrics put the SGC in the top 0.3% / 1.4% of random codes.
+- *(b) What they concluded:* EM can emerge neutrally. Di Giulio 2023 (abstract) objects that the simulations contain "elements of natural selection", making the conclusion "at least partly tautological".
+- *(c) What I infer:* in my model the specific SGC column placement of the four founders is the single largest ingredient. Same-matrix similarity plus a less extreme metric also inflates the fraction. This is consistent with — but not proof of — the "information smuggled in" objection; I have not read Di Giulio's argument itself.
+
+**Direct observations** (E1; column-wise growth as in E021 variant B; 500k-code nulls; n = 3,000 per row; ± ≈ 0.01 at 30%, ≈ 0.0025 at 2%):
+- Null p-values for the SGC (500k codes): PR unweighted 1.24e-4, PR FH-weighted 2e-6, KD unweighted 7.7e-3, KD FH-weighted 8.8e-5 (agree with E020's 1.19e-4, 3.0e-6, 7.9e-3, 1.1e-4).
+- `gc_grow3.out`, greedy (T=0), fraction of grown codes as good as or better than the SGC (PR-u / PR-w / KD-u / KD-w):
+
+| founders | similarity | PR-u | PR-w | KD-u | KD-w |
+|---|---|---|---|---|---|
+| random | PR | 0.034 | 0.019 | 0.120 | 0.014 |
+| random | KD | 0.017 | 0.006 | 0.359 | 0.141 |
+| random | HW | 0.009 | 0.000 | 0.106 | 0.007 |
+| random | MW | 0.000 | 0.000 | 0.012 | 0.000 |
+| random | aaRS class | 0.001 | 0.000 | 0.056 | 0.006 |
+| SGC (V,A,D,G) | PR | 0.156 | 0.062 | 0.189 | 0.043 |
+| SGC | KD | 0.569 | 0.293 | 0.932 | 0.782 |
+| SGC | HW | 0.019 | 0.003 | 0.271 | 0.049 |
+| SGC | MW | 0.001 | 0.000 | 0.008 | 0.001 |
+| SGC | aaRS class | 0.020 | 0.003 | 0.339 | 0.218 |
+
+  (T=0.3 rows in the file show the same pattern, slightly weaker.)
+- Control `gc_grow3b.out`: SGC founders with uniform filling (T=∞): PR-u 0.0000, PR-w 0.0000, KD-u 0.0037, KD-w 0.0010 — **founders alone do nothing**; the effect is an interaction of founders with the similarity rule.
+- Control `gc_grow3c.out`: founders spread across the property range (one from each quartile, columns random), T=0: PR-sim 0.051 / 0.033 / 0.163 / 0.024; KD-sim 0.025 / 0.008 / 0.456 / 0.224. Spread helps a little, far less than SGC founders.
+- Control `gc_grow3d.out`, founder set {V,A,D,G} at T=0:
+
+| similarity | founder placement | PR-u | PR-w | KD-u | KD-w |
+|---|---|---|---|---|---|
+| PR | shuffled across columns | 0.043 | 0.029 | 0.191 | 0.026 |
+| PR | SGC column, random block | 0.101 | 0.056 | 0.192 | 0.040 |
+| PR | exact SGC block | 0.144 | 0.053 | 0.179 | 0.044 |
+| KD | shuffled across columns | 0.057 | 0.021 | 0.401 | 0.151 |
+| KD | SGC column, random block | 0.292 | 0.236 | 0.921 | 0.747 |
+| KD | exact SGC block | 0.559 | 0.283 | 0.924 | 0.761 |
+
+- `gc_grow3e.out` (n = 2,000, T=0): column composition. Second-position columns in my block space: U = F I L M V (5 blocks), C = A P S T (4), A = D E H K N Q Y (7), G = C G R S W (5; Ser counted in C and G). Mean fraction of each column's SGC amino acids recovered by the grown code (U / C / A / G): SGC founders + KD-sim 0.74 / 0.44 / 0.85 / 0.55; SGC founders + PR-sim 0.62 / 0.70 / 0.64 / 0.47; random founders 0.20–0.37 (≈ the 0.25 expected by chance). Grown codes almost never recover a column's exact set (≤ 0.4% for all columns except C under SGC founders + PR-sim, 17%); all four at once: 0/2000. Column mean KD, SGC vs grown (SGC founders, KD-sim): U 3.44 vs 2.88, A −3.20 vs −3.62.
+
+**Retrieved information:**
+- aaRS subclasses used for the "aaRS class" similarity (distance 0 same subclass, 1 same class, 2 other class): Ia CILMV, Ib RQE, Ic WY, IIa GHPST, IIb NDK, IIc AF — from encyclopedia.pub/entry/7860 Table 1, cross-checked with aars.online class I list and the MMBR 2003 aaRS review [E3; K assigned to IIb, which ignores the class I LysRS in some archaea].
+- Massey 2015 quotes as in E021 [E2].
+
+**Mathematical derivations:**
+- None new.
+
+**Logical deductions:**
+- Since uniform filling with SGC founders gives ≈ null results (3b) while greedy similarity filling with the same founders gives up to 93%, the founders matter only through the similarity rule: they set which property region each second-position column grows around.
+- Since shuffling the same four founders across columns removes most of the effect (KD-sim, PR-w: 0.283 → 0.021), the information that matters is **which founder goes to which column** — i.e. the SGC's own column-to-property mapping (hydrophobic V to the U column, acidic D to the A column).
+
+**Empirical findings:**
+- (E1, high within this model) With random founders and similarity ≠ score, the fraction of grown codes at SGC level on FH-weighted PR is 0–2%.
+- (E1, high within this model) With SGC-placed founders and KD similarity, 29% reach SGC level on FH-weighted PR and 78–93% on KD. Massey-size numbers (18–25%+) are reproduced or exceeded once SGC founders, same-matrix similarity, or a less extreme metric (KD-unweighted, where SGC is top ~0.8%, comparable to Massey's 0.3–1.4%) are added.
+- (E1) aaRS-class similarity (a non-physicochemical rule) gives little on PR (≤ 2%) but 22% on KD-w with SGC founders.
+
+**Inferences:**
+- (moderate) The large published fractions do not show that neutral growth "readily" produces SGC-level codes from scratch. In my version, they depend heavily on starting the four second-position columns with the SGC's own amino acids in the SGC's own columns. That placement already encodes much of the SGC's structure.
+- (moderate) Whether this is "smuggling" depends on a historical question the simulations cannot answer: if V, A, D, G really were the first four amino acids and were assigned to those columns for non-selective reasons (e.g. prebiotic abundance, stereochemistry), then using them is legitimate input, and the emergent account gains a lot. If that placement was itself shaped by selection, the argument becomes circular.
+- (low–moderate) Same-property similarity and scoring inflates fractions, but less than founder placement does: random founders, KD-sim scored on KD-u is 36% vs on PR-w 0.6%. Much of that gap reflects how extreme the SGC is under each metric (p 7.7e-3 vs 2e-6), not similarity alone.
+
+**Hypotheses:**
+- H8.5 (partly examined via `gc_grow3e.out`, mechanism not isolated): the founder effect works through column sizes — the SGC's A column holds 7 amino acid blocks, the U column 5, the C column 4 — so planting the hydrophilic D in the 7-slot column lets greedy growth collect the polar set there. Observed: SGC founders + KD greedy growth recover 74% / 85% of the SGC's U / A column amino acids (chance ≈ 25%). Remaining test: swap column sizes in a synthetic block structure.
+- H8.6: block-preservation (my space) changes the fractions compared with free codon-level growth. Test: codon-level grower with Massey's threshold-plus-random-fallback rule.
+
+**Theoretical explanations:**
+- Emergent (neutral) EM given an early column-founder assignment; selection on EM; or mixtures (e.g. founders set by prebiotic chemistry, later filling by similarity). The simulations do not discriminate between these without independent evidence about the founder assignment.
+
+**Speculation:**
+- (flagged) If the 2-1-3 / "GNC/SNS early code" literature independently supports V, A, D, G as first in their columns for non-EM reasons, the emergent account would look much stronger on these numbers. I have not checked that literature this hour.
+
+**Unknowns:**
+- Independent (non-EM) evidence for the founder–column assignment → GNC hypothesis (Ikehara), Trifonov's consensus chronology, Higgs & Pudritz 2009 early amino acids.
+- Di Giulio's specific argument → full text of Biosystems 104838.
+- Whether codon-level growth changes these numbers (H8.6).
+
+**Contradictions:**
+- E021's contradiction (my ≤3% vs Massey's 18–25%) is **largely resolved within my model**: adding SGC-placed founders and hydrophobicity-based similarity yields 16–57% (PR-u) and 6–29% (PR-w). This is a model-level reconciliation, not a check of Massey's actual code.
+
+**Sources:**
+1. Massey 2015 — https://pmc.ncbi.nlm.nih.gov/articles/PMC4500140/
+2. Di Giulio 2023 — https://europepmc.org/article/MED/36657560
+3. aaRS subclasses — https://encyclopedia.pub/entry/7860 ; https://aars.online/class1 ; MMBR 2003 aaRS structure review https://doi.org/10.1128/mmbr.67.4.550-573.2003
+
+**Corrections to earlier entries:**
+- None.
+
+**Thread update:** T08 status → active · next step → see the T08 row.
+**Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [x] disconfirmation searched (Di Giulio 2023) [x] next step set
+
+### E023: Free hour 2 (Nov 1 morning): T08 — the GNC founder mapping is, by its proponent's own account, read off the modern code and 'accidentally' frozen; of its 8 allowed variants, the 4 putting Val/Asp in the U/A columns give 3–34% SGC-level codes, the other 4 give 0
+- **Date:** 2026-11-01 10:08 PST · **Cycle:** free hour 2 · **Threads:** T08
+- **Question this cycle:** Is there independent (non-error-minimisation) support for putting V, A, D, G in the U, C, A, G columns — the ingredient E022 found to carry most of the effect — and how much does the result depend on that exact mapping among the alternatives the hypothesis's own author allows?
+- **Why this, now:** E022's main inference hinged on whether the founder–column assignment is independently motivated. The GNC hypothesis (Ikehara) is the standard source for it, and its OA 2023 paper turned out to state the allowed alternatives explicitly, which made a direct test possible.
+
+**Separation of claims:**
+- *(a) What the author demonstrated:* Ikehara 2002 (abstract) and 2023 (OA full text): among four-amino-acid systems taken from rows and columns of the universal code table, [GADV] encoded by GNC best meets four protein-structure conditions (hydropathy, α-helix, β-sheet, turn/coil). This is a computation on amino-acid properties; it does not by itself fix which GNC codon goes with which amino acid.
+- *(b) What he concluded:* the universal code originated from the GNC code; the specific codon–amino-acid pairs were "accidentally selected out among the eight ways and frozen".
+- *(c) What I infer:* the founder–column mapping used by Massey is, by its main proponent's own account, read off the modern code and not explained independently. My test of the 8 allowed mappings shows the emergent-growth result depends mostly on one binary choice among them.
+
+**Direct observations** (E1; `notes/free_hour_2/gc_grow3f.py` → `gc_grow3f.out`; column-wise greedy growth (T=0), founder in a random block of its column; n = 1,500 per row, seed 21; SE ≈ 0.006 at 5%, ≈ 0.012 at 30%):
+- The 8 mappings: {V,D} on columns {U,A} (GUC/GAC) or {C,G} (GCC/GGC), {A,G} on the other pair, each pair in either order. Fraction of grown codes as good as or better than the SGC on FH-weighted PR (PR-w), and on unweighted KD (KD-u):
+
+| founders in columns U,C,A,G | PR-sim: PR-w | PR-sim: KD-u | KD-sim: PR-w | KD-sim: KD-u |
+|---|---|---|---|---|
+| V A D G (SGC) | 0.054 | 0.217 | 0.235 | 0.919 |
+| V G D A | 0.033 | 0.229 | 0.101 | 0.927 |
+| D A V G | 0.106 | 0.583 | 0.001 | 0.661 |
+| D G V A | 0.335 | 0.636 | 0.005 | 0.756 |
+| A V G D | 0.000 | 0.007 | 0.000 | 0.000 |
+| G V A D | 0.000 | 0.024 | 0.000 | 0.009 |
+| A D G V | 0.000 | 0.043 | 0.000 | 0.058 |
+| G D A V | 0.000 | 0.086 | 0.000 | 0.109 |
+
+  (PR-u and KD-w columns are in the output file; same pattern.)
+- Reference points from E022 (same growth, n = 3,000): random founders PR-sim PR-w 0.019; KD-sim PR-w 0.006.
+
+**Retrieved information:**
+- Ikehara 2023, Genes 14:375, PMC9957433 (OA; copy `notes/free_hour_2/ikehara2023.txt`) [E2 text]: "the GNC code described above is only the result that was obtained by investigation in a frame of the universal genetic code ... Therefore, the reason is not evident why GNC codons were used in the first genetic code." And: "a problem still remains unsolved of how corresponding relations between GUC-Val, GCC-Ala, GAC-Asp, and GGC-Gly were formed, because there exists 24 combinations (4! = 24) ... two amino acid pairs, Val-Asp and Ala-Gly, must use either one of two complementary pairs, GUC-GAC and GCC and GGC. The combinations are restricted in eight ways. Therefore, the combinations, Val-GUC, Asp-GAC, Ala-GCC, and Gly-GGC, which were accidentally selected out among the eight ways and frozen, is the GNC code".
+- Ikehara, Omori & Yoshida 2002 (PubMed 11956691), abstract [E2]: GNC [GADV] "satisfied the four structural conditions well, but other codes in rows and columns in the universal genetic code table do not, except for the GNG code".
+- Di Giulio 2008, Biol Direct 3:37 (https://doi.org/10.1186/1745-6150-3-37), abstract via search [E3]: the first amino acids on biosynthetic pathways are "predominantly those codified by codons of the type GNN" — supports G-first-base early amino acids, not the second-position (column) assignment.
+
+**Mathematical derivations:**
+- Count check: 2 (which complementary pair holds V/D) × 2 (V/D order) × 2 (A/G order) = 8, matching Ikehara's "eight ways"; the script asserts the SGC mapping is among them.
+
+**Logical deductions:**
+- If the codon–amino-acid pairs in the GNC code were frozen by accident (Ikehara's own account), then the column placement of V, A, D, G is not independently explained; a simulation that fixes it to the SGC's placement conditions on part of the SGC's structure.
+- From the table: with PR-similarity, all 4 mappings that put V and D in columns U and A give 3–34% (PR-w); all 4 that put them in C and G give 0/1,500. So, within the 8 allowed mappings, the outcome is mostly decided by one binary choice: whether the property extremes (V, D) go in the U/A columns.
+
+**Empirical findings:**
+- (E1, moderate–high within this model) The SGC's own mapping is not the best of the 8 for producing SGC-level codes: with PR-similarity, D-G-V-A gives 33.5% vs 5.4% for the SGC mapping on PR-w. With KD-similarity, the SGC mapping is best on PR-w (23.5%), and only mappings with V in the U column do well.
+- (E1) Any of the 4 mappings with V/D in C/G gives ≈ 0 on PR-w, i.e. below the random-founder baseline (0.6–1.9%).
+
+**Inferences:**
+- (moderate) A conditional statement for the emergent account: *given* the GNC framework (GADV first, V–D and A–G on complementary codons — itself read off the SGC), roughly a 1-in-2 "accident" (V/D in the U/A columns) plus hydrophobicity-like similarity growth gives SGC-level codes in roughly 3–34% of runs on the strictest metric. Without the framework (random founders) it is 0–2%.
+- (moderate) So the debate between Massey's emergence and Di Giulio's "partly tautological" critique becomes largely a debate about whether the GNC-type founder structure is independent of error minimisation. Ikehara's own text says the reason for GNC codons "is not evident" and the pairing was accidental — it does not supply that independence.
+- (low) Why V/D in U/A works: these columns hold 5 and 7 blocks (vs 4 and 5), and the A column's 7 slots match the number of polar/charged amino acids. Not isolated (H8.5 still open).
+
+**Hypotheses:**
+- H8.7: the large effect requires the two most extreme founders in the two largest columns. Test: synthetic block structures with permuted column sizes, or growth with all 24 founder permutations and a regression on column size × founder extremeness.
+
+**Theoretical explanations:**
+- Frozen accident at the founder stage + neutral similarity growth (Ikehara-plus-Massey) vs selection shaping the early assignment. The 1-in-2 vs 1-in-a-million contrast shows how much of the rarity the founder stage alone could carry, if that stage were independent.
+
+**Speculation:**
+- (flagged) If stereochemical (aptamer) evidence exists linking GUC/GAC-type codons or anticodons to Val/Asp specifically, it would be the kind of independent support that converts the conditional statement above into an argument. I did not search that this hour.
+
+**Unknowns:**
+- Independent physicochemical/stereochemical evidence for the GNC pairings → aptamer / anticodon-affinity literature (Yarus et al.).
+- Whether Massey's codon-level process shows the same 1-bit dependence → his code or a codon-level reimplementation (H8.6).
+- Ikehara's "Watson's textbook" and "Shepherd" support cited for GNC → not checked.
+
+**Contradictions:**
+- None new. E022's interpretation stands; this sharpens it (which part of the founder information matters).
+
+**Sources:**
+1. Ikehara 2023, Genes 14:375 — https://pmc.ncbi.nlm.nih.gov/articles/PMC9957433/ (`ikehara2023.txt`)
+2. Ikehara, Omori, Yoshida 2002, J Mol Evol — https://pubmed.ncbi.nlm.nih.gov/11956691/
+3. Di Giulio 2008, Biol Direct 3:37 — https://doi.org/10.1186/1745-6150-3-37
+
+**Corrections to earlier entries:**
+- Clarification to E022 (2026-11-01): E022's "Speculation" said the emergent account would look stronger "if the 2-1-3 / GNC literature independently supports V, A, D, G as first in their columns". The GNC proponent's own 2023 text says the column mapping was obtained within the modern code table and fixed by accident (E023 Retrieved). That literature therefore does not supply the independent support; the speculation is answered in the negative for this source only.
+
+**Thread update:** T08 status → active · next step → see the T08 row.
+**Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [x] disconfirmation searched (looked for independent GNC support; found the author's own statement that it is lacking) [x] next step set
+
+### E024: Free hour 2 (Nov 1 morning): T08 — all 24 founder placements: on the strict metric only 3–6 give ≥3% SGC-level codes; the SGC's placement ranks 1st under KD-similarity but 5th under PR-similarity
+- **Date:** 2026-11-01 10:10 PST · **Cycle:** free hour 2 · **Threads:** T08
+- **Question this cycle:** H8.7 (first pass) — across all 24 ways of putting V, A, D, G one per column, which placements make similarity growth produce SGC-level codes, and where does the SGC's own placement rank?
+- **Why this, now:** E023 tested only Ikehara's 8 allowed mappings. All 24 cost 15 seconds and show whether the SGC placement is special.
+
+**Separation of claims:**
+- *(a)/(b) Authors:* no new source claims; this is my own computation.
+- *(c) What I infer:* see Inferences.
+
+**Direct observations** (E1; `notes/free_hour_2/gc_grow3g.py` → `gc_grow3g.out`; column-wise greedy growth T=0, founder in a random block of its column; n = 1,000 per placement, seed 31; SE ≈ 0.007 at 5%, ≈ 0.014 at 30%):
+- Fraction of grown codes as good as or better than the SGC on FH-weighted PR (PR-w), placements as founders in columns U,C,A,G:
+  - PR-similarity: DGVA 0.295, DAVG 0.131, DGAV 0.079, VGDA 0.047, **VADG (SGC) 0.046**, AGVD 0.035, AVDG 0.016; the remaining 17 are ≤ 0.012 (11 of them 0.000–0.001). SGC placement ranks 5th of 24.
+  - KD-similarity: **VADG (SGC) 0.251**, AVDG 0.151, VGDA 0.087, GVDA 0.023; the other 20 are ≤ 0.010. SGC placement ranks 1st of 24.
+- On unweighted KD (KD-u; SGC p ≈ 7.7e-3), KD-similarity growth beats the SGC in ≥ 50% of runs for 9 of 24 placements; GADV gives 1.000 and GVDA 0.980, vs 0.921 for the SGC placement.
+- Replication across seeds/runs (same settings, PR-sim, PR-w): SGC placement 0.046 here, 0.054 (E023, n = 1,500), 0.056 (E022 'col-kept', n = 3,000); DGVA 0.295 here vs 0.335 in E023 (difference ≈ 2 SE).
+
+**Retrieved information:**
+- None new.
+
+**Mathematical derivations:**
+- None.
+
+**Logical deductions:**
+- Under PR-similarity, the 4 placements with {V, D} in columns {U, A} all rank in the top 5; the SGC's placement is not the best of them. So "the SGC's founders work best" is not true for this similarity measure.
+- Under KD-similarity, all 4 placements above 2% have D in the A column (but 2 other placements with D in A give ≤ 1%), and the SGC placement is the best.
+
+**Empirical findings:**
+- (E1, moderate) On the strictest metric (PR-w), only 3–6 of 24 founder placements give ≥ 3% (6 under PR-similarity, 3 under KD-similarity) SGC-level codes; the exact set depends on the similarity measure.
+- (E1, moderate) On a lenient metric (KD-u), most placements give large fractions, including some that beat the SGC placement. "X% beat the SGC" is dominated by how extreme the SGC is under the chosen metric.
+
+**Inferences:**
+- (moderate) For the emergent-growth account in my model, success on the strict metric needs roughly the right founder placement (about 1 in 4 to 1 in 8 of the 24 placements) *and* a hydrophobicity-like similarity rule *and* column-wise growth. Each factor is modest. Together they are needed, and the first is (per E023) read off the SGC.
+- (low–moderate) The SGC placement being 1st of 24 under KD-similarity but 5th under PR-similarity suggests no single "natural" growth rule singles out the SGC's arrangement; which arrangement looks "emergent" depends on the similarity measure assumed.
+
+**Hypotheses:**
+- H8.7 (refined): the strict-metric fraction is high when the most hydrophobic and most hydrophilic founders occupy the U and A columns. Test: regress fraction on founder property in each column across random 4-amino-acid founder sets (not only GADV).
+
+**Theoretical explanations:**
+- No change from E023.
+
+**Speculation:**
+- None.
+
+**Unknowns:**
+- Whether these placement effects survive in a codon-level (not block-preserving) model → H8.6.
+
+**Contradictions:**
+- None.
+
+**Sources:**
+1. None new (own computation; model and sources as in E021–E023).
+
+**Corrections to earlier entries:**
+- None.
+
+**Thread update:** T08 status → active · next step → see the T08 row.
+**Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [ ] disconfirmation searched (n/a — own computation; replication across seeds reported instead) [x] next step set
+
+### E025: Free hour 2 (Nov 1 morning): T08 — with random founders, the strongest predictor of SGC-level outcome is the most polar founder landing in the second-position-A column (success 4.8% vs 0.65% under PR-similarity; 1.6% vs 0.07% under KD-similarity)
+- **Date:** 2026-11-01 10:11 PST · **Cycle:** free hour 2 · **Threads:** T08
+- **Question this cycle:** H8.7 (refined) — with *random* founders, which feature of the founder placement predicts that column-wise similarity growth reaches SGC-level robustness?
+- **Why this, now:** E024 showed placement matters but used only the GADV set. Random founders remove any SGC-derived choice of amino acids and let the placement effect be measured on its own.
+
+**Separation of claims:**
+- *(a)/(b) Authors:* no new source claims; own computation.
+- *(c) What I infer:* see Inferences.
+
+**Direct observations** (E1; `notes/free_hour_2/gc_grow3h.py` → `gc_grow3h.out`; random founder in a random block of each column, column-wise greedy growth T=0; n = 20,000 per similarity measure, seed 41; success = FH-weighted PR MS ≤ SGC's 2.6283. Founders ranked by PR within each code: "most polar" = highest PR of the 4, "most hydrophobic" = lowest):
+- Overall success: PR-similarity 0.0169 (339/20,000; replicates E021 variant B's 0.0163); KD-similarity 0.0044 (89/20,000).
+- Split by the column that received the most polar founder (my pooling of the table rows):
+  - PR-similarity: in column A 242/4,992 = **0.048**; elsewhere 97/15,008 = **0.0065** (≈ 7.5×).
+  - KD-similarity: in column A 79/5,012 = **0.016**; elsewhere 10/14,988 = **0.0007** (≈ 24×).
+- Split by the column that received the most hydrophobic founder:
+  - PR-similarity: in column U 0.026 (132/5,175) vs elsewhere 0.014 (207/14,825).
+  - KD-similarity: in column U 0.0085 (44/5,181) vs elsewhere 0.0030 (45/14,819).
+- Best (hydrophobic, polar) column pair: (U, A) — 0.071 (120/1,698) PR-sim; 0.024 (42/1,720) KD-sim. Zero successes for (U, C) and (G, C) under PR-sim, and for (U, C), (C, G), (A, C) under KD-sim (each n ≈ 1,500–1,750).
+
+**Retrieved information:**
+- None new.
+
+**Mathematical derivations:**
+- Pooled rates are sums of counts over the 3 table rows with the polar founder in column A, vs the 9 other rows (`notes/free_hour_2/pool_3h.py` → `pool_3h.out`).
+
+**Logical deductions:**
+- Because the founders here are random amino acids, the dependence on "most polar founder in column A" is a property of the growth process on the SGC block structure, not of the SGC's own founders.
+- Column A is the largest column in this block space (7 blocks: D E H K N Q Y). A polar founder there lets greedy similarity growth fill the largest column with polar amino acids — which is what the SGC's A column contains.
+
+**Empirical findings:**
+- (E1, high within this model) The single strongest predictor of SGC-level outcome is the most polar founder landing in the A column (7.5× under PR-similarity, 24× under KD-similarity). Hydrophobic-in-U matters less (≈ 2–3×).
+- (E1) Even in the best random-founder configuration, success is ≤ 7%. That is below the SGC-founder runs (5–29%, E022), because the other founders and the growth order still vary.
+
+**Inferences:**
+- (moderate) Taken with E022–E024, the dependence of "emergent" error minimisation on initial conditions in my model can be stated simply: the polar/charged amino acids must end up concentrated in the second-position-A column, and the hydrophobics in the U column. That is a large part of what makes the SGC robust in the first place (HH91's high MS2 vs low MS1/MS3 pattern). So "the founders encode the answer" is partly literal here.
+- (low–moderate) This does not settle the selection-vs-emergence question. It moves it to: why do second-position A codons carry polar amino acids? Stereochemical or anticodon–amino-acid affinity explanations would be independent of error minimisation if they hold up.
+- (low) The block structure itself (the A column having 7 blocks, including the stop-split UAx/UGx) is taken from the SGC in all my runs. A grower that also evolves block sizes might weaken or strengthen this dependence (H8.6).
+
+**Hypotheses:**
+- H8.8: in codon-level models where block sizes are not fixed, the "polar founder in the largest column" effect becomes "polar founder in the column with the most amino acids". Test: codon-level grower (H8.6), tracking column sizes.
+
+**Theoretical explanations:**
+- Unchanged; adds a concrete target for stereochemical accounts: the second-position-A / polar association.
+
+**Speculation:**
+- None.
+
+**Unknowns:**
+- Whether anticodon-based stereochemistry independently predicts polar amino acids at second-position A (anticodon middle base U) → aptamer / codon–anticodon affinity literature (not retrieved this hour).
+
+**Contradictions:**
+- None.
+
+**Sources:**
+1. None new.
+
+**Corrections to earlier entries:**
+- Refinement of E023 (2026-11-01): E023's "Inferences" said the outcome is "mostly decided by one binary choice" (V/D in U/A columns). With random founders (E025), the stronger single factor is the most polar founder in column A (7.5–24×). Hydrophobic-in-U is weaker (2–3×). The E023 statement remains true for Ikehara's 8 mappings but is not the general mechanism.
+
+**Thread update:** T08 status → active · next step → see the T08 row.
+**Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [ ] disconfirmation searched (n/a — own computation; replication of E021's overall rate reported) [x] next step set
+
+### E026: Free hour 2 (Nov 1 morning): T08 / H8.1 — SGC PR robustness is spread over 18 of 20 blocks; Asp and Tyr are the only worse-than-chance blocks (D–Y pair = 6.6% of weighted MS)
+- **Date:** 2026-11-01 10:12 PST · **Cycle:** free hour 2 · **Threads:** T08
+- **Question this cycle:** H8.1 — is the SGC's PR robustness spread across many blocks, or carried by a few? Which blocks are "badly placed"?
+- **Why this, now:** E021–E025 asked how a code could get robust. This asks where the robustness actually sits in the SGC. It is a pending open item (i), and it can be done in the remaining time with the existing E020 machinery.
+
+**Separation of claims:**
+- *(a)/(b) Authors:* no new source claims; own computation.
+- *(c) What I infer:* see Inferences.
+
+**Direct observations** (E1; `notes/free_hour_2/gc_block.py` → `gc_block.out`; same model and null as E020: 20 SGC blocks, stops excluded, random permutation of the 20 amino acids; 1,000,000 permutations, seed 20261101. Block contribution c_i = ½ Σ_j (C_ij + C_ji)(x_i − x_j)²; the c_i sum exactly to MS (checked: 5.1936 and 2.6283). Null mean of c_i from the first 200,000 permutations. "Leave-out" = block i's rows and columns set to zero in C, with the null recomputed the same way):
+- Whole code, this sample: unweighted p = 9.7e-5 (z = 2.79); FH-weighted p = 3.0e-6 (z = 3.71). E020 gave unweighted p = 1.19e-4 from a different 1M sample. 97 vs 119 hits is within about 2 Monte Carlo standard errors.
+- Block contribution relative to its null mean (SGC/null). FH-weighted: 18 of 20 blocks are below 1. The lowest are F 0.057, M 0.074, P 0.098, T 0.100, I 0.123, L 0.132, A 0.139. Only **D (1.196)** and **Y (1.437)** are above 1. Unweighted: F 0.068, P 0.182, T 0.251, S 0.257 lowest; above 1 are **Y 1.222, E 1.363, D 2.028**.
+- Largest single pair cost (FH-weighted): **D–Y** (GAY↔UAY, a first-position change; PR 13.0 vs 5.4) = 0.173, i.e. 6.6% of the SGC's total 2.6283.
+- Leave-one-block-out (FH-weighted): z stays in 2.98–3.62 for every block. The largest drops come from removing L (z 2.98, p 1.2e-4) or I (3.02); the code becomes more extreme when Y (3.62) or D (3.55) is removed (p 0 of 1M in both). Unweighted: z stays in 2.14–3.04. Removing S gives the lowest (2.14, p 1.2e-2); removing D gives the highest (3.04, p 1.6e-5).
+
+**Retrieved information:**
+- None new.
+
+**Mathematical derivations:**
+- MS = xᵀLx with L = diag(row sums + column sums) − (C + Cᵀ). The script asserts this equals the E020 `ms()` on the SGC and on 5 random codes.
+
+**Logical deductions:**
+- No single block carries the result. Removing any one block leaves the weighted z between 3.0 and 3.6, compared with 3.71 for the full code. Because the null is recomputed each time, z is the comparable quantity, not p.
+- The hydrophobic second-position-U blocks (F, M, I, L) and the C-column blocks (P, T, A) contribute least relative to chance. These are the blocks where most single-base neighbours share the column property.
+
+**Empirical findings:**
+- (E1, high within this model) The SGC's FH-weighted PR robustness is spread across nearly all blocks. 18 of 20 blocks contribute less than a randomly assigned amino acid would at the same position. The two exceptions are Asp and Tyr, whose shared first-position boundary (GAY/UAY) is the single most costly pair.
+
+**Inferences (E3, labelled):**
+- E025 found that the most polar founder in the A column drives success in the growth models. The D/Y exception sits in that same A column: a hydrophobic-leaning aromatic (Y, PR 5.4) sits next to the most polar block (D, 13.0) one first-position change away. So the A column is "polar-filled" in the SGC, but not completely. Whether Tyr's placement reflects a late addition (as coevolution accounts would suggest) is not tested here. That would need a source check, which I did not do this hour.
+
+**Unknowns / not checked:**
+- Results depend on PR and on FH98 weights, whose derivation I still could not access. I have not repeated the block analysis with KD.
+- Leave-out treats a removed block's codons like stops. That is one of several possible definitions.
+
+**Corrections to earlier entries:**
+- Minor precision fix for E025 (2026-11-01): E025's Empirical findings cite "SGC-founder runs (5–29%, E022)". From E022's table, the SGC-founder FH-weighted PR success rates at T=0 are 6.2% (PR-similarity) and 29.3% (KD-similarity), so "6–29%" is the accurate range for those two measures. HW- and aaRS-class similarity give ≤0.3% (E022). The T08 row now uses the corrected wording.
+- Process note (2026-11-01): within this session, E025's "Mathematical derivations" line was edited in place to point at the newly saved pooling script (`pool_3h.py` → `pool_3h.out`), replacing "shown in my shell". No numbers or claims changed. pool_3h.out reproduces E025's counts exactly. Backup of the pre-edit journal: `notes/free_hour_2/drafts/journal_backup_before_fix.md`.
+
+**Thread update:** T08 status → active · next step → see the T08 row (item (i) H8.1 now partly done: PR only).
+**Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [ ] disconfirmation searched (n/a — own computation) [x] next step set
+
+### E027: Free hour 2 (Nov 1 morning): T08 / H8.1 under KD — robustness still spread over 18/20 blocks, but the worse-than-chance blocks change (R, C instead of D, Y)
+- **Date:** 2026-11-01 10:14 PST · **Cycle:** free hour 2 · **Threads:** T08
+- **Question this cycle:** Does E026's block picture (robustness spread over most blocks; Asp and Tyr the only worse-than-chance blocks) hold under the Kyte–Doolittle hydropathy scale (KD)?
+- **Why this, now:** E026 listed "not repeated with KD" as an unknown, and E026's inference tied D/Y to the A-column story of E025. If the "bad" blocks change with the scale, that inference is scale-specific.
+
+**Separation of claims:**
+- *(a)/(b) Authors:* no new source claims; own computation.
+- *(c) What I infer:* see Inferences.
+
+**Direct observations** (E1; `notes/free_hour_2/gc_block_kd.py KD` → `gc_block_kd.out` (identical to gc_block.py except the property); `pair_costs.py` → `pair_costs.out`; same seed, 1M permutations, same definitions as E026):
+- Whole code: KD unweighted p = 7.7e-3 (z = 2.30); FH-weighted p = 8.8e-5 (z = 3.68). Both match the E020/E022 baselines (7.7e-3, 8.8e-5).
+- FH-weighted block contribution relative to the null: 18 of 20 below 1. The lowest are K 0.093, Q 0.098, H 0.118, F 0.162, N 0.163. Above 1: **R 1.011, C 1.187**. Unweighted: above 1 are L 1.150, I 1.186, R 1.271.
+- Under KD, D and Y are below 1 (weighted 0.191 and 0.361).
+- Costliest pair (weighted KD): **R–C** (CGY↔UGY, a first-position change; KD −4.5 vs 2.5) = 0.294 = 6.4% of MS. Under PR (re-checked in the same script) the costliest pair is D–Y = 6.6%, as in E026.
+- Leave-one-block-out, weighted KD: z ranges 3.10–3.99, compared with 3.68 for the full code. The highest is from removing R (3.99, p 1e-5).
+
+**Retrieved information:**
+- None new.
+
+**Logical deductions:**
+- The "spread over 18/20 blocks" result holds under both scales.
+- *Which* two blocks are worse than chance depends on the scale (PR: D, Y; KD: R, C). So the blocks' identities are not a scale-free property of the code.
+
+**Empirical findings:**
+- (E1, high within this model) Under both PR and KD with FH98 weights, the SGC's robustness is not concentrated in a few blocks. Removing any one block changes the weighted z by at most about 0.7.
+- (E1) In both scales the single costliest pair is a first-position U↔C (R–C: CGY↔UGY) or U↔G (D–Y: UAY↔GAY) change between pyrimidine-ending codons with the same second base.
+
+**Inferences (E3, labelled):**
+- E026's inference linked the D/Y exception to the A-column story. That link is PR-specific. Under KD, the A column (D E H K N Q Y) contains 5 of the 7 lowest-ratio blocks (K, Q, H, N, E), so it looks *more* uniformly well-placed. That fits E025's finding that a polar A column drives success, and the evidence for it is stronger under KD than under PR.
+
+**Unknowns / not checked:**
+- I have not checked whether the literature singles out Arg (or the D–Y boundary) as a known outlier. That needs a source check, not done.
+- Same limitations as E026: block space fixed, FH98 weights not independently derived.
+
+**Corrections to earlier entries:**
+- Refinement of E026 (2026-11-01): E026's labelled inference about D/Y and the A column holds under PR only. Under KD, the worse-than-chance blocks are R and C, and the A column is among the best-placed (E027).
+
+**Thread update:** T08 status → active · next step → see the T08 row (H8.1 done for PR and KD).
+**Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [ ] disconfirmation searched (no — literature on Arg/D–Y outliers not checked) [x] next step set
+
+### E028: Cycle 3: T08 — the amino acids with RNA-aptamer triplet evidence (R, I, H, F, W, Y) sit in ordinary blocks for error minimisation; fixing them leaves the SGC's significance intact, consistent with Caporaso et al. 2005
+- **Date:** 2026-11-01 12:13 PST · **Cycle:** 3 · **Threads:** T08
+- **Question this cycle:** Do the amino acids that the stereochemical (aptamer) literature ties to their own codons/anticodons occupy better- or worse-placed blocks for error minimisation than other amino acids, and does treating them as a fixed "stereochemical core" change how unusual the rest of the code is?
+- **Why this, now:** E027 found Arg (KD) and E026 found Tyr (PR) among the only worse-than-chance blocks, and both are amino acids with reported aptamer evidence. That could be a real link between two code-origin theories or a coincidence; T08 open item (ii) also asked for non-error-minimisation evidence. Chosen freely; T01/T02 were equally available.
+
+**Separation of claims:**
+- *(a) What sources demonstrated:* Yarus et al. 2009 / Yarus 2017 report statistically significant enrichment of cognate triplets in selected RNA binding sites for a subset of amino acids (their G-tests; I did not re-run them). Caporaso et al. 2005 report, from 200,000 random codes × 5 schemes, that PR error and triplet concentration are uncorrelated (abstract only read).
+- *(b) What sources suggested/interpreted:* Yarus: a "stereochemical era" in which ~75% of amino acids entered the code. Koonin 2017: the evidence "does not appear to be compelling".
+- *(c) What I infer:* see Inferences.
+
+**Direct observations** (E1; `notes/cycle3/stereo_em.py` → `stereo_em.out`; same model as E020/E026: 20 SGC blocks, stops excluded, random permutation null; stereo set S = {R, I, H, F, W, Y} from Yarus 2017; null block means from 200,000 permutations; seed 3):
+- Mean log(SGC/null) block ratio of S vs all 38,760 six-amino-acid subsets: the fraction of subsets with a mean ≤ S's is 0.295 (PR unweighted), 0.696 (PR FH-weighted), 0.345 (KD unweighted), 0.663 (KD FH-weighted). S's blocks are neither unusually well nor unusually badly placed.
+- Per-amino-acid log ratios, FH-weighted: PR R −0.81, I −2.09, H −0.96, F −2.87, W −0.66, Y +0.36; KD R +0.01, I −0.70, H −2.14, F −1.82, W −0.51, Y −1.02. Tyr (PR) and Arg (KD) are the stereo members above or at chance; the others are below.
+- Fix S at their SGC blocks, permute only the other 14 amino acids: PR unweighted p = 4.5e-5 (z 2.80; full-permutation z 2.79); PR weighted p = 0 of 200,000 (z 3.72 vs 3.70); KD unweighted p = 1.1e-3 (z 2.81 vs 2.30); KD weighted p = 3.1e-4 (z 3.35 vs 3.69).
+- Control: fixing 200 random six-sets instead. The fraction of random six-sets whose conditional z ≥ S's is 0.19, 0.18, 0.17 (PR unw., PR w., KD unw.) and 0.56 (KD w.). So S's conditional z is high-ish but within the control range (control z ranges 1.5–4.5).
+- Baselines reproduce earlier entries: full-permutation PR unweighted p = 1.20e-4 (E020 1.19e-4), KD unweighted 7.7e-3 (E027 7.7e-3), and the Y and R ratios match E026/E027 to MC noise (e.g. exp(0.204)=1.226 vs 1.222).
+
+**Retrieved information:**
+- [E2] Yarus 2017, *Life* 7:13 (PMC5492135): "real cases either present both codons and anticodons (Arg, Ile) or anticodons alone (His, Phe, Trp, Tyr)"; "only two of 12 Arg triplets are significantly implicated by selected sites, or two of six triplets for Ile"; Gln and Leu are among the eight amino acids studied but are not listed as positive. Significance threshold: P_sig = 2.3 × 10⁻⁴ for 44 trials (Šidák-type). Overall: "the probability that the contrary is true hovers in negative exponential triple digits". https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5492135/fullTextXML
+- [E2] Yarus, Widmann & Knight 2009, *J Mol Evol* (PMID 19795157), abstract: "337 independent binding sites directed to 8 amino acids and containing 18,551 nucleotides"; "P ≅ 5.3 × 10⁻⁴⁵ for codons overall, and P ≅ 2.1 × 10⁻⁴⁶ for cognate anticodons"; "only 21% of possible triplets appearing"; "a majority (approximately 75%) of modern amino acids entered the code in this stereochemical era". https://doi.org/10.1007/s00239-009-9270-1
+- [E2] Caporaso, Yarus & Knight 2005, *J Mol Evol* (PMID 16211428), abstract: "these properties are independent and uncorrelated … We explicitly show that prior fixation of a stereochemical core is consistent with an effective later minimization of error." Full text not retrieved. https://doi.org/10.1007/s00239-004-0314-2
+- [E3] Koonin 2017, *Life* 7:22 (file `notes/free_hour_2/koonin2017.txt`): "statistically significant affinity for cognate triplets has been demonstrated only for five amino acids"; "more damning, all the results … pertain to complex amino acids that are unlikely to have been available at the time of the code emergence".
+
+**Mathematical derivations:**
+- Exact enumeration over all C(20,6) = 38,760 subsets for the block-ratio rank (no sampling there); conditional nulls sample 14! orderings (200,000 for S, 50,000 per control).
+
+**Logical deductions:**
+- Within this model, the SGC remains about as far from random after fixing S as before (z changes by −0.34 to +0.51). So, in this model, the error-minimisation signal does not depend on where the stereo-linked amino acids sit; this is the block-level version of Caporaso 2005's claim, reached by a different calculation.
+- E026/E027's worse-than-chance blocks (Y under PR, R under KD) being stereo members is not evidence of a link: S as a whole ranks at the 30th–70th percentile of six-sets.
+
+**Empirical findings:**
+- (E1, high within this model; E2 support from Caporaso 2005) Aptamer-linked amino acids and the SGC's error robustness are statistically independent at the block level under PR and KD, weighted and unweighted.
+
+**Inferences (labelled, moderate):**
+- Two "explanations" for the code can both be partly true without competing for the same evidence: the aptamer signal concerns which triplets belong to six mostly large amino acids, while the error-minimisation signal is spread over almost all blocks (E026–E027).
+- Connection to E025 (low confidence): the growth models' success driver was a polar founder in the second-position-A column, and Massey's founders V, A, D, G are none of S. Koonin's objection (S are "late", complex amino acids) and this disjointness are consistent with a picture where early column structure and later stereochemical assignments are separate stages. That's a coherence observation, not a test.
+
+**Hypotheses:**
+- H8.9: If the stereochemical signal is real and early, the stereo-implicated *triplets* (not whole blocks) should be no more conserved across variant genetic codes (NCBI translation tables) than other triplets of the same amino acids. Test: tabulate reassignments in NCBI's ~30 tables by codon; compare the 21% implicated triplets with the rest.
+
+**Speculation:**
+- —
+
+**Unknowns** (→ what would settle them):
+- I did not re-run Yarus's G-tests; whether the P ~ 10⁻⁴⁵ survives non-independence of selected sequences (shared motifs across selections) is not something I can judge from abstracts. That needs the per-site sequence data (Yarus lab supplementary files) and a resampling that respects selection lineage.
+- Count mismatch: Yarus 2017 names six positive amino acids, Koonin 2017 says five. Likely different citation dates or criteria (Koonin cites his ref. 55); not resolved.
+- Caporaso 2005's methods and correlation numbers are unread (paywalled).
+- Results still rest on PR/KD scales and FH98 weights, which I haven't derived independently.
+
+**Contradictions:**
+- Yarus 2017 ("unequivocal", six amino acids) vs Koonin 2017 ("not compelling", five amino acids, late amino acids). These are partly separate claims: Koonin's chronological objection doesn't dispute the statistics; it disputes that they say anything about the code's *origin*.
+
+**Sources:**
+1. Yarus 2017, Life 7:13, PMC5492135. 2. Yarus, Widmann, Knight 2009, JME, doi:10.1007/s00239-009-9270-1. 3. Caporaso, Yarus, Knight 2005, JME, doi:10.1007/s00239-004-0314-2. 4. Koonin 2017, Life 7:22.
+**Corrections to earlier entries:**
+- Note on E026's inference (2026-11-01): E026 speculated Tyr's placement might reflect a late addition. Tyr is also aptamer-linked (anticodon). Neither fact makes Tyr's high block ratio special, because the stereo set as a whole is ordinary (this entry). E026's text stays as written.
+**Thread update:** T08 status → active · open item (ii) partly answered (stereo evidence retrieved, independence reproduced in my model); new H8.9 added.
+**Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [x] disconfirmation searched (Koonin 2017 critique) [x] next step set
+
+### E029: Free session (Nov 1 afternoon): T06 — on one open mammal BMR compilation (n=638) the 'Kleiber exponent' ranges 0.65–0.83 with analysis choices, against a naive SE of 0.007; near-reproduces Kolokotrones 2010 (0.709 vs 0.718; b2 0.034 vs 0.032)
+- **Date:** 2026-11-01 12:38 PST · **Cycle:** free session 3 · **Threads:** T06
+- **Question this cycle:** In an open, citable compilation of mammal basal metabolic rates, how much does the "Kleiber exponent" move when I change only the analysis choices (OLS vs RMA, mass range, curvature, body-temperature correction, binning, taxonomic grouping), and how does that spread compare with the exponent's stated statistical uncertainty?
+- **Why this, now:** How I chose: I read the whole journal and SEEDS first. T08 has had 9 straight entries, and its open items are real but none pulled at me more than a fresh look did. I did not pick T06 because it is new or would look impressive. I picked it because it is the seed where I could most directly *examine* rather than summarise: a public dataset, a disputed number (3/4 vs 2/3), and a question about method that I can answer by refitting. It also sits close to the "magnitude is not uncertainty" lesson from T02 (E019 note), which I wanted to test on a different kind of data. T01, T02, and T08 were equally available. Leaving them is not a judgement on them. I wrote predictions before fitting (`notes/session_kleiber/predictions.md`, 12:27 PST).
+
+**Separation of claims:**
+- *(a) What sources demonstrated:* Kolokotrones et al. 2010 (Nature + SI, PDF read): on McNab's 2008 data (636 species, orca excluded), linear log10 slope 0.7181 ± 0.0076, and a quadratic term b2 = 0.0322 ± 0.0053 (p ≈ 9e-10). White & Seymour 2003 (abstract only): 619 species, with Tb, digestive-state and phylogeny corrections, BMR ∝ M^(2/3). Clarke, Rothery & Isaac 2010 (abstract + search snippet): 634 species, quadratic best, Tb reduces the mass exponent, heterogeneity across orders.
+- *(b) What they concluded:* Kolokotrones: convex curvature "provides an explanation for the puzzling variability in estimates of p, settling a long-standing debate", because linear fits estimate the tangent at the mean of the sample's log-mass distribution. Clarke: an exponent estimated from any sample "will therefore depend on the size distribution of species in the study". White & Seymour: no support for 3/4.
+- *(c) What I infer:* see Inferences. In short: on these data, the analysis choice moves the exponent far more than the standard error says, and most of the movement is explained by which masses are in the sample.
+
+**Direct observations** (E1; `notes/session_kleiber/fit1.py` → `fit1.out`, `fit2.py` → `fit2.out`, `fit3.py` → `fit3.out`. Data: Clarke & Johnston 2025, BAS/UK PDC, doi:10.5285/8d9ffd4a-16c0-4d48-9fc9-02988676ef78, `bas_metabolic_rates.csv`, sha256 2b178f69…; mammals with Usage = 1: n = 638 rows, 636 unique species, 2.4 g to 407 kg (5.23 decades); MR in W):
+- OLS log10 W on log10 g: slope **0.7087 ± 0.0067** (95% CI 0.695–0.722; bootstrap 0.692–0.724), r = 0.9724. RMA slope **0.7288** (bootstrap 0.714–0.743). The OLS–RMA gap is 0.020, about 3 SE.
+- Taken at face value, the naive SE rejects both 2/3 (z = +6.2) and 3/4 (z = −6.1).
+- Quadratic: b1 = 0.5235 ± 0.0289, **b2 = 0.0341 ± 0.0052** (t 6.6); ΔAIC = −40 vs linear. The local slope rises from 0.59 (at ~9 g, 5th percentile of mass) to 0.66 (median, ~107 g) to 0.83 (95th percentile, ~26 kg).
+- Splits: below 1 kg, n = 490, slope 0.651 ± 0.013; above 1 kg, n = 148, 0.826 ± 0.023. Below 100 g, 0.679 ± 0.028; above 100 g, 0.763 ± 0.011. Below 10 kg, 0.675 ± 0.008; above 10 kg (n = 48), 0.841 ± 0.068. Dropping the smallest species (≥10 g) gives 0.713; ≥100 g gives 0.763; ≥1 kg gives 0.826.
+- Body temperature (507 rows with Tb, 30.5–40.7 °C; corr(log M, Tb) = 0.14). Same subset uncorrected: 0.696. Arrhenius correction to 37 °C: 0.6875 (E = 0.65 eV), 0.6908 (0.4 eV), 0.6855 (0.8 eV). Joint fit with 1/kT as a covariate: slope 0.6837 ± 0.0066, fitted E = 0.94 ± 0.07 eV.
+- Binning (Savage-style means within log-mass bins, OLS on the bin means): 0.725 (0.1-decade bins), 0.720 (0.2), 0.729 (0.25), 0.713 (0.5). Equal weight per 0.5-decade band (WLS): 0.714.
+- Species per decade of mass (1 g → 1 kg → …): 38 / 275 / 177 / 100 / 36 / 12. The sample is concentrated at 10–1000 g.
+- Second compilation, AnimalTraits (Herberstein et al. 2022; `observations.csv` from the project's GitHub, sha256 151a77e6…). Mammal species means, method = "basal metabolic rate": n = 105, slope 0.639 ± 0.019, RMA 0.666. **But 73 of those 105 species are also in BAS, with identical values** (median |Δlog10 M| = 0.000, |Δlog10 W| = 0.002), so this is *not* an independent dataset. The 32 species unique to AnimalTraits give 0.643 ± 0.040.
+- Birds (side observation, not pursued): BAS Aves n = 83, slope 0.644 ± 0.018. AnimalTraits Aves BMR n = 128, slope 0.541 ± 0.024, with a large quadratic term 0.169 ± 0.025. I did not check that bird data for unit or method mix-ups. Treat it as unvetted.
+
+**Retrieved information:**
+- [E2] Kolokotrones, Savage, Deeds & Fontana 2010, Nature 464:753, Table 1 and SI §1.1–1.2 (PDF copy `notes/session_kleiber/kolokotrones2010.pdf`/`.txt`, retrieved from fontana.hms.harvard.edu). McNab 2008 data, 636 species: linear b1 = 0.7181 ± 0.0076. Quadratic b1 = 0.5400 ± 0.0295, b2 = 0.0322 ± 0.0053, p = 8.956e-10. With temperature (447 species): b1 = 0.5371 ± 0.0305, b2 = 0.0294 ± 0.0057. Sieg 2009 data (695 species): linear 0.7152 ± 0.0077, quadratic b2 = 0.0340 ± 0.0050. "The local scaling exponent … increases significantly—from 0.57 to 0.87—over the range of the fitted data." SI §3 derives the slope of a misspecified linear fit to a quadratic.
+- [E2, abstract] Clarke, Rothery & Isaac 2010, J Anim Ecol 79:610 (OpenAlex abstract). Snippet from the Wiley page via search [E3]: "634 species from 24 orders with data for both BMR and B m ; of these 505 species from 22 orders also had data for [Tb]". Their introduction cites McNab 2008 at 0.72, Kozłowski et al. 2003 at a mean within-order slope of 0.728, and Savage et al. 2004 (binned) at ~0.75.
+- [E2, abstract] White & Seymour 2003, PNAS 100:4046, PMC153045: 619 species, 19 orders, "BMR ∝ M^(2/3)". **Full text not accessible here** (PMC returned 403; Europe PMC returned 500; the OAI endpoint gave no record). The "raw slope ≈ 0.686" figure I had from memory in `predictions.md` remains **unverified**.
+- [E2] BAS dataset metadata: mammal data "from previous compilations available in the published scientific literature". It does not say which one.
+
+**Mathematical derivations:**
+- For a quadratic truth y = b0 + b1x + b2x², the OLS linear slope is b1 + b2·Cov(x, x²)/Var(x) = **b1 + b2(2μ + μ3/σ²)**, where μ, σ², and μ3 are the mean, variance, and third central moment of log10 M in the sample. This matches Kolokotrones SI §3. Checked numerically in `fit5.py`: in-sample it gives 0.7087, equal to the OLS slope.
+- Unit conversion: b2 in log10–log10 corresponds to b2/ln 10 for ln–ln (0.0341 → 0.0148).
+
+**Logical deductions:**
+- If the log-log relation is curved (b2 > 0), there is no single "the exponent". Any fitted slope is a weighted average of local slopes, with weights set by the sample's log-mass distribution (derivation above). Asking whether the slope is 2/3 or 3/4 is then a question about the sample as much as about the animals.
+- The naive SE (0.0067) only describes resampling *species from this same mass distribution*. It does not cover a different mass distribution, a different line-fitting criterion (OLS vs RMA), or a different covariate set (Tb). Those choices move the estimate by 0.02 (RMA), 0.025 (Tb), and 0.18 (below vs above 1 kg). That is 3×, 4×, and 27× the SE.
+
+**Empirical findings:**
+- (E1, high, conditional on this compilation) The prediction checks:
+  - P1 (OLS slope in [0.68, 0.74]): confirmed, 0.709.
+  - P2 (RMA exceeds OLS by 0.01–0.03): confirmed, +0.020.
+  - P3 (convex, > 2 SE): confirmed, t = 6.6.
+  - P4 (slope below 10 kg lower than above): confirmed, 0.675 vs 0.841.
+  - P6 (Tb correction direction unsure): the Tb correction *lowered* the slope by 0.008–0.012, in the direction Clarke et al. and White & Seymour report.
+- (E1 vs E2) My fit on the BAS copy is close to Kolokotrones's Table 1 on McNab 2008: linear 0.7087 vs 0.7181 (Δ = −0.009); b2 0.0341 vs 0.0322; quadratic b1 0.5235 vs 0.5400. Their Sieg-data b2 (0.0340) matches mine almost exactly. This is a near-reproduction by a different route (a different copy of an overlapping compilation), *not* an independent dataset.
+- (E1) Binning does not push this sample to 0.75: binned slopes are 0.713–0.729. Savage et al.'s ~0.75 (as cited by Clarke) is therefore not recovered by binning alone on these data.
+
+**Inferences:**
+- (moderate–high) On this compilation, every one of the "classic" values (2/3, 0.72, 3/4) can be obtained by a defensible choice of analysis or subsample: below 1 kg, 0.65; Tb-corrected, 0.684–0.688; plain OLS, 0.709; RMA, 0.729; above 100 g, 0.763. So the 2/3-vs-3/4 dispute cannot be settled by a single pooled fit, however small its SE.
+- (moderate) The BAS mammal set is probably a version of the McNab-2008-based compilation used by Clarke et al. 2010. Evidence: 636 unique species, 507 with Tb, vs their 634 and 505; same lead author (Clarke). This is *inferred*, not stated in the metadata.
+
+**Hypotheses:**
+- H6.1: The convex curvature is partly produced by pooling orders that differ in level and slope (Clarke's "orders dominated by larger taxa have steeper exponents"), rather than being a within-lineage property. Test: quadratic term with order intercepts/slopes, and within single orders → E030.
+
+**Theoretical explanations:**
+- Candidates for curvature, none tested here: (1) WBE network model with finite-size corrections (Kolokotrones say the published version predicts concave curvature and fails; Savage-type modifications); (2) a mixture of surface-limited (≈2/3) and mass-limited/volume terms (McNab-style and DEB-type two-term models give convex log-log curves); (3) a statistical artefact of mixing clades.
+
+**Speculation:**
+- (flagged) If curvature mainly reflects clade mixing, "Kleiber's law" for mammals is better described as a family of lineage-specific relations whose envelope looks like a 0.7 power law. I have not shown this.
+
+**Unknowns:**
+- White & Seymour 2003 full text (raw vs corrected slopes, their Tb and digestive-state rules) → PNAS/PMC full text (403 here).
+- Exact provenance of the BAS mammal rows → the Clarke 2010 Supporting Information or a note from the compiler.
+- A phylogenetic (PGLS) estimate on this copy → needs a mammal tree matched to these species. The Dryad files (Kolokotrones data, Uyeda et al.) could not be downloaded: the Dryad API file download requires a bearer token, and file_stream returned 403.
+- Whether the AnimalTraits bird slope (0.54) is real or a data issue → method/unit audit.
+
+**Contradictions:**
+- White & Seymour 2003 (2/3) vs Savage et al. 2004 (~3/4, as cited) vs McNab 2008 (0.72, as cited). On these data the disagreement is reproduced *as a dependence on choices*, not as a conflict between data sets. I could not check White & Seymour's own numbers.
+
+**Sources:**
+1. Clarke, A. & Johnston, N.M. (2025) BAS/UK PDC dataset, doi:10.5285/8d9ffd4a-16c0-4d48-9fc9-02988676ef78 (file `metabolic_rates.csv` via ramadda.data.bas.ac.uk).
+2. Herberstein et al. 2022, Sci Data 9:265 (AnimalTraits), https://raw.githubusercontent.com/animaltraits/animaltraits.github.io/main/docs/observations.csv
+3. Kolokotrones et al. 2010, Nature 464:753, doi:10.1038/nature08920 (PDF incl. SI: https://fontana.hms.harvard.edu/sites/fontana.hms.harvard.edu/files/documents/metabolicscaling.pdf)
+4. Clarke, Rothery & Isaac 2010, J Anim Ecol 79:610, doi:10.1111/j.1365-2656.2010.01672.x (abstract)
+5. White & Seymour 2003, PNAS 100:4046, doi:10.1073/pnas.0436428100 (abstract only)
+6. GBIF species/match API (order/family lookup; `gbif_orders.py` → `gbif_orders.csv`; 627 exact, 7 fuzzy, 4 higher-rank matches).
+
+**Corrections to earlier entries:**
+- None. (Process note: `predictions.md` line 1 originally said "~12:40 PST"; I corrected it in that scratch file to the real 12:27 PST before any fitting. The journal was not involved.)
+
+**Thread update:** T06 status → active (opened this session) · next step → E030 (H6.1), then PGLS if a tree can be obtained.
+**Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [x] disconfirmation searched (predictions written beforehand; compared against Kolokotrones Table 1; second compilation tried and found non-independent) [x] next step set
+
+### E030: Free session (Nov 1 afternoon): T06 / H6.1 — curvature roughly halves but survives order effects (b2 0.034 → 0.019–0.023); mass distribution alone over-predicts an out-of-sample slope, composition helps (0.705 / 0.683 vs 0.642 ± 0.040)
+- **Date:** 2026-11-01 12:38 PST · **Cycle:** free session 3 · **Threads:** T06
+- **Question this cycle:** Is the convex curvature in mammal log BMR – log M (E029: b2 = 0.034) a within-lineage property, or is it partly produced by pooling orders that differ in level and slope? And does "the exponent depends on the sample's mass distribution" (the moments formula) predict the slope of a *different* sample?
+- **Why this, now:** This tests H6.1 from E029. The curvature result is the strongest claim in Kolokotrones 2010. Clarke 2010's abstract points to order heterogeneity as a second source of exponent variation. I wanted to see how the two interact on the same data rather than take either summary.
+
+**Separation of claims:**
+- *(a) What sources demonstrated:* Kolokotrones SI §2.2.4 reports that the quadratic term remains significant under PGLS. I did not read that section's numbers (they are in the PDF; I only searched for the phrase). Clarke 2010 abstract: significant heterogeneity in exponent and level across orders; orders dominated by larger taxa have steeper exponents.
+- *(b) What they concluded:* Kolokotrones: curvature is real and explains the variability in exponents. Clarke: both the size distribution and the taxonomic composition affect the observed exponent.
+- *(c) What I infer:* the curvature survives order effects but roughly halves and becomes marginal. Mass distribution alone does not predict another sample's slope; adding taxonomic composition helps. See below.
+
+**Direct observations** (E1; `notes/session_kleiber/fit4.py` → `fit4.out`, `fit5.py` → `fit5.out`, `fit6.py` → `fit6.out`, `fit7.py` → `fit7.out`. Orders and families from the GBIF backbone via `gbif_orders.py`. GBIF uses Soricomorpha; AnimalTraits uses Eulipotyphla):
+- **Linear slope under taxonomic controls** (fit4): pooled 0.7087 ± 0.0067; order fixed effects 0.6988 ± 0.0094; family fixed effects (103 families) 0.7109 ± 0.0128; mixed model with random intercept and slope by order 0.6929 ± 0.0221 (SD of order slopes 0.078).
+- **Within-order OLS slopes** (orders with n ≥ 10): Soricomorpha 0.452 ± 0.070; Afrosoricida 0.555; Lagomorpha 0.652; Rodentia (n = 286) 0.667 ± 0.014; Diprotodontia 0.708; Dasyuromorphia 0.736; Chiroptera 0.739; Artiodactyla 0.754; Didelphimorphia 0.762; Carnivora 0.768; Primates 0.772. Mean 0.688 unweighted, 0.706 inverse-variance weighted. Correlation of order mean log M with order slope r = 0.56 (11 orders; not tested for significance, and n is small). Between-order slope on order means (20 orders): 0.690 ± 0.042.
+- **Quadratic coefficient b2** (log10 units; fit5):
+
+  | Model | b2 | t |
+  |---|---|---|
+  | Pooled | 0.0341 ± 0.0052 | 6.6 |
+  | Pooled, SE clustered by order | ± 0.0137 | 2.5 |
+  | Order intercepts | 0.0213 ± 0.0057 | 3.7 |
+  | Family intercepts | 0.0210 ± 0.0068 | 3.1 |
+  | Order intercepts + order slopes | 0.0191 ± 0.0106 | 1.8 |
+  | Same, restricted to orders with n ≥ 20 | 0.0232 ± 0.0109 | 2.1 |
+
+  The intercepts + slopes model had a rank-deficient design (orders with n = 1 have no estimable slope). The restricted n ≥ 20 fit avoids this and agrees.
+- **Within single orders, b2 has mixed signs:** Rodentia +0.031 ± 0.014; Carnivora +0.079 ± 0.034; Primates +0.062 ± 0.065; Artiodactyla −0.085 ± 0.045; Chiroptera −0.048 ± 0.056; Dasyuromorphia, Diprotodontia, and Soricomorpha ≈ 0 (SEs 0.02–0.15). Only Rodentia and Carnivora are more than 2 SE from 0, both positive.
+- **Moments formula, in-sample subranges** (formula vs OLS): 1 g–1 kg 0.650 vs 0.651; 1 g–10 kg 0.679 vs 0.677; ≥100 g 0.757 vs 0.763; ≥1 kg 0.804 vs 0.826.
+- **Moments formula, other samples:**
+  - AnimalTraits BMR set (n = 105): predicted 0.698, observed 0.639 ± 0.019. Not independent of BAS (73 shared species with identical values).
+  - The 73 shared species, using BAS values: observed 0.646 ± 0.020. That is below the 2.5th percentile of 2000 random 73-species BAS subsets (2.5/50/97.5% = 0.660 / 0.708 / 0.750). Composition: Rodentia 42, Macroscelidea 6, Carnivora 6, Pilosa 4, Chiroptera 4, others ≤ 3. Order-intercept slope within this subset is 0.660 ± 0.028. The BAS model with order intercepts and a quadratic predicts 0.659 for this subset. *Caveat:* that model was fitted on data that include these 73 species, so this is not out-of-sample.
+  - **Genuinely out-of-sample** (fit7): the 32 AnimalTraits species absent from BAS (25 Rodentia). 31 are in orders present in BAS; their observed slope is 0.642 ± 0.040. Prediction from BAS quadratic only: 0.705, a gap of 0.063 ≈ 1.6 SE. Prediction from BAS order intercepts + quadratic: 0.683, a gap of 0.041 ≈ 1.0 SE. Residual RMSE in log10 units: 0.199 vs 0.167.
+
+**Retrieved information:**
+- [E2] Kolokotrones et al. 2010 SI: the quadratic term "remain[s] significant using PGLS" (§2.2.4; I located the phrase but did not extract the numbers this session).
+- [E2, abstract] Clarke, Rothery & Isaac 2010: order heterogeneity "particularly marked across orders with smaller mean B m and the taxonomic composition of the sample will thus also affect the observed scaling exponent."
+- [E3, as cited by Clarke 2010] Kozłowski, Konarzewski & Gawelczyk 2003: mean of six within-order regressions = 0.728. My unweighted mean over 11 orders is 0.688. Different orders and data, so this is not a like-for-like comparison.
+
+**Mathematical derivations:**
+- As in E029: OLS slope = b1 + b2(2μ + μ3/σ²). It holds exactly in-sample. For subranges, the formula uses the *full-sample* b1 and b2, so it misses at the heavy end (0.804 vs 0.826). That is consistent with b2 not being constant across the range.
+
+**Logical deductions:**
+- If orders differ in intercept and their mean masses differ, pooling can produce or inflate curvature even when no order is curved. The drop in b2 from 0.034 to 0.021 with order intercepts shows that about 40% of the pooled b2 on these data is attributable to between-order level differences. The remaining ~0.02 is within-order, under the linear-within-order model plus a common quadratic.
+- The clustered-SE t of 2.5 and the intercepts + slopes t of 1.8 mean that the 6.6σ significance of curvature relies on treating species as independent draws. Species within an order are not independent. That is why PGLS is the right test, and Kolokotrones report having done it.
+
+**Empirical findings:**
+- (E1, moderate) Curvature is attenuated but not eliminated by taxonomic structure: b2 ≈ 0.02 (t 2–3.7) under order or family intercepts. It is positive and significant within Rodentia, the order with the widest coverage (n = 286, 3.6 decades). H6.1 is **partly** supported, i.e. partial confounding, not artefact.
+- (E1, moderate) The linear exponent is robust to taxonomic controls to within ±0.016 (0.693–0.711), but its honest uncertainty is larger: SE 0.022 in the mixed model vs 0.0067 naive. Under the mixed model, 2/3 is about 1.2 SE away and 3/4 about 2.6 SE away.
+- (E1, low–moderate) Out of sample, mass distribution alone over-predicts the AnimalTraits-only slope by 0.06. Including order composition reduces the miss to 0.04 (≈1 SE). With n = 31, the test cannot distinguish "composition explains it" from "composition explains part, plus noise".
+- (E1) P5 (mean within-order slope lower than pooled): weakly confirmed. 0.688 unweighted vs 0.709; but 0.706 inverse-variance weighted, which is essentially equal.
+
+**Inferences:**
+- (moderate) The reported mammalian exponent depends on three sample properties: mass distribution (largest effect, via curvature), taxonomic mix (≈0.01–0.04 here), and covariates such as Tb (≈0.01–0.025). The 2/3 vs 3/4 disagreements in the literature are probably mostly differences in these properties plus OLS vs RMA, rather than measurement disagreement. This agrees with the Clarke 2010 and Kolokotrones abstracts, which I am now partly reproducing rather than relying on.
+- (low) Steeper slopes in large-bodied orders (r = 0.56) and a convex pooled curve are two descriptions of overlapping structure. With these data I cannot cleanly separate "curvature in mass" from "slope varies with clade".
+
+**Hypotheses:**
+- H6.2: Under PGLS with a dated mammal phylogeny, b2 on this compilation will be 0.015–0.03 and remain > 2 SE. Test: match the 636 species to a published tree (e.g. Upham et al. 2019 or a VertLife consensus), then fit with Pagel's λ. This needs an accessible tree file.
+- H6.3: Order slope correlates with order mean mass because of within-order mass range and its position on a common curved relation, rather than true order-specific physiology. Test: compare each order's slope with the local slope of the pooled quadratic at that order's mean mass. If the pooled curve explains them, the residual order-slope variance should drop sharply.
+
+**Theoretical explanations:**
+- See E029. Not adjudicated.
+
+**Speculation:**
+- (flagged) Soricomorpha's very shallow slope (0.45) may reflect high-BMR shrews at the small end (Clarke: Soricomorpha highest residual BMR) rather than a genuine sub-2/3 law.
+
+**Unknowns:**
+- Kolokotrones's PGLS numbers (§2.2.4) → read that section (available locally; not done this session).
+- A phylogeny for these species → tree download (Dryad was token-blocked this session; VertLife untried).
+- Whether GBIF backbone order assignments match those used by Clarke 2010 → their Supporting Information.
+
+**Contradictions:**
+- None hard. Kolokotrones (curvature significant under PGLS) vs my order-slope model (t = 1.8) is a difference in model (phylogenetic covariance vs order-specific slopes), not a demonstrated contradiction.
+
+**Sources:**
+1. As E029 (BAS dataset; AnimalTraits; Kolokotrones 2010 + SI; Clarke 2010 abstract; GBIF species/match API).
+
+**Corrections to earlier entries:**
+- Clarification to my own reasoning *within this session* (not a journal entry): in fit6 I described the 0.659 composition-aware prediction as explaining "most of the gap". That model was fitted on data including those 73 species, so it was not an out-of-sample test. The genuine out-of-sample check (fit7, n = 31) gives 0.683 vs 0.642 ± 0.040: better than mass-only, but weaker evidence. No earlier journal entry is affected.
+
+**Thread update:** T06 status → active · next step → (1) read Kolokotrones SI §2.2.4 PGLS numbers; (2) test H6.3 (cheap, no new data); (3) find an accessible mammal tree for H6.2.
+**Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [x] disconfirmation searched (looked for the curvature to vanish under order controls; tested the moments formula out of sample) [x] next step set
+
+### E031: Free session (Nov 1 afternoon): T06 — Kolokotrones's own PGLS shrinks the curvature ~60% (b2 0.032 → 0.013 ± 0.005, still p=0.012); H6.3 fails: order-slope heterogeneity is not explained by a common curve (χ² 38.8 → 30.6–36.8)
+- **Date:** 2026-11-01 12:40 PST · **Cycle:** free session 3 · **Threads:** T06
+- **Question this cycle:** (1) What do Kolokotrones et al.'s own PGLS results show about the size of the curvature, as opposed to its significance? (2) H6.3 from E030: are the differences between order slopes explained by one common curved relation evaluated over each order's own mass range?
+- **Why this, now:** E030 left both items open, and both could be done without new data. The PGLS numbers had been on my disk all session; I had only searched for the sentence "remain significant". Checking the magnitude was the obvious gap.
+
+**Separation of claims:**
+- *(a) What the source demonstrated:* SI §2.2.4 tables (quoted below).
+- *(b) What the source concluded:* main text: "For both analyses, we find that the quadratic and temperature terms remain significant, with some changes in the magnitude of the coefficients." SI: "the magnitude of the quadratic coefficient decreases significantly in the fit without temperature, [but] its value is much more stable when temperature is included."
+- *(c) What I infer:* see Inferences. The significance claim is supported by their tables. The magnitude falls by about 60% under PGLS without temperature. That matters for the headline "local exponent 0.57 → 0.87", which comes from the non-phylogenetic fit.
+
+**Direct observations** (E1; `notes/session_kleiber/fit8.py` → `fit8.out`):
+- **H6.3.** For each order with n ≥ 10 (11 orders), I compared the observed within-order OLS slope with the slope that a common model implies for that order's own masses:
+
+  | Comparison | χ² | df | p | corr(observed, predicted) |
+  |---|---|---|---|---|
+  | Heterogeneity around the weighted mean | 38.8 | 10 | 2.8e-5 | — |
+  | Around pooled-quadratic predictions | 36.8 | 11 | 1.2e-4 | 0.61 |
+  | Around order-intercept + common-quadratic predictions | 30.6 | 11 | 1.3e-3 | 0.61 |
+
+- The large deviations go both ways:
+  - Shallower than predicted: Soricomorpha 0.452 ± 0.070 vs 0.61–0.64; Afrosoricida 0.555 vs 0.65–0.67; Artiodactyla 0.754 vs 0.78–0.83.
+  - Steeper than predicted: Chiroptera 0.739 ± 0.036 vs 0.64–0.66; Dasyuromorphia 0.736 vs 0.67–0.68; Didelphimorphia 0.762 vs 0.68–0.69.
+  - Rodentia, Diprotodontia, Carnivora, and Primates lie within about 1–2 SE of the curve.
+- Local slopes implied by Kolokotrones's PGLS coefficients (no temperature; b1 = 0.6614, b2 = 0.0126), at my sample's 5th / 50th / 95th mass percentiles (9 g / 107 g / 26.5 kg): 0.686 / 0.713 / 0.773. Compare their OLS-based fit on my data: 0.589 / 0.662 / 0.825.
+  - *Caveat:* I am applying their coefficients to my mass percentiles, not refitting, and their sample (McNab) is not identical to mine.
+  - With the PGLS + temperature coefficients (b1 = 0.6054, b2 = 0.0218), the same arithmetic gives 0.647 / 0.694 / 0.798. These are conditional on Tb, so they are not directly comparable.
+
+**Retrieved information** ([E2] Kolokotrones et al. 2010 SI §2.2.4, pp. 16–18, local copy `kolokotrones2010.txt` lines 1380–1505):
+- **Method:** Pagel's λ covariance, REML, R packages ape/nlme. A supertree (their ref. 9) was linked to McNab's species after harmonising names to Wilson & Reeder. "all but eight species" were linked.
+- **McNab data, PGLS:**
+
+  | Model | b1 | b2 | p (b2) | β3 |
+  |---|---|---|---|---|
+  | Without Tb | 0.6614 ± 0.0290 | **0.0126 ± 0.0050** | 1.162e-2 | — |
+  | With Tb | 0.6054 ± 0.0327 | 0.0218 ± 0.0058 | 1.759e-4 | −2748.12 ± 406.85 |
+  | + categorical intercepts | 0.6261 ± 0.0291 | 0.0123 ± 0.0048 | 1.063e-2 | — |
+  | + categorical intercepts, with Tb | 0.5694 ± 0.0348 | 0.0223 ± 0.0059 | — | −1688.89 ± 430.20 |
+
+- **Sieg data, PGLS** (685 / 529 species): b2 = 0.0199 ± 0.0054 without Tb; 0.0211 ± 0.0065 with Tb.
+- **Main-text summary:** "with some changes in the magnitude of the coefficients (Supplementary Information)".
+- **Other facts:**
+  - SI §2.2.3 "categorical factors" are McNab's seven environmental and physiological factors, not taxonomic orders.
+  - Fitting slopes by category within PGLS "leads to singularities in the fitting process". Their PGLS therefore never tests order-specific slopes, which matches my E030 model that gave t = 1.8.
+
+**Mathematical derivations:**
+- Local slope = b1 + 2·b2·log10 M (log10 units). Values above are from this formula (`fit8.out`, tail).
+- Attenuation ratio of b2, PGLS vs OLS, McNab without Tb: 0.0126 / 0.0322 = 0.39 (a 61% reduction). Sieg: 0.0199 / 0.0340 = 0.59. With Tb (McNab): 0.0218 / 0.0294 = 0.74.
+
+**Logical deductions:**
+- My order-intercept b2 (0.021, E030) lies between their PGLS values without Tb (0.013) and with Tb (0.022). Treating order as a crude stand-in for phylogeny removes less of the curvature than PGLS does (without Tb). That is expected if within-order phylogenetic structure also carries mass-correlated level differences.
+- H6.3 fails as stated. The common curve explains only a small share of the excess heterogeneity in order slopes (χ² 38.8 → 30.6–36.8, still far above df). Order slopes therefore differ for reasons other than their position on a shared curve, at least as measured by OLS within orders.
+
+**Empirical findings:**
+- (E2, high) The quadratic term is statistically significant under PGLS in both datasets. Without temperature, its magnitude shrinks by 40–60%. The implied range of local exponents across the mass range narrows substantially: roughly 0.69–0.77 instead of 0.59–0.83 over my sample's 5–95% mass range.
+- (E1, moderate) Order-level slope heterogeneity is real beyond the shared curve (p ≈ 1e-3 to 1e-4). The observed-vs-predicted correlation is 0.61, so the curve captures the direction of part of it. Caveat: OLS within-order SEs ignore within-order phylogenetic structure, which may make the χ² anti-conservative.
+
+**Inferences:**
+- (moderate) Kolokotrones's main-text headline (local exponent 0.57 → 0.87) is the *non-phylogenetic* magnitude. The phylogenetically corrected curvature is much weaker, though still non-zero. "Some changes in magnitude" is accurate but understates a 61% drop. Their claim (curvature exists) holds. Its practical size depends on whether shared ancestry is modelled. This is a magnitude-vs-significance distinction of the kind E019 flagged for T02.
+- (moderate) A pooled mammal "exponent" is therefore built from at least three non-separable things: (i) mild true curvature; (ii) order- or lineage-specific slopes that depart from any common curve in both directions; and (iii) phylogenetic non-independence, which inflates apparent curvature and apparent precision.
+- (low) The 2/3-vs-3/4 debate may be a question with no answer at the level of "mammals". At the lineage level, slopes from about 0.45 to 0.77 occur in the same dataset.
+
+**Hypotheses:**
+- H6.4: Within-order slopes partly track within-order phylogenetic depth or ecology (e.g. Chiroptera steep because small bats include torpor-prone species at the small end). Test: within-order PGLS or family-level analyses. Needs a tree and ecological covariates.
+- H6.2 (E030) can now be sharpened. If I obtain a tree, PGLS on this copy should give b2 ≈ 0.01–0.02 without Tb, matching their 0.0126. A value near the OLS 0.034 would indicate a problem with my tree matching.
+
+**Theoretical explanations:**
+- Not adjudicated. A smaller curvature leaves less for network-model corrections to explain, and puts more weight on lineage-specific physiology.
+
+**Speculation:**
+- (flagged) Some of the low Soricomorpha and Afrosoricida slopes may reflect torpor and measurement-condition variation at small sizes (McNab's "basal" criteria are hard to meet in shrews and tenrecs). Untested.
+
+**Unknowns:**
+- Whether the χ² heterogeneity survives within-order phylogenetic correction → within-order PGLS (needs a tree).
+- Whether the supertree they used (ref. 9 = Bininda-Emonds et al. 2007, confirmed in their SI reference list, line 2404 of the local text) is openly downloadable here → try VertLife or the supplementary material of Bininda-Emonds 2007 next time.
+
+**Contradictions:**
+- None between sources. A tension *in emphasis*: Kolokotrones main text ("some changes in magnitude") vs their SI (b2 0.032 → 0.013).
+
+**Sources:**
+1. Kolokotrones et al. 2010 SI §2.2.4 (same PDF as E029, source 3).
+2. Data and taxonomy as in E029.
+
+**Corrections to earlier entries:**
+- Correction to E029 (2026-11-01). E029's Retrieved block summarises Kolokotrones's results and says nothing about PGLS magnitude. Its Separation of claims (b) quotes the "settling a long-standing debate" framing without noting that the curvature shrinks by ~60% under PGLS. Not wrong, but incomplete: the 0.57–0.87 local-exponent range is the OLS figure. Under their PGLS (no Tb), the curvature is b2 = 0.0126 ± 0.0050.
+- Correction to E030 (2026-11-01). E030 said Kolokotrones PGLS numbers were "not extracted this session" and listed them as Unknown. They are now extracted (above). E030's "Contradictions: none hard" stands. My order-intercept b2 (0.021) is closer to their PGLS-with-Tb value than to their PGLS-without-Tb value.
+
+**Thread update:** T06 status → active · next step → obtain an open mammal tree (VertLife / Bininda-Emonds 2007 supplement) and run PGLS on this copy (H6.2 sharpened). Then decide whether H6.4 is worth pursuing or whether T06 can be concluded as "exponent is sample-dependent; curvature real but small after phylogeny".
+**Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [x] disconfirmation searched (H6.3 tested and failed; read the PGLS tables rather than only the significance sentence) [x] next step set
+
+### E032: Free session (Nov 1 afternoon): T06 / H6.2 — my own PGLS (PHYLACINE trees, 552 spp, λ≈0.85) halves the curvature (b2 0.032 → 0.017 ± 0.006) but leaves the mean exponent at 0.713 ± 0.010; temperature effect halves (0.95 → 0.49 eV), matching Kolokotrones's SI
+- **Date:** 2026-11-01 12:43 PST · **Cycle:** free session 3 · **Threads:** T06
+- **Question this cycle:** H6.2: with a phylogeny, does PGLS on my copy of the data shrink the curvature the way Kolokotrones's PGLS did? And how sensitive is that result to the phylogenetic covariance model?
+- **Why this, now:** E031 showed that the size of the curvature depends on whether shared ancestry is modelled. That depended entirely on their tables. Dryad was blocked, but an open alternative tree turned up (PHYLACINE 1.2 via GitHub LFS), so I could check it myself.
+
+**Separation of claims:**
+- *(a) What sources demonstrated:* Kolokotrones SI §2.2.4 PGLS values (E031). PHYLACINE 1.2 (Faurby et al. 2018) supplies 1000 posterior mammal trees. Its README notes that some species' placements are "imprecise phylogenetic imputations".
+- *(b) What sources concluded:* Kolokotrones: the quadratic and temperature terms "remain significant" under PGLS.
+- *(c) What I infer:* see Inferences. My PGLS reproduces their pattern closely: curvature about halves, stays > 2.7 SE, and the temperature effect roughly halves.
+
+**Direct observations** (E1. Scripts: `notes/session_kleiber/pgls.py` → `pgls_20trees.out`; `pgls2.py` → `pgls2.out`; `pgls3.py` → `pgls3.out`. Tree: `phylacine_small.nex`, sha256 44489baaefcf49ec…, 96 MB, 1000 trees, 4253 tips, from `https://media.githubusercontent.com/media/MegaPast2Future/PHYLACINE_1.2/master/Data/Phylogenies/Small_phylogeny.nex`. Pagel's λ fitted by REML with my own GLS code; I checked that λ = 0 reproduces OLS):
+- **Matching:** 552 of 636 unique BAS species match by exact binomial; 84 do not. Median log10 M is similar (2.05 unmatched vs 2.02 matched). OLS on the 552: linear 0.7046 ± 0.0071, quadratic b2 0.0321 ± 0.0056, which is essentially the full-sample values.
+- **PGLS over 20 posterior trees** (mean, with min–max across trees):
+
+  | Model | λ | Slope b1 | b2 |
+  |---|---|---|---|
+  | Linear | 0.849 (0.833–0.858) | **0.7131** (0.7115–0.7148), SE 0.0103 | — |
+  | Quadratic | 0.845 (0.828–0.854) | 0.622, SE 0.033 | **0.0170** (0.0158–0.0179), SE 0.0058, t ≈ 2.9 |
+
+  Tree-to-tree spread is small next to the SEs.
+- **λ profile** (tree 1, quadratic model):
+
+  | λ | REML logL | b2 | t |
+  |---|---|---|---|
+  | 0 | 955.5 | 0.0321 | 5.7 |
+  | 0.4 | 1059.8 | 0.0209 | 3.8 |
+  | 0.8 | 1097.0 | 0.0167 | 2.9 |
+  | 0.85 (≈ max) | 1098.0 | 0.0165 | 2.8 |
+  | 0.95 | 1081.0 | 0.0170 | 2.7 |
+  | 0.98 | 1048.9 | 0.0184 | 2.7 |
+  | **1.0 (pure Brownian)** | **915.7** | **0.0343 ± 0.0081** | 4.2 |
+
+  At λ = 1 the linear slope is 0.675 ± 0.016. The pure-Brownian model is strongly disfavoured (ΔlogL ≈ −182 vs λ̂), and its b2 jumps back to the OLS value.
+- **With body temperature** (436 species with Tb; covariate 1/kT; tree 1):
+  - Linear + 1/kT: PGLS slope 0.7042 ± 0.0104 with temperature coefficient −0.199 ± 0.040 (λ 0.75), vs OLS 0.6790 ± 0.0069 and −0.412 ± 0.033.
+  - Quadratic + 1/kT: PGLS b2 **0.0224 ± 0.0065** (λ 0.74), vs OLS 0.0316 ± 0.0056.
+
+**Retrieved information:**
+- [E2] Kolokotrones SI §2.2.4 (E031): McNab data, PGLS b2 = 0.0126 ± 0.0050 without Tb and 0.0218 ± 0.0058 with Tb. Temperature coefficient in the quadratic + 1/T model: β3 = −4798.95 ± 362.22 (OLS, SI §1.1) vs −2748.12 ± 406.85 (PGLS). Their tree is the Bininda-Emonds 2007 supertree; mine is the PHYLACINE posterior.
+- [E2] PHYLACINE README: "Remember to always use a distribution of trees like this to capture phylogenetic uncertainty"; some species have "imprecise phylogenetic imputations".
+
+**Mathematical derivations:**
+- Converting the temperature coefficient to activation energy: E = |c|·ln 10·k for c in log10 per 1/kT. My values: PGLS 0.199 × 2.3026 = **0.46 eV**; OLS 0.412 × 2.3026 = **0.95 eV**.
+- Like-for-like (quadratic + temperature models): mine OLS 0.4135 → **0.952 eV**, PGLS 0.2113 → **0.487 eV**. For Kolokotrones, β3 is in K, so E = |β3|·ln 10·k_B (k_B = 8.617e-5 eV/K): OLS 4798.95 → **0.952 eV**, PGLS 2748.12 → **0.545 eV**.
+
+- Local slope under PGLS (quadratic, tree 1–20 mean b1 0.622, b2 0.017): 0.622 + 0.034·1 = 0.656 at 10 g; 0.622 + 0.034·4.5 = 0.775 at ~32 kg.
+
+**Logical deductions:**
+- Three independent routes (my order intercepts in E030, my PGLS here, their PGLS) all reduce b2 from ≈0.032–0.034 to ≈0.013–0.022. Since λ = 0 reproduces OLS exactly in my code, the reduction comes from the covariance model, not from a coding difference.
+- Because b2 is non-monotone in λ and returns to the OLS value at λ = 1, the "phylogenetically corrected curvature" is not one number. It is conditional on the evolutionary model. The likelihood strongly favours λ ≈ 0.85 over both 0 and 1 (ΔlogL ≈ 140 and 180), so the λ̂ estimate is the defensible one, but it is a model-based figure.
+
+**Empirical findings:**
+- (E1, moderate–high) **H6.2 is confirmed.** Under PGLS with the estimated λ, b2 = 0.017 ± 0.006 (t ≈ 2.9; prediction was 0.01–0.02 and > 2 SE). That is about half the OLS value, and within ~0.6 SE of Kolokotrones's 0.0126 ± 0.0050 using a different tree and a different copy of the data. With Tb included: mine 0.0224 ± 0.0065 vs theirs 0.0218 ± 0.0058.
+- (E1, moderate–high) The **linear PGLS exponent is 0.713 ± 0.010**, close to OLS and robust over 20 trees. Phylogeny shrinks the *curvature* but barely moves the *average slope*. At this SE, 2/3 is ~4.5 SE below and 3/4 ~3.6 SE above. Under the order random-slope model (E030) the SE was 0.022, and the two SEs answer different questions: phylogenetic non-independence vs heterogeneity of slopes across orders.
+- (E1, moderate) The temperature effect roughly halves under PGLS. In the quadratic + T model: 0.952 → 0.487 eV (mine) vs 0.952 → 0.545 eV (theirs). The OLS values agree to three digits. This reproduces their observation that Tb partly acts "as a surrogate for the role of shared evolution". Including Tb under PGLS raises the slope (0.679 OLS → 0.704 PGLS), so the "Tb pulls the exponent toward 2/3" finding of E029 is itself partly a non-phylogenetic artefact.
+
+**Inferences:**
+- (moderate) Taken together (E029–E032), the most defensible description of this compilation is: average mammalian BMR scaling ≈ 0.71 (0.69–0.73 across defensible models), weak convex curvature (b2 ≈ 0.017; local exponent ≈ 0.66 at 10 g to ≈ 0.78 at ~32 kg under PGLS; see Derivations), and real lineage heterogeneity on top. Neither 2/3 nor 3/4 is a good description of the average. Both occur as local or lineage values.
+- (low–moderate) Most of the wide 0.57–0.87 "local exponent" range in Kolokotrones's main text comes from phylogenetic non-independence that the OLS fit treats as signal.
+
+**Hypotheses:**
+- H6.5: The 84 unmatched species do not bias b2. Test: resolve the names with GBIF synonyms or the PHYLACINE synonym table and refit. Matched and unmatched species have similar median mass, but that is not a test.
+
+**Theoretical explanations:**
+- Not adjudicated. A curvature this weak is compatible with several two-term or finite-size models. It no longer strongly constrains them the way the 0.57 → 0.87 range seemed to.
+
+**Speculation:**
+- (flagged) The sharp jump at λ = 1 probably reflects near-zero terminal branches (sister species, imputed placements) making the Brownian covariance nearly singular. Untested.
+
+**Unknowns:**
+- Whether imputed placements in PHYLACINE affect the result → refit on species with molecular data only (needs PHYLACINE's imputation flags).
+- Within-order PGLS (H6.4) → feasible now with this tree; not done.
+
+**Contradictions:**
+- None with Kolokotrones; a close quantitative match. Partial tension with my own E029 inference that Tb correction moves the exponent toward 2/3: that holds under OLS only (see Corrections).
+
+**Sources:**
+1. Faurby et al. 2018, PHYLACINE 1.2, Ecology, doi:10.1002/ecy.2443; data https://github.com/MegaPast2Future/PHYLACINE_1.2 (Small_phylogeny.nex via media.githubusercontent.com LFS).
+2. Kolokotrones et al. 2010 SI (as E031).
+3. BAS dataset (as E029).
+
+**Corrections to earlier entries:**
+- Correction to E029 (2026-11-01). E029 said Tb correction lowered the slope (0.696 → 0.684–0.691), "in the direction Clarke et al. and White & Seymour report", and P6 was scored on that. → That holds for OLS. Under PGLS (λ ≈ 0.75) the slope with a Tb covariate is 0.704 ± 0.010, not lower than the PGLS linear slope without Tb (0.713 on 552 species). Because the Tb subset differs (436 vs 552 species), the like-for-like comparison is not yet done. P6's "direction" result should be read as OLS-specific.
+- Correction to E031 (2026-11-01). E031's inference that the 0.57–0.87 range "is the non-phylogenetic magnitude" stands. Its rough PGLS local-slope range (0.69–0.77, from their no-Tb coefficients at my mass percentiles) is now superseded by my own PGLS: ~0.66–0.78 over 10 g–30 kg.
+
+**Thread update:** T06 status → active (near a natural conclusion) · next step → (1) H6.5 name resolution (cheap); (2) within-order PGLS for H6.4; (3) otherwise conclude T06 with the summary in Inferences.
+**Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [x] disconfirmation searched (λ profile including the λ = 1 extreme; 20 trees; OLS identity check at λ = 0) [x] next step set
+
+### E033: Free session (Nov 1 afternoon): T06 / H6.5 & H6.4 — curvature robust to names; order heterogeneity vanishes under within-order PGLS
+- **Date:** 2026-11-01 12:45 PST · **Cycle:** free session 3 · **Threads:** T06
+- **Question this cycle:** (H6.5) Do the 84 species that failed to match in E032 bias the PGLS curvature? Do imputed tree placements bias it? (H6.4) Does the order-slope heterogeneity reported in E030/E031 survive when each order's slope is estimated by PGLS?
+- **Why this, now:** Both are cheap now that the tree and the PHYLACINE synonymy table are on disk. H6.4 bears directly on an E031 empirical finding that I had flagged as possibly anti-conservative.
+
+**Separation of claims:**
+- *(a) What sources demonstrated:* PHYLACINE synonymy table columns (Binomial.1.2, older version names, EltonTraits and IUCN names, Bases = sequence length used).
+- *(b) What they concluded:* n/a.
+- *(c) What I infer:* The curvature result is robust to name resolution and imputation. The order heterogeneity found under OLS largely disappears under within-order PGLS. That reverses part of E031.
+
+**Direct observations** (E1. `notes/session_kleiber/pgls4.py` → `pgls4.out`; `pgls5.py` → `pgls5.out`. Synonymy table: `phylacine_synonyms.csv` from raw.githubusercontent.com/MegaPast2Future/PHYLACINE_1.2/master/Data/Taxonomy/Synonymy_table_with_unaccepted_species.csv, 6047 rows):
+- **H6.5, name resolution.** Exact matches 552. With synonyms from PHYLACINE 1.0/1.1/EltonTraits/IUCN names: 590 of 636. Four tips received two BAS species each and were averaged, giving 588 tips.
+  - **All resolved (n = 588), 3 trees:** OLS b2 0.0345 ± 0.0052. PGLS λ 0.84–0.86, **b2 0.0178–0.0183 ± 0.0056**, linear slope 0.7165–0.7173 ± 0.0100.
+  - **Species with sequence data only** (Bases > 0, n = 557): OLS b2 0.0333. PGLS λ 0.86–0.88, **b2 0.0152–0.0159 ± 0.0056**, linear slope 0.7249–0.7253 ± 0.0103.
+- **H6.4, per-order slopes** (orders as in PHYLACINE 1.2, n ≥ 15, 8 orders; PGLS λ fitted per order; mean over 3 trees):
+
+  | Order | n | OLS | PGLS (λ) |
+  |---|---|---|---|
+  | Eulipotyphla | 38 | 0.472 ± 0.038 | 0.670 ± 0.059 (0.99) |
+  | Rodentia | 250 | 0.652 ± 0.014 | 0.700 ± 0.018 (0.91) |
+  | Diprotodontia | 24 | 0.708 ± 0.018 | 0.710 ± 0.023 (1.00) |
+  | Dasyuromorphia | 22 | 0.736 ± 0.024 | 0.743 ± 0.033 (0.91) |
+  | Chiroptera | 77 | 0.741 ± 0.036 | 0.745 ± 0.042 (0.53) |
+  | Primates | 26 | 0.784 ± 0.041 | 0.748 ± 0.044 (0.68) |
+  | Cetartiodactyla | 20 | 0.754 ± 0.034 | 0.759 ± 0.032 (0.84) |
+  | Carnivora | 53 | 0.768 ± 0.033 | 0.789 ± 0.035 (0.92) |
+
+  - **Heterogeneity, OLS:** Q = 61.4, df 7, p = 8e-11. SD of slopes 0.101; inverse-variance mean 0.691 ± 0.009.
+  - **Heterogeneity, PGLS:** **Q = 8.4, df 7, p = 0.30.** SD of slopes 0.037; inverse-variance mean **0.725 ± 0.011**.
+
+**Retrieved information:**
+- [E3, as cited in Clarke et al. 2010, see E029] Kozłowski, Konarzewski & Gawelczyk 2003: mean of six within-order regressions 0.728. Methods not read.
+
+**Mathematical derivations:**
+- Q = Σ wᵢ(bᵢ − b̄_w)², with wᵢ = 1/SEᵢ² and b̄_w the inverse-variance mean. SE of b̄_w = (Σw)^(−1/2). Script: `pgls5.py` plus the inline check appended to `pgls5.out`.
+- Distances of the PGLS within-order mean (0.725 ± 0.0105) from the classic values: (0.725 − 0.667)/0.0105 = 5.6 SE above 2/3; (0.75 − 0.725)/0.0105 = 2.3 SE below 3/4.
+
+**Logical deductions:**
+- The fall in Q (61 → 8) is not only an SE effect. The spread of the point estimates also shrinks (SD 0.10 → 0.04). The largest change is the order with the most extreme OLS slope (Eulipotyphla 0.47 → 0.67), whose λ ≈ 1 shows strong within-order phylogenetic structure.
+- So E031's "order-level slope heterogeneity is real beyond the shared curve" depended on treating species within an order as independent, as E031's own caveat anticipated.
+
+**Empirical findings:**
+- (E1, moderate–high) **H6.5 supported:** curvature under PGLS is robust to name resolution (b2 ≈ 0.018) and to dropping imputed-placement species (b2 ≈ 0.015–0.016). It stays at about 2.7–3.3 SE.
+- (E1, moderate) **Under within-order PGLS, order slopes are statistically homogeneous** (Q = 8.4/7 df), clustering at 0.67–0.79 with an inverse-variance mean 0.725 ± 0.011. Under OLS, the same orders look strongly heterogeneous (0.47–0.78).
+- (E1, moderate) PGLS pooled linear slopes across subsets: 0.713 (552 exact), 0.717 (588 resolved), 0.725 (557 with sequence data). The mean within-order PGLS slope is 0.725.
+
+**Inferences:**
+- (moderate) Much of the apparent clade-to-clade variation in mammalian BMR scaling in this compilation, including the striking shallow shrew/insectivore slope, is attributable to phylogenetic structure *within* orders: clusters of related species sharing a level offset. It does not look like order-specific scaling laws. This weakens the "lineage heterogeneity" component of my E032 summary.
+- (low–moderate) With phylogeny modelled, these data point to a mammalian BMR exponent of about 0.71–0.73, mild convexity, and no detectable order heterogeneity. That is still clearly above 2/3 (≥ 4.5 SE in every PGLS variant) and below 3/4 (2.3–3.6 SE). The close agreement of my within-order mean (0.725) with Kozłowski et al.'s 0.728 may be coincidence; their method is unread.
+
+**Hypotheses:**
+- H6.6: The steeper within-order PGLS slope (0.725) than the pooled PGLS slope (0.713) reflects between-order level differences, a Simpson-type effect in which orders of large species have lower intercepts. Test: PGLS with order intercepts on the pooled data.
+
+**Theoretical explanations:**
+- Not adjudicated.
+
+**Speculation:**
+- (flagged) If within-clade clustering of level offsets is the dominant structure, the classic exponent disputes may largely reflect differences in sampling *density within clades* between compilations (e.g. many related rodents) rather than different physiology.
+
+**Unknowns:**
+- Per-order λ estimates from small samples (n = 20–38) are noisy. The PGLS Q test has low power with 8 orders, so "no detectable heterogeneity" ≠ "homogeneous".
+- E033's order sample (tree-matched, PHYLACINE orders, n ≥ 15) differs from E030/E031's (all BAS, GBIF orders, n ≥ 10). Orders with n 10–14 (Lagomorpha, Didelphimorphia, Afrosoricida) are untested under PGLS.
+- H6.6 → not run.
+
+**Contradictions:**
+- With my own E030/E031 (corrected below). Not with any source: Clarke 2010's abstract reports order heterogeneity using their own models, apparently without PGLS (full text unread), so the two may simply use different models.
+
+**Sources:**
+1. PHYLACINE 1.2 synonymy table (URL above); Faurby et al. 2018, doi:10.1002/ecy.2443.
+2. Tree and data as in E032.
+
+**Corrections to earlier entries:**
+- Correction to E031 (2026-11-01). E031 Empirical finding: "Order-level slope heterogeneity is real beyond the shared curve (p ≈ 1e-3 to 1e-4)" → This holds only for OLS within-order slopes. With within-order PGLS (8 orders with n ≥ 15), heterogeneity is not detectable: Q = 8.4, df 7, p = 0.30; slopes 0.67–0.79. The E031 caveat about anti-conservative OLS SEs was correct and decisive.
+- Correction to E030 (2026-11-01). E030's within-order slope table (11 orders with GBIF order names, n ≥ 10: Soricomorpha 0.452 … Primates 0.772) and E030's mixed-model SD of order slopes (0.078) are OLS-based. They should not be read as clade-specific exponents. On the tree-matched sample with PHYLACINE orders (n ≥ 15, 8 orders), OLS gives an SD of 0.101 and PGLS gives 0.037. The extreme order (Eulipotyphla, which contains Soricomorpha) moves from 0.472 to 0.670 ± 0.059. The samples and order definitions differ from E030's, but the OLS-vs-PGLS comparison within E033 is like-for-like.
+- Correction to E032 (2026-11-01). E032 Inferences: "and real lineage heterogeneity on top" → not supported under within-order PGLS (see above). Read as "apparent lineage heterogeneity under OLS, largely phylogenetic within-order structure".
+
+**Thread update:** T06 status → active (natural stopping point reached; can be concluded next time after H6.6, or left) · next step → H6.6 (PGLS + order intercepts); optional: Clarke 2010 full text via NORA to see whether their order heterogeneity was phylogenetically corrected.
+**Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [x] disconfirmation searched (tested my own earlier finding and it failed) [x] next step set
+
+### E034: Free session (Nov 1 afternoon): T06 / H6.6 + joint test — E033 overstated; heterogeneity reduced, not removed
+- **Date:** 2026-11-01 12:47 PST · **Cycle:** free session 3 · **Threads:** T06
+- **Question this cycle:** (H6.6) Does adding order intercepts to the pooled PGLS explain why the within-order PGLS slopes (mean 0.725) are steeper than the pooled PGLS slope (0.717)? Second, E033 tested order heterogeneity with separate per-order fits. Does a joint PGLS test, with one tree, one λ and one σ², agree?
+- **Why this, now:** I had a nagging doubt about E033's per-order Q test. Each order got its own λ and σ², estimated from 20–38 species, and that inflates the SEs. The joint model is the like-for-like counterpart of E031's OLS test, so it was the obvious disconfirmation check on my own fresh headline.
+
+**Separation of claims:**
+- *(a) What sources demonstrated:* none new.
+- *(b) What they concluded:* none new.
+- *(c) What I infer:* E033's "order heterogeneity vanishes" overstated the result. Under a joint PGLS it is roughly a third as strong as under OLS (LR 71 → 21), but still detectable. H6.6 is not supported.
+
+**Direct observations** (E1. `pgls6.py` → `pgls6.out`, `pgls7.py` → `pgls7.out`, `pgls8.py` → `pgls8.out`. Data: 588 resolved tips, 23 orders, PHYLACINE trees 0–2. Mass centred. Fit by REML for coefficients and ML for LRTs):
+- **Pooled fits** (tree 0; trees 1–2 within ±0.001 for slopes):
+
+  | Model | PGLS λ | PGLS slope | PGLS b2 | OLS slope | OLS b2 | ML logL |
+  |---|---|---|---|---|---|---|
+  | linear | 0.847 | 0.7173 ± 0.0100 | – | 0.7073 | – | 346.3 |
+  | quadratic | 0.841 | 0.7026 ± 0.0109 (at mean) | 0.0178 ± 0.0056 | 0.6773 | 0.0345 | 351.5 |
+  | linear + order intercepts | 0.843 | 0.7151 ± 0.0110 | – | 0.6832 | – | 359.8 |
+  | quadratic + order intercepts | 0.838 | 0.7032 ± 0.0115 | 0.0181 ± 0.0058 | 0.6719 | 0.0268 | 365.1 |
+  | linear + order intercepts + 7 order-slope deviations | 0.823 | – | – | – | – | 369.8 |
+
+- **LRT, order intercepts (PGLS):** LR 25.8–27.0, df 22, p = 0.21–0.26. **LRT, order slopes (PGLS, joint):** LR 19.9–21.2, df 7, **p = 0.0035–0.0058**. The same slope test under OLS gives LR 70.8, p = 1e-12.
+- **Joint-model order slopes** (shared λ 0.82–0.84; 3 trees): Eulipotyphla **0.571–0.587 ± 0.057**; small orders pooled 0.658–0.661 ± 0.033; Rodentia 0.695–0.697 ± 0.019; Diprotodontia 0.699–0.701; Dasyuromorphia 0.739–0.741; Chiroptera 0.733–0.738; Primates 0.746–0.748; Cetartiodactyla 0.758–0.761; Carnivora 0.783–0.785 ± 0.029.
+- **Leave-one-extreme-order-out slope LRT (PGLS, df 6):** dropping Eulipotyphla gives p = 0.044–0.051. Dropping Carnivora gives p = 0.016–0.031.
+
+**Retrieved information:**
+- None.
+
+**Mathematical derivations:**
+- The ML log-likelihood under Pagel's λ is −½[n ln(2π σ̂²) + n + ln|V_λ|], with σ̂² = RSS_GLS/n. λ is profiled separately in each model. The LR is 2Δ logL, referred to χ² with df equal to the number of added slope terms. At λ = 0 the OLS version reduces to n ln(RSS₀/RSS₁).
+
+**Logical deductions:**
+- **H6.6 is not supported.** Under PGLS, order intercepts barely move the slope (0.717 → 0.715) and are not jointly significant (p ≈ 0.2). The Simpson-type shift exists only under OLS (0.707 → 0.683). The phylogenetic covariance already absorbs it.
+- So the 0.725 vs 0.717 gap is not explained by intercepts. The likelier source is weighting. E033's inverse-variance mean gives Rodentia (SE 0.018) less pull relative to the other orders than its 250 species exert in the pooled fit. This is an untested reading.
+- E033's per-order Q test and the joint LRT disagree (p = 0.30 vs p ≈ 0.005). The main difference is the variance structure. Per-order fits estimate a separate λ (0.53–1.00) and σ² for each order. In particular, Eulipotyphla's per-order λ ≈ 0.99 gives 0.670 ± 0.059, whereas the shared λ ≈ 0.83 gives 0.58 ± 0.057. Neither model is clearly right: λ genuinely differing among orders favours the per-order fits; small-sample λ noise favours the joint fit.
+
+**Empirical findings:**
+- (E1, moderate) Under PGLS, order-slope heterogeneity is **reduced about 3.5-fold in LR, but not eliminated** in a joint model (p ≈ 0.005). It rests largely on the two extreme orders, Eulipotyphla (shallow) and Carnivora (steep). Without either one, the evidence is marginal (p ≈ 0.02–0.05).
+- (E1, moderate) The Eulipotyphla slope is model-sensitive: 0.47 (OLS), 0.58 (PGLS, shared λ), 0.67 (PGLS, own λ).
+- (E1, moderate–high) Curvature is unaffected by order intercepts under PGLS: b2 0.0181–0.0187 ± 0.0058.
+
+**Inferences:**
+- (moderate) A fair statement is that lineage heterogeneity in mammalian BMR scaling is much smaller than OLS suggests and is concentrated in a few clades. Whether it exceeds what phylogenetic structure explains depends on how the phylogenetic variance is modelled. "Vanishes" (E033) and "real" (E031/E032) were both too strong.
+
+**Hypotheses:**
+- H6.7: In a model where λ (or σ²) differs by order, as a mixed or multi-rate model, the Eulipotyphla slope lies between 0.58 and 0.67 and the joint slope test is around p ≈ 0.05. Not run; this would need a heteroscedastic GLS.
+
+**Theoretical explanations:**
+- Not adjudicated.
+
+**Speculation:**
+- (flagged) The shallow shrew slope may reflect known measurement problems in tiny, high-turnover insectivores, such as reaching true basal conditions. That makes it a data-quality question as well as a biological one.
+
+**Unknowns:**
+- Which variance model is appropriate (H6.7).
+- Leave-one-out p-values near 0.05 are fragile. No multiple-comparison adjustment was applied across the two drop checks.
+
+**Contradictions:**
+- With E033 (corrected below).
+
+**Sources:**
+1. As E032/E033 (BAS data; PHYLACINE 1.2 trees and synonymy).
+
+**Corrections to earlier entries:**
+- Correction to E033 (2026-11-01). E033 Empirical finding: "Under within-order PGLS, order slopes are statistically homogeneous (Q = 8.4/7 df)" → this holds only when each order gets its own λ and σ². A joint PGLS with shared λ (LRT, 7 df) gives p ≈ 0.004–0.006, with LR 20 vs 71 under OLS. Heterogeneity is reduced, not removed.
+- Correction to E033 (2026-11-01). E033 title: "order heterogeneity vanishes under within-order PGLS" → should read "is strongly reduced, and its significance depends on the variance model (E034)".
+- Correction to E033 (2026-11-01). E033's corrections to E031 and E032 should read "overstated" rather than "not supported". E031's p ≈ 1e-3 to 1e-4 OLS figure is still anti-conservative, but a PGLS-based p ≈ 0.005 remains. E032's "real lineage heterogeneity" should read "modest, clade-concentrated heterogeneity, model-dependent".
+
+**Thread update:** T06 status → active (natural pause) · next step → H6.7 (order-specific variance PGLS); Clarke 2010 full text; data-quality audit of the Eulipotyphla records.
+**Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [x] disconfirmation searched (my own E033 headline; partially failed) [x] next step set
+
+### E035: Free session (Nov 1 afternoon): T06 / H6.7 — order-specific λ,σ² strongly preferred (ΔAIC≈−44); under it order slopes homogeneous (p 0.23–0.37, common 0.72–0.73)
+- **Date:** 2026-11-01 12:49 PST · **Cycle:** free session 3 · **Threads:** T06
+- **Question this cycle:** (H6.7) If each order has its own λ and σ² in one joint likelihood, is there still order-slope heterogeneity? Which variance model do the data prefer?
+- **Why this, now:** E034 left the heterogeneity verdict dependent on an untested choice of variance model. That choice can be tested directly, and it decides between E033 and E034.
+
+**Separation of claims:**
+- *(a) What sources demonstrated:* none new.
+- *(b) What they concluded:* none new.
+- *(c) What I infer:* The data strongly prefer order-specific λ and σ² (ΔAIC ≈ −44). Under that model, order-slope heterogeneity is not detected (p = 0.23–0.37). This partly restores E033 and corrects E034's "neither model is clearly right".
+
+**Direct observations** (E1. `pgls9.py` → `pgls9.out`; `pgls10.py` → `pgls10.out`; `pgls11.py` → `pgls11.out`. The 8 orders with n ≥ 15, 510 species; PHYLACINE trees 0–2; ML throughout):
+- **Order-specific λ_g and σ²_g, block-diagonal V** (each order has its own intercept):
+  - Separate slopes vs common slope: **LR 7.6–9.3, df 7, p = 0.23–0.37**. Common slope **0.724–0.729**.
+  - ML per-order slopes (tree 0): Rodentia 0.698 (λ 0.89), Chiroptera 0.746 (0.45), Carnivora 0.788 (0.89), Eulipotyphla 0.682 (0.98), Primates 0.750 (0.58), Diprotodontia 0.707 (1.00), Dasyuromorphia 0.736 (**0.00**; REML in E033 gave 0.91), Cetartiodactyla 0.759 (0.68).
+- **Same blocks, λ = 0 but own σ²_g:** LR 52.6, p = 4e-9. Common slope 0.696.
+- **Shared λ and σ², 8 orders, order intercepts:** block-diagonal V gives LR 15.0–15.8, p = 0.027–0.036. Full V gives LR 14.9–15.7, p = 0.028–0.037. Common slope 0.721. The block-diagonal approximation is therefore innocuous here (ΔLR ≤ 0.1).
+- **Variance-model comparison (common-slope models):** shared λ, σ² gives logL 301.6–307.9 (11 parameters). Order-specific λ_g, σ²_g gives logL 337.0–344.2 (25 parameters). **LR 70.8–72.9, df 14, ΔAIC −42.8 to −44.9** in favour of order-specific. (The parameter counts printed in `pgls11.out` are each one too low; the df and ΔAIC are unaffected.)
+
+**Retrieved information:**
+- Clarke, Rothery & Isaac 2010: NORA record (https://nora.nerc.ac.uk/id/eprint/9826/) has the abstract and no attached document. The OpenAlex OA link (onlinelibrary.wiley.com/doi/pdfdirect/…) returned HTTP 403 with a Cloudflare challenge via curl (`clarke2010_wiley_403.html`). Abstract point 4 [E2] reads: "significant heterogeneity in both the mass scaling exponent and mean BMR across mammalian orders… particularly marked across orders with smaller mean Bm". From the abstract I cannot tell whether that analysis was phylogenetically corrected.
+
+**Mathematical derivations:**
+- Order-specific model: logL = Σ_g logL_g(β), where each block is profiled over α_g, σ²_g (closed form) and λ_g (1-D bounded search). β is common (outer 1-D search) or free per order.
+
+**Logical deductions:**
+- Order-specific σ² alone (λ = 0) leaves strong heterogeneity (LR 53). Shared λ leaves weak heterogeneity (LR ≈ 15). Only order-specific λ removes it. **The heterogeneity signal is therefore an artefact of forcing one phylogenetic signal strength on clades whose residual structure differs (λ_g from 0 to 1).** This holds to the extent that the order-specific model is right, and the AIC strongly favours it.
+
+**Empirical findings:**
+- (E1, moderate) In the best-supported variance model among those tried, mammalian orders (n ≥ 15) share a BMR mass exponent of about **0.72–0.73**. Slope heterogeneity is not detected (p ≥ 0.23).
+- (E1, moderate–high) Residual phylogenetic signal differs strongly among orders (ΔAIC ≈ −44 vs a shared λ, σ²).
+
+**Inferences:**
+- (moderate) Taking E032–E035 together: on this compilation, after phylogeny, the mammalian BMR exponent is about 0.71–0.73 with mild convexity (b2 ≈ 0.016–0.018). Apparent order-specific exponents, including the shallow insectivore slope, are mostly a product of how within-clade non-independence is modelled. This was my thread's final open empirical question, and it lands nearer E033 than E034.
+- (low) This does not test whether heterogeneity exists among *small* orders (n < 15), where Clarke 2010's abstract says it was most marked.
+
+**Hypotheses:**
+- None new. H6.7 tested as above: the predicted Eulipotyphla range (0.58–0.67) held (0.657–0.682 ML; slightly above). The predicted "p ≈ 0.05" was wrong (p 0.23–0.37).
+
+**Theoretical explanations:**
+- Not adjudicated.
+
+**Speculation:**
+- (flagged) Order-specific λ might reflect different densities of near-duplicate congeneric records between orders, i.e. a compilation artefact.
+
+**Unknowns:**
+- ML λ_g estimates with n = 20–38 are noisy (Dasyuromorphia: λ 0 under ML vs 0.91 under REML). χ² references for LRTs involving λ near the 0/1 boundaries are approximate.
+- Other variance models (OU, multi-rate Brownian motion) not tried.
+- Small orders not tested.
+- Clarke 2010 full text remains inaccessible here (403).
+
+**Contradictions:**
+- With E034 (corrected below).
+
+**Sources:**
+1. As E032–E034.
+2. NORA record for Clarke et al. 2010 (URL above); OpenAlex work W2001331516.
+
+**Corrections to earlier entries:**
+- Correction to E034 (2026-11-01). E034 Logical deductions: "Neither model is clearly right" → The order-specific variance model is strongly preferred (ΔAIC ≈ −44; E035). Under it, order-slope heterogeneity is not detected (p 0.23–0.37).
+- Correction to E034 (2026-11-01). E034 Empirical finding: "reduced … but not eliminated in a joint model (p ≈ 0.005)" → That holds only under a shared λ and σ². On the 8 larger orders alone, shared λ gives p ≈ 0.03. With order-specific λ and σ², p = 0.23–0.37. E034's correction of E033 therefore partly reverses: E033's conclusion was closer to the best-supported model, though its per-order Q test was a cruder route to it.
+- Correction to E034 (2026-11-01). E034 Inferences: "'Vanishes' (E033) and 'real' (E031/E032) were both too strong" → Under the AIC-preferred model, "not detectable among orders with n ≥ 15" is the accurate summary. The power caveat remains.
+
+**Thread update:** T06 status → active (natural pause; can be concluded) · next step → optional: small-order test; Eulipotyphla record audit; Clarke 2010 full text via browser.
+**Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [x] disconfirmation searched (tested E034 against alternative variance model; E034 failed) [x] next step set
+
+### E036: Free session (Nov 1 afternoon): T06 / Eulipotyphla audit — shallow order slope is a shrew-subfamily level split (Soricinae +0.11 vs Crocidurinae −0.13), not bad records
+- **Date:** 2026-11-01 12:50 PST · **Cycle:** free session 3 · **Threads:** T06
+- **Question this cycle:** (T06 open item iv) What drives the shallow OLS slope of Eulipotyphla (0.47), the most extreme order in E030–E035? Is it a data artefact, or structure inside the order?
+- **Why this, now:** It is the single order behind much of the apparent heterogeneity. It is cheap to inspect directly: 38 rows.
+
+**Separation of claims:**
+- *(a) What sources demonstrated:* none new. The data are the BAS rows (E029).
+- *(b) What they concluded:* none.
+- *(c) What I infer:* The shallow slope comes mainly from a level split between two shrew subfamilies of similar size, not from bad records.
+
+**Direct observations** (E1. `euli_audit.py` → `euli_audit.out`; the full row listing is in this session's shell output, reproducible by printing `e` in the script. Subfamily assigned by genus, my own mapping: Soricinae = Sorex, Blarina, Neomys, Cryptotis, Notiosorex; Crocidurinae = Crocidura, Suncus):
+- **Composition:** Soricidae 25 species (median 10.2 g), Talpidae 6 (55 g), Erinaceidae 7 (452 g). No implausible values on inspection; masses run 2.4 g (Suncus etruscus) to 822.7 g.
+- **Mean residual from the order OLS line, by group:**
+
+  | Group | n | Median mass | Mean residual | Mean Tb |
+  |---|---|---|---|---|
+  | Soricinae | 13 | 8.05 g | +0.108 | 37.8 °C |
+  | Crocidurinae | 12 | 11.75 g | −0.125 | 35.5 °C |
+  | Talpidae | 6 | – | +0.027 | 37.4 °C |
+  | Erinaceidae | 7 | – | −0.011 | 35.4 °C |
+
+  Exceptions: Notiosorex (−0.215) and Cryptotis (−0.144) are soricines with low residuals.
+- **Order OLS slopes:**
+
+  | Model | n | Slope |
+  |---|---|---|
+  | mass only | 38 | 0.472 ± 0.038 |
+  | + family intercepts | 38 | 0.475 ± 0.087 |
+  | + group intercepts (2 subfamilies + 2 families) | 38 | 0.566 ± 0.072 |
+  | + Tb | 30 | 0.585 ± 0.030 |
+  | + Tb + group | 30 | 0.752 ± 0.065 |
+
+- **Within-subfamily slopes:** Crocidurinae 0.530 ± 0.069 (n 12); Soricinae 0.645 ± 0.181 (n 13).
+- **Tb coefficient:** 0.091–0.102 log10 units per °C.
+
+**Retrieved information:**
+- None this cycle. [E4, background knowledge, not checked this session] Crocidurine shrews are generally described as having lower BMR and Tb than soricine shrews, with some species using torpor.
+
+**Mathematical derivations:**
+- A Tb coefficient of 0.09–0.10 log10/°C implies Q10 = 10^(10 × 0.09…0.10) ≈ 8–10. That is far above typical biochemical Q10 values of 2–3, and above Clarke 2010's abstract value of 2.9.
+
+**Logical deductions:**
+- Soricines and crocidurines overlap in mass. Soricines sit higher in BMR, and the smallest species are mostly soricines, so pooling them flattens the slope. That is the clade-level offset that a high λ (0.98 in E035) absorbs. It explains why PGLS raises this order's slope (0.47 → 0.66–0.68).
+- The Q10 of about 8–10 means the cross-species Tb coefficient here cannot be a pure thermal (Arrhenius) effect. Tb is acting as a marker of clade or metabolic level, so the "+Tb" slopes (0.585, 0.752) should not be read as temperature-corrected exponents.
+
+**Empirical findings:**
+- (E1, moderate) The shallow Eulipotyphla slope is largely a between-subfamily level difference (Soricinae +0.11 vs Crocidurinae −0.13 in log10 BMR at a given mass), aligned with a ~2.3 °C Tb difference. I found no evidence of erroneous records.
+
+**Inferences:**
+- (moderate) This gives a concrete mechanism for E033–E035: an order "exponent" can be set by which subclades happen to occupy which end of the order's mass range.
+- (low) It is consistent with Clarke 2010's abstract remark that heterogeneity is "particularly marked across orders with smaller mean Bm", though I cannot check their analysis.
+
+**Hypotheses:**
+- None new.
+
+**Theoretical explanations:**
+- Not adjudicated.
+
+**Speculation:**
+- (flagged) The same subclade-offset mechanism may underlie the steep Carnivora slope (~0.78), for example low-BMR large carnivores or particular families. That is untested.
+
+**Unknowns:**
+- The subfamily mapping is mine and was not checked against a source. n is small and SEs are large (Soricinae ± 0.18).
+- Original references for the shrew rows were not examined (the BAS `ref` column was not followed up).
+
+**Contradictions:**
+- None.
+
+**Sources:**
+1. BAS rows as E029; PHYLACINE 1.2 families as E033.
+
+**Corrections to earlier entries:**
+- Correction to E035 (2026-11-01). E035 title: "under it order slopes homogeneous" → should read "under it order-slope heterogeneity not detected". The test cannot establish homogeneity, as E033's Unknowns note.
+
+**Thread update:** T06 status → active (natural pause; could be concluded) · next step → optional: Carnivora subclade check; small-order test; Clarke 2010 full text via browser (curl gets 403).
+**Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [x] disconfirmation searched (looked for bad records; none found) [x] next step set
+
+### E037: Free session (Nov 1 afternoon): T06 — Carnivora's steep slope (0.77–0.79) is not a family-offset effect; E036 mechanism not general
+- **Date:** 2026-11-01 12:50 PST · **Cycle:** free session 3 · **Threads:** T06
+- **Question this cycle:** Does the shrew mechanism from E036 (subclade level offsets setting an order's slope) also explain the steep Carnivora slope? I flagged this as speculation in E036. The same check was run on the other large orders.
+- **Why this, now:** It is a direct test of my own flagged speculation and takes one short script.
+
+**Separation of claims:**
+- *(a) What sources demonstrated:* none new.
+- *(b) What they concluded:* none.
+- *(c) What I infer:* No. Family offsets do not explain Carnivora's steep slope. The E036 mechanism is not general.
+
+**Direct observations** (E1. `carn_audit.py` → `carn_audit.out`; PHYLACINE 1.2 families; OLS):
+
+| Order | n | Families | Order slope | Slope with family intercepts |
+|---|---|---|---|---|
+| Carnivora | 53 | 13 | 0.768 ± 0.033 | 0.779 ± 0.037 |
+| Rodentia | 250 | 22 | 0.652 ± 0.014 | 0.687 ± 0.020 |
+| Chiroptera | 77 | 11 | 0.741 ± 0.036 | 0.738 ± 0.047 |
+| Primates | 26 | 11 | 0.784 ± 0.041 | 0.786 ± 0.088 |
+
+- Carnivora family residuals from the order line show no mass-ordered pattern. Mustelidae (median 2950 g) are +0.140 and Phocidae (54 kg) +0.218, while Ailuridae (1 sp.) is −0.362 and Ursidae (1 sp.) −0.198.
+
+**Retrieved information:**
+- None.
+
+**Mathematical derivations:**
+- None.
+
+**Logical deductions:**
+- Family intercepts leave Carnivora (+0.011), Chiroptera and Primates essentially unchanged. Only Rodentia steepens (+0.035). For Carnivora, the steep slope is within-family, or at least not between-family. That fits its PGLS slopes (0.785–0.789, E033–E035) being as steep as OLS.
+
+**Empirical findings:**
+- (E1, moderate) The steep Carnivora slope (~0.77–0.79) survives family intercepts and PGLS. In E035's preferred model it is about 1.8 SE above the common 0.725 (0.788 ± ~0.035). That is suggestive, not significant after considering 8 orders.
+
+**Inferences:**
+- (low–moderate) Order exponents in this data mostly fall within sampling error of about 0.72–0.73 once phylogeny is modelled. The shrews' shallow value has an identifiable subclade cause (E036). Carnivora's steeper value has none that I found.
+
+**Hypotheses:**
+- None new.
+
+**Theoretical explanations:**
+- Not adjudicated.
+
+**Speculation:**
+- The E036 speculation that the same mechanism explains Carnivora is **not supported**.
+
+**Unknowns:**
+- Small orders (n 8–14: Lagomorpha, Didelphimorphia, Afrosoricida, Peramelemorphia) were not added to E035's order-specific model. With n ≈ 10, per-order λ and σ² estimates would be close to uninformative, so I chose not to run a test whose result I could not interpret.
+
+**Contradictions:**
+- None.
+
+**Sources:**
+1. As E033–E036.
+
+**Corrections to earlier entries:**
+- None.
+
+**Thread update:** T06 status → active (natural pause; reasonable to conclude next session or leave) · next step → optional: Clarke 2010 full text via browser; follow BAS `ref` for shrew rows.
+**Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [x] disconfirmation searched (tested my own speculation; failed) [x] next step set
+
+### E038: Free session (Nov 1 afternoon): T06 — E035 stable over 20 trees (p 0.16–0.51); common within-order exponent 0.725, 95% CI ≈ 0.70–0.75 (excludes 2/3, borderline 3/4)
+- **Date:** 2026-11-01 12:51 PST · **Cycle:** free session 3 · **Threads:** T06
+- **Question this cycle:** Is E035's result (order-specific λ and σ², heterogeneity not detected, common slope ≈ 0.725) stable across posterior trees? What is the uncertainty on that common slope?
+- **Why this, now:** E035 used 3 trees and gave no interval for the common slope. A magnitude without its uncertainty is incomplete by my own method rules.
+
+**Separation of claims:**
+- *(a) What sources demonstrated:* none new.
+- *(b) What they concluded:* none new.
+- *(c) What I infer:* The E035 result is stable across trees. The interval for the common slope excludes 2/3 and just reaches 3/4.
+
+**Direct observations** (E1; same 8 orders, n = 510):
+- **PHYLACINE trees 0–19, order-specific λ_g and σ²_g** (`pgls9b.py` → `pgls9b.out`):
+  - Slope-heterogeneity LR 6.28–10.55 (df 7), **p = 0.16–0.51** across all 20 trees.
+  - Common slope **0.7238–0.7307**.
+- **Profile-likelihood 95% CI for the common slope** (logL drop 1.92; `pgls12.py` → `pgls12.out`):
+  - tree 0: 0.7253 (0.7053–0.7453)
+  - tree 1: 0.7288 (0.7088–0.7487)
+  - tree 2: 0.7243 (0.7015–0.7444)
+
+**Retrieved information:**
+- None.
+
+**Mathematical derivations:**
+- The profile likelihood over β re-maximises every block's α_g, σ²_g and λ_g at each β. The CI is where 2Δ logL = 3.84.
+
+**Logical deductions:**
+- The interval half-width is about 0.020, roughly twice the pooled-PGLS SE (0.010, E032). The extra variance parameters and the non-independence within orders both widen it.
+- 2/3 lies well outside every interval, about 0.035–0.04 below the lower limits. 3/4 lies just outside the upper limit on trees 0 and 2 and sits at the edge on tree 1 (0.7487).
+
+**Empirical findings:**
+- (E1, moderate–high) Across 20 posterior trees, order-slope heterogeneity is not detected under order-specific λ and σ² (p ≥ 0.16).
+- (E1, moderate) Common within-order exponent ≈ **0.725 (95% CI ≈ 0.70–0.75)**.
+
+**Inferences:**
+- (moderate) On this compilation, with phylogeny and clade-specific residual structure modelled, the data rule out 2/3 decisively. They cannot cleanly separate a within-order exponent of about 0.72–0.73 from 3/4. The pooled-PGLS slope of 0.713 ± 0.010 (E032), which also uses between-order information, sits further from 3/4. "Neither 2/3 nor 3/4" (E032) is right for the pooled fit. For the within-order common slope it is right for 2/3 and borderline for 3/4.
+- No theory is adjudicated by this. A value of about 0.72–0.73 is also what the mild convexity predicts at mid-range masses.
+
+**Hypotheses:**
+- None.
+
+**Theoretical explanations:**
+- Not adjudicated.
+
+**Speculation:**
+- None.
+
+**Unknowns:**
+- The ML profile CI ignores tree uncertainty. Across 20 trees the point estimate varies by only ±0.0035, which is small next to the CI half-width.
+
+**Contradictions:**
+- None. This refines E032's wording; see Inferences.
+
+**Sources:**
+1. As E032–E037.
+
+**Corrections to earlier entries:**
+- None.
+
+**Thread update:** T06 status → active (natural pause) · next step → optional: Clarke 2010 full text via browser; follow BAS `ref` for the shrew rows; then conclude.
+**Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [x] disconfirmation searched (20 trees) [x] next step set
+
+---
+### Note (2026-11-01, 1:05 PM PST): self-evaluation becomes a standing practice
+**Observation:** Session E029–E038 contained eight overstated claims that were later corrected within the same session. My last self-assessment happened only because Reke asked "are you satisfied."
+**Change:** Self-evaluation is now a required step in every cycle (METHODS.md, "Self-evaluation"), done on my own initiative. Recurring weakness to watch: conclusions stated faster and stronger than the evidence supports.
+
+---
+### Note (2026-11-01, 1:07 PM PST): self-evaluation revised to be even-handed
+**Correction to previous note:** The fault-finding framing could bias every self-check toward finding errors. The revised check allows five outcomes per claim: overstated, appropriately supported, unnecessarily cautious, alternative overlooked, or insufficient evidence to judge. See METHODS.md.
+
+---
+### E039: Cycle 4: T08 / H8.9 — aptamer-implicated codons are reassigned in NCBI variant codes about as often as their unimplicated siblings (2/10 vs 6/14 codons; exact P 0.23–0.95); the test has little power and the reassignments follow tRNA decoding pairs, not aptamer status
+- **Date:** 2026-11-01 20:10 PST · **Cycle:** 4 · **Threads:** T08
+- **Question this cycle:** Across NCBI's variant genetic codes, are the specific triplets that aptamer experiments implicate (Yarus, Widmann & Knight 2009, Table 1) reassigned less often, more often, or about as often as the other codons of the same eight tested amino acids?
+- **Why this, now:** H8.9 (E028) was a concrete, cheap test with public data. Chosen freely; T01, T02, T06 were equally available and are untouched.
+
+**Separation of claims:**
+- *(a) What sources demonstrated:* Yarus et al. 2009 Table 1 lists per-triplet G-test probabilities for 24 codons and 24 anticodons of 8 amino acids. NCBI gc.prt lists 26 variant translation tables.
+- *(b) What sources concluded:* Yarus 2009 names "arginine CGG-AGG/UCG; histidine -/GUG, isoleucine AUU/UAU, phenylalanine -/GAA, tryptophan -/CCA, and tyrosine -/AUA-GUA as best candidate codon/anticodons". Yarus/Knight lineage reads this as surviving primordial assignments.
+- *(c) What I infer:* see Inferences. This entry's result is a null with low power, not evidence against the stereochemical claim.
+
+**Direct observations** (E1; `notes/cycle4/h89_variant_codes.py` → `h89_variant_codes.out`; input `notes/cycle4/gc.prt`, fetched 2026-11-01 ~8:09 PM PST):
+- Implicated set, as codons (anticodons converted by reverse complement: UCG→CGA, GUG→CAC, UAU→AUA, GAA→UUC, CCA→UGG, AUA→UAU, GUA→UAC): {AGG, CGG, CGA, AUU, AUA, CAC, UUC, UGG, UAU, UAC} = 10 of the 24 codons of R, Q, H, I, L, F, W, Y.
+- gc.prt parsed: tables 1–6, 9–16, 21–33 (27 tables, 26 variants vs table 1).
+- Implicated codons ever reassigned in any variant table: **2 of 10** (AUA: Ile→Met in 2, 3, 5, 13, 21; AGG: Arg→stop/Ser/Gly/Lys in 2, 5, 9, 13, 14, 21, 24, 33). Codon–table reassignment events: 13.
+- Other 14 codons of the same amino acids: **6 of 14** ever reassigned (AGA, and the four CUN Leu codons in table 3 plus CUG in 12 and 26, UUA in 23). Events: 15.
+- Exact enumeration over all C(24,10) = 1,961,256 subsets: P(ever-reassigned count ≤ observed) = 0.234, P(≥) = 0.949; P(events ≥ observed) = 0.439, P(≤) = 0.623. Distinct (codon, new meaning) pairs: 5 implicated vs 10 other.
+- Within amino acids: AGG and AGA (implicated and not) are reassigned in the same 8 tables, identically in 6 and to different meanings in 2 (tables 24, 33: AGA→Ser, AGG→Lys). In Ile only AUA (implicated by its anticodon) is reassigned. AUU (implicated codon), all His, Phe, Tyr, Trp codons, and CGN Arg codons are never reassigned.
+
+**Retrieved information:**
+- [E2] Yarus, Widmann & Knight 2009, *J Mol Evol* 69:406, Table 1 (open access; quoted via search-result extraction of the article text, and the table rendered imperfectly there; I could not open the article directly this cycle): e.g. Arg AGG "P Codon 1.2 × 10⁻²⁰", Ile AUU "8.0 × 10⁻¹¹⁰", Ile anticodon UAU "3.2 × 10⁻¹³¹", Trp anticodon CCA "2.7 × 10⁻¹³"; "only 3 of 24 codons and 7 of 24 anticodons are significantly found within amino acid binding sites". https://doi.org/10.1007/s00239-009-9270-1
+- [E2] NCBI genetic code table file gc.prt. https://ftp.ncbi.nih.gov/entrez/misc/data/gc.prt
+- [E3] Knight & Landweber review chapter (Madame Curie Bioscience DB, NBK6584): "Retention of initial stereochemical codon assignments for three of six amino acids (arginine, isoleucine, and tyrosine, but not glutamine, leucine or phenylalanine) is strongly supported." https://www.ncbi.nlm.nih.gov/books/NBK6584/
+- [E2, abstract only] Knight, Landweber & Yarus 2001 "How mitochondria redefine the code" (PMID 11675590): codon disappearance is "neither necessary nor sufficient for reassignment"; they propose "coding ambiguity, the extension of a tRNA's decoding capacity" as the second event. https://pubmed.ncbi.nlm.nih.gov/11675590/
+- [E2, abstract only] Watanabe group 2001 (PMID 11675591): tRNA anticodon sequence and anticodon-loop modifications are "crucial effectors for promoting or restricting codon reassignment". https://pubmed.ncbi.nlm.nih.gov/11675591/
+
+**Mathematical derivations:**
+- Exact null: all 10-subsets of the 24 tested codons, equally likely. No sampling.
+
+**Logical deductions:**
+- With 8 of 24 codons ever reassigned and the events concentrated in two decoding groups (AGR, CUN) plus AUA, no subset statistic of this kind can be far in either tail; the test cannot distinguish "implicated triplets protected" from "no relation". A null here carries little information.
+- The reassignment units are tRNA decoding groups (AGA+AGG read together; AUA separately from AUU/AUC; the CUN box in yeast mitochondria). Implicated and unimplicated codons are mixed inside those groups (AGG implicated, AGA not; AUA implicated, AUU implicated, AUC not), so reassignment cannot be tracking aptamer status independent of decoding structure.
+
+**Empirical findings:**
+- (E1 on E2 data, high for the count; low for its meaning) Aptamer-implicated codons are not detectably more or less reassignable in NCBI's variant codes than other codons of the same amino acids.
+
+**Inferences:**
+- (moderate) Modern reassignability is governed by tRNA decoding and codon usage (as the 2001 mitochondrial studies say), which are unrelated to any primordial RNA–amino-acid affinity; so H8.9 was a weak test from the start. I framed it in E028 as if conservation were a natural prediction, without asking what controls reassignment. That premise was unchecked.
+- (low) The fact that the two most reassigned codons among the tested set (AGG, AUA) are both implicated is a coincidence of small numbers plus decoding structure, not support for or against stereochemistry.
+
+**Hypotheses:**
+- H8.9 → effectively retired as uninformative. A sharper version, if ever wanted: condition on decoding group and codon usage (e.g. compare implicated vs unimplicated codons that share a tRNA), which with these data leaves only 2–3 informative pairs, i.e. no power.
+
+**Theoretical explanations:**
+- —
+
+**Speculation:**
+- —
+
+**Unknowns** (→ what would settle them):
+- Whether my implicated set matches Yarus 2009 Table 1 exactly: the table came through a garbled text extraction (the "3.4 3 10 25"-style exponents). The named list in the text agrees with my set, so moderate confidence. Opening the article PDF directly would settle it.
+- gc.prt encodes ambiguous codons (e.g. table 27–28 UGA, stop-or-sense) as one meaning; this affects only stop codons, outside the tested set.
+- Lineage independence: the 26 tables are not independent events (e.g. AUA→Met spans several mitochondrial lineages that may share one origin). An event count over a phylogeny of reassignments would be the proper unit; that needs a reassignment phylogeny such as Sengupta & Higgs or Knight et al. 2001 data.
+- Count mismatch across Yarus-group papers (E028: Yarus 2017 six positive amino acids, Koonin five; now NBK6584 says three of six, excluding Phe): these differ by date and by test (earlier randomized-code comparisons vs later G-tests). Not resolved.
+
+**Contradictions:**
+- NBK6584 (Knight & Landweber) excludes Phe; Yarus 2009/2017 include Phe (via anticodon GAA, Corr P "2.2 × 10⁻⁴"-ish in the garbled extraction, just around the threshold). Flagged, unresolved; likely an analysis-date/criterion difference.
+
+**Sources:**
+1. Yarus, Widmann & Knight 2009, doi:10.1007/s00239-009-9270-1. 2. NCBI gc.prt. 3. NBK6584. 4. PMID 11675590. 5. PMID 11675591.
+
+**Corrections to earlier entries:**
+- Correction to E028 (2026-11-01, 8:10 PM PST): H8.9 was stated as a test of whether stereochemical triplets are "no more conserved" than others, without checking what controls modern codon reassignment; the premise that reassignability would reflect primordial affinity is unsupported, so the test is weak in either direction. E028's text stays as written.
+
+**Thread update:** T08 status → active (natural pause) · H8.9 done (null, low power) · next step → optional, unordered: Yarus 2009 Table 1 read directly to confirm the triplet set; Yarus G-test robustness to selection-lineage non-independence (needs site sequences); (ii) second-position-A polar literature; (iii) codon-level grower. T08 could reasonably be concluded soon.
+**Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [x] disconfirmation searched (mitochondrial reassignment mechanism literature; NBK6584 critique) [x] next step set
+
+**Self-evaluation (2026-11-01, 8:12 PM PST):**
+- "2/10 vs 6/14 ever reassigned; no detectable difference": (b) appropriately supported for the count. The P-values are computed exactly from data I parsed myself.
+- "The test has little power": (b). It follows from 8/24 codons and the clustering into decoding groups; I didn't quantify power formally, but the logic is direct.
+- "Reassignment follows tRNA decoding groups, not aptamer status": (b) as an observation within the tested codons (AGG/AGA move together, AUA alone); the general mechanistic claim rests on two 2001 abstracts only (E2 abstract-level), so that part is moderate, which is how it's labelled.
+- Implicated-triplet set: (e)-leaning — retrieved through a garbled extraction rather than verified against the original table. Flagged as an unknown, not hidden; this is "numbers retrieved but not verified" applying for real.
+- Self-correction of E028's H8.9 premise: (b). Not overcorrecting: I'm not saying the stereochemical claim is wrong, only that this test can't speak to it.
+- Was anything stated more cautiously than needed? Possibly the AUA observation: it's simply the well-known mitochondrial AUA→Met case; no extra caution needed there, and none added.
+- Recurring-pattern check (tracked hypothesis: conclusions faster and stronger than evidence): did not recur this cycle; the headline is a null with its weakness stated. A different pattern did show up once: in E028 I proposed a test without checking its premise. Adjustment: when writing a new hypothesis, add one line on what else controls the predicted quantity.
+
+### E040: Free session 4: T08 — Yarus 2009 Table 1 read directly: E039's 10-codon implicated set is confirmed exactly; under five other reasonable significance rules H8.9 stays null (P 0.06–0.97), and within amino acids the "fewer reassigned" tilt disappears (2 observed vs 1.67 expected)
+- **Date:** 2026-11-01 20:28 PST · **Cycle:** Free session 4 (Reke: "feel free to follow up on anything for the next hour", ~8:23–9:15 PM PST) · **Threads:** T08
+- **Question this cycle:** Does the codon set E039 used really match Yarus, Widmann & Knight 2009 Table 1, and does E039's null depend on how that set is defined?
+- **Why this, now (how I chose):** No topic was assigned. I looked for the weakest load-bearing input in recent work rather than for anything new. E039's main input (the implicated set) came through a garbled text extraction, and E039's own self-evaluation rated it (e). That makes this an accuracy check, not a novelty pick. Honest note: the session brief/summary had also listed this as a pending item, so the choice was not made in a vacuum. T01, T02, T06 and the unstarted seeds were equally available and are untouched.
+
+**Separation of claims:**
+- *(a) What the source demonstrated:* Table 1 gives, for 8 amino acids, per-triplet G-test P and "Corr P" for each cognate codon and its complementary anticodon, plus site counts; the Sum row gives Fisher-combined P for codons (5.3 × 10⁻⁴⁵) and anticodons (2.1 × 10⁻⁴⁶).
+- *(b) What the source suggested/concluded:* that 3 codons and 7 anticodons are "best candidate" stereochemical triplets, for 6 of 8 amino acids, and that this supports a stereochemical era.
+- *(c) What I infer:* see Inferences. Briefly: E039's set is right; its null is robust to the set definition; the slight "implicated codons reassigned less" direction in E039 was a between-amino-acid effect (mostly Leu), not something inside amino acids.
+
+**Direct observations** (E1 unless stated; all files in `notes/session_yarus/`):
+- Table 1 transcribed from the Springer table page (WebFetch rendered it as a clean table, unlike E039's extraction) → `table1.tsv`, provenance in `table1_SOURCE.txt`.
+- `check_table1.py` → `check_table1.out`:
+  - Column sums reproduce the paper's Sum row exactly: 337 sites / 18,551 nt / 4,945 site nt.
+  - Every anticodon in the table is the reverse complement of the codon in its row.
+  - Applying the paper's own rule (Corr P ≤ 0.01) gives codons {CGG, AGG, AUU} and anticodons {UCG, GUG, UAU, GAA, CCA, AUA, GUA}; converted to codons this is exactly E039's set {AGG, AUA, AUU, CAC, CGA, CGG, UAC, UAU, UGG, UUC}. 3 + 7 = 10 matches the text's "3 of 24 codons and 7 of 24 anticodons".
+  - The "Corr P" column is reproduced (worst relative error 4%, rounding) by Corr P = 1 − (1 − P)^N with **N = 2 × (number of codons of that amino acid)**, i.e. codons and anticodons together (N = 12 for Arg and Leu, 6 for Ile, 4 for Gln/His/Phe/Tyr, 2 for Trp). With N = number of codons only, it does not match (e.g. Arg CGC: 0.0084 vs table 0.017). The caption's "N triplets for each amino acid" is thus codons + anticodons; the correction is per amino acid, not across all 44 tested triplets.
+  - Fisher's method applied to the per-triplet P values does **not** give the Sum row (codons: 4.0 × 10⁻¹¹², anticodons 2.9 × 10⁻¹⁴⁴, vs paper 5.3 × 10⁻⁴⁵ and 2.1 × 10⁻⁴⁶). That is expected: the caption says Fisher was applied to "G-test probabilities for complete sets of triplets sought together". Back-calculating, the 8 set-level tests sum to −ln p ≈ 127 (codons), less than the −ln p ≈ 251 of the single AUU entry. So the set-level tests are much weaker than the best single triplet, and the Sum row cannot be checked from Table 1.
+  - Near-threshold entries (0.001 < Corr P ≤ 0.05): CGG codon 0.004 and GUA anticodon 0.008 are in; CGC codon 0.017, GCG anticodon 0.022, UAC codon 0.016, AUG anticodon 0.039, AAA anticodon 0.047 are out.
+- `h89_threshold_sensitivity.py` → `.out` (H8.9 count of codons ever reassigned in NCBI gc.prt variant tables, reassigned set taken from E039's output; one-sided hypergeometric over 24 codons, 8 ever reassigned):
+  - paper rule (Corr P ≤ 0.01): 2/10 vs 6/14, P(≤) 0.234, P(≥) 0.949 (reproduces E039 exactly).
+  - study-wide Šidák over all 44 tested triplets at 0.01 (raw P ≤ 2.3 × 10⁻⁴): drops CGG and UAC → 2/8 vs 6/16, P(≤) 0.447.
+  - uncorrected P ≤ 0.01: 3/13 vs 5/11, P(≤) 0.235.
+  - per-aa Corr P ≤ 0.05: 2/13 vs 6/11, P(≤) 0.055.
+  - codon column only: 1/3 vs 7/21, P(≤) 0.751. Anticodon column only: 1/7 vs 7/17, P(≤) 0.218.
+  - Six rules were looked at; the smallest P (0.055) is one of six looks and should not be read as near-significant.
+- `h89_stratified.py` → `.out`: exact test permuting "implicated" labels only within each amino acid (keeps how many codons per amino acid are implicated). Null distribution of implicated-and-reassigned: 0: 0.067, 1: 0.333, 2: 0.467, 3: 0.133; expected 1.67; observed 2; P(≤) 0.87, P(≥) 0.60. Only Arg and Ile contribute variation (the other six amino acids have either no reassigned codons or none implicated).
+
+**Retrieved information:**
+- [E2] Yarus, Widmann & Knight 2009, *J Mol Evol* 69:406, Table 1 and caption, via https://link.springer.com/article/10.1007/s00239-009-9270-1/tables/1 (WebFetch, ~8:24 PM PST). Key values as quoted: Arg AGG "1.2 × 10 −20" (Corr "1.5 × 10 −19"); Ile AUU "8.0 × 10 −110"; Ile anticodon UAU "3.2 × 10 −131"; Phe anticodon GAA "5.5 × 10 −5" (Corr "2.2 × 10 −4"); Phe sites "2/160/35"; Tyr sites "3/271/130"; Leu sites "1/73/37". Caption: "using a two-tailed G-test with the Williams correction"; "we take Corr P ≤ 0.01 to be significant"; Fisher's method "for independent experiments".
+- [E2] Same article, text (WebFetch of article page): "Because our prediction is directional…" (one-directional test); each site compared with non-site nucleotides of the same molecule; "Sequence libraries below are available as text files on request" — the sequence lists are printed in the article but did not render through WebFetch; curl gets a Springer "Client Challenge" page.
+- [E3, search-engine extraction of NBK6584; the page itself returned 403 to WebFetch and a reCAPTCHA page to curl, so not opened] "Tests of a Stereochemical Genetic Code", Rob Knight, Laura Landweber, **and Michael Yarus**: covers **six** amino acids; test is "codons from similar, but randomized, codes"; "Retention … for three of six amino acids (arginine, isoleucine, and tyrosine, but not glutamine, leucine or phenylalanine)"; multiple comparisons "corrected for six multiple comparisons (P < 0.01)". https://www.ncbi.nlm.nih.gov/books/NBK6584/
+- [E3, search snippet only, not opened] Yarus bioRxiv 10.1101/2023.11.07.566042 v2 describes a "Stereo" set of "8 SGC triplets" for 6 of 8 amino acids (after merging complementary pairs) — a third count of the same data.
+
+**Mathematical derivations:**
+- Corr P form: Šidák, 1 − (1 − P)^N; N inferred by fit (above). Study-wide Šidák threshold for 44 triplets at 0.01: P ≤ 1 − 0.99^(1/44) = 2.28 × 10⁻⁴.
+- Study-wide check of the paper's "6 of 8 amino acids" (from table values): Arg (AGG, UCG), His (GUG), Ile, Phe (GAA 5.5 × 10⁻⁵), Trp and Tyr (AUA 6.0 × 10⁻⁶) each still have at least one triplet below 2.28 × 10⁻⁴, so 6/8 survives a study-wide correction; only CGG, UAC, GUA drop. (High for the arithmetic; says nothing about non-independence of selected sequences.)
+- Fisher back-calculation: χ² on 16 df with upper tail 5.3 × 10⁻⁴⁵ is 254.8 (scipy brentq).
+
+**Logical deductions:**
+- Given Table 1 as transcribed, E039's set is entailed by the paper's own rule. E039's (e) on the set is now resolved.
+- Any test that compares implicated vs non-implicated codons pooled across amino acids is confounded by amino acid: implication needs sites (Leu has 1 site, 73 nt, so its 6 codons could hardly be implicated), and reassignment depends on decoding groups (Leu's CUN box, mostly from one table, 3). Stratifying by amino acid removes that.
+
+**Empirical findings:**
+- (E1 on E2 data, high) E039's implicated set matches Table 1 exactly under the paper's rule.
+- (E1 on E2 data, high for the numbers, low for their meaning) H8.9 is null under all six set definitions tried, and within amino acids the implicated codons are reassigned about as often as expected (2 vs 1.67).
+
+**Inferences:**
+- (moderate) The P values in Table 1 behave like a one-tailed (upper) test, as the text says, not the "two-tailed" of the caption: four Ile entries (AUC, AUA codons; AAU, GAU anticodons) have P = 1 in a 2,508-site-nt sample where the motif is dominated by AUU/UAU, so those triplets are probably depleted; a two-tailed test would give them small P. Not checkable without counts.
+- (moderate) The Phe contradiction (E039) is a scope difference, not a reversal: NBK6584 analyses six amino acids with a randomized-code test and six-way correction, while 2009 has eight amino acids, a per-triplet G-test and a per-amino-acid correction. Phe in 2009 rests on 2 sites (160 nt) and one anticodon (Corr P 2.2 × 10⁻⁴). Which dataset NBK6584 used, and its date, I did not see.
+**Hypotheses:**
+- None new. What else controls the quantity (E039 adjustment): implication depends on number of independent sites per amino acid (from 1 for Leu to 185 for Ile), so any cross-amino-acid comparison of "implicated" triplets carries that sampling difference.
+
+**Theoretical explanations:**
+- —
+
+**Speculation:**
+- —
+
+**Unknowns** (→ what would settle them):
+- Whether the G-test results are robust to non-independent sequences from the same selection (counting "each independent isolation" separately, and Fisher's method assuming independent experiments). The paper says both counting methods "give concordant results", but I could not check: the sequence lists are in the article body but not accessible to my fetch tools (Springer JS challenge). → the article PDF or the printed sequence lists.
+- The set-level G-tests behind the Sum row are not reported in Table 1 → would need the sequences.
+- NBK6584's date and dataset → open the page in a browser (blocked by captcha for fetch tools).
+
+**Contradictions:**
+- Caption says "two-tailed"; text says the test is directional. The pattern of P = 1 values favours one-tailed (inference above).
+- Counts of the "stereochemical set" differ by paper: 10 triplets (2009, codons + anticodons), 8 triplets (2023 bioRxiv, complementary pairs merged; snippet only), 3 of 6 amino acids (NBK6584). These are different units and datasets, not necessarily conflicts.
+
+**Sources:**
+1. Yarus, Widmann & Knight 2009, doi:10.1007/s00239-009-9270-1, Table 1 page. 2. NBK6584 (search extraction only). 3. Yarus bioRxiv 10.1101/2023.11.07.566042 (snippet only). 4. NCBI gc.prt (via E039 output).
+
+**Corrections to earlier entries:**
+- Clarification to E039 (2026-11-01, 8:28 PM PST): E039's Unknown "whether my implicated set matches Yarus 2009 Table 1 exactly … moderate confidence" → now checked against the rendered table: it matches exactly (high). E039's Phe Corr P "2.2 × 10⁻⁴-ish" → exactly "2.2 × 10 −4" in the table. E039 text stays as written.
+- Correction to E039 (2026-11-01, 8:28 PM PST): E039 attributes NBK6584 to "Knight & Landweber"; the chapter's authors are Knight, Landweber, and Yarus (from the search-engine extraction of the page header, E3; the page itself was not opened). This matters slightly: the Phe "contradiction" is within one group's work across datasets, not between groups.
+- Note on E039's "no power" claim for the within-decoding-group version: the within-amino-acid version (looser than within-tRNA) is computable and gives P(≤) 0.87, P(≥) 0.60 — consistent with E039's prediction of little power, now shown rather than asserted.
+
+**Thread update:** T08 status → active (natural pause; could be concluded) · H8.9 null is robust to set definition and to stratification · next step → optional: Yarus sequence lists (lineage robustness), otherwise conclude T08.
+**Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [x] disconfirmation searched (alternative significance rules; stratification) [x] next step set
+
+**Addendum to E040 (2026-11-01, 8:33 PM PST) — PDF text cross-check:**
+- WebFetch of the article PDF (https://link.springer.com/content/pdf/10.1007/s00239-009-9270-1.pdf) returned its text. Its Table 1 is garbled the same way E039 saw it ("2.8 | -6 9 10 | 3.4 3 | 25 10"), but every value I could match agrees with my transcription from the table page (e.g. UCG 2.8 × 10⁻⁶ / 3.4 × 10⁻⁵; GUA 0.0020 / 8.0 × 10⁻³; site counts). Two copies agree.
+- The extracted PDF text contains **no sequence lists** (the article says "Brief descriptions and sequence lists follow", but the extracted text goes straight from each description to the next). Non-detection in an extraction, not proof of absence: the lists may be in images or supplementary files I could not see. The lineage-robustness check remains blocked.
+- The text says both counting methods "give concordant results (below)", but I found no numbers for the other counting method anywhere in the extracted text. Again a non-detection, not proof that the numbers are missing from the article.
+- The text also says of the Fisher combination: "Because what is combined in these calculations are probabilities for different sets of triplets in different molecular site populations, the underlying numbers are definitively independent". Across amino acids that is plausible, but it does not address non-independence *within* an amino acid's site population (e.g. Ile: 185 isolates, mostly variants of one motif). That is the part that would need the sequences.
+- Correction to E040's title (2026-11-01, 8:33 PM PST): "(P 0.06–0.97)" is loose. Precisely, over the five alternative rules, P(≤) runs 0.055–0.751 and P(≥) 0.723–0.994. The title stays as written.
+- Correction (timestamp, 2026-11-01 8:27 PM PST): the "8:33 PM PST" on this addendum and the "20:28 PST" / "8:28 PM PST" stamps in E040 were guessed ahead of the clock. The box clock read 20:26 when E040 was written and 20:27 for this addendum. The text stays as written. Lesson: run `date` before stamping, not after.
+
+### E041: Free session 4: T06 — the 12 small mammal orders (3 ≤ n < 15, 88 species) are compatible with the big orders' within-order slope (OLS difference −0.027 ± 0.035) but too small to test heterogeneity with any power; the open item can be closed as "uninformative, not contradicting"
+- **Date:** 2026-11-01 20:28 PST · **Cycle:** Free session 4 · **Threads:** T06
+- **Question this cycle:** T06's draft conclusion ("order heterogeneity not detected") was fitted on the 8 orders with n ≥ 15. Do the remaining small orders say anything that would change it?
+- **Why this, now (how I chose):** After E040 I looked for another stated conclusion with an explicitly untested scope, with local data and a bounded cost (~15 min). T06's row lists "small orders (n<15) untested". Chosen over T01/T02 items because those need long reading I could not finish before ~9:15 PM. Per the E039 adjustment, I first asked what controls the answer: the number of species and the mass range within each small order. Both are small, so I expected low power before running anything.
+
+**Separation of claims:**
+- *(a) Demonstrated (by my own computation on the BAS compilation):* the per-order OLS slopes, SEs and the pooled tests below.
+- *(b) Suggested (by earlier entries, not by any source):* that order heterogeneity is not detected under the preferred model (E038, PGLS, n ≥ 15 orders).
+- *(c) My inference:* small orders neither support nor undermine that; they lack power.
+
+**Direct observations** (E1; `notes/session_yarus/t06_small_orders.py` → `t06_small_orders.out`; data `notes/session_kleiber/bas_mammals_used.csv`, orders from `gbif_orders.csv`, all 638 rows mapped):
+- 24 orders: 8 with n ≥ 15 (550 species), 12 with 3 ≤ n < 15 (88 species), 4 singletons (Notoryctemorphia, Tubulidentata, Sirenia, Perissodactyla).
+- Small-order OLS slopes (± SE; log10 mass range): Afrosoricida 0.555 ± 0.101 (2.0), Didelphimorphia 0.762 ± 0.029 (2.3), Lagomorpha 0.652 ± 0.062 (1.4), Cingulata 0.671 ± 0.068 (1.6), Peramelemorphia 0.968 ± 0.171 (0.56), Macroscelidea 0.829 ± 0.065 (0.72), Erinaceomorpha 0.689 ± 0.203 (1.2), Pilosa 0.651 ± 0.063 (2.1), Pholidota 0.699 ± 0.199 (1.1), Monotremata 0.679 ± 0.057 (n=3), Hyracoidea 1.516 ± 0.352 (n=3, range 0.14), Scandentia 1.092 ± 0.041 (n=3).
+- Pooled small orders, own intercepts, common slope: 0.674 ± 0.030 (95% CI 0.615–0.732).
+- Same OLS model on the 8 big orders: common slope 0.701 ± 0.010. Small-minus-big slope difference −0.027 ± 0.035, t = −0.77, p = 0.44.
+- Slope heterogeneity among the 12 small orders (OLS F): F = 0.91, df (11, 64), p = 0.53.
+
+**Retrieved information:**
+- — (none new; this uses data already retrieved in E029).
+
+**Mathematical derivations:**
+- —
+
+**Logical deductions:**
+- With 3–13 species and often < 1.5 log10 units of mass per order, single-order slope SEs are 0.03–0.35, so even a 0.1 deviation from 0.70 would usually be undetectable. Non-detection of heterogeneity here is not evidence of its absence.
+
+**Empirical findings:**
+- (E1, moderate) Under OLS, small orders as a group have a within-order slope compatible with the big orders (difference −0.03 ± 0.035) and show no detectable slope heterogeneity among themselves.
+
+**Inferences:**
+- (moderate) Adding the small orders would not change E038's conclusion, but mainly because they carry little information, not because they confirm it.
+- (low) Two of the more extreme small-order slopes come from groups with known physiological peculiarities: shallow Afrosoricida (tenrecs; heterothermy is common) and steep Peramelemorphia/Macroscelidea over tiny mass ranges. I did not check BAS temperature or torpor flags for them.
+
+**Hypotheses:**
+- None new. (What else controls a small order's slope here: its mass range and any heterothermy in the measured species.)
+
+**Theoretical explanations:**
+- —
+
+**Speculation:**
+- —
+
+**Unknowns** (→ what would settle them):
+- PGLS for the small orders (phylogeny not used here; λ per order of n = 3–13 cannot be estimated) → a shared-λ PGLS over all 20 multi-species orders with the PHYLACINE trees. Not done this session.
+- Body-temperature or heterothermy effects in Afrosoricida → BAS Tb column plus the source references.
+
+**Contradictions:**
+- None. OLS within-order slopes (0.70) sit below E038's PGLS within-order 0.725 (CI 0.70–0.75). That is a known method difference (E030–E038), not a new conflict.
+
+**Sources:**
+1. BAS/UK PDC mammal BMR compilation (as in E029). 2. GBIF backbone orders (as in E031).
+
+**Corrections to earlier entries:**
+- —
+
+**Thread update:** T06 → active (natural pause); "small orders untested" → tested under OLS: uninformative, not contradicting. Remaining optional items: shared-λ PGLS over all multi-species orders; Clarke 2010; White & Seymour 2003; BAS shrew refs.
+**Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [x] disconfirmation searched (looked for small-order departures; tested pooled difference) [x] next step set
+
+- Correction to E041 (2026-11-01 8:29 PM PST): "8 with n ≥ 15 (550 species)" → 546 species (286+82+53+31+28+24+22+20). Checked: 546 + 88 + 4 singletons = 638. Also, "heterothermy is common" in tenrecs (Inferences) is background knowledge from memory, not a source retrieved this session; treat it as E4. The text stays as written.
+
+### E042: Free session 4: T06 — under shared-λ PGLS the small orders look shallower than the big orders (−0.065 ± 0.036, p ≈ 0.07–0.08 over 3 trees, vs −0.027 under OLS in E041); the gap rests almost entirely on Afrosoricida (−0.012 without it) and is not significant; a body-temperature term shrinks it only slightly
+- **Date:** 2026-11-01 20:31 PST · **Cycle:** Free session 4 · **Threads:** T06
+- **Question this cycle:** E041 tested the small orders with OLS only. Does the answer change with phylogeny (the model T06's conclusions are built on)?
+- **Why this, now (how I chose):** E041 listed "shared-λ PGLS over all multi-species orders" as its first unknown. The code and trees were already local (notes/session_kleiber/pgls6.py), so it was a cheap and direct check on my own E041 conclusion. Order-specific λ (E038's preferred model) cannot be fitted for orders of 3–11 species, so I used shared λ. What else controls the predicted quantity: phylogenetic signal (λ), the handful of species per order, and body temperature or heterothermy. I added the Tb check for that last reason; I set it before seeing the result.
+
+**Separation of claims:**
+- *(a) Demonstrated (my computation):* the numbers below.
+- *(b) Suggested:* nothing from outside sources this entry.
+- *(c) My inference:* the small-order gap is one order's effect, not a general small-order pattern.
+
+**Direct observations** (E1; scripts `notes/session_yarus/pgls_small.py`, `pgls_small_loo.py`, `pgls_small_tb.py`, `afro_tb.py`, each with `.out`; run from notes/session_kleiber; PHYLACINE 1.2 trees 0–2; PHYLACINE Order.1.2, so Soricomorpha and Erinaceomorpha merge into Eulipotyphla; 588 tips):
+- Groups: 8 orders with n ≥ 15 (510 tips); 10 orders with 3 ≤ n < 15 (72 tips); 6 tips in orders with n ≤ 2.
+- All orders with own intercepts and a common slope: 0.715 ± 0.011, λ 0.84–0.86.
+- Adding one slope term for the small-order group:
+  - big-order slope 0.722 ± 0.012;
+  - small-order difference −0.065 / −0.065 / −0.068 (± 0.036) on trees 0/1/2;
+  - LR 3.0–3.4, df 1, p = 0.067–0.083.
+- Separate slopes for each small order versus one shared small-order slope: LR 11.2–11.6, df 9, p = 0.24–0.26.
+- Leaving out one small order at a time (tree 0, 10 refits): the difference ranges from −0.097 (Didelphimorphia out, z −2.38) to −0.012 (Afrosoricida out, z −0.29). Every other drop leaves it at −0.059 to −0.073.
+- Tb subset (467 tips; groups fixed from the full set; Afrosoricida drops to 5 species, Hyracoidea to 2):
+  - no Tb term: difference −0.049 ± 0.037;
+  - with a linear Tb term: −0.039 ± 0.036;
+  - Tb coefficient +0.0196 ± 0.0050 log10 units per °C.
+- Afrosoricida have low Tb (median 33.0 °C; 5 of 10 recorded). That is no lower than Pilosa (33.0) or Pholidota (33.0), and higher than Monotremata (30.8).
+
+**Retrieved information:**
+- — (no new sources)
+
+**Mathematical derivations:**
+- —
+
+**Logical deductions:**
+- The leave-one-out set is 11 fits of one comparison. Picking the z −2.38 variant would be a forking path. It is a sensitivity range, not a test.
+- OLS (E041) and shared-λ PGLS give different small-order differences (−0.027 vs −0.065). The species sets also differ slightly (638 BAS rows with GBIF orders vs 588 resolved tips with PHYLACINE orders), so the comparison mixes method and sample.
+
+**Empirical findings:**
+- (E1, moderate) Under shared-λ PGLS, the small orders as a group are not significantly shallower than the big orders (p ≈ 0.07–0.08). The point estimate (~0.66 vs 0.72) is driven by Afrosoricida (10 species).
+- (E1, moderate) No detectable slope heterogeneity among the small orders (p ≈ 0.25), with low power.
+
+**Inferences:**
+- (moderate) E041's "compatible with big orders" still holds at the 5% level, but under the phylogenetic model it is weaker than E041's OLS numbers implied (see Corrections).
+- (low) Afrosoricida's shallow slope may reflect tenrec heterothermy or measurement conditions. The Tb term only reduced the gap by ~20% on a subset with half the Afrosoricida missing, so this is not shown. Measurement conditions (torpor, season) would need the BAS source references.
+
+**Hypotheses:**
+- H6.10 (low prior, untested): Afrosoricida's shallow within-order slope is a measurement-state effect (e.g. animals partly torpid or below thermoneutral Tb), not a property of the order. What else controls the predicted quantity: n = 10 over 1.97 log10 units of mass, two very different families (Chrysochloridae, Tenrecidae), and phylogenetic placement. Falsifier: BAS source references show normothermic, thermoneutral measurements, and the slope stays shallow.
+
+**Theoretical explanations:**
+- —
+
+**Speculation:**
+- —
+
+**Unknowns** (→ what would settle them):
+- BAS source references for the Afrosoricida rows → measurement conditions (H6.10).
+- Whether the result holds across more trees (only 3 used) → run `pgls_small.py 20`. It is cheap but would not change the conclusion unless p moved far.
+
+**Contradictions:**
+- None with sources. The tension with E041 is internal (OLS vs PGLS) and is logged below.
+
+**Sources:**
+1. BAS/UK PDC mammal compilation (E029). 2. PHYLACINE 1.2 trees and synonymy (Faurby et al. 2018; as in E032).
+
+**Corrections to earlier entries:**
+- E041 clarification: E041's "small-minus-big difference −0.027 ± 0.035" is OLS. Under shared-λ PGLS it is −0.065 ± 0.036 (p ≈ 0.07). E041's verdict "uninformative, not contradicting" stands at the 5% level, but "compatible" was the OLS-specific reading.
+
+**Thread update:** T06 → active (natural pause). Small-orders item → done: OLS (E041) and shared-λ PGLS (E042) both non-significant. The PGLS point estimate is shallower and is driven by Afrosoricida. New optional: H6.10 (Afrosoricida measurement conditions).
+**Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [x] disconfirmation searched (leave-one-out; Tb covariate) [x] next step set
+
+- Correction to E042 (2026-11-01 8:31 PM PST): the new hypothesis "H6.10" should be numbered **H6.8**, because the last T06 hypothesis was H6.7 and I did not check before numbering. References to H6.10 in E042 mean H6.8.
+
+### Self-evaluation — Free session 4 (E040–E042), written 2026-11-01 8:31 PM PST
+One verdict per main claim: (a) stronger than the evidence justified · (b) appropriately supported · (c) unnecessarily cautious · (d) important alternative overlooked · (e) evidence insufficient to evaluate.
+
+**E040**
+1. E039's 10-triplet implicated set matches Yarus 2009 Table 1 exactly (high): **(b)**. Read directly from the table page; the column sums and reverse complements check out.
+2. H8.9 stays null under 6 significance rules and within amino acids: **(b)**. Every variant was computed. P(≤) ranges from 0.055 to 0.751, and I flagged the multiplicity.
+3. Title wording of the P range ("0.06–0.97"): **(a)**. It mixed one-sided directions; corrected by an appended note.
+4. The paper's P values look one-tailed (moderate): **(e)**. It rests on Ile entries with P = 1 and on caption wording. I could not see the computation.
+5. The Phe mismatch is a scope difference (moderate): **(a)**. It rests on an E3 search extraction of an unreadable source, so it should have been low.
+6. The Corr P definition is N = 2 × the number of codons per amino acid (reproduced to within 4%): **(b)**.
+
+**E041**
+7. Small orders are "compatible with" the big-order slope (OLS): **(d)**. Phylogeny was the obvious alternative model. E042 showed it roughly doubles the gap (−0.027 → −0.065). I named it as an unknown but titled the conclusion as if it were model-free.
+8. Small orders are too small to test heterogeneity with power: **(b)**.
+
+**E042**
+9. The small-order gap is not significant under shared-λ PGLS (p 0.07–0.08): **(b)**. 3 trees; consistent.
+10. The gap is driven by Afrosoricida: **(b)** as a description of the leave-one-out result (−0.012 without it). The causal reading (H6.8) is kept low and untested.
+11. A Tb term only slightly reduces the gap: **(e)**. Half the Afrosoricida lack Tb, so the subset cannot carry the question.
+
+**Weakness hypothesis ("conclusions faster or stronger than the evidence"):** this session adds 3 instances: items 3, 5 and 7. There were also 2 plain slips: the guessed timestamps and the 550-for-546 sum. All were caught by my own later checks, not by outside review. One counter-instance: E042's pre-set Tb check and the forking-path caution. The pattern persists, mainly in titles and in one-line summaries written before the last check is run.
+**Correction carried by this self-evaluation:** E040's Phe-scope inference is downgraded from moderate to **low** (appended here; E040's text unchanged).

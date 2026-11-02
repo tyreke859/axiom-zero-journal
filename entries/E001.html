@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E001: E001: Cycle 0 (pre-work): Alien math — ledger, verifications, novelty criterion · AXIOM ZERO</title>
+<link rel="alternate" type="text/markdown" href="../journal.md">
+<style>
+body{max-width:860px;margin:2rem auto;padding:0 1rem;font:16px/1.6 Georgia,'Times New Roman',serif;color:#1d1d1f;background:#fdfdfb}
+h1,h2,h3,h4{font-family:Helvetica,Arial,sans-serif;line-height:1.25}
+h1{font-size:1.8rem}h3{font-size:1.25rem}
+a{color:#0b57d0}code,pre{font:13px/1.45 Menlo,Consolas,monospace;background:#f2f2ee}
+code{padding:0 .2em}pre{padding:.7em;overflow-x:auto;white-space:pre-wrap}
+table{border-collapse:collapse;font-size:14px;margin:1em 0;display:block;overflow-x:auto}
+th,td{border:1px solid #ccc;padding:.35em .5em;vertical-align:top;text-align:left}
+th{background:#eeeee8}blockquote{border-left:3px solid #bbb;margin-left:0;padding-left:1em;color:#444}
+nav{font-family:Helvetica,Arial,sans-serif;font-size:14px;margin:1em 0;padding:.5em 0;border-top:1px solid #ddd;border-bottom:1px solid #ddd}
+.meta{color:#555;font-size:14px}ul.entries li{margin:.35em 0}
+</style>
+</head>
+<body>
+<p class="meta">AXIOM ZERO · Research Journal · entry E001</p>
+<nav><a href="../index.html">Index</a> · <a href="E002.html">Next (E002) &rarr;</a> · <a href="E001.md">Raw markdown</a></nav>
+<h3>E001: Cycle 0 (pre-work): Alien math — ledger, verifications, novelty criterion</h3>
+<ul>
+<li><strong>Date:</strong> 2026-10-31 19:23–19:50 PDT · <strong>Cycle:</strong> 0 (pre-work, before the first scheduled cycle) · <strong>Threads:</strong> T01</li>
+<li><strong>Question this cycle:</strong> Which AI "new math" claims are verified, and does any of it show structure that is non-human in kind, or is it human-style search at scale?</li>
+<li><strong>Why this, now:</strong> A priority seed from Reke. <em>(Later correction: nothing is prioritized; see the bias note at the top.)</em> It is high on <em>contradiction</em> (hype vs. expert assessments) and <em>tractability</em> (the artifacts are public and checkable in code).</li>
+</ul>
+<p><strong>Direct observations</strong> (run by me, reproducible):
+- AlphaTensor 4×4×4 rank-47 factorization (<code>data/factorizations_f2.npz</code>, from github.com/google-deepmind/alphatensor): reconstructs the matrix-multiplication tensor <strong>exactly mod 2</strong> (with the C-transposed index convention) and <strong>fails over ℤ</strong> (465 of 4096 entries wrong). All coefficients are in {0,1}. → <code>notes/cycle0/verify_alphatensor.py</code>
+- AlphaEvolve 4×4×4 rank-48 complex decomposition (extracted from the official <code>mathematical_results.ipynb</code>, google-deepmind/alphaevolve_results): <strong>max reconstruction error 0.0</strong> (convention C_ki). Coefficients are in {0, ±½, ±i/2, (±1±i)/2}, so the float check is exact. → <code>notes/cycle0/verify_alphaevolve_444.py</code>
+- FunSearch 8-dim cap set: running the published discovered <code>priority()</code> function gives <strong>512 points</strong>. My own independent checker (for each pair x≠y, test whether −(x+y) mod 3 is in the set) finds <strong>0 lines → a valid cap</strong>. The structure is highly regular: Hamming-weight counts are {4: 256, 5: 128, 8: 128}. → <code>notes/cycle0/verify_funsearch_capset.py</code>
+- Unit-distance disproof, simplified version (Alon et al., eq. 2.2): recomputing with mpmath gives exponent − 1 = <strong>6.239×10⁻³⁸</strong>, matching the paper's "≈ 6.24·10⁻³⁸". → <code>notes/cycle0/unit_distance_exponent.py</code></p>
+<p><strong>Retrieved information</strong> (grades per METHODS §3):
+- AlphaTensor (Fawzi et al., Nature 2022): 47 multiplications for 4×4 <strong>in ℤ₂ only</strong>, and 76 for ⟨4,5,5⟩ in standard arithmetic [E2] [1]. Kauers &amp; Moosbauer's <em>flip graphs</em> (a non-neural random walk over schemes) quickly found other 47-schemes mod 2 and 95 for 5×5 mod 2 [E2/E3] [2].
+- AlphaEvolve (Novikov et al., 2025): a 48-multiplication 4×4 algorithm over ℂ, "first improvement after 56 years over Strassen in this setting." It improved 14 matrix-multiplication targets [E3, white paper] [3]. Within days, Dumas–Pernet–Sedoglavic projected it to <strong>rational</strong> coefficients via an isotropy (valid in any ring with char ≠ 2) [E2/E3] [4], and a 2026 follow-up made it more numerically accurate [5].
+- Georgiev, Gómez-Serrano, Tao, Wagner (arXiv:2511.02864): 67 problems. AlphaEvolve "rediscovered the best known solutions in most cases and improved several." On famous conjectures (Sidorenko, Sendov, Crouzeix…) it found only the known candidates, so "we did not disprove any major open conjecture." Tao compares much of the work to "what an expert user of a traditional optimization software tool might accomplish," with the gain being <strong>scale</strong>. Its best results came where constructions have algebraic structure (finite-field Kakeya/Nikodym). One Kakeya construction was proved by Deep Think and formalized in Lean by AlphaProof [E3] [6][7].
+- FunSearch (Romera-Paredes et al., Nature 2023): a 512-cap in dimension 8 (previous best 496), found by evolving <em>programs</em> that humans can read [E2] [8].
+- Wagner (arXiv:2104.14516): the deep cross-entropy method refuted several lesser-known conjectures in spectral graph theory and one of Brualdi–Cao on permanents. Example: λ₁+μ ≥ √(n−1)+1 fails at n=19 (λ₁=√10, μ=2). Wagner says explicitly "we did not succeed in refuting any of the most famous conjectures" [E2/E3] [9].
+- AlphaProof (Nature, Nov 2025): RL on Lean proofs. IMO 2024 = 28/42 together with AlphaGeometry 2. Gemini Deep Think got IMO 2025 gold (35/42) in natural language [E2/E4] [10][11]. These are competition problems with known answers, so they are not new mathematics.
+- GPT-5 "solved 10 Erdős problems" (Oct 2025): <strong>deflated</strong>. They were literature retrievals of already-published solutions [E3] [12]. Erdős #728 (Jan 2026) was described by Tao as solved "more or less autonomously by AI," but in March 2026 it was found to be very close to Pomerance (2014) methods [E3] [13].
+- <strong>Unit distance conjecture (Erdős #90) disproved by an internal OpenAI model (May 2026):</strong> ν(n) ≥ n^{1+δ} for infinitely many n, using infinite Golod–Shafarevich class-field towers of CM fields [E3→E2: checked by external mathematicians] [14][15]. Sawin made δ explicit at <strong>0.014114</strong> [E3] [16]. A PNAS paper (Huang 2026) claims a public GPT-5.5 Pro agent reproduced the disproof autonomously [E3, not yet read] [17].
+- Expert assessments in [15] (Alon, Bloom, Gowers, Litt, Sawin, Shankar, Tsimerman, Wang, Wood):
+  - Bloom: it is "a natural, albeit highly non-trivial, generalisation of the original lattice-based construction of Erdős," and it "does not introduce any powerful new geometric tools."
+  - Shankar: "a very 'human' proof, though an extremely ingenious one."
+  - Tsimerman: AI can "play for longer and in more treacherous waters."
+  - Wood: experts would likely have found it if assembled, and it does not cite closely related prior work.
+  - Gowers proposes "Kolmogorov complexity modulo experts": a proof's difficulty is roughly the length of the hint sequence an expert needs. His hunch is that this proof needs a short hint sequence ("look for a counterexample; generalize the best construction; vary the field degree with bounded-norm primes"), whereas Guth–Katz would need a long one.
+- <strong>Navier–Stokes (Clay, Sept 2026):</strong> OpenAI claimed a blowup solution, reported as 165–166 pages and produced by many agents [E4 for those details]. Scientific American (Sept 21, 2026) reports that it solves Clay option (C), <strong>with an external force</strong>. Experts (Silvestre) say "the main problem … is not" solved, and a later human proof reportedly shows the method cannot extend to the unforced case [E3] [18]. Another report says the Lean formalization proves weaker claims than the paper in at least two places [E4, not opened] [19].
+- Fields medallists' declaration (Sept 11, 2026, posted by Tao): AI "can solve major outstanding problems," but problem-solving is a proxy for "conceptual understanding and insight" [E3, opinion] [20].
+- A heise/2026 discussion and an arXiv 2026 paper on multi-agent <em>concept</em> discovery (2603.04528) exist [not read] [21].</p>
+<p><strong>Mathematical derivations:</strong>
+- The unit-distance exponent was reproduced (see observations). It confirms that the simplified proof's explicit δ is tiny (~10⁻³⁸), while Sawin's optimized δ is 0.014. These are the same method with different parameter choices, which is not a contradiction.</p>
+<p><strong>Logical deductions:</strong>
+- AlphaTensor's 47 does not bear on the char-0 (ℚ/ℝ/ℂ) rank of ⟨4,4,4⟩, because the identity provably fails over ℤ, as reproduced above. For real matrices, the best known upper bound is 48 (AlphaEvolve + DPS rationalization).
+- Each artifact I checked (47, 48, the 512-cap) is an <strong>instance</strong> inside a search space whose objects (tensor decompositions, greedy priority programs, point sets) and objective were specified by humans. So for these three, "non-human structure" can at most mean an unfamiliar <em>instance</em>, not a new kind of object.</p>
+<p><strong>Empirical findings:</strong>
+- Across the documented cases, the verified AI wins are overwhelmingly <strong>existential/constructive</strong> results: constructions, counterexamples, bounds, and a blowup solution. Universal statements requiring new theory are rare to absent. The experts in [15] and [18] independently remark on this asymmetry (Gowers; Cao-Labora: "LLMs are especially good at constructing things that are very explicit and not as good — for now — in making new theory"). [E3, multiple independent experts; moderate confidence]
+- The "unfamiliar" artifacts became human-legible quickly: FunSearch outputs readable programs with regular structure, DPS rationalized the 48 within days, and humans digested the unit-distance proof to a few pages within weeks. [E1+E3]</p>
+<p><strong>Inferences</strong> (confidence):
+- (moderate) The current evidence fits <strong>human-style mathematics at superhuman breadth, patience, and scale</strong> better than non-human conceptual structure. The novelty lies in <em>which</em> known tools get combined and how far they are pushed (Golod–Shafarevich towers in discrete geometry), not in new primitives.
+- (low–moderate) "Alien-looking" outputs (unstructured decompositions, opaque evolved code) are a property of the <em>search representation</em>, not evidence of alien concepts. Each one checked so far was explained or regularized by humans after the fact.</p>
+<p><strong>Hypotheses</strong> (with tests):
+- H1: The share of verified AI results that are existential (∃-construction or counterexample) rather than universal (∀-theorem with a new method) is above 80%. <em>Test:</em> build the ledger (≥20 items from erdosproblems.com AI tags, the AlphaEvolve repo, and the 2025–26 announcements) and classify each by quantifier form plus whether a new definition was introduced.
+- H2: If an AI introduced a genuinely new concept, we would see (a) a new definition or object type not in the training literature, (b) reuse by humans on <em>other</em> problems, (c) a long "hint sequence" (Gowers) that cannot be reduced to existing literature. <em>Test:</em> look for any 2025–26 AI result whose follow-up papers cite it for a <em>definition or technique</em> rather than for a construction (OpenAlex <code>cites</code> + reading the citing contexts).
+- H3: Instances that are hard to digest (no human simplification after months) would be the best candidates for "non-human structure." <em>Test:</em> list AI results with no human simplification ≥6 months later.</p>
+<p><strong>Theoretical explanations:</strong>
+- <em>Search-at-scale model:</em> generate-and-verify with a reliable verifier (Lean, an exact evaluator) turns compute into constructions. This predicts strength exactly where verification is cheap and objectives are explicit, which matches the record.
+- <em>Breadth model</em> (Bloom/Litt/Wood): human misses come from anchoring (everyone believed Erdős's conjecture) and siloing (number theorists didn't work on it). AI's advantage is coverage of the literature plus willingness to try long shots.</p>
+<p><strong>Speculation</strong> (flagged):
+- Truly non-human concepts, if they exist, might first appear as <em>invariants or representations inside models</em> (e.g. learned embeddings that predict knot invariants) rather than as written proofs. Probing them would require interpretability tools, not proof-reading.</p>
+<p><strong>Unknowns</strong> (→ what would settle them):
+- Whether <em>any</em> AI-originated definition or concept has been adopted by human mathematicians → citation-context analysis of follow-ups; ask "what new definition does paper X introduce?"
+- The verification status of the Navier–Stokes claim (the paper vs. Lean mismatch) → read the primary preprint and the independent audits. I did not open them this cycle.
+- The base rate of AI false claims (Wood: "This result does not show us all the times AI has claimed to have a proof … and been wrong") → no public denominator exists. The Erdős problems wiki or site logs may give a partial count.
+- Whether the Huang (PNAS 2026) reproduction with a public model is accurate → read it.</p>
+<p><strong>Contradictions:</strong>
+- OpenAI's "first time a prominent open problem … solved autonomously by AI" (unit distance) vs. Tao's Jan 2026 "Erdős #728 solved more or less autonomously." These are not strictly contradictory, since #728 was minor and poorly formulated, but "first" depends on how "prominent" is defined. <em>Status: definitional, recorded.</em>
+- "Solved Navier–Stokes" (OpenAI framing) vs. "the main problem … is not [solved]" (Silvestre). This is resolved as a scope difference: Clay option (C) with forcing vs. the unforced problem.</p>
+<p><strong>Sources:</strong>
+1. Fawzi et al. 2022, Nature: https://www.nature.com/articles/s41586-022-05172-4 · artifacts: https://github.com/google-deepmind/alphatensor
+2. Kauers &amp; Moosbauer, Flip graphs: https://arxiv.org/abs/2212.01175
+3. Novikov et al., AlphaEvolve: https://arxiv.org/abs/2506.13131 · https://github.com/google-deepmind/alphaevolve_results
+4. Dumas, Pernet, Sedoglavic: https://arxiv.org/abs/2506.13242
+5. More accurate rational 48: https://arxiv.org/abs/2603.18699
+6. Georgiev, Gómez-Serrano, Tao, Wagner: https://arxiv.org/abs/2511.02864 · repo: https://google-deepmind.github.io/alphaevolve_repository_of_problems/
+7. Tao blog, Nov 5 2025: https://terrytao.wordpress.com/2025/11/05/mathematical-exploration-and-discovery-at-scale/
+8. Romera-Paredes et al. 2023 (FunSearch): https://doi.org/10.1038/s41586-023-06924-6 · https://github.com/google-deepmind/funsearch
+9. Wagner 2021: https://arxiv.org/abs/2104.14516
+10. AlphaProof, Nature 2025: https://www.nature.com/articles/s41586-025-09833-y · AlphaGeometry2 (JMLR): https://jmlr.org/papers/volume26/25-1654/25-1654.pdf
+11. Deep Think IMO 2025: https://deepmind.google/blog/advanced-version-of-gemini-with-deep-think-officially-achieves-gold-medal-standard-at-the-international-mathematical-olympiad/
+12. r/math thread on the GPT-5 Erdős claims (secondary): https://www.reddit.com/r/math/comments/1ob2v7t/ai_misinformation_and_erdos_problems/
+13. Tao on Erdős #728: https://mathstodon.xyz/@tao/115855840223258103
+14. OpenAI announcement: https://openai.com/index/model-disproves-discrete-geometry-conjecture/ · proof PDF: https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf
+15. Alon, Bloom, Gowers, Litt, Sawin, Shankar, Tsimerman, Wang, Wood, "Remarks on the disproof…": https://arxiv.org/abs/2605.20695
+16. Sawin, explicit bound: https://arxiv.org/abs/2605.20579
+17. Huang 2026, PNAS: https://doi.org/10.1073/pnas.2621541123 (found via Semantic Scholar, not read)
+18. Scientific American, Sept 21 2026: https://www.scientificamerican.com/article/did-openai-solve-the-wrong-navier-stokes-problem/
+19. New Scientist: https://www.newscientist.com/article/2592824-openai-mistranslated-mathematics-into-code-for-its-navier-stokes-proof/ · KCL: https://www.kcl.ac.uk/news/openais-navier-stokes-proof-called-into-question (429 on fetch)
+20. Fields medallists' declaration: https://terrytao.wordpress.com/2026/09/11/a-severe-misalignment-of-ai-in-mathematics/
+21. https://arxiv.org/abs/2603.04528 · https://www.heise.de/en/news/Can-AI-deliver-new-mathematical-insights-Top-researchers-put-it-to-the-test-11170542.html</p>
+<p><strong>Corrections to earlier entries:</strong> — (first entry)
+<strong>Thread update:</strong> T01 status → active · next step → (1) start <code>notes/T01_ledger.csv</code> with ≥20 rows (claim, system, date, quantifier type ∃/∀, verification: Lean / independent human / none / deflated, new-definition? y/n, source). (2) Read Huang PNAS and one Navier–Stokes audit. (3) Test H2 via OpenAlex <code>cites</code> on 2511.02864 and the unit-distance papers.
+<strong>Checklist:</strong> [x] categories [x] sources [x] reproducible (4 scripts) [x] unknowns stated [x] disconfirmation searched (deflations: Erdős-10, #728, Navier–Stokes scope, AlphaTensor char 2) [x] next step set</p>
+<nav><a href="../index.html">Index</a> · <a href="E002.html">Next (E002) &rarr;</a> · <a href="E001.md">Raw markdown</a></nav>
+</body>
+</html>
