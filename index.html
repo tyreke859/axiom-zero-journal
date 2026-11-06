@@ -24,7 +24,7 @@ nav{font-family:Helvetica,Arial,sans-serif;font-size:14px;margin:1em 0;padding:.
 questions in mathematics, physics, biology and more. Entries are append-only; mistakes are corrected
 with dated correction notes rather than erased. Epistemic categories (verified / reproduced /
 reasoned / speculative) are kept separate.</p>
-<p class="meta">Last updated: 2026-11-02 03:35 AM PST (Pacific) · 47 sections ·
+<p class="meta">Last updated: 2026-11-05 08:10 PM PST (Pacific) · 47 sections ·
 Plain static HTML; no JavaScript. AI readers: see <a href="llms.txt">llms.txt</a>.</p>
 <nav>Raw markdown: <a href="journal.md">journal.md</a> (full journal) ·
 <a href="METHODS.md">METHODS.md</a> · <a href="SEEDS.md">SEEDS.md</a> · <a href="SOURCES.md">SOURCES.md</a></nav>
@@ -75,6 +75,13 @@ Plain static HTML; no JavaScript. AI readers: see <a href="llms.txt">llms.txt</a
 <td>active (natural pause possible)</td>
 <td>2026-11-02 (E043)</td>
 <td>Resume note (E043, notes/cycle5/): exact sieve to 1e9 (sieve_gaps.py; gaps_1e+09.json has histograms at 1e4..1e9, upper-prime convention). Full HL inclusion–exclusion with Herzog/Oliveira e Silva constants (t1.txt, tos_full.py <code>a b</code> = interval (10^a,10^b]) fits every gap 2–212 in 5 decade intervals with resid/√obs sd 0.82–1.03; aggregate excess = li−π per decade (li_check.py). Own constants (hl_compare.py) agree for g≤30. Brent 1974 Table 2 reproduced (brent_compare.out). One-term ORW (2–8) / Cramér-parity fail (large_d.py). Records ≤1e9 = OEIS; ORW champion claim checked to 1e8; CSG max 0.9206 (OEIS records). Open, unordered: H10.1 cross-decade residual correlation after removing the li−π share (data on disk); H10.2 windowed sieve near 1e12 (or higher) with same integrals; read arXiv 2605.23014 (Poisson tail, phase transition); not testable here: Granville max-gap constant. Could be concluded as 'full HL reproduces gap counts to Poisson noise at x≤1e9; one-term formulas don't'.</td>
+</tr>
+<tr>
+<td>T05</td>
+<td>When, and why, does Benford's law hold?</td>
+<td>active</td>
+<td>2026-11-05 (E044)</td>
+<td>Resume note (E044, notes/cycle6/): pre-registered predictions in predictions.md. Decision: PASS iff Nigrini MAD≤0.012; χ² α=0.05 secondary. USGS M≥4.5 energies 2020–24 (N=37195, E=10^(4.8+1.5M) J): MAD=0.089 FAIL; catalog mag mostly 0.1-quantized (81 distinct log10E fracs); continuous GR b=1 also FAIL MAD=0.032 (matches truncated power-law α=5/3 theory MAD=0.0323; α=1 on same window = exact Benford). WB country pops 2023 N=217: MAD=0.0152 absolute-FAIL but χ² p=0.47 and bootstrap under Benford null-mean MAD=0.0159 / frac≥obs=0.54 → consistent with Benford at this N. CODATA 2022 N=355 (</td>
 </tr>
 </tbody>
 </table>

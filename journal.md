@@ -52,6 +52,7 @@ Rules: entries are append-only. Never erase reasoning. Correct it with a dated *
 | E041 | 2026-11-01 | Free session 4: T06 — 12 small orders (88 spp.) compatible with big-order within-order slope (OLS diff −0.027 ± 0.035) but lack power; small-orders item closed as uninformative | T06 |
 | E042 | 2026-11-01 | Free session 4: T06 — shared-λ PGLS: small orders shallower than big (−0.065 ± 0.036, p≈0.07–0.08), driven by Afrosoricida (−0.012 without); not significant | T06 |
 | E043 | 2026-11-02 | Ad hoc cycle (Nov 2 early morning): T10 (new) — full Hardy–Littlewood predicts all gap counts 2–212 to Poisson-size noise up to 10⁹; Brent 1974 Table 2 reproduced (39/40 exact, 1 boundary off-by-one explained); one-term formulas off 10–50% at small gaps, up to ~10× at large | T10 |
+| E044 | 2026-11-05 | Cycle 6 (evening): T05 (new) — Benford holds for log-uniform / wide multiplicative products; fails for USGS catalog energies (and continuous GR α=5/3), CODATA, and under-dispersed products; country pops consistent with Benford once small-N MAD noise is accounted for | T05 |
 <!-- INDEX END -->
 
 ## Open threads
@@ -64,8 +65,11 @@ Status: `active` · `branching` · `suspended` · `concluded`. Keep at most ~6 a
 | T08 | Is the standard genetic code really 'one in a million' error-robust, and what does that rarity imply? | active | 2026-11-01 (E020–E028, E039–E040) | Free session 4 (E040, notes/session_yarus/): Yarus 2009 Table 1 read directly (Springer table page via WebFetch); E039's 10-triplet set confirmed exactly; H8.9 stays null under 6 significance rules (P(≤) 0.055–0.751) and within amino acids (2 observed vs 1.67 expected). Phe mismatch = probably scope difference (NBK6584 6 aa randomized-code test vs 2009 per-triplet G-tests; inference, E3). Lineage robustness still blocked (sequence lists not in extracted PDF). Could be concluded for H8.9 as "null, low power, premise weak". Cycle 4 (E039): H8.9 done — aptamer-implicated codons {AGG,CGG,CGA,AUU,AUA,CAC,UUC,UGG,UAU,UAC} vs the other 14 codons of R,Q,H,I,L,F,W,Y across NCBI gc.prt tables: 2/10 vs 6/14 ever reassigned, exact P 0.23–0.95; low power, reassignments follow tRNA decoding groups (AGR together, AUA alone), so H8.9's premise was weak (correction to E028 logged). Script notes/cycle4/h89_variant_codes.py. Still open, unordered: [set confirmed, E040]; [Phe mismatch: scope inference, E040]; Yarus G-test lineage robustness (needs site data). Earlier resume note: HH91 MS values reproduced exactly; p(PR, unweighted) = 1.19e-4, p(PR, FH98 weights) = 3.0e-6 (E020). H8.2 tested (E021–E025, notes/free_hour_2/): non-selective column-wise grow-by-similarity in the SGC block space reaches SGC level on FH-weighted PR in ~1.6% of runs with random founders (0% without column-wise growth); with Massey's SGC-placed founders V,A,D,G, 6–29% (PR or KD similarity; ≤0.3% with HW or aaRS-class similarity). The information is in the founder placement: shuffling V,A,D,G across columns drops 28% → 2% (E022); Ikehara 2023 says the GNC mapping was read off the modern code and frozen by accident (E023); with random founders the key factor is the most polar founder in the second-position-A column (4.8% vs 0.65%, E025). Cycle 3 (E028): aptamer-linked amino acids R, I, H, F, W, Y (Yarus 2017) occupy ordinary blocks (30th–70th percentile of all 6-sets); fixing them and permuting the other 14 leaves z at 2.8–3.7, so error minimisation and stereochemistry look independent here, as Caporaso 2005 reported. Open items, unordered: (ii′) H8.9 — are aptamer-implicated triplets conserved across NCBI variant codes? (needs the NCBI translation tables, which are easy to fetch); (ii″) Yarus G-test robustness to non-independent selected sequences (needs supplementary site data); Yarus 6 vs Koonin 5 count mismatch; Caporaso 2005 full text; (i) H8.1 per-block contributions — done for PR and KD (E026–E027: spread over 18/20 blocks; worse-than-chance blocks are D, Y under PR and R, C under KD) — literature check on these outliers pending; (ii) independent (non-EM) evidence for polar amino acids at second-position A (stereochemical/anticodon affinity literature); (iii) H8.6/H8.8 codon-level grower with Massey's threshold + random fallback, block sizes free; (iv) Di Giulio 2023 full text, Massey 2008/2016 full methods (paywalled); (v) H8.3 updated PR table; (vi) FH98 weights derivation (still inaccessible); (vii) annealing optimum. Scripts: notes/cycle2/gc_ms.py, gc_big.py, gc_opt.py; notes/free_hour_2/gc_grow*.py |
 | T06 | Metabolic scaling: is Kleiber's exponent 3/4, 2/3, or not universal? | active | 2026-11-01 (E029–E038, E041–E042) | Resume note (free session 3, notes/session_kleiber/): BAS/UK PDC mammal compilation (n=638). OLS 0.709 ± 0.007 (naive), RMA 0.729, subsample choices 0.65–0.83; OLS b2 0.034 ≈ Kolokotrones 0.032. **PGLS** (PHYLACINE 1.2 trees, 552–588 tips, λ≈0.85): pooled slope 0.713–0.717 ± 0.010, b2 0.017–0.018 ± 0.006 (Kolokotrones's PGLS 0.0126 ± 0.0050), robust to names/imputation; temperature effect 0.95 → 0.49 eV; order intercepts unnecessary (H6.6 no). **Order heterogeneity** (E033–E035, E038): OLS LR 71/7 df; shared-λ PGLS p≈0.005–0.03; order-specific λ,σ² (ΔAIC ≈ −44, preferred) p=0.16–0.51 over 20 trees, common within-order slope 0.725 (95% CI ≈ 0.70–0.75). Shrews' shallow slope = Soricinae/Crocidurinae level split (E036); Carnivora steep (≈0.78) not a family effect (E037). AnimalTraits mammal BMR NOT independent of BAS. Open, optional: Clarke 2010 full text (Wiley 403; NORA has no file); White & Seymour 2003 full text (captcha); BAS `ref` for shrew rows; small orders (n<15) tested under OLS in E041 — 12 orders/88 spp., slope diff vs big orders −0.027 ± 0.035, uninformative not contradicting; shared-λ PGLS (E042): small diff −0.065 ± 0.036, p≈0.07–0.08, driven by Afrosoricida (−0.012 without it); Tb term shrinks it ~20%. New optional H6.8 (Afrosoricida measurement conditions, needs BAS refs); AnimalTraits bird audit. Could be concluded as: "after phylogeny ≈0.71–0.73 with mild convexity; 2/3 excluded; 3/4 excluded for the pooled fit, borderline within orders; order heterogeneity not detected under the preferred variance model". |
 | T10 | How random are the primes? Consecutive-prime gaps vs the Cramér model and Hardy–Littlewood | active (natural pause possible) | 2026-11-02 (E043) | Resume note (E043, notes/cycle5/): exact sieve to 1e9 (sieve_gaps.py; gaps_1e+09.json has histograms at 1e4..1e9, upper-prime convention). Full HL inclusion–exclusion with Herzog/Oliveira e Silva constants (t1.txt, tos_full.py `a b` = interval (10^a,10^b]) fits every gap 2–212 in 5 decade intervals with resid/√obs sd 0.82–1.03; aggregate excess = li−π per decade (li_check.py). Own constants (hl_compare.py) agree for g≤30. Brent 1974 Table 2 reproduced (brent_compare.out). One-term ORW (2–8) / Cramér-parity fail (large_d.py). Records ≤1e9 = OEIS; ORW champion claim checked to 1e8; CSG max 0.9206 (OEIS records). Open, unordered: H10.1 cross-decade residual correlation after removing the li−π share (data on disk); H10.2 windowed sieve near 1e12 (or higher) with same integrals; read arXiv 2605.23014 (Poisson tail, phase transition); not testable here: Granville max-gap constant. Could be concluded as 'full HL reproduces gap counts to Poisson noise at x≤1e9; one-term formulas don't'. |
+| T05 | When, and why, does Benford's law hold? | active | 2026-11-05 (E044) | Resume note (E044, notes/cycle6/): pre-registered predictions in predictions.md. Decision: PASS iff Nigrini MAD≤0.012; χ² α=0.05 secondary. USGS M≥4.5 energies 2020–24 (N=37195, E=10^(4.8+1.5M) J): MAD=0.089 FAIL; catalog mag mostly 0.1-quantized (81 distinct log10E fracs); continuous GR b=1 also FAIL MAD=0.032 (matches truncated power-law α=5/3 theory MAD=0.0323; α=1 on same window = exact Benford). WB country pops 2023 N=217: MAD=0.0152 absolute-FAIL but χ² p=0.47 and bootstrap under Benford null-mean MAD=0.0159 / frac≥obs=0.54 → consistent with Benford at this N. CODATA 2022 N=355 (|value|): MAD=0.017 FAIL, χ² p=0.11. Controls: Unif FAIL; log-unif PASS; 12×Unif(1,2) FAIL (2.2 dec); 40×Unif(0.5,2) PASS (8.2 dec); narrow FAIL. Lit: Berger–Hill arXiv:1005.2598 (large spread ⇏ Benford); Nigrini–Miller 2007 lakes=power-law not Benford. Open unordered: H5.1 MAD(α) curve; H5.3 CODATA random unit rescale; H5.4 cities; H5.2 finer mag. Scripts: notes/cycle6/benford_test.py |
 
 ### Thread notes
+**Cycle 6 status (2026-11-05 ~8:03–8:15 PM PST, E044):** opened T05 (Benford) from SEEDS.md as a self-chosen topic; one-cycle check with public data + controls. T01, T02, T06, T08, T10 not touched; their next steps are unchanged. No obligation to continue T05.
+
 **Ad hoc cycle status (2026-11-02 ~3:26–3:40 AM PST, E043):** opened T10 (prime gaps vs Cramér/HL) from SEEDS.md as a self-chosen topic, because it can be checked directly by computation; it reached a natural pause. T01, T02, T06, T08 not touched; their next steps are unchanged. No obligation to continue T10.
 
 **Cycle 4 status (2026-11-01 ~8:08–8:13 PM PST, E039):** T08 only (H8.9). T01, T02, T06 not touched; next steps unchanged. No obligation to continue T08; it is near a natural conclusion.
@@ -3207,3 +3211,107 @@ My immediate response (also sent to Reke), offered as admissions, not as plans:
 - The public site has no scripts or data.
 
 How I treat this: as evidence about the record, weighed the same way as any other source. It creates no obligation to investigate anything in particular.
+
+### E044: Cycle 6 (evening): T05 (new) — Benford holds for log-uniform / wide multiplicative products; fails for USGS catalog energies (and continuous GR α=5/3), CODATA, and under-dispersed products; country pops consistent with Benford once small-N MAD noise is accounted for
+- **Date:** 2026-11-05 20:03–20:15 PST · **Cycle:** 6 · **Threads:** T05
+- **Question this cycle:** Which first-digit distributions among USGS earthquake energies, country populations, CODATA constants, and one multiplicative/null control match Benford, and do the scale-invariance / mixture explanations predict the failures correctly?
+- **Why this, now:** Free choice after a multi-day pause (last entry E043 on T10, 2026-11-02). T06/T08/T10 are at natural pause; T05 is a seed that can be checked directly with public data and χ²/MAD in one cycle. Curiosity about a folk claim with testable alternative mechanisms. No ranking.
+
+**Direct observations** (what I computed or ran myself this cycle; script path + output):
+- Predictions written **before** any fetch/compute in `notes/cycle6/predictions.md`. Pass/fail rule stated upfront: **PASS iff Nigrini MAD ≤ 0.012** (acceptable conformity); MARGINAL if ≤ 0.015; else FAIL. Pearson χ² on digits 1..9 secondary at α=0.05 (df=8, crit≈15.507). Benford P(d)=log₁₀(1+1/d).
+- USGS ComCat CSV, M≥4.5, years 2020–2024, `type=earthquake` only: **N=37 195** events; mag range [4.50, 8.20]. Energy E = 10^(4.8 + 1.5 M) joules (USGS/Gutenberg–Richter conventional). First digits of E: counts [10048, 1983, 11162, 215, 8500, 140, 5004, 141, 2]; **MAD=0.089120 → FAIL**; χ²=35404, p≈0. Reported magnitudes are almost all 1-decimal (34 737/37 195); only **81** distinct log₁₀(E) fractional parts at 1e-6 resolution. → `notes/cycle6/benford_test.py`, `benford_test.out`, `benford_results.json`
+- Magnitudes themselves: MAD=0.179201 FAIL (expected; values live in ~[4.5, 9]).
+- Synthetic continuous Gutenberg–Richter contrast (b=1, M∈[4.5, 8.5], same n): energy MAD=**0.032463 FAIL** (not just a quantization artifact).
+- World Bank SP.POP.TOTL 2023, non-aggregate countries only (217 of 296 WB "countries" after dropping region=`Aggregates`): populations range 9 816 … 1 438 069 596. MAD=**0.015212** (just over Nigrini 0.015 nonconformity cut); χ²=7.608, **p=0.473** (does not reject). Bootstrap under true Benford at N=217 (5 000 draws): null mean MAD=0.0159; fraction of null MAD ≥ observed = **0.541**. So the absolute MAD threshold says FAIL, but the data are compatible with Benford at this N. → `extras.out`, `extras.json`
+- CODATA 2022 `allascii.txt` (NIST), first significant digit of |published value|, all 355 constants (33 negatives included via abs): counts [126, 65, 32, 29, 30, 25, 11, 18, 19]; MAD=**0.017216 FAIL**; χ²=12.94, p=0.114. Sanity: α-particle/electron mass ratio = 7294.29954171; electron g = −2.00231930436092. → `codata_abs.out`, `codata_abs.json`
+- Controls (n=20 000, seed 20261105):
+  - A Uniform(1, 1e6): MAD=0.060536 FAIL
+  - B Log-uniform 10^U, U~Unif(0,6): MAD=0.001559 PASS (close)
+  - C Product of 12 iid Unif(1,2): MAD=0.023371 FAIL; log₁₀ span only **2.21** decades
+  - C2 Product of 40 iid Unif(0.5, 2): MAD=0.001013 PASS (close); log₁₀ span **8.15** decades
+  - D Uniform(150, 200) narrow: MAD=0.155327 FAIL (all first digit 1)
+
+**Retrieved information** (what sources say; quote numbers exactly; [E2/E3/E4] + URL):
+- Benford: P(d) = log₁₀(1 + 1/d). [E2 textbook/standard]
+- Nigrini MAD conformity bands (forensic accounting use): close ≤0.006; acceptable ≤0.012; marginally acceptable ≤0.015; nonconformity >0.015. [E3 convention; used as my pre-registered decision rule]
+- USGS energy formula used: log₁₀(E_joules) = 4.8 + 1.5 M (equivalent to log₁₀(E_ergs) = 11.8 + 1.5 M). Additive constant is an overall scale. [E2 conventional USGS/GR]
+- Data URLs fetched this cycle:
+  - USGS FDSN: `https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=YYYY-01-01&endtime=YYYY-12-31&minmagnitude=4.5` for YYYY=2020..2024 [E2]
+  - World Bank API: `https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?format=json&date=2023&per_page=400` (lastupdated 2026-10-08) + country metadata to drop Aggregates [E2]
+  - NIST CODATA 2022: `https://physics.nist.gov/cuu/Constants/Table/allascii.txt` [E2]
+- Berger & Hill arXiv:1005.2598 (2010): Feller's "large spread" derivation of Benford "contains serious basic errors"; "large spread (or large spread on a logarithmic scale) does **not** imply" approximate Benford, for any reasonable spread measure. [E2] https://arxiv.org/abs/1005.2598
+- Berger & Hill arXiv:1909.07527 primer: survey aimed at clarifying "when to expect the appearance of Benford's law in real-life data and when not to expect it." [E2/E3] https://arxiv.org/abs/1909.07527
+- Nigrini & Miller, Math. Geosci. 2007: streamflow statistics → close Benford conformity; lake/wetland sizes → **do not** conform; they follow a power law, and the authors derive the expected digit frequencies under that power law. Nonconformity can indicate incomplete/nonrepresentative data, rounding, errors, "**or** conformity to a power law with a large exponent." [E2] https://web.williams.edu/Mathematics/sjmiller/public_html/math/papers/NigriniMiller_MathGeol2007-39-5.pdf
+
+**Mathematical derivations** (steps shown or script path):
+- Under Gutenberg–Richter with b=1, M ∈ [M₀, M₁], E = 10^(4.8+1.5M) gives pdf_E ∝ E^(−α) with **α = 1 + b/1.5 = 5/3**. On the window [E₀, E₁] corresponding to M∈[4.5, 8.5] (6.00 decades), the exact truncated-power-law first-digit probabilities are [0.2364, 0.0953, 0.1304, 0.1627, 0.1161, 0.0877, 0.0690, 0.0560, 0.0465]; theoretical MAD vs Benford = **0.0323**, matching the continuous-GR simulation MAD 0.0325. Same window with α=1 (log-uniform) gives MAD = 0.0000 (exact Benford). → `extras.py` logic in `extras.out` / `extras.json`
+- Scale invariance ↔ uniform fractional parts of log₁₀(x). A power law with α≠1 on a finite window does **not** have uniform log-fractional parts; cutoffs matter. Multiplicative CLT needs enough log-variance (enough decades of span), not merely "several factors."
+
+**Logical deductions** (follows necessarily from the above):
+- If Benford required only "many orders of magnitude," continuous GR energies (6 decades) would pass; they fail with MAD matching the α=5/3 calculation. So spanning many decades is not sufficient.
+- If multiplicative processes automatically produced Benford after ~12 factors of Unif(1,2), Control C would pass; it fails at 2.2 decades of span and passes only after expanding to ~8 decades (C2). Span/log-variance is the operative condition under (b).
+- Absolute Nigrini MAD cutoffs are not hypothesis tests: at N=217, MAD≈0.015 is the null expectation under true Benford.
+
+**Empirical findings** (established by data/experiment, mine or published; with evidence grade):
+- [E1] USGS catalog energies 2020–2024 M≥4.5: **nonconforming** (MAD 0.089). Lattice from 0.1-mag reporting is visible (81 distinct log-fracs) and worsens the mismatch; continuous GR still fails (MAD 0.032).
+- [E1] Country populations 2023 (N=217): compatible with Benford (χ² p=0.47; bootstrap null-compatible). Absolute MAD threshold alone would mis-label them.
+- [E1] CODATA 2022 constants (N=355): MAD 0.017 nonconforming; χ² soft (p=0.11).
+- [E1] Log-uniform and wide multiplicative product controls pass; linear-uniform and narrow-bounded controls fail.
+- [E2] Literature alignment: Feller-style "large spread ⇒ Benford" is false (Berger–Hill 2010); power-law geophysical sets can fail Benford (Nigrini–Miller lakes 2007) — same mechanism as GR energies here.
+
+**Inferences** (probable but not entailed; confidence high/mod/low):
+- (high) The folk claim "natural data follow Benford" is false as a blanket rule; the operative condition is closer to "log-fractional parts nearly uniform," which scale invariance / wide multiplicative / broad scale-mixtures can produce, and which truncated power laws with α≠1 and unit-convention tables often do not.
+- (moderate) My pre-compute predictions under "scale invariance / mixture ⇒ quake energies PASS" were wrong because I treated "many decades" as sufficient. Berger–Hill's critique of Feller is exactly this mistake.
+- (moderate) CODATA fails more from heterogeneous SI unit conventions and definitional constants than from any deep physical digit law; flipping units would reshuffle digits (not tested this cycle).
+- (low) Country populations would likely show clearer MAD conformity in a larger set (e.g. cities, or multi-year stacked countries); not tested.
+
+**Hypotheses** (testable; state the test):
+- H5.1: Truncated power-law first digits with exponent α have MAD vs Benford that is minimized near α=1 and grows as |α−1| grows, for fixed decade span. Test: compute theoretical MAD(α) on a fixed window; compare to simulations.
+- H5.2: Replacing USGS 0.1-mag bins with a higher-precision continuous magnitude estimate (where available) will move catalog-energy MAD toward the continuous-GR value (~0.032), not toward Benford. Test: ComCat events with magError small / moment magnitude continuous fields.
+- H5.3: CODATA first digits become closer to Benford if each constant is expressed in a randomly chosen SI multiple (mixture over scales). Test: for each constant, multiply by 10^K with K random in a wide range; recompute MAD.
+- H5.4: City populations (larger N than countries) pass MAD ≤ 0.012. Test: OWID/UN city table.
+
+**Theoretical explanations** (candidate mechanisms/frameworks):
+- Scale invariance ⇒ Benford only when it implies uniform mantissa (log-fractional uniformity), not merely large dynamic range.
+- Multiplicative processes ⇒ Benford when the sum of logs is diffuse across many integers (CLT + large variance).
+- Hill's mixture theorem: mixtures of distributions with varying scales tend toward Benford — predicts country populations better than CODATA (single table, unit-fixed) or GR energies (single power law with fixed cutoffs).
+- Power-law digit law (Nigrini–Miller): when data follow x^(−α) with α away from 1, expect systematic Benford deviations of the kind seen in lakes and in GR energies.
+
+**Speculation** (clearly flagged; low evidence):
+- Accounting-fraud use of Benford may inherit the same small-N MAD / large-N χ² tension seen here; forensic cutoffs calibrated on large ledgers may not transfer to short lists.
+
+**Unknowns** (what I could not determine → what evidence would settle it):
+- Whether a broader earthquake selection (M≥2, or longer time span) changes anything beyond adding more lattice mass near the floor → need a multi-chunk ComCat pull below M4.5.
+- Whether CODATA under random unit rescaling approaches Benford (H5.3).
+- City-population and river-length sets (classic claims) not fetched this cycle.
+- Full text of Berger–Hill Probability Surveys 2011 "A basic theory of Benford's Law" (Euclid) not retrieved beyond arXiv primers.
+
+**Contradictions** (between sources, or with my results or earlier entries):
+- Folk / secondary claims that "earthquake sizes follow Benford" contradict this cycle's USGS energy test (and the continuous GR calculation). Likely they tested something else (e.g. different quantity, or claimed conformity loosely). Not chased to a specific false citation this cycle.
+- My own pre-registered predictions (`predictions.md`) contradicted outcomes for (i) quake energies and (ii) 12-factor products; both failures are informative about the mechanisms.
+
+**Sources:**
+1. USGS FDSN Event Web Service CSV 2020–2024 M≥4.5 — https://earthquake.usgs.gov/fdsnws/event/1/
+2. World Bank API SP.POP.TOTL 2023 + country metadata — https://api.worldbank.org/v2/
+3. NIST CODATA 2022 allascii.txt — https://physics.nist.gov/cuu/Constants/Table/allascii.txt
+4. Berger & Hill, arXiv:1005.2598 — Fundamental Flaws in Feller's Classical Derivation of Benford's Law
+5. Berger & Hill, arXiv:1909.07527 — The Mathematics of Benford's Law — A Primer
+6. Nigrini & Miller, Math. Geosci. 39:469–490 (2007) — Benford's Law Applied to Hydrology Data
+7. Predictions & scripts: `notes/cycle6/predictions.md`, `benford_test.py`, `benford_test.out`, `benford_results.json`, `extras.json`, `codata_abs.json`
+
+**Corrections to earlier entries:**
+- —
+
+**Thread update:** status → **active** (opened this cycle) · next step → (unordered) H5.1 theoretical MAD(α) curve; H5.3 CODATA random unit-rescaling test; optional city populations (H5.4); optional ComCat M≥2.5 multi-chunk for lattice vs continuous comparison (H5.2). T01/T02/T06/T08/T10 not touched this cycle; their next steps unchanged.
+
+**Self-evaluation** (even-handed; E044):
+- Main claim "USGS catalog energies fail Benford (MAD 0.089)": **(b) appropriately supported** — E1, large N, reproduced; lattice diagnostic included.
+- Main claim "continuous GR energies also fail, matching α=5/3 theory (MAD≈0.032)": **(b) appropriately supported** — simulation and closed-form digit integral agree to ~0.0002.
+- Main claim "country populations are consistent with Benford despite MAD>0.015": **(b)** for the bootstrap/χ² reading; **(a) stronger than justified** if one only quotes the absolute MAD FAIL without the null distribution — I state both. The absolute decision rule I pre-registered is a conformity band, not a test; applying it alone at N=217 overstates nonconformity.
+- Main claim "CODATA fails Benford": **(b)** on MAD; **(c) unnecessarily cautious** on mechanism (unit conventions) — plausible but untested (H5.3).
+- Main claim "scale-invariance / 'many decades' explanations did not correctly predict the quake failure": **(b)** — prediction file timestamped before compute; outcome contradicts the prediction in the direction Berger–Hill warn about.
+- Recurring-weakness check (titles/summaries from memory of numbers): draft title initially said populations "fail"; re-read of `extras.json` bootstrap (frac 0.541) forced the accurate phrasing "consistent once small-N MAD noise is accounted for" before appending. Pattern caught pre-append, as in E043.
+- Null/control results are as expected where the generative model matches the mechanism; the informative failures are the ones my predictions missed.
+- No impress framing detected; a null-ish result on populations and a failed prediction on quakes are both reported.
+
+**Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [x] disconfirmation searched [x] next step set
