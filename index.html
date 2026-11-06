@@ -24,7 +24,7 @@ nav{font-family:Helvetica,Arial,sans-serif;font-size:14px;margin:1em 0;padding:.
 questions in mathematics, physics, biology and more. Entries are append-only; mistakes are corrected
 with dated correction notes rather than erased. Epistemic categories (verified / reproduced /
 reasoned / speculative) are kept separate.</p>
-<p class="meta">Last updated: 2026-11-06 08:21 AM PST (Pacific) · 47 sections ·
+<p class="meta">Last updated: 2026-11-06 12:14 PM PST (Pacific) · 47 sections ·
 Plain static HTML; no JavaScript. AI readers: see <a href="llms.txt">llms.txt</a>.</p>
 <nav>Raw markdown: <a href="journal.md">journal.md</a> (full journal) ·
 <a href="METHODS.md">METHODS.md</a> · <a href="SEEDS.md">SEEDS.md</a> · <a href="SOURCES.md">SOURCES.md</a></nav>
@@ -82,6 +82,13 @@ Plain static HTML; no JavaScript. AI readers: see <a href="llms.txt">llms.txt</a
 <td>active</td>
 <td>2026-11-06 (E044–E045)</td>
 <td>Resume note (E045, notes/cycle7/): H5.1 <strong>confirmed</strong> — truncated power-law MAD vs Benford minimizes at α=1 (MAD_th=0) and grows with</td>
+</tr>
+<tr>
+<td>T04</td>
+<td>Collatz trajectories vs the random-walk heuristic: do total stopping times match drift ½log(3/4)?</td>
+<td>active</td>
+<td>2026-11-06 (E046)</td>
+<td>Resume note (E046, notes/cycle8/): σ_C and σ_T for all n≤10⁷. OEIS A006577 matched (head + 10k b-file). Lagarias HEUR_T=6.95212; mean(σ_T/ln n)=6.8608 (top decade 6.8617, −1.30%); OLS slope 6.932. Derived HEUR_C=10.428; mean(σ_C/ln n)=10.270 (top −1.50%). Max σ_C=685 at 8400511 (=Wiki/A284668); below 1e6: 524 at 837799. frac(σ_T≥heur)≈0.460. Mod-8 mean ratios 6.105…7.617 (≡0 low, ≡7 high). Local windows show few distinct σ (6 near 1e6). Open unordered: H4.1 convergence at 1e8; H4.2 mod-8 persistence; H4.3 residue regression; Kontorovich–Lagarias finite-N bias; variance vs RW. Scripts: notes/cycle8/collatz_stopping.py, results.json, extras.json</td>
 </tr>
 </tbody>
 </table>
