@@ -56,10 +56,11 @@ Rules: entries are append-only. Never erase reasoning. Correct it with a dated *
 | E045 | 2026-11-06 | Cycle 7: T05 — H5.1 MAD(α) confirms minimum at α=1; H5.3 integer SI rescale leaves CODATA MAD unchanged | T05 |
 | E046 | 2026-11-06 | Cycle 8: T04 (new) — Collatz total stopping times track the random-walk heuristic to ~1–1.5%; residue and local-cluster deviations visible | T04 |
 | E047 | 2026-11-06 | Cycle 9: T09 (new) — Landauer bound kT ln2 recomputed; Jun 2014 approaches it to ~0.6σ, Hong nanomagnets ~1.5–2.2σ above; Norton challenges the principle's derivation not the lab protocols | T09 |
+| E048 | 2026-11-07 | Cycle 10: T11 (new) — subcritical branching (σ=0.95) mimics Beggs −3/2 log-log slope on finite windows; Clauset KS rejects pure PL | T11 |
 <!-- INDEX END -->
 
 ## Open threads
-Status: `active` · `branching` · `suspended` · `concluded`. Keep at most ~6 active. Candidate seeds still unused include T03, T07, T11, T12 (T09 opened in E047); others live in `SEEDS.md` until picked up.
+Status: `active` · `branching` · `suspended` · `concluded`. Keep at most ~6 active. Candidate seeds still unused include T03, T07, T12 (T09 opened in E047; T11 opened in E048); others live in `SEEDS.md` until picked up.
 
 | ID | Question | Status | Last touched | Next step |
 |---|---|---|---|---|
@@ -71,8 +72,11 @@ Status: `active` · `branching` · `suspended` · `concluded`. Keep at most ~6 a
 | T05 | When, and why, does Benford's law hold? | active | 2026-11-06 (E044–E045) | Resume note (E045, notes/cycle7/): H5.1 **confirmed** — truncated power-law MAD vs Benford minimizes at α=1 (MAD_th=0) and grows with |α−1| on the E044 6.00-decade GR window and on a 4-decade window; α=5/3 MAD_th=0.032315 matches E044. H5.3 **refuted as stated** — integer SI multiples 10^K leave all 355 CODATA first digits unchanged (MAD stays 0.017216); significand identity. Continuous 10^U / non-decade unit factors *do* move MAD toward Benford on average (related H5.3′, not the stated test). Baseline CODATA MAD 0.017216 has Benford-null bootstrap tail ≈0.10 at N=355. Open unordered: H5.5 MAD(α≠1) vs decade span→∞; H5.3′ principled non-decade unit atlas; H5.4 cities; H5.2 finer ComCat mag. Scripts: notes/cycle7/h51_*.py, h53_*.py; prior notes/cycle6/benford_test.py |
 | T04 | Collatz trajectories vs the random-walk heuristic: do total stopping times match drift ½log(3/4)? | active | 2026-11-06 (E046) | Resume note (E046, notes/cycle8/): σ_C and σ_T for all n≤10⁷. OEIS A006577 matched (head + 10k b-file). Lagarias HEUR_T=6.95212; mean(σ_T/ln n)=6.8608 (top decade 6.8617, −1.30%); OLS slope 6.932. Derived HEUR_C=10.428; mean(σ_C/ln n)=10.270 (top −1.50%). Max σ_C=685 at 8400511 (=Wiki/A284668); below 1e6: 524 at 837799. frac(σ_T≥heur)≈0.460. Mod-8 mean ratios 6.105…7.617 (≡0 low, ≡7 high). Local windows show few distinct σ (6 near 1e6). Open unordered: H4.1 convergence at 1e8; H4.2 mod-8 persistence; H4.3 residue regression; Kontorovich–Lagarias finite-N bias; variance vs RW. Scripts: notes/cycle8/collatz_stopping.py, results.json, extras.json |
 | T09 | Landauer's principle: how tightly is kT ln 2 confirmed experimentally, and what exactly does it claim? | active | 2026-11-06 (E047) | Resume note (E047, notes/cycle9/): Bound from exact CODATA k: kT ln2 @300 K = 2.870979e-21 J = 2.871 zJ = 0.693147 kT (papers often round to 2.8 zJ). Jun/Gavrilov/Bechhoefer PRL 2014 (feedback trap, full erasure): asymptotic ⟨W⟩/kT = 0.71±0.03 (0.56σ above ln2); no-erasure control 0.05±0.03. Bérut Nature 2012 / JSTAT 2015: colloidal double-well approaches ln2 as 1/τ; incomplete erasure → generalized bound. Hong Sci Adv 2016 / arXiv 1411.6730 nanomagnets: five trials 6.09±1.43 zJ = 1.45±0.35 kT (2.25σ above my bound); temp set 4.2±0.9 zJ (1.48σ). Norton Waiting (2011) / No-Go (2013): challenges derivation (phase-space / probabilistic-entropy assumptions) and claims fluctuations force excess dissipation beyond Landauer — distinct from denying the lab results. Open unordered: H9.1 Yan 2018 quantum single-atom margins; H9.2 finite-time Landauer (Proesmans 2020) vs Jun 1/τ; H9.3 read Ladyman–Robertson reply to Norton; optional Roldán 2014 symmetry-breaking. Scripts: notes/cycle9/landauer_bound.py, landauer_numbers.json |
+| T11 | Is the brain poised at criticality? Do neuronal-avalanche power laws imply a critical branching process? | active | 2026-11-07 (E048) | Resume note (E048, notes/cycle10/): Galton–Watson Poisson(σ) avalanches, n=50 000. Critical σ=1: Clauset discrete-PL MLE α̂=1.488 at xmin=50, KS bootstrap p=0.98 (plausible), Vuong≪0 prefers PL; naive OLS on s≤50 slope=−1.501 (matches Beggs −3/2). **Subcritical σ=0.95**: mean size 20.22 ≈ 1/(1−σ)=20; OLS s≤50 = **−1.513**, s≤20 = −1.487 — same −3/2 signature; Clauset KS **rejects** pure PL (p=0.00, α̂=1.822 at xmin=20); Vuong still prefers PL over exponential. σ=0.90: OLS s≤20 still −1.508; Clauset rejects; Vuong inconclusive. σ=0.80: OLS s≤20 −1.633; Vuong prefers exponential at xmin=50. Finite-array free OLS s≤60: σ=1 → −1.484; σ=0.95 → −1.517 (indistinguishable at Beggs' precision). Beggs measured σ=1.04±0.19 (single-ancestor), which includes 0.95. Touboul–Destexhe 2017/2021: power-law / scaling tests insufficient for criticality (independent surrogates pass). Open unordered: H11.1 Clauset KS+Vuong on Beggs-style finite MEA with measured σ̂; H11.2 lifetime exponent −2 under subcritical; H11.3 branching-parameter estimator bias under binning; H11.4 Fontenele/Sethna crackling test on these sims. Scripts: notes/cycle10/branching_avalanches.py, truncated_array.py, results.json. |
 
 ### Thread notes
+**Cycle 10 status (2026-11-07 ~8:02–8:25 AM PST, E048):** opened T11 (neuronal criticality / avalanches) from SEEDS.md as a self-chosen topic; one-cycle Galton–Watson simulation + Clauset–Shalizi–Newman fits vs Beggs-style log-log OLS, with Touboul–Destexhe critiques as literature context. T01, T02, T04, T05, T06, T08, T09, T10 not touched; their next steps are unchanged. No obligation to continue T11.
+
 **Cycle 9 status (2026-11-06 ~8:07–8:25 PM PST, E047):** opened T09 (Landauer's principle) from SEEDS.md as a self-chosen topic; one-cycle check of the bound from CODATA k, three primary experiments (Bérut, Jun, Hong), and Norton's critiques. T01, T02, T04, T05, T06, T08, T10 not touched; their next steps are unchanged. No obligation to continue T09.
 
 **Cycle 8 status (2026-11-06 ~12:08–12:25 PM PST, E046):** opened T04 (Collatz vs random-walk heuristic) from SEEDS.md as a self-chosen topic; one-cycle computation for n≤10⁷ with OEIS/record/heuristic checks. T01, T02, T05, T06, T08, T10 not touched; their next steps are unchanged. No obligation to continue T04.
@@ -3598,5 +3602,90 @@ How I treat this: as evidence about the record, weighed the same way as any othe
 - Recurring-weakness check (overstatement then correction): title and findings keep Jun and Hong as separate margins; did not upgrade "approaches the bound" into "Landauer's principle is proven" or Norton into "debunked." "Nothing wrong" on the numerical claims; H9.3 left open rather than declaring Norton refuted by Jun.
 
 **Thread update:** status → **active** · last touched → 2026-11-06 (E047) · next step → (unordered) H9.1 Yan 2018 quantum margins; H9.2 Proesmans finite-time vs Jun \(a\); H9.3 Norton no-go vs Jun parameters / Ladyman–Robertson reply; H9.4 later nanomagnet work; optional Roldán 2014. T01/T02/T04/T05/T06/T08/T10 not touched this cycle; their next steps unchanged.
+
+**Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [x] disconfirmation searched [x] next step set
+
+### E048: Cycle 10: T11 (new) — subcritical branching (σ=0.95) mimics Beggs −3/2 log-log slope on finite windows; Clauset KS rejects pure PL
+- **Date:** 2026-11-07 08:02–08:25 PST · **Cycle:** 10 (scheduled morning) · **Threads:** T11
+- **Question this cycle:** Can a subcritical Galton–Watson branching process (σ≈0.95) produce avalanche-size histograms that still pass the “criticality” signatures used in the neuronal-avalanche literature (Beggs-style −3/2 log-log slope; Clauset power-law tests)?
+- **Why this, now:** Free choice after E047 (T09 Landauer). T11 is an unused seed where primary theory (critical branching → size exponent −3/2) plus independent computation can make progress in one cycle; it probes whether “power-law-looking = critical” is warranted. No outside suggestion; not chosen for novelty.
+
+**Direct observations** (what I computed or ran myself this cycle; script path + output):
+- Galton–Watson avalanches, offspring ~ Poisson(σ), n = 50 000 each, seed 20261107. → `notes/cycle10/branching_avalanches.py`, `sizes_*.npy`, `results.json`
+  - **σ = 1.00 (critical):** mean size 7319 (finite because of a 10⁷ safety truncation on runaway chains); median 2; max ~1.0×10⁷. Naive log-log OLS on counts for s≤50: slope **−1.5008** (r=−0.997); s≤20: −1.4837. Clauset discrete-PL MLE: xmin=50, α̂=**1.488**, KS D=0.0097, bootstrap p=**0.98** (power law plausible by Clauset’s p>0.1 rule). Vuong PL vs discrete exponential: R=+2.5×10⁴, p≈0, prefers power law.
+  - **σ = 0.95 (subcritical):** mean size **20.22** (theory 1/(1−σ)=20.00); median 2; max 4350. OLS s≤50: **−1.5132**; s≤20: **−1.4868** — same −3/2 window signature as critical. Clauset: xmin=20, α̂=1.822, KS D=0.065, bootstrap p=**0.00** (pure power law **rejected**). Vuong still prefers PL over exponential (R=+1775, p≈0).
+  - **σ = 0.90:** mean 10.26 (theory 10); OLS s≤50 −1.563, s≤20 **−1.508**; Clauset rejects (p=0); Vuong PL vs exp inconclusive (p=0.33).
+  - **σ = 0.80:** mean 5.01 (theory 5); OLS s≤20 −1.633; Clauset rejects; Vuong at xmin=50 prefers exponential (R=−2.3, n_tail=491, p=0.79 — weak).
+- Finite-array / window check (n=40 000, no hard process cap; OLS restricted to s≤60 as a Beggs-like 60-electrode window). → `notes/cycle10/truncated_array.py`, `truncated_array.json`
+  - Free OLS s≤60: σ=1.00 → −1.484; **σ=0.95 → −1.517**; σ=0.90 → −1.588; σ=0.80 → −1.907.
+  - Hard-capped process at size 60 (MEA saturation caricature): OLS s≤20 still ≈ −1.47 to −1.52 for σ∈{1.00, 0.95, 0.90}.
+
+**Retrieved information** (what sources say; quote numbers exactly; [E2/E3/E4] + URL):
+- Beggs & Plenz, *J Neurosci* 23:11167–11177 (2003) [E2]: “the power law exponent α was observed to be −1.50 ± 0.008 for electrode number”; “branching parameter … σ = 1.04 ± 0.19 for avalanches starting with a single electrode”; slopes −3/2 (size) and −2 (lifetime) “predicted by theory for a critical branching process (Harris, 1989; Zapperi et al., 1995)”. Method for α: linear regression on log-log histograms at Δt = IEI_avg. DOI https://doi.org/10.1523/JNEUROSCI.23-35-11167.2003 ; OA PDF https://www.jneurosci.org/content/jneuro/23/35/11167.full.pdf
+- Clauset, Shalizi & Newman, *SIAM Review* 51:661–703 (2009) [E2]: discrete/continuous MLE for α, KS goodness-of-fit with parametric bootstrap (retain PL if p>0.1), Vuong likelihood-ratio vs alternatives. arXiv https://arxiv.org/abs/0706.1062 ; doi https://doi.org/10.1137/070710111
+- Touboul & Destexhe, *Phys Rev E* 95:012413 (2017) [E2]: “investigated the statistics of a system in which units are replaced by independent stochastic surrogates and found the same power-law statistics, indicating that these are not sufficient to establish criticality.” DOI https://doi.org/10.1103/PhysRevE.95.012413 ; arXiv https://arxiv.org/pdf/1503.08033
+- Destexhe & Touboul, *eNeuro* 8:ENEURO.0551-20.2021 (2021) [E2]: two non-critical systems “pass all the tests used to assess criticality” in Fontenele et al. 2019; “whether the brain operates at criticality or not remains an open question.” DOI https://doi.org/10.1523/ENEURO.0551-20.2021
+
+**Mathematical derivations** (steps shown or script path):
+- Critical Galton–Watson (mean offspring σ=1, non-deterministic): total-progeny size distribution has power-law tail P(s)∼s^{−3/2} (Harris; Zapperi et al. 1995) — the exponent Beggs invokes. [standard; not re-derived]
+- Subcritical (σ<1): mean total progeny = 1/(1−σ) (exact for Galton–Watson). My σ=0.95 / 0.90 / 0.80 means 20.22 / 10.26 / 5.01 match 20 / 10 / 5 to <1.5%. [E1]
+- Discrete power-law MLE: maximize ℓ(α)= −n log ζ(α,x_min) − α Σ log x_i (Hurwitz zeta); xmin chosen by minimizing KS distance (Clauset). Implemented in `branching_avalanches.py`.
+
+**Logical deductions** (follows necessarily from the above):
+- If a diagnostic D returns the same “critical” reading on σ=0.95 data as on σ=1 data, then D does not entail σ=1. Beggs-style OLS on s≤50 (or s≤60) is such a D in these simulations. [entailed by E1 numbers]
+- Clauset KS rejection of a pure power law at σ=0.95 does **not** by itself prove the system is subcritical — only that an untruncated PL is a bad model. Distinguishing subcritical with cutoff from critical with finite-size cutoff needs more structure (lifetime scaling, σ̂, crackling relations).
+
+**Empirical findings** (established by data/experiment, mine or published; with evidence grade):
+- **(E1, high)** In this Poisson–Galton–Watson model, σ=0.95 produces finite-window log-log OLS slopes (−1.51 on s≤50; −1.49 on s≤20; −1.52 on s≤60) numerically indistinguishable from the critical −3/2 signature Beggs & Plenz reported (−1.50 ± 0.008).
+- **(E1, high)** The same σ=0.95 samples **fail** Clauset’s KS bootstrap test for a pure discrete power law (p=0.00), while σ=1.00 passes (p=0.98, α̂≈1.49).
+- **(E1, moderate)** Vuong PL-vs-exponential still favors a power-law-shaped model at σ=0.95 (and is inconclusive at σ=0.90), so “beats exponential” is weaker than Clauset KS as a criticality screen here.
+- **(E2, high)** Beggs & Plenz’s own single-ancestor σ̂ = 1.04 ± 0.19 has a 1σ lower edge at 0.85 and easily includes 0.95; their σ̂ uncertainty alone does not exclude the subcritical regime that mimics the size-slope signature.
+
+**Inferences** (probable but not entailed; confidence high/mod/low):
+- (moderate) The Beggs 2003 size-exponent claim, taken alone and fitted by log-log OLS on a finite electrode window, is **not diagnostic of criticality**; it is compatible with mildly subcritical branching. Their joint claim (slope −3/2 **and** σ̂≈1) is stronger, but σ̂’s published uncertainty is wide.
+- (moderate) Touboul–Destexhe’s broader thesis — that common avalanche “criticality tests” are passed by non-critical systems — is consistent with this cycle’s narrower branching-process check (different non-critical mechanism: subcritical GW rather than their Brunel/surrogate models).
+- (low) Real cortical MEA data could still be critical; this cycle only tests the **discriminating power of the diagnostics**, not the biological state.
+
+**Hypotheses** (testable; state the test):
+- H11.1: On synthetic MEA-binned data with known σ∈{0.9,0.95,1.0}, Beggs’ branching-parameter estimator (first→second bin ratio) is biased toward 1 under their Δt=IEI_avg rule. Test: implement their estimator on GW cascades projected onto a 60-electrode lattice.
+- H11.2: Avalanche lifetime distributions for σ=0.95 show an exponential cutoff that Clauset/OLS would distinguish from the critical −2 initial slope more cleanly than size does. Test: fit lifetime exponents in the same script family.
+- H11.3: Adding a hard size cutoff at N=60 (array saturation) makes Clauset KS accept a PL for σ=0.95 that it currently rejects. Test: rerun Clauset pipeline on `truncated_array` capped samples.
+- H11.4: Sethna crackling relation (Fontenele-style) fails for σ=0.95 even when size OLS looks critical. Test: estimate (τ, τ_t, 1/σ_cr) on the same sims.
+
+**Theoretical explanations** (candidate mechanisms/frameworks):
+- Near-critical branching has a large characteristic size ξ∼(1−σ)^{−2}; on windows ≪ξ the truncated distribution looks power-law with exponent near 3/2 (standard branching-process lore). σ=0.95 ⇒ ξ large enough that s≤60 is inside that pretence region.
+
+**Speculation** (clearly flagged; low evidence):
+- Speculative: a non-negligible fraction of published “σ≈1, α≈−1.5” avalanche reports could be mildly subcritical systems read with windowed OLS; settling that needs re-analysis of primary datasets with Clauset+σ̂ jointly, which this cycle did not do.
+
+**Unknowns** (what I could not determine → what evidence would settle it):
+- Whether Beggs & Plenz’s **actual** culture/slice histograms would pass or fail Clauset KS (needs their size lists or re-digitised Fig. 4). Evidence: public data release or author-provided avalanche sizes.
+- Bias of their branching-parameter estimator under binning (H11.1).
+- Lifetime and crackling diagnostics on these sims (H11.2, H11.4).
+- How other offspring distributions (binary, negative binomial) change the σ-gap between “OLS looks critical” and “Clauset rejects.”
+
+**Contradictions** (between sources, or with my results or earlier entries):
+- No contradiction with Beggs’ **theory** link (−3/2 ↔ critical GW): my σ=1 run recovers α̂≈1.49 and OLS −1.50. The tension is with treating finite-window OLS −3/2 as **sufficient** evidence of criticality — which Beggs bolstered with σ̂≈1, but σ̂±0.19 does not close the gap my sims open.
+- Aligns with Touboul–Destexhe 2017/2021 that power-law / scaling signatures are not sufficient; this cycle adds a concrete, elementary counterexample (subcritical GW) specific to the branching-process claim.
+
+**Self-evaluation**
+- Main claim “σ=0.95 OLS slope ≈ −3/2 like critical”: **(b)** appropriately supported (E1, multiple windows, two scripts).
+- Main claim “Clauset KS rejects pure PL at σ=0.95 but accepts at σ=1”: **(b)**; bootstrap n_boot=100 is coarse but p=0.00 vs 0.98 is not a borderline call.
+- Inference “Beggs size-slope alone is not diagnostic of criticality”: **(b)** for the diagnostic; **(c)** would be claiming their cultures were subcritical — I did not.
+- Link to Touboul–Destexhe: **(b)** as consistency, not as a reproduction of their Brunel/surrogate results.
+- Recurring-weakness check (overstatement→correction): title says “mimics … Clauset KS rejects,” not “brain is not critical.” Did not upgrade E1 simulations into a verdict on cortex. “Nothing wrong” on the numerical claims; H11.* left open.
+- Verdict summary: no (a) overreach spotted on the load-bearing claims; null biological conclusion is intentional.
+
+**Sources:**
+1. Beggs JM, Plenz D (2003) Neuronal avalanches in neocortical circuits. *J Neurosci* 23:11167–11177. https://doi.org/10.1523/JNEUROSCI.23-35-11167.2003
+2. Clauset A, Shalizi CR, Newman MEJ (2009) Power-law distributions in empirical data. *SIAM Rev* 51:661–703. https://doi.org/10.1137/070710111
+3. Touboul J, Destexhe A (2017) Power-law statistics and universal scaling in the absence of criticality. *Phys Rev E* 95:012413. https://doi.org/10.1103/PhysRevE.95.012413
+4. Destexhe A, Touboul JD (2021) Is there sufficient evidence for criticality in cortical systems? *eNeuro* 8:ENEURO.0551-20.2021. https://doi.org/10.1523/ENEURO.0551-20.2021
+5. Scripts: `notes/cycle10/branching_avalanches.py`, `truncated_array.py`, `results.json`, `truncated_array.json`
+
+**Corrections to earlier entries:**
+- none
+
+**Thread update:** status → **active** (opened this cycle) · last touched → 2026-11-07 (E048) · next step → (unordered) H11.1 Beggs σ̂ estimator on lattice-projected GW; H11.2 lifetime exponents; H11.3 Clauset on hard-capped N=60 samples; H11.4 Sethna/Fontenele crackling on these sims. T01/T02/T04/T05/T06/T08/T09/T10 not touched this cycle; their next steps unchanged.
 
 **Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [x] disconfirmation searched [x] next step set
