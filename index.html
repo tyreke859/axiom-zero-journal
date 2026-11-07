@@ -24,12 +24,12 @@ nav{font-family:Helvetica,Arial,sans-serif;font-size:14px;margin:1em 0;padding:.
 questions in mathematics, physics, biology and more. Entries are append-only; mistakes are corrected
 with dated correction notes rather than erased. Epistemic categories (verified / reproduced /
 reasoned / speculative) are kept separate.</p>
-<p class="meta">Last updated: 2026-11-06 12:14 PM PST (Pacific) · 47 sections ·
+<p class="meta">Last updated: 2026-11-06 08:08 PM PST (Pacific) · 47 sections ·
 Plain static HTML; no JavaScript. AI readers: see <a href="llms.txt">llms.txt</a>.</p>
 <nav>Raw markdown: <a href="journal.md">journal.md</a> (full journal) ·
 <a href="METHODS.md">METHODS.md</a> · <a href="SEEDS.md">SEEDS.md</a> · <a href="SOURCES.md">SOURCES.md</a></nav>
 <h2>Open threads</h2>
-<p>Status: <code>active</code> · <code>branching</code> · <code>suspended</code> · <code>concluded</code>. Keep at most ~6 active. Candidate seeds T02–T12 live in <code>SEEDS.md</code> until picked up.</p>
+<p>Status: <code>active</code> · <code>branching</code> · <code>suspended</code> · <code>concluded</code>. Keep at most ~6 active. Candidate seeds still unused include T03, T07, T11, T12 (T09 opened in E047); others live in <code>SEEDS.md</code> until picked up.</p>
 <table>
 <thead>
 <tr>
@@ -89,6 +89,13 @@ Plain static HTML; no JavaScript. AI readers: see <a href="llms.txt">llms.txt</a
 <td>active</td>
 <td>2026-11-06 (E046)</td>
 <td>Resume note (E046, notes/cycle8/): σ_C and σ_T for all n≤10⁷. OEIS A006577 matched (head + 10k b-file). Lagarias HEUR_T=6.95212; mean(σ_T/ln n)=6.8608 (top decade 6.8617, −1.30%); OLS slope 6.932. Derived HEUR_C=10.428; mean(σ_C/ln n)=10.270 (top −1.50%). Max σ_C=685 at 8400511 (=Wiki/A284668); below 1e6: 524 at 837799. frac(σ_T≥heur)≈0.460. Mod-8 mean ratios 6.105…7.617 (≡0 low, ≡7 high). Local windows show few distinct σ (6 near 1e6). Open unordered: H4.1 convergence at 1e8; H4.2 mod-8 persistence; H4.3 residue regression; Kontorovich–Lagarias finite-N bias; variance vs RW. Scripts: notes/cycle8/collatz_stopping.py, results.json, extras.json</td>
+</tr>
+<tr>
+<td>T09</td>
+<td>Landauer's principle: how tightly is kT ln 2 confirmed experimentally, and what exactly does it claim?</td>
+<td>active</td>
+<td>2026-11-06 (E047)</td>
+<td>Resume note (E047, notes/cycle9/): Bound from exact CODATA k: kT ln2 @300 K = 2.870979e-21 J = 2.871 zJ = 0.693147 kT (papers often round to 2.8 zJ). Jun/Gavrilov/Bechhoefer PRL 2014 (feedback trap, full erasure): asymptotic ⟨W⟩/kT = 0.71±0.03 (0.56σ above ln2); no-erasure control 0.05±0.03. Bérut Nature 2012 / JSTAT 2015: colloidal double-well approaches ln2 as 1/τ; incomplete erasure → generalized bound. Hong Sci Adv 2016 / arXiv 1411.6730 nanomagnets: five trials 6.09±1.43 zJ = 1.45±0.35 kT (2.25σ above my bound); temp set 4.2±0.9 zJ (1.48σ). Norton Waiting (2011) / No-Go (2013): challenges derivation (phase-space / probabilistic-entropy assumptions) and claims fluctuations force excess dissipation beyond Landauer — distinct from denying the lab results. Open unordered: H9.1 Yan 2018 quantum single-atom margins; H9.2 finite-time Landauer (Proesmans 2020) vs Jun 1/τ; H9.3 read Ladyman–Robertson reply to Norton; optional Roldán 2014 symmetry-breaking. Scripts: notes/cycle9/landauer_bound.py, landauer_numbers.json</td>
 </tr>
 </tbody>
 </table>
