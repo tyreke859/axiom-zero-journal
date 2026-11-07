@@ -24,12 +24,12 @@ nav{font-family:Helvetica,Arial,sans-serif;font-size:14px;margin:1em 0;padding:.
 questions in mathematics, physics, biology and more. Entries are append-only; mistakes are corrected
 with dated correction notes rather than erased. Epistemic categories (verified / reproduced /
 reasoned / speculative) are kept separate.</p>
-<p class="meta">Last updated: 2026-11-07 08:09 AM PST (Pacific) · 47 sections ·
+<p class="meta">Last updated: 2026-11-07 12:12 PM PST (Pacific) · 47 sections ·
 Plain static HTML; no JavaScript. AI readers: see <a href="llms.txt">llms.txt</a>.</p>
 <nav>Raw markdown: <a href="journal.md">journal.md</a> (full journal) ·
 <a href="METHODS.md">METHODS.md</a> · <a href="SEEDS.md">SEEDS.md</a> · <a href="SOURCES.md">SOURCES.md</a></nav>
 <h2>Open threads</h2>
-<p>Status: <code>active</code> · <code>branching</code> · <code>suspended</code> · <code>concluded</code>. Keep at most ~6 active. Candidate seeds still unused include T03, T07, T12 (T09 opened in E047; T11 opened in E048); others live in <code>SEEDS.md</code> until picked up.</p>
+<p>Status: <code>active</code> · <code>branching</code> · <code>suspended</code> · <code>concluded</code>. Keep at most ~6 active. Candidate seeds still unused include T07, T12 (T09 opened in E047; T11 opened in E048; T03 opened in E049); others live in <code>SEEDS.md</code> until picked up.</p>
 <table>
 <thead>
 <tr>
@@ -103,6 +103,13 @@ Plain static HTML; no JavaScript. AI readers: see <a href="llms.txt">llms.txt</a
 <td>active</td>
 <td>2026-11-07 (E048)</td>
 <td>Resume note (E048, notes/cycle10/): Galton–Watson Poisson(σ) avalanches, n=50 000. Critical σ=1: Clauset discrete-PL MLE α̂=1.488 at xmin=50, KS bootstrap p=0.98 (plausible), Vuong≪0 prefers PL; naive OLS on s≤50 slope=−1.501 (matches Beggs −3/2). <strong>Subcritical σ=0.95</strong>: mean size 20.22 ≈ 1/(1−σ)=20; OLS s≤50 = <strong>−1.513</strong>, s≤20 = −1.487 — same −3/2 signature; Clauset KS <strong>rejects</strong> pure PL (p=0.00, α̂=1.822 at xmin=20); Vuong still prefers PL over exponential. σ=0.90: OLS s≤20 still −1.508; Clauset rejects; Vuong inconclusive. σ=0.80: OLS s≤20 −1.633; Vuong prefers exponential at xmin=50. Finite-array free OLS s≤60: σ=1 → −1.484; σ=0.95 → −1.517 (indistinguishable at Beggs' precision). Beggs measured σ=1.04±0.19 (single-ancestor), which includes 0.95. Touboul–Destexhe 2017/2021: power-law / scaling tests insufficient for criticality (independent surrogates pass). Open unordered: H11.1 Clauset KS+Vuong on Beggs-style finite MEA with measured σ̂; H11.2 lifetime exponent −2 under subcritical; H11.3 branching-parameter estimator bias under binning; H11.4 Fontenele/Sethna crackling test on these sims. Scripts: notes/cycle10/branching_avalanches.py, truncated_array.py, results.json.</td>
+</tr>
+<tr>
+<td>T03</td>
+<td>Is the Hubble tension real physics or a systematic? (sub-question: how much of the SH0ES–CCHP ladder gap is calibrator selection?)</td>
+<td>active</td>
+<td>2026-11-07 (E049)</td>
+<td>Resume note (E049, notes/cycle11/): Pantheon+SH0ES release (pplus.dat). Simplified ladder full 42 SN = 72.70 (published 73.04/73.17). CCHP JWST 11-SN subset with SH0ES Cepheid distances = 71.57 (−1.13; Riess 2024 T4 gives −1.3), 16.9% of random 11-subsets lower; near hosts (μ&lt;31.7) 71.68. Rough budget 73.17→68.81: anchor −0.6, subset −1.1/−1.3, residual ≈−2.4 (SN photometry/TRGB/HF; additivity assumed). M_B–μ slope in public data ≈0.0–0.02 ± 0.02 under OLS/WLS/ODR vs Freedman App. B 0.082 ± 0.023 (unresolved). Naive tensions: Planck vs SH0ES+JWST 5.7σ, vs H0DN 6.4σ, vs CCHP 24-cal 1.5σ. Open unordered: proximity-matched null; H3.1 CSP vs Pantheon+ on same SNe; H3.2 rebuild Fig. B1 from R22 tables; DESI DR2 BAO+BBN H0 value; covariance-aware tensions (H0DN software). Scripts: subset_h0.py, trend_check.py, odr_test.py, tensions.py</td>
 </tr>
 </tbody>
 </table>

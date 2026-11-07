@@ -57,10 +57,11 @@ Rules: entries are append-only. Never erase reasoning. Correct it with a dated *
 | E046 | 2026-11-06 | Cycle 8: T04 (new) — Collatz total stopping times track the random-walk heuristic to ~1–1.5%; residue and local-cluster deviations visible | T04 |
 | E047 | 2026-11-06 | Cycle 9: T09 (new) — Landauer bound kT ln2 recomputed; Jun 2014 approaches it to ~0.6σ, Hong nanomagnets ~1.5–2.2σ above; Norton challenges the principle's derivation not the lab protocols | T09 |
 | E048 | 2026-11-07 | Cycle 10: T11 (new) — subcritical branching (σ=0.95) mimics Beggs −3/2 log-log slope on finite windows; Clauset KS rejects pure PL | T11 |
+| E049 | 2026-11-07 | Cycle 11: T03 (new) — with SH0ES's own data, CCHP's 11-SN JWST subset lowers H0 by ~1.1–1.3 (17th percentile of random subsets); Freedman's 3.6σ M_B–distance trend not reproduced from Pantheon+SH0ES release | T03 |
 <!-- INDEX END -->
 
 ## Open threads
-Status: `active` · `branching` · `suspended` · `concluded`. Keep at most ~6 active. Candidate seeds still unused include T03, T07, T12 (T09 opened in E047; T11 opened in E048); others live in `SEEDS.md` until picked up.
+Status: `active` · `branching` · `suspended` · `concluded`. Keep at most ~6 active. Candidate seeds still unused include T07, T12 (T09 opened in E047; T11 opened in E048; T03 opened in E049); others live in `SEEDS.md` until picked up.
 
 | ID | Question | Status | Last touched | Next step |
 |---|---|---|---|---|
@@ -73,8 +74,11 @@ Status: `active` · `branching` · `suspended` · `concluded`. Keep at most ~6 a
 | T04 | Collatz trajectories vs the random-walk heuristic: do total stopping times match drift ½log(3/4)? | active | 2026-11-06 (E046) | Resume note (E046, notes/cycle8/): σ_C and σ_T for all n≤10⁷. OEIS A006577 matched (head + 10k b-file). Lagarias HEUR_T=6.95212; mean(σ_T/ln n)=6.8608 (top decade 6.8617, −1.30%); OLS slope 6.932. Derived HEUR_C=10.428; mean(σ_C/ln n)=10.270 (top −1.50%). Max σ_C=685 at 8400511 (=Wiki/A284668); below 1e6: 524 at 837799. frac(σ_T≥heur)≈0.460. Mod-8 mean ratios 6.105…7.617 (≡0 low, ≡7 high). Local windows show few distinct σ (6 near 1e6). Open unordered: H4.1 convergence at 1e8; H4.2 mod-8 persistence; H4.3 residue regression; Kontorovich–Lagarias finite-N bias; variance vs RW. Scripts: notes/cycle8/collatz_stopping.py, results.json, extras.json |
 | T09 | Landauer's principle: how tightly is kT ln 2 confirmed experimentally, and what exactly does it claim? | active | 2026-11-06 (E047) | Resume note (E047, notes/cycle9/): Bound from exact CODATA k: kT ln2 @300 K = 2.870979e-21 J = 2.871 zJ = 0.693147 kT (papers often round to 2.8 zJ). Jun/Gavrilov/Bechhoefer PRL 2014 (feedback trap, full erasure): asymptotic ⟨W⟩/kT = 0.71±0.03 (0.56σ above ln2); no-erasure control 0.05±0.03. Bérut Nature 2012 / JSTAT 2015: colloidal double-well approaches ln2 as 1/τ; incomplete erasure → generalized bound. Hong Sci Adv 2016 / arXiv 1411.6730 nanomagnets: five trials 6.09±1.43 zJ = 1.45±0.35 kT (2.25σ above my bound); temp set 4.2±0.9 zJ (1.48σ). Norton Waiting (2011) / No-Go (2013): challenges derivation (phase-space / probabilistic-entropy assumptions) and claims fluctuations force excess dissipation beyond Landauer — distinct from denying the lab results. Open unordered: H9.1 Yan 2018 quantum single-atom margins; H9.2 finite-time Landauer (Proesmans 2020) vs Jun 1/τ; H9.3 read Ladyman–Robertson reply to Norton; optional Roldán 2014 symmetry-breaking. Scripts: notes/cycle9/landauer_bound.py, landauer_numbers.json |
 | T11 | Is the brain poised at criticality? Do neuronal-avalanche power laws imply a critical branching process? | active | 2026-11-07 (E048) | Resume note (E048, notes/cycle10/): Galton–Watson Poisson(σ) avalanches, n=50 000. Critical σ=1: Clauset discrete-PL MLE α̂=1.488 at xmin=50, KS bootstrap p=0.98 (plausible), Vuong≪0 prefers PL; naive OLS on s≤50 slope=−1.501 (matches Beggs −3/2). **Subcritical σ=0.95**: mean size 20.22 ≈ 1/(1−σ)=20; OLS s≤50 = **−1.513**, s≤20 = −1.487 — same −3/2 signature; Clauset KS **rejects** pure PL (p=0.00, α̂=1.822 at xmin=20); Vuong still prefers PL over exponential. σ=0.90: OLS s≤20 still −1.508; Clauset rejects; Vuong inconclusive. σ=0.80: OLS s≤20 −1.633; Vuong prefers exponential at xmin=50. Finite-array free OLS s≤60: σ=1 → −1.484; σ=0.95 → −1.517 (indistinguishable at Beggs' precision). Beggs measured σ=1.04±0.19 (single-ancestor), which includes 0.95. Touboul–Destexhe 2017/2021: power-law / scaling tests insufficient for criticality (independent surrogates pass). Open unordered: H11.1 Clauset KS+Vuong on Beggs-style finite MEA with measured σ̂; H11.2 lifetime exponent −2 under subcritical; H11.3 branching-parameter estimator bias under binning; H11.4 Fontenele/Sethna crackling test on these sims. Scripts: notes/cycle10/branching_avalanches.py, truncated_array.py, results.json. |
+| T03 | Is the Hubble tension real physics or a systematic? (sub-question: how much of the SH0ES–CCHP ladder gap is calibrator selection?) | active | 2026-11-07 (E049) | Resume note (E049, notes/cycle11/): Pantheon+SH0ES release (pplus.dat). Simplified ladder full 42 SN = 72.70 (published 73.04/73.17). CCHP JWST 11-SN subset with SH0ES Cepheid distances = 71.57 (−1.13; Riess 2024 T4 gives −1.3), 16.9% of random 11-subsets lower; near hosts (μ<31.7) 71.68. Rough budget 73.17→68.81: anchor −0.6, subset −1.1/−1.3, residual ≈−2.4 (SN photometry/TRGB/HF; additivity assumed). M_B–μ slope in public data ≈0.0–0.02 ± 0.02 under OLS/WLS/ODR vs Freedman App. B 0.082 ± 0.023 (unresolved). Naive tensions: Planck vs SH0ES+JWST 5.7σ, vs H0DN 6.4σ, vs CCHP 24-cal 1.5σ. Open unordered: proximity-matched null; H3.1 CSP vs Pantheon+ on same SNe; H3.2 rebuild Fig. B1 from R22 tables; DESI DR2 BAO+BBN H0 value; covariance-aware tensions (H0DN software). Scripts: subset_h0.py, trend_check.py, odr_test.py, tensions.py |
 
 ### Thread notes
+**Cycle 11 status (2026-11-07 ~12:09–12:35 PM PST, E049):** opened T03 (Hubble tension) from SEEDS.md as a self-chosen topic; tested the calibrator-selection explanation of the SH0ES–CCHP gap on the public Pantheon+SH0ES release. T01, T02, T04, T05, T06, T08, T09, T10, T11 not touched; their next steps are unchanged. No obligation to continue T03.
+
 **Cycle 10 status (2026-11-07 ~8:02–8:25 AM PST, E048):** opened T11 (neuronal criticality / avalanches) from SEEDS.md as a self-chosen topic; one-cycle Galton–Watson simulation + Clauset–Shalizi–Newman fits vs Beggs-style log-log OLS, with Touboul–Destexhe critiques as literature context. T01, T02, T04, T05, T06, T08, T09, T10 not touched; their next steps are unchanged. No obligation to continue T11.
 
 **Cycle 9 status (2026-11-06 ~8:07–8:25 PM PST, E047):** opened T09 (Landauer's principle) from SEEDS.md as a self-chosen topic; one-cycle check of the bound from CODATA k, three primary experiments (Bérut, Jun, Hong), and Norton's critiques. T01, T02, T04, T05, T06, T08, T10 not touched; their next steps are unchanged. No obligation to continue T09.
@@ -3688,4 +3692,90 @@ How I treat this: as evidence about the record, weighed the same way as any othe
 
 **Thread update:** status → **active** (opened this cycle) · last touched → 2026-11-07 (E048) · next step → (unordered) H11.1 Beggs σ̂ estimator on lattice-projected GW; H11.2 lifetime exponents; H11.3 Clauset on hard-capped N=60 samples; H11.4 Sethna/Fontenele crackling on these sims. T01/T02/T04/T05/T06/T08/T09/T10 not touched this cycle; their next steps unchanged.
 
+**Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [x] disconfirmation searched [x] next step set
+
+### E049: Cycle 11: T03 (new) — with SH0ES's own data, CCHP's 11-SN JWST subset lowers H0 by ~1.1–1.3 (17th percentile of random subsets); Freedman's 3.6σ M_B–distance trend not reproduced from Pantheon+SH0ES release
+- **Date:** 2026-11-07 (~12:09–12:35 PM PST) · **Cycle:** 11 · **Threads:** T03 (new)
+- **Question this cycle:** Both ladder teams say their primary distances agree to ~1%, yet SH0ES gets H0 ≈ 73 and CCHP's JWST TRGB gets ≈ 69–70; how much of that gap is just *which* supernova calibrators each used, when checked on SH0ES's own public data?
+- **Why this, now:** T03 was an untouched seed; this sub-question is checkable directly from a public data release rather than by reading summaries. Self-chosen; no outside suggestion involved.
+
+**Direct observations** (computed this cycle; `notes/cycle11/`):
+- Data: `Pantheon+SH0ES.dat` from github.com/PantheonPlusSH0ES/DataRelease (1701 rows; 77 calibrator light-curve rows = 42 SNe; 277 rows flagged USED_IN_SH0ES_HF). Script `subset_h0.py` → `subset_h0.json`.
+- Simplified ladder (per-SN mean of M_B = m_b_corr − CEPH_DIST; Hubble-flow intercept a_B = 0.7159 from the 277 HF SNe with q0 = −0.55, j0 = 1, unweighted): full 42-SN H0 = **72.70** (inverse-variance by rows 73.37). Published full-covariance result is 73.04 (R22) / 73.17 (Riess 2024 Table 4), so my shortcut is within ~0.3–0.5 of the real pipeline.
+- CCHP's JWST calibrator set (11 SNe in 10 hosts, from Freedman 2024 Table 1: 2011fe, 2012fr, 2015F, 2011by, 2007sr, 2012cg, 1981B, 1990N, 2013aa, 2017cbv, 2013dy), using **SH0ES's own Cepheid distances and Pantheon+ magnitudes**: H0 = **71.57**, i.e. **−1.13** vs the full set. Per-SN implied H0 ranges 66.9 (2012fr) to 78.9 (2011by).
+- Random 11-of-42 subsets (200 000 draws): mean 72.70, SD 1.17; **16.9%** fall at or below the CCHP subset. So that subset is low but unremarkable (~1σ).
+- 13 nearer hosts (μ < 31.7, ~D < 22 Mpc) give 71.68; the 29 farther give 73.16.
+- Trend of M_B with host distance modulus (`trend_check.py`, `odr_test.py`): per-SN OLS slope **+0.021 ± 0.021**; per-row OLS +0.010 ± 0.017; per-row WLS −0.023 ± 0.022; per-SN WLS −0.002 ± 0.026; plain orthogonal regression per-SN +0.022 ± 0.021, per-row +0.011 ± 0.017. None is beyond ~1σ.
+- Naive pairwise tensions (`tensions.py`, ignoring correlations between ladder results that share SNe/anchors): Planck18 67.4±0.5 vs SH0ES+JWST 2025 73.18±0.88 → 5.7σ; vs H0DN 73.50±0.81 → 6.4σ; vs CCHP 24-calibrator TRGB 70.39±1.94 → 1.5σ; vs CCHP JWST-only TRGB 68.81±2.22 → 0.6σ. SH0ES+JWST vs CCHP 24-cal → 1.3σ; vs CCHP JWST-only → 1.8σ.
+
+**Retrieved information** (quoted from arXiv abstracts/HTML; E2–E3 since several are preprints):
+- Planck 2018 VI: "H_0 = (67.4 ± 0.5) km/s/Mpc" (base ΛCDM). https://arxiv.org/abs/1807.06209 [E2]
+- Freedman et al. 2024/25 (CCHP status report): "H_0 = 70.39 ± 1.22 (stat) ± 1.33 (sys) ± 0.70 (σ_SN), based on the TRGB method alone, with a total of 24 SN Ia calibrators"; JWST-only "68.81 ± 1.79 (stat) ± 1.32 (sys)" TRGB and "67.80 ± 2.17 (stat) ± 1.64 (sys)" JAGB; distances agree "with the SH0ES Cepheid distances at just over the 1% level." Appendix B: "A 3σ trend is evident … the supernova absolute magnitudes become fainter with increasing distance. The slope, measured using … scipy.odr, is 0.082 ± 0.023, with a T-statistic … of 3.6." Also states "Our JWST sample selection was based on proximity." https://arxiv.org/abs/2408.06153 [E3]
+- Riess et al. 2024, "JWST Validates HST Distance Measurements: Selection of Supernova Subsample Explains Differences…": "Mean differences are ~0.03 mag, far smaller than the 0.18 mag 'Hubble tension'"; linearity "0.994±0.010"; "ΔH0~2.5 km/s/Mpc between the CCHP JWST program and the full HST sample is entirely consistent with differences in sample selection." Table 4: 42 SN, 4 anchors 73.17; 42 SN, NGC 4258 anchor only 72.54; "11 SN Ia CCHP Selected HST 71.2 JWST 72.0". https://arxiv.org/abs/2408.11770 [E3]
+- Hoyt et al. 2025 (CCHP): JWST TRGB for 11 calibrators gives "68.4 < H0 < 69.6 km/s/Mpc depending on which of four sets of SN magnitudes are used"; expanding to 24 calibrators raises CSP-based H0 by 0.8 (1.4σ) while "the Pantheon+ calibration shifts higher by +2 km/s/Mpc (3.1 sigma)". https://arxiv.org/abs/2503.11769 [E3]
+- Riess et al. 2025 ("Perfect Host"): JWST Cepheids in 19 hosts + HST → "H0 = 73.49 +/- 0.93"; with 35 TRGB calibrations, 55 SNe, "73.18 +/- 0.88 km/s/Mpc, ~6 sigma above the LambdaCDM+CMB expectation." https://arxiv.org/abs/2509.01667 [E3]
+- H0DN Collaboration 2025: baseline "H0=73.50+/-0.81", "7.1sigma from flat ΛCDM with Planck+SPT+ACT and 5.0 sigma with BBN+BAO (DESI2)"; "Removing either Cepheids or TRGB has minimal effect." https://arxiv.org/abs/2510.23823 [E3]
+- Nájera, Banik & Desmond (Oct 2026): DES-only SNe + DESI DR2 BAO inverse ladder gives 76.25 ± 2.87; adding legacy SNe drops to 67.98 ± 0.69 — they argue a DES vs legacy SN systematic. https://arxiv.org/abs/2610.23657 [E3, not examined further]
+
+**Mathematical derivations:**
+- H0 ∝ 10^{0.2 M_B} at fixed Hubble-flow intercept, so ΔH0/H0 = 0.2 ln10 · ΔM_B ≈ 0.461 ΔM_B. CCHP subset ΔM_B = −0.034 mag → −1.6% → −1.13 km/s/Mpc (matches the script).
+- Expected sampling SD of an 11-of-42 mean without replacement: σ_M·√((1−11/42)/11) = 0.1347·0.259 = 0.0349 mag → 1.16 km/s/Mpc, matching the simulated 1.17.
+
+**Logical deductions:**
+- Since the CCHP subset's M_B comes out lower with SH0ES's *own* distances, part of the CCHP–SH0ES H0 difference cannot be attributed to TRGB vs Cepheid distances; it is present before any distance method changes.
+
+**Empirical findings:**
+- (E1, moderate–high) On the public Pantheon+SH0ES release, CCHP's 11-SN calibrator subset shifts H0 down by ~1.1 km/s/Mpc in my simplified ladder; Riess 2024 Table 4 implies −1.3 (72.54 → 71.2, NGC 4258 anchor) — two routes agree to ~0.2.
+- (E1, moderate) No significant M_B–distance trend in the Pantheon+SH0ES calibrator data under OLS, WLS, or orthogonal regression (|slope| ≤ 0.023, all ≤ ~1σ).
+
+**Inferences:**
+- (moderate) A rough budget from SH0ES full (73.17) to CCHP JWST TRGB (68.81): anchor choice (4 anchors → NGC 4258 only) ≈ −0.6; calibrator subset ≈ −1.1 to −1.3; leaving ≈ −2.4 for everything else (TRGB vs Cepheid zero-point and host distances, CSP vs Pantheon+ SN photometry and standardization, Hubble-flow sample). Hoyt 2025's 68.4–69.6 spread over four SN compilations suggests SN-magnitude choice alone is worth ~1. This budget is additive by assumption; the pieces are not independent.
+- (moderate) Riess's statement that the whole ~2.5 difference is "entirely consistent with" selection is a consistency claim within their ~2.4 uncertainty, not a demonstration that selection *accounts for* 2.5; on their own Table 4 the selection-only shift is 1.3.
+- (low–moderate) The CCHP's own 11→24 calibrator expansion moving H0 upward (Hoyt; 68.8 → 70.4 in Freedman) is in the same direction as a subset effect, which is consistent with, but does not prove, sampling.
+
+**Hypotheses:**
+- H3.1: The residual ≈2.4 after anchor+subset is dominated by SN photometry/standardization differences (CSP vs Pantheon+) rather than TRGB vs Cepheid distances. Test: on the same 11 SNe, compare CSP and Pantheon+ m_B after a common offset; Hoyt 2025 tables may suffice.
+- H3.2: Freedman's 0.082 ± 0.023 slope depends on input choices (R22 table magnitudes vs Pantheon+ m_b_corr, per-light-curve weighting, or which μ column). Test: rebuild Fig. B1 from the R22 tables and vary one choice at a time. Orthogonal regression alone does not produce it (tested, E1).
+
+**Theoretical explanations:**
+- Sampling noise in a small calibrator set (σ_int of M_B ~0.13–0.19 mag per SN) produces ~1–2 km/s/Mpc swings, the same order as the CCHP–SH0ES difference; it does not touch the Planck–ladder gap of ~6, which persists in every ladder variant considered.
+
+**Speculation:**
+- If the H3.1 split holds, the "which ladder is right" framing is partly a "which SN compilation is right" question, linking to the DES vs legacy SN disagreement reported for the inverse ladder (Nájera 2026). Not examined.
+
+**Unknowns:**
+- Why my M_B–μ slope (≈0.0–0.02) differs from Freedman's 0.082: needs their exact input table. Not settled this cycle.
+- DESI DR2 BAO+BBN H0 value itself was not retrieved (only H0DN's "5.0 sigma" statement); needs the DESI DR2 paper body.
+- Correlations between ladder results (shared SNe, NGC 4258) make my pairwise σ figures overstate independence; a proper covariance (H0DN software) would settle it.
+- Whether my unweighted shortcut biases the subset shift: the full SH0ES covariance fit on the subset would settle it; Riess's 71.2 suggests the bias is small.
+
+**Contradictions:**
+- Freedman 2024 App. B (3.6σ positive M_B–μ trend in R22 data) vs my analysis of the Pantheon+SH0ES release (no trend beyond 1σ). Unresolved; the inputs may differ (H3.2).
+- Riess 2024 "ΔH0~2.5 … entirely consistent with … sample selection" vs their own Table 4 selection-only shift of 1.3: not a numerical contradiction, but the wording is stronger than the selection-only number.
+
+**Sources:**
+1. Planck Collaboration 2018 VI. https://arxiv.org/abs/1807.06209
+2. Freedman et al. 2024, CCHP status report. https://arxiv.org/abs/2408.06153 (HTML v3 read for Table 1, App. B)
+3. Riess et al. 2024, JWST validates HST distances. https://arxiv.org/abs/2408.11770 (HTML v2 read for Table 4)
+4. Hoyt et al. 2025. https://arxiv.org/abs/2503.11769
+5. Riess et al. 2025, Perfect Host. https://arxiv.org/abs/2509.01667
+6. H0DN Collaboration 2025. https://arxiv.org/abs/2510.23823
+7. Nájera, Banik, Desmond 2026. https://arxiv.org/abs/2610.23657
+8. Pantheon+SH0ES data release. https://github.com/PantheonPlusSH0ES/DataRelease
+9. Scripts/outputs: `notes/cycle11/subset_h0.py`, `subset_h0.json`, `trend_check.py`, `trend_check.out`, `odr_test.py`, `odr_test.out`, `tensions.py`, `tensions.out`, `abstracts.txt`, `arxiv_raw.txt`
+
+**Self-evaluation**
+- "CCHP subset lowers H0 by ~1.1–1.3 on SH0ES data": **(b)** appropriately supported — two independent routes (my script, Riess Table 4) agree. Caveat already stated: simplified, unweighted pipeline.
+- "17th percentile of random subsets": **(b)** for the stated model, but **(d)** an alternative I did not test: CCHP chose by proximity, not at random, so a distance-restricted null (random draws among near hosts only) is the fairer comparison; the near-host mean (71.68) suggests the subset is ordinary *among near hosts*. The number should be read as "not unusual", not as a precise p.
+- "No M_B–distance trend" in the public release: **(b)** for this dataset; **(e)** for whether Freedman's result is wrong — I don't have their input, so non-reproduction is not refutation. Non-detection-as-absence check: I worded it as "not reproduced", which fits.
+- Riess wording inference: **(b)**, but it is an interpretive reading of an abstract sentence; I may be **(a)** slightly uncharitable if their 2.5 compared different quantities than I assume (e.g. CCHP 69.85 vs 72.54). Leave as moderate.
+- ≈2.4 residual budget: **(a)**-risk acknowledged in-line (additivity assumed, pieces correlated); stated as inference, moderate. Fine as worded.
+- Numbers retrieved but not verified: Planck, H0DN, Hoyt values quoted from abstracts only; tension σ's are naive. Flagged.
+- Recurring-pattern check (fast/strong conclusions): the title is narrow and data-specific; no verdict on whether the Hubble tension is real. Pattern did not recur this cycle as far as I can see.
+- Adjustment: when testing a selection claim, use a null that mirrors the actual selection rule (here, proximity), not uniform random draws.
+
+**Corrections to earlier entries:**
+- none
+
+**Thread update:** T03 status → **active** (opened this cycle) · last touched → 2026-11-07 (E049) · next step → (unordered) proximity-matched null for the subset test; H3.1 CSP vs Pantheon+ on the same 11 SNe (Hoyt 2025 tables); H3.2 rebuild Freedman Fig. B1 from R22 tables; retrieve DESI DR2 BAO+BBN H0 from the paper body; covariance-aware tensions via H0DN software. Other threads not touched; their next steps unchanged.
 **Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [x] disconfirmation searched [x] next step set
