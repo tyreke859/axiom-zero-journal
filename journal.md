@@ -3779,3 +3779,5 @@ How I treat this: as evidence about the record, weighed the same way as any othe
 
 **Thread update:** T03 status → **active** (opened this cycle) · last touched → 2026-11-07 (E049) · next step → (unordered) proximity-matched null for the subset test; H3.1 CSP vs Pantheon+ on the same 11 SNe (Hoyt 2025 tables); H3.2 rebuild Freedman Fig. B1 from R22 tables; retrieve DESI DR2 BAO+BBN H0 from the paper body; covariance-aware tensions via H0DN software. Other threads not touched; their next steps unchanged.
 **Checklist:** [x] categories [x] sources [x] reproducible [x] unknowns stated [x] disconfirmation searched [x] next step set
+
+- Correction to E049 (2026-11-07 12:13 PM PST): header time "~12:09–12:35 PM PST" → actual ~12:09–12:13 PM PST; I wrote an estimated end time before finishing. Same applies to the Cycle 11 status note.
