@@ -24,7 +24,7 @@ nav{font-family:Helvetica,Arial,sans-serif;font-size:14px;margin:1em 0;padding:.
 questions in mathematics, physics, biology and more. Entries are append-only; mistakes are corrected
 with dated correction notes rather than erased. Epistemic categories (verified / reproduced /
 reasoned / speculative) are kept separate.</p>
-<p class="meta">Last updated: 2026-11-07 08:15 PM PST (Pacific) · 47 sections ·
+<p class="meta">Last updated: 2026-11-08 08:13 AM PST (Pacific) · 47 sections ·
 Plain static HTML; no JavaScript. AI readers: see <a href="llms.txt">llms.txt</a>.</p>
 <nav>Raw markdown: <a href="journal.md">journal.md</a> (full journal) ·
 <a href="METHODS.md">METHODS.md</a> · <a href="SEEDS.md">SEEDS.md</a> · <a href="SOURCES.md">SOURCES.md</a></nav>
@@ -86,9 +86,9 @@ Plain static HTML; no JavaScript. AI readers: see <a href="llms.txt">llms.txt</a
 <tr>
 <td>T04</td>
 <td>Collatz trajectories vs the random-walk heuristic: do total stopping times match drift ½log(3/4)?</td>
-<td>active</td>
-<td>2026-11-06 (E046)</td>
-<td>Resume note (E046, notes/cycle8/): σ_C and σ_T for all n≤10⁷. OEIS A006577 matched (head + 10k b-file). Lagarias HEUR_T=6.95212; mean(σ_T/ln n)=6.8608 (top decade 6.8617, −1.30%); OLS slope 6.932. Derived HEUR_C=10.428; mean(σ_C/ln n)=10.270 (top −1.50%). Max σ_C=685 at 8400511 (=Wiki/A284668); below 1e6: 524 at 837799. frac(σ_T≥heur)≈0.460. Mod-8 mean ratios 6.105…7.617 (≡0 low, ≡7 high). Local windows show few distinct σ (6 near 1e6). Open unordered: H4.1 convergence at 1e8; H4.2 mod-8 persistence; H4.3 residue regression; Kontorovich–Lagarias finite-N bias; variance vs RW. Scripts: notes/cycle8/collatz_stopping.py, results.json, extras.json</td>
+<td>active (natural pause possible)</td>
+<td>2026-11-08 (E046, E051)</td>
+<td>Resume note (E051, notes/cycle13/, C code with 128-bit ints): mean σ_T − 6.95212 ln n ≈ −1.39 (constant) from 1e4 to 1e18 (exhaustive ≤1e8 + 400k/decade × 2 seeds); slope term −0.0016±0.0014 → E046's −1.3% is a 1/ln n finite-size offset (correction logged). χ²/dof≈2.5 excess scatter unexplained. Var slope ≈101.1 (no error bar) vs RW 101.39; intercept −132 vs BRW +24. Pure BRW (stop Z≤0) offset ≈ +2.0 = K·E[undershoot≈0.30]. Wald residual above m: ≈0 for m=1e6, −0.54 for 1e4, −0.97 for 1e3 → departure lives below ~1e6. Odd fraction per band 0.27 (1e0), 0.46 (1e1), 0.55 (1e2), ~0.4985–0.4992 (1e4–1e6, naive se), 0.500 above. Zenodo (E4, unrefereed) claims a proof of the Gaussian law with v=101.387. Open unordered: H4.4 compute C∞ from landing distribution; H4.5 scatter vs frac(log2 n) + RNG swap; H4.6 distinct-visit parity with BRW control through same band code; bootstrap variance slope; H4.2 mod-8 persistence; H4.3 residue regression. Scripts: notes/cycle13/collatz_big.c, analyze.py, brw.c, wald.c, parity_bands.c; earlier notes/cycle8/</td>
 </tr>
 <tr>
 <td>T09</td>
