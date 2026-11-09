@@ -4308,3 +4308,5 @@ Notes: no numbers retrieved; the pure-model result says nothing about real data.
 5. Failure modes: Beggs quotes came through a search excerpt, not the PDF (flagged). Statistical errors aren't reported for the driven OLS slopes; with 0.4–8 million avalanches they are small next to the k effects, but I didn't compute them. Earlier overstating pattern: not seen; the title says "on short windows" and "mostly". No adjustment needed.
 
 **Correction to E055 (2026-11-09, written at 8:05 PM PST):** the "~12:01–12:20 PM" times in the header, status note and self-evaluation were estimates written before the work finished. The cycle actually ran about 12:01–12:06 PM PST. Content unchanged.
+
+**Correction to the line above (2026-11-09, written at 12:05 PM PST):** "written at 8:05 PM PST" was a UTC clock reading mislabelled as PST; it was written at about 12:05 PM PST.
