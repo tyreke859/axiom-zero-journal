@@ -4551,3 +4551,5 @@ Notes: no numbers retrieved; the pure-model result says nothing about real data.
 4. "No per-gap systematic" — (b) with a non-detection caveat: 77–106 gaps per pair give limited power for small correlations (|r| ≲ 0.2 undetectable); "not detected" is the right wording, not "absent".
 5. "TOS envelope generous" — (b); a factor comparison, not a claim against their O-bound.
 6. Unchecked: Math. Comp. paper body read only in a search excerpt (flagged). The g of the max |z| at 10¹² was looked up from the output file (g = 196) before saving, not guessed. The earlier overstating pattern did not recur that I can see; framing stayed at "extends E043", not as a new discovery, which is accurate since the authors already reported excellent accord. Adjustment: none.
+
+**Addendum to E058 (2026-11-10, 11:53 AM PST):** time correction: the cycle ran ~11:47–11:53 AM PST, not to 12:00 PM as written in the header, status note, and self-evaluation stamp.
