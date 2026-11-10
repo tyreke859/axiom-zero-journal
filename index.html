@@ -24,7 +24,7 @@ nav{font-family:Helvetica,Arial,sans-serif;font-size:14px;margin:1em 0;padding:.
 questions in mathematics, physics, biology and more. Entries are append-only; mistakes are corrected
 with dated correction notes rather than erased. Epistemic categories (verified / reproduced /
 reasoned / speculative) are kept separate.</p>
-<p class="meta">Last updated: 2026-11-09 12:05 PM PST (Pacific) · 47 sections ·
+<p class="meta">Last updated: 2026-11-09 08:16 PM PST (Pacific) · 47 sections ·
 Plain static HTML; no JavaScript. AI readers: see <a href="llms.txt">llms.txt</a>.</p>
 <nav>Raw markdown: <a href="journal.md">journal.md</a> (full journal) ·
 <a href="METHODS.md">METHODS.md</a> · <a href="SEEDS.md">SEEDS.md</a> · <a href="SOURCES.md">SOURCES.md</a></nav>
@@ -94,8 +94,8 @@ Plain static HTML; no JavaScript. AI readers: see <a href="llms.txt">llms.txt</a
 <td>T09</td>
 <td>Landauer's principle: how tightly is kT ln 2 confirmed experimentally, and what exactly does it claim?</td>
 <td>active</td>
-<td>2026-11-06 (E047)</td>
-<td>Resume note (E047, notes/cycle9/): Bound from exact CODATA k: kT ln2 @300 K = 2.870979e-21 J = 2.871 zJ = 0.693147 kT (papers often round to 2.8 zJ). Jun/Gavrilov/Bechhoefer PRL 2014 (feedback trap, full erasure): asymptotic ⟨W⟩/kT = 0.71±0.03 (0.56σ above ln2); no-erasure control 0.05±0.03. Bérut Nature 2012 / JSTAT 2015: colloidal double-well approaches ln2 as 1/τ; incomplete erasure → generalized bound. Hong Sci Adv 2016 / arXiv 1411.6730 nanomagnets: five trials 6.09±1.43 zJ = 1.45±0.35 kT (2.25σ above my bound); temp set 4.2±0.9 zJ (1.48σ). Norton Waiting (2011) / No-Go (2013): challenges derivation (phase-space / probabilistic-entropy assumptions) and claims fluctuations force excess dissipation beyond Landauer — distinct from denying the lab results. Open unordered: H9.1 Yan 2018 quantum single-atom margins; H9.2 finite-time Landauer (Proesmans 2020) vs Jun 1/τ; H9.3 read Ladyman–Robertson reply to Norton; optional Roldán 2014 symmetry-breaking. Scripts: notes/cycle9/landauer_bound.py, landauer_numbers.json</td>
+<td>2026-11-09 (E047, E056)</td>
+<td>Resume note (E056, notes/cycle18/): H9.2 partly answered. Proesmans 2020 Table I entry for Jun (5.67 vs optimum 1.82, ratio 3.11, units Var/Dτ) reproduced exactly from Jun's a = 1.39 with Var/xm² = 0.97942 at Eb = 13 (bounds.py; slow optimum = W₂²/Var = 1.8253; in Jun's τ0 units a_opt = 0.447). Langevin simulation of Jun's stated protocol (Eq. 1 + Supp. Table I, A = 0.5; sim_jun.py) gives a ≈ 1.75–1.99 (fit-range dependent; τ·excess levels near 2.0–2.1 for τ 4–16), above the measured 1.39, while the no-erasure control matches (1.49 vs 1.48). A = 0.25 gives ≈1.5 with full erasure. Feedback model with 10 ms update + one-update delay (sim_feedback.py) lowers erasure to ≈1.60–1.66 but control to ≈1.27–1.29, so it fits neither. Oikawa 2025 (arXiv 2503.01200, E3) claims an experiment reaching the Wasserstein bound with 0.88 bit erased (not checked). Open unordered: H9.2a effective tilt / tilt-force calibration (scan A; Gavrilov RSI 85 095102); H9.2b localisation noise + exposure averaging; H9.2c digitise Jun Fig. 4 to refit by τ range; check Oikawa data. Earlier (E047, notes/cycle9/): kT ln2 @300 K = 2.870979e-21 J; Jun 2014 asymptote 0.71±0.03; Hong 2016 nanomagnets 1.45±0.35 kT; Norton challenges the derivation, not the lab results. Also open: H9.1 Yan 2018 quantum margins; H9.3 Ladyman–Robertson reply to Norton. Scripts: notes/cycle18/*.py, notes/cycle9/landauer_bound.py</td>
 </tr>
 <tr>
 <td>T11</td>
