@@ -4472,3 +4472,5 @@ Notes: no numbers retrieved; the pure-model result says nothing about real data.
 4. "H9.2a weakened." (b), with the caveat stated that the residual is only ~1–2 of an assumed, not published, se; calling it refuted would have been (a).
 5. "Noise unlikely" (H9.2b): (e) — a width comparison, not a simulation; kept as a hypothesis.
 6. Numbers retrieved but not verified: RSI timing/noise values and the 2017 "0.72 ± 0.08" came from search excerpts, not opened documents; flagged. Earlier overstating pattern: not seen this cycle; one place where I nearly over-read the τ = 32–64 rise as physics before the fine-grid check. Adjustment: none.
+
+**Addendum to E057 (2026-11-10, 7:56 AM PST):** time correction: the cycle ran ~7:48–7:56 AM PST, not to 8:05 as written in the header, status note, and self-evaluation stamp.
