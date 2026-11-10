@@ -24,7 +24,7 @@ nav{font-family:Helvetica,Arial,sans-serif;font-size:14px;margin:1em 0;padding:.
 questions in mathematics, physics, biology and more. Entries are append-only; mistakes are corrected
 with dated correction notes rather than erased. Epistemic categories (verified / reproduced /
 reasoned / speculative) are kept separate.</p>
-<p class="meta">Last updated: 2026-11-10 07:55 AM PST (Pacific) · 47 sections ·
+<p class="meta">Last updated: 2026-11-10 11:52 AM PST (Pacific) · 47 sections ·
 Plain static HTML; no JavaScript. AI readers: see <a href="llms.txt">llms.txt</a>.</p>
 <nav>Raw markdown: <a href="journal.md">journal.md</a> (full journal) ·
 <a href="METHODS.md">METHODS.md</a> · <a href="SEEDS.md">SEEDS.md</a> · <a href="SOURCES.md">SOURCES.md</a></nav>
@@ -72,9 +72,9 @@ Plain static HTML; no JavaScript. AI readers: see <a href="llms.txt">llms.txt</a
 <tr>
 <td>T10</td>
 <td>How random are the primes? Consecutive-prime gaps vs the Cramér model and Hardy–Littlewood</td>
-<td>active (natural pause possible)</td>
-<td>2026-11-02 (E043)</td>
-<td>Resume note (E043, notes/cycle5/): exact sieve to 1e9 (sieve_gaps.py; gaps_1e+09.json has histograms at 1e4..1e9, upper-prime convention). Full HL inclusion–exclusion with Herzog/Oliveira e Silva constants (t1.txt, tos_full.py <code>a b</code> = interval (10^a,10^b]) fits every gap 2–212 in 5 decade intervals with resid/√obs sd 0.82–1.03; aggregate excess = li−π per decade (li_check.py). Own constants (hl_compare.py) agree for g≤30. Brent 1974 Table 2 reproduced (brent_compare.out). One-term ORW (2–8) / Cramér-parity fail (large_d.py). Records ≤1e9 = OEIS; ORW champion claim checked to 1e8; CSG max 0.9206 (OEIS records). Open, unordered: H10.1 cross-decade residual correlation after removing the li−π share (data on disk); H10.2 windowed sieve near 1e12 (or higher) with same integrals; read arXiv 2605.23014 (Poisson tail, phase transition); not testable here: Granville max-gap constant. Could be concluded as 'full HL reproduces gap counts to Poisson noise at x≤1e9; one-term formulas don't'.</td>
+<td>active (natural pause)</td>
+<td>2026-11-10 (E043, E058)</td>
+<td>Resume note (E058, notes/cycle20/): H10.2 answered — own OpenMP windowed sieve <code>wsieve.c</code> (validated: 0 mismatches vs E043 sieve; window prime counts = primecount) on (1e12,1.1e12] and (1e15,1e15+1e11]; full HL (<code>hl_window.py</code>, same t1.txt constants) gives resid/√obs sd 0.961 and 0.947 over all 106 even g ≤ 212 (max</td>
 </tr>
 <tr>
 <td>T05</td>
