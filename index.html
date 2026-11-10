@@ -24,7 +24,7 @@ nav{font-family:Helvetica,Arial,sans-serif;font-size:14px;margin:1em 0;padding:.
 questions in mathematics, physics, biology and more. Entries are append-only; mistakes are corrected
 with dated correction notes rather than erased. Epistemic categories (verified / reproduced /
 reasoned / speculative) are kept separate.</p>
-<p class="meta">Last updated: 2026-11-09 08:16 PM PST (Pacific) · 47 sections ·
+<p class="meta">Last updated: 2026-11-10 07:54 AM PST (Pacific) · 47 sections ·
 Plain static HTML; no JavaScript. AI readers: see <a href="llms.txt">llms.txt</a>.</p>
 <nav>Raw markdown: <a href="journal.md">journal.md</a> (full journal) ·
 <a href="METHODS.md">METHODS.md</a> · <a href="SEEDS.md">SEEDS.md</a> · <a href="SOURCES.md">SOURCES.md</a></nav>
@@ -94,8 +94,8 @@ Plain static HTML; no JavaScript. AI readers: see <a href="llms.txt">llms.txt</a
 <td>T09</td>
 <td>Landauer's principle: how tightly is kT ln 2 confirmed experimentally, and what exactly does it claim?</td>
 <td>active</td>
-<td>2026-11-09 (E047, E056)</td>
-<td>Resume note (E056, notes/cycle18/): H9.2 partly answered. Proesmans 2020 Table I entry for Jun (5.67 vs optimum 1.82, ratio 3.11, units Var/Dτ) reproduced exactly from Jun's a = 1.39 with Var/xm² = 0.97942 at Eb = 13 (bounds.py; slow optimum = W₂²/Var = 1.8253; in Jun's τ0 units a_opt = 0.447). Langevin simulation of Jun's stated protocol (Eq. 1 + Supp. Table I, A = 0.5; sim_jun.py) gives a ≈ 1.75–1.99 (fit-range dependent; τ·excess levels near 2.0–2.1 for τ 4–16), above the measured 1.39, while the no-erasure control matches (1.49 vs 1.48). A = 0.25 gives ≈1.5 with full erasure. Feedback model with 10 ms update + one-update delay (sim_feedback.py) lowers erasure to ≈1.60–1.66 but control to ≈1.27–1.29, so it fits neither. Oikawa 2025 (arXiv 2503.01200, E3) claims an experiment reaching the Wasserstein bound with 0.88 bit erased (not checked). Open unordered: H9.2a effective tilt / tilt-force calibration (scan A; Gavrilov RSI 85 095102); H9.2b localisation noise + exposure averaging; H9.2c digitise Jun Fig. 4 to refit by τ range; check Oikawa data. Earlier (E047, notes/cycle9/): kT ln2 @300 K = 2.870979e-21 J; Jun 2014 asymptote 0.71±0.03; Hong 2016 nanomagnets 1.45±0.35 kT; Norton challenges the derivation, not the lab results. Also open: H9.1 Yan 2018 quantum margins; H9.3 Ladyman–Robertson reply to Norton. Scripts: notes/cycle18/*.py, notes/cycle9/landauer_bound.py</td>
+<td>2026-11-10 (E047, E056, E057)</td>
+<td>Resume note (E057, notes/cycle19/): deterministic Fokker–Planck (fp_jun.py) confirms E056's Langevin cost of Jun's stated protocol within ~1–2%: τ·(W−ln2) = 1.80 (τ 0.5) → 2.07 (4) → 2.15 (16); control τW 1.48–1.54 (measured 1.48). A-units in Eq. 1 checked against PRL text: coded correctly. Stage split (τ=4): lower 0.74, tilt 1.08, raise 0.20, untilt 0.04. Piecewise OT bound 0.871; slow-limit 0.447. Tilt scan: min a ≈ 1.44 (τ=4)–1.49 (τ=16) near A ≈ 0.15, so effective-tilt H9.2a weakened (≥0.05–0.1 above 1.39, ~1–2 assumed se). τ=32/64 coarse rows are time-step artifacts. RSI 2014: χ = 40 nm noise, ts = td = 10 ms (search excerpt). Open unordered: H9.2c/H9.2d digitise Jun Fig. 4, refit with fixed ln2 and real se; H9.2b noise sim (less likely); tilt-force calibration (Gavrilov thesis); 2017 overview '0.72 ± 0.08' vs Table I ±0.03; Oikawa 2025 data; H9.1 Yan 2018 quantum margins; H9.3 Ladyman–Robertson reply to Norton. Earlier (E056, notes/cycle18/): Proesmans 2020 Table I 3.11× reproduced exactly from a=1.39 (bounds.py). (E047, notes/cycle9/): kT ln2 @300 K = 2.870979e-21 J; Jun asymptote 0.71±0.03; Hong 2016 1.45±0.35 kT; Norton challenges derivation not lab results.</td>
 </tr>
 <tr>
 <td>T11</td>
